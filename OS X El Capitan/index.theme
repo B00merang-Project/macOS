@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=OS X El Capitan
+Comment=A theme by Christian Medel (Elbullazul) simulating OS X 10.11 El Capitan
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=OS X El Capitan
+MetacityTheme=OS X El Capitan
+ButtonLayout=:minimize,maximize,close
