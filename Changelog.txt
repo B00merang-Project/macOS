@@ -1,0 +1,13 @@
+v0.1 : Release
+v0.1b : Workspace switcher text color fix
+v0.1c : GTK 3.0 assets fix
+v0.1d : Final assets fix, Cinnamon fixes
+--------------------------
+v0.2 : More cinnamon fixes to sliders and bg transparency
+v0.2b : More cinnamon fixes, starting to look real good now, with same transparency level for applets
+--------------------------
+v0.3 : Gnome-Shell buttons are now visible (3.18)
+v0.3b : Unity version is now available!
+v0.3c : New Unity buttons for a more clean look (spacing is increased)
+--------------------------
+v0.4 : New GTK buttons (GTK  3) with gradients, fixes to the cinnamon theme, new scrollbars (GTK 2 & 3), new metacity theme, new menu color
