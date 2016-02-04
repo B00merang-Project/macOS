@@ -1903,7 +1903,7 @@ GtkStatusbar {
  **********/
 GtkSwitch {
     padding: 0;
-    border-radius: 4px;
+    border-radius: 12px;
     font: bold condensed;
 }
 
@@ -2057,7 +2057,7 @@ GtkColorButton.button {
  **************/
 .header-bar {
     padding: 4px;
-    border-width: 0 0 1px 0;
+    border-width: 0 0 0 0;
     border-style: solid;
     border-color: shade(@titlebar_bg_color, 0.8);
     background-color: @titlebar_bg_color;
