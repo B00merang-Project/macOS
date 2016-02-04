@@ -11,5 +11,4 @@ v0.3b : Unity version is now available!
 v0.3c : New Unity buttons for a more clean look (spacing is increased)
 --------------------------
 v0.4 : New GTK buttons (GTK  3) with gradients, fixes to the cinnamon theme, new scrollbars (GTK 2 & 3), new metacity theme, new menu color
---------------------------
-v0.5 : Bigger metacity buttons, new gradients, color fixes
+v0.4b : Bigger metacity buttons, new gradients, color fixes
