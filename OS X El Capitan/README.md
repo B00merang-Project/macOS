@@ -24,7 +24,7 @@ xfconf-query -c xfwm4 -p /general/theme -s "OS\ X\ El\ Capitan"
 
 GTK+ 3.6 or above
 
-Murrine and Pixmap theme engines
+Murrine theme engines
 
 ### Code and license
 

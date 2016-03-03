@@ -186,7 +186,7 @@ StScrollBar StButton#hhandle {
 	min-width: 250px;
 	min-height: 80px;
 	border:rgba(0,0,0,0.8);
-	border-radius: 0px 0px 0px 0px;
+	border-radius: 3px 3px 3px 3px;
 	box-shadow: none;
 	background-color: rgba(245,245,245,0.9);
 	background-image: url('menu-background.png');

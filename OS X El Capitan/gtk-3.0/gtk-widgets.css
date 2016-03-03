@@ -71,6 +71,12 @@
     color: @theme_selected_fg_color;
 }
 
+*:selected:backdrop,
+*:selected:focus:backdrop {
+	background-color: shade(theme_bg_color, 0.8);
+	color: @theme_fg_color;
+}
+
 *:insensitive,
 *:insensitive:insensitive {
     color: mix(@theme_fg_color, @theme_bg_color, 0.5);
@@ -203,19 +209,23 @@ GtkAssistant .sidebar {
     -GtkWidget-focus-padding: 1;
     -GtkWidget-focus-line-width: 0;
 
-    padding: 3px;
+    padding: 1px 3px 1px 3px;
     border-width: 1px;
     border-radius: 4px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
-    background-color: shade(@theme_bg_color, 1.08);
-    background-image: none;
+    background-color: @base_color;
+    background-image: linear-gradient(to bottom,                         
+                                      @base_color,
+				      shade(@base_color, 0.98),
+                                      shade(@base_color, 0.95)
+                                      );
     color: @theme_fg_color;
 }
 
 .button:hover {
     border-color: shade(@theme_bg_color, 0.7);
-    background-color: shade(@theme_bg_color, 0.95);
+    background-color: shade(@theme_bg_color, 0.99);
     background-image: none;
 }
 
@@ -1298,7 +1308,7 @@ GtkModelButton.button:selected {
 GtkProgressBar {
     padding: 0;
     border-width: 1px;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 .progressbar,
@@ -1714,6 +1724,48 @@ GtkComboBox .separator {
     border-width: 0;
 }
 
+/*addition start*/
+.sidebar-item {
+  padding: 10px 4px; }
+  .sidebar-item > Gtklabel {
+    padding-left: 6px;
+    padding-right: 6px; }
+  .sidebar-item.needs-attention > Gtklabel {
+    background-size: 6px 6px, 0 0; }
+
+/* -------------
+NEW ON GTK 3.18
+---------------*/
+GtkSidebarRow.list-row {
+  padding: 0px; }
+GtkSidebarRow .sidebar-revealer {
+  padding: 1px 14px 1px 12px; }
+GtkSidebarRow .sidebar-icon:dir(ltr) {
+  padding-right: 8px; }
+GtkSidebarRow .sidebar-icon:dir(rtl) {
+  padding-left: 8px; }
+GtkSidebarRow .sidebar-label:dir(ltr) {
+  padding-right: 2px; }
+GtkSidebarRow .sidebar-label:dir(rtl) {
+  padding-left: 2px; }
+
+
+.sidebar-button.button.image-button {
+  padding: 3px;
+  border-radius: 0;
+  box-shadow: 0px 0px 0px alpha(@dark_shadow,0)}
+.sidebar-button.button:not(:hover):not(:active) > GtkImage {
+  opacity: 0.5; }
+
+.sidebar-item {
+  padding: 10px 4px; }
+  .sidebar-item > GtkLabel {
+    padding-left: 6px;
+    padding-right: 6px; }
+  .sidebar-item.needs-attention > GtkLabel {
+    background-size: 6px 6px, 0 0; }
+/*addition end*/
+
 /**************
  * spinbutton *
  **************/
@@ -1900,11 +1952,12 @@ GtkStatusbar {
 
 /**********
  * switch *
- **********/
+ **********
 GtkSwitch {
     padding: 0;
     border-radius: 12px;
     font: bold condensed;
+    width: 20px;
 }
 
 GtkSwitch.slider {
@@ -1940,6 +1993,79 @@ GtkSwitch.trough:insensitive {
     background-color: shade(@theme_bg_color, 0.9);
     background-image: none;
     color: mix(@theme_fg_color, @theme_bg_color, 0.5);
+}*/
+
+GtkSwitch {
+    -GtkWidget-focus-line-width: 0;
+    border-radius: 8px;
+    padding: 0;
+}
+
+.menu GtkSwitch.trough,
+.toolbar.menubar GtkSwitch.trough,
+.primary-toolbar .toolbar GtkSwitch.trough,
+.primary-toolbar.toolbar GtkSwitch.trough,
+GtkSwitch.trough,
+GtkSwitch.trough:insensitive,
+GtkSwitch.trough:backdrop {
+    border: none;
+    border-image: none;
+    background: none;
+    color: transparent;
+    box-shadow: none;
+    background-image: url("assets/off.png");
+    background-size: 36px 22px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-shadow: none;
+}
+
+GtkSwitch.trough {
+    background-image: url("assets/off.png");
+}
+
+GtkSwitch.trough:active {
+    background-image: url("assets/on.png");
+}
+
+GtkSwitch.trough:insensitive {
+    background-image: url("assets/off-disabled.png");
+}
+
+GtkSwitch.trough:active:insensitive {
+    background-image: url("assets/on-disabled.png");
+}
+
+.toolbar.menubar GtkSwitch.trough,
+.primary-toolbar .toolbar GtkSwitch.trough,
+.primary-toolbar.toolbar GtkSwitch.trough {
+    background-image: url("assets/switch-dark-off.svg");
+}
+
+.toolbar.menubar GtkSwitch.trough:active,
+.primary-toolbar .toolbar GtkSwitch.trough:active,
+.primary-toolbar.toolbar GtkSwitch.trough:active {
+    background-image: url("assets/switch-dark-on.svg");
+}
+
+.toolbar.menubar GtkSwitch.trough:insensitive,
+.primary-toolbar .toolbar GtkSwitch.trough:insensitive,
+.primary-toolbar.toolbar GtkSwitch.trough:insensitive {
+    background-image: url("assets/switch-dark-off-disabled.svg");
+}
+
+.toolbar.menubar GtkSwitch.trough:active:insensitive,
+.primary-toolbar .toolbar GtkSwitch.trough:active:insensitive,
+.primary-toolbar.toolbar GtkSwitch.trough:active:insensitive {
+    background-image: url("assets/switch-dark-on-disabled.svg");
+}
+
+GtkSwitch.slider {
+    border: none;
+    border-image: none;
+    background: none;
+    color: transparent;
+    box-shadow: none;
 }
 
 /************
@@ -2202,7 +2328,11 @@ GtkColorButton.button {
 .toolbar .button {
     border-color: shade(@toolbar_bg_color, 0.8);
     background-color: shade(@toolbar_bg_color, 1.08);
-    background-image: none;
+    background-image: linear-gradient(to bottom,
+                                      @bg_color,
+                                      shade(@bg_color, 0.98),
+                                      shade(@bg_color, 0.95)
+                                      );
     color: @toolbar_fg_color;
 }
 
