@@ -3,9 +3,10 @@
 @define-color fg_color #4c4c4c;
 @define-color base_color #ffffff;
 @define-color text_color #4c4c4c;
-@define-color selected_bg_color #006ada;
+@define-color selected_bg_color #066DC1;
+@define-color selected_bg_color2 #4a8cc1;
 @define-color selected_fg_color #ffffff;
-@define-color tooltip_bg_color #cecece;
+@define-color tooltip_bg_color #fff;
 @define-color tooltip_fg_color #4c4c4c;
 
 /* dark color scheme */

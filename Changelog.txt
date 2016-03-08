@@ -14,3 +14,5 @@ v0.4 : New GTK buttons (GTK  3) with gradients, fixes to the cinnamon theme, new
 v0.4b : Bigger metacity buttons, new gradients, color fixes
 --------------------------
 v0.5 : Fixes to GTK 3.18 sidebar; v0.6 will include GNOME-SHELL theme, new unity and GNOME window buttons
+--------------------------
+v0.6 : NEW Gnome-Shell theme, toolbar buttons fixed, progressbar radius reset, new thumbnails, new gradients for GTK2, cinnamon fixes,
