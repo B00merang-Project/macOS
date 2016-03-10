@@ -148,9 +148,9 @@ StScrollBar {
 	height: 21px;
 	background-size: contain; }
 	.toggle-switch-intl, .toggle-switch-us {
-		background-image: url("assets/toggle-off.svg"); }
+		background-image: url("assets/off.png"); }
 	.toggle-switch-intl:checked, .toggle-switch-us:checked {
-		background-image: url("assets/toggle-on.svg"); }
+		background-image: url("assets/on.png"); }
 
 /* links */
 .shell-link {
@@ -394,7 +394,7 @@ StScrollBar {
 	spacing-rows: 15px;
 	spacing-columns: 1em; }
 
-/* Popovers/Menus */
+/* Popover Menus */
 .popup-menu {
 	border-radius: 0 4px 4px 0;
 	color: black;
@@ -456,7 +456,7 @@ StScrollBar {
 	border: 0px rgba(90,105,111,0.5);
 	box-shadow: 1px 3px 5px 2px rgba(0,0,0,0.25);
 	border-radius: 4px;
-	margin-top:1px;
+	margin-top: 0;
 }
 
 .popup-separator-menu-item {
@@ -513,7 +513,8 @@ StScrollBar {
 	border: 0 solid rgba(25,25,25,0.7); }
 
 .switcher-list .item-box:selected {
-	background-color:#1c7aec;
+	border-radius: 4px;
+	background-color: rgba(255,255,255,0.4);
 	color: white; }
 
 .switcher-list .thumbnail-box {
@@ -593,6 +594,7 @@ StScrollBar {
 /* TOP BAR */
 #panel {
 	font-weight: normal;
+	font-size: 90%;
 	color: black;
 	height: 24px;
 	background-color: rgba(255,255,255,0.75);
@@ -636,8 +638,8 @@ StScrollBar {
 			box-shadow: none;
 			background-image: none;
 			background-gradient-direction: vertical;
-		background-gradient-start: rgba(160,160,160,0.8);
-		background-gradient-end: rgba(180,180,180,1);
+			background-gradient-start: rgba(80,80,80,0.8);
+			background-gradient-end: rgba(100,100,100,1);
 			color: white;
 			text-shadow:none;
 			icon-shadow:none; }
@@ -1044,23 +1046,23 @@ StScrollBar {
 
 .search-entry {
 	width: 320px;
-	border: none;
-	color: #4c4c4c;
-	caret-color: #4c4c4c;
+	border: solid 2px rgba(255,255,255,0.2);
+	color: #e4e4e4;
+	caret-color: gray;
 	caret-size: 1px;
-	background-color: rgba(255,255,255,0.9);
+	background-color: rgba(255,255,255,0.1);
 	background-gradient-direction: none;
 	padding: 7px 9px;
-	border-radius: 4px;
+	border-radius: 3px;
 	box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.4);
 }
 .search-entry:hover {
-	background-color: rgba(255,255,255,1);
-	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+	background-color: rgba(255,255,255,0.2);
+	border: solid 2px rgba(255,255,255,0.3);
 	transition-duration: 200ms;
 }
 .search-entry:focus {
-	background-color: white;
+	background-color: rgba(255,255,255,0.75);
 	color: #4d4d4d;
 	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
 	transition-duration: 200ms;
@@ -1068,13 +1070,13 @@ StScrollBar {
 .search-entry .search-entry-icon {
 	icon-size: 1em;
 	padding: 0 4px;
-	color: black;
+	color: #e4e4e4;
 }
 .search-entry:hover .search-entry-icon {
-	color: #5e5e5e;
+	color: #e4e4e4;
 }
 .search-entry:focus .search-entry-icon {
-	color: #1e1e1e;
+	color: gray;
 }
 
 #searchResultsBin {
@@ -1140,13 +1142,13 @@ StScrollBar {
 	background-gradient-end: rgba(180,180,180,0.7);
 	border-color: rgba(100,100,100,0.8);
 	box-shadow: 0;
-	width: 70px;
+	padding: 0 0;
 }
 
 #dash .placeholder {
 	background-image: url("assets/dash-placeholder.svg");
 	background-size: contain;
-	height: 24px;
+	height: 64px;
 }
 #dash .empty-dash-drop-target {
 	width: 24px;
@@ -1157,7 +1159,7 @@ StScrollBar {
 	color: white;
 }
 .dash-item-container > StWidget {
-	padding: 4px 10px;
+	padding: 2px 2px;
 }
 
 .dash-label {
@@ -1173,8 +1175,8 @@ StScrollBar {
 /* App Vault/Grid */
 .icon-grid {
 	spacing: 30px;
-	-shell-grid-horizontal-item-size: 144px; /* Default 136*/
-	-shell-grid-vertical-item-size: 144px;
+	-shell-grid-horizontal-item-size: 124px; /* Default 136*/
+	-shell-grid-vertical-item-size: 124px;
 }
 .icon-grid .overview-icon {
 	icon-size: 96px;
@@ -1378,16 +1380,18 @@ StScrollBar {
 	font-size: 11pt;
 	width: 34em;
 	margin: 5px;
-	border-radius: 0;
-	color: white;
-	background-color: rgba(60,60,60,0.85);
+	border-radius: 4px;
+	color: gray;
+	background-color: rgba(255,255,255,0.75);
 	border: none;
 	border-width: 0px;
-	box-shadow: 0 3px 8px 0 rgba(0,0,0,0.5); }
+	box-shadow: 3px 3px 8px 5px rgba(0,0,0,0.5); }
 	.notification-banner:hover, .notification-banner:focus {
 		margin: 5px;
-		background-color: rgba(60,60,60,0.9);
-		box-shadow: 0 5px 10px 0 rgba(255,255,255,0.5); }
+		background-color: rgba(255,255,255,0.75);
+		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5); 
+		border-radius: 4px;
+}
 	.notification-banner .notification-icon {
 		padding: 5px; }
 	.notification-banner .notification-content {
@@ -1396,29 +1400,28 @@ StScrollBar {
 	.notification-banner .secondary-icon {
 		icon-size: 1.09em; }
 	.notification-banner .notification-actions {
-		background-color: rgba(60,60,60,0.85);
-		border-radius: 0;
+		background-color: rgba(255,255,255,0.75);
 		padding-top: 0px;
 		spacing: 1px; }
 	.notification-banner .notification-button {
 		border: none;
 		padding: 4px 4px 5px;
-		color: white;
+		color: gray;
 		font-weight: normal;
-		background-color: rgba(60,60,60,0.85);
-		border-color: rgba(0,0,0,0.4);
+		background-color: rgba(255,255,255,0.75);
+		border-color: rgba(0,0,0,0.1);
 		box-shadow: none;
-		border-radius: 0px;
+		border-radius: 4px;
 		text-shadow:none;}
 		.notification-banner .notification-button:first-child {
-			border-radius: 0 0 0 0; }
+			border-radius: 4px 4px 0 0; }
 		.notification-banner .notification-button:not(:first-child):not(:last-child) {
 			border-radius: 0px; }
 		.notification-banner .notification-button:last-child {
-			border-radius: 0 0 0 0; }
+			border-radius: 0 0 4px 4px; }
 		.notification-banner .notification-button:hover, .notification-banner .notification-buttonfocus, .notification-banner .notification-button:focus {
-			background-color: rgba(60,60,60,0.95);
-			color: white; }
+			background-color: rgba(255,255,255,0.85);
+			color: gray; }
 
 .notification StEntry,
 .notification-banner StEntry {
