@@ -15,8 +15,8 @@
    height="24"
    id="svg11300"
    sodipodi:version="0.32"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="popup.svg"
+   inkscape:version="0.91 r"
+   sodipodi:docname="notification.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
    style="display:inline;enable-background:new">
@@ -29,18 +29,18 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="20.594485"
-     inkscape:cx="7.1227846"
-     inkscape:cy="12"
+     inkscape:zoom="7.28125"
+     inkscape:cx="-21.100238"
+     inkscape:cy="22.837282"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="846"
+     inkscape:window-width="1366"
+     inkscape:window-height="718"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="22"
      width="400px"
      height="300px"
      inkscape:snap-nodes="true"
@@ -129,20 +129,12 @@
      inkscape:label="Base"
      id="layer1"
      transform="translate(0,-276)">
-    <path
-       style="opacity:0.3;fill:#ffffff;fill-opacity:1;stroke:none"
-       d="M 2 0 C 0.892 0 3.0947467e-18 0.892 0 2 L 0 22 C 0 23.108 0.892 24 2 24 L 22 24 C 23.108 24 24 23.108 24 22 L 24 2 C 24 0.892 23.108 3.0947467e-18 22 0 L 2 0 z M 3 1 L 21 1 C 22.108 1 23 1.892 23 3 L 23 21 C 23 22.108 22.108 23 21 23 L 3 23 C 1.892 23 1 22.108 1 21 L 1 3 C 1 1.892 1.892 1 3 1 z "
-       transform="translate(0,276)"
-       id="rect3005" />
     <rect
-       style="fill:#000000;fill-opacity:1;stroke:none;opacity:0.85"
-       id="rect3003"
-       width="22"
-       height="22"
-       x="1"
-       y="1"
-       ry="2"
-       rx="2"
-       transform="translate(0,276)" />
+       style="fill:#3c3c3c;fill-opacity:1;stroke:#646464;stroke-width:0.95879829;stroke-opacity:0.78431373"
+       id="rect4144"
+       width="23.011158"
+       height="23.011158"
+       x="0.49442062"
+       y="276.49442" />
   </g>
 </svg>

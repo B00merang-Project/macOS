@@ -20,7 +20,7 @@
   <distance name="button_height" value="18"/>
   <distance name="title_vertical_pad" value="0"/>
   <border name="title_border" left="0" right="0" top="5" bottom="0"/>
-  <border name="button_border" left="5" right="0" top="5" bottom="0"/>
+  <border name="button_border" left="5" right="0" top="5" bottom="5"/>
 </frame_geometry>
 
 <frame_geometry name="maximized" rounded_top_left="false" rounded_top_right="false" rounded_bottom_left="false" rounded_bottom_right="false" title_scale="medium">
@@ -33,7 +33,7 @@
   <distance name="button_height" value="18"/>
   <distance name="title_vertical_pad" value="0"/>
   <border name="title_border" left="0" right="0" top="5" bottom="0"/>
-  <border name="button_border" left="5" right="1" top="5" bottom="0"/>
+  <border name="button_border" left="5" right="1" top="5" bottom="5"/>
 </frame_geometry>
 
 <frame_geometry name="border" parent="normal" has_title="false">
@@ -44,11 +44,19 @@
 </frame_geometry>
 
 <draw_ops name="title-text-focused">
+  <clip x="5" y="0" width="width" height="height"/>
+<icon  x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -70"
+         y="(height-mini_icon_height) / 2 + 2"
+         width="mini_icon_width-1" height="mini_icon_height-1"/>
 <title color="#4c4c4c" x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -48" y="(height - title_height) / 2"/> 
 </draw_ops>
 
 <draw_ops name="title-text-unfocused">
- <title color="#cfcfcf" x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -48" y="(height - title_height) / 2"/>  
+  <clip x="5" y="0" width="width" height="height"/>
+<icon  x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -70"
+         y="(height-mini_icon_height) / 2 + 2"
+         width="mini_icon_width-1" height="mini_icon_height-1"/>
+ <title color="#9f9f9f" x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -48" y="(height - title_height) / 2"/>  
 </draw_ops>
 
 <draw_ops name="blank">
