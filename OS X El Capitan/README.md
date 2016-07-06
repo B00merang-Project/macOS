@@ -17,7 +17,6 @@ To set the theme in Xfce, run the following commands in Terminal,
 
 ```
 xfconf-query -c xsettings -p /Net/ThemeName -s "OS X El Capitan"
-xfconf-query -c xfwm4 -p /general/theme -s "OS X El Capitan"
 ```
 
 ### Requirements ###
