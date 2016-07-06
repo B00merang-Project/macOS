@@ -1,5 +1,6 @@
 ## OS X mimics the flat and bright look of OS X 10.11 El Capitan ##
 
+![OS-X-el-Cap](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/1279540_orig.png)
 More info on http://b00merang.weebly.com/os-x-el-capitan.html
 
 ###Manual installation###
