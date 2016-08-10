@@ -2341,6 +2341,10 @@ GtkStatusbar .button:checked,
     background: @base-color;
 }
 
+.header-bar .entry:selected {
+    background-color: @theme_selected_bg_color;
+}
+
 /***********
  * toolbar *
  ***********/
