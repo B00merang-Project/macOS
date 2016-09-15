@@ -115,7 +115,7 @@
 .view text,
 iconview text,
 textview text {
-  color: black;
+  @theme_fg_color;
   background-color: @theme_base_color; }
   .view:backdrop, iconview:backdrop,
   .view text:backdrop,
@@ -205,7 +205,7 @@ assistant .sidebar label.highlight {
 .csd popover.background.touch-selection, .csd popover.background.magnifier, popover.background.touch-selection, popover.background.magnifier, .csd popover.background.osd, popover.background.osd, .app-notification,
 .app-notification.frame, .osd .scale-popup,
 .osd {
-  color: @theme_unfocused_fg_color;
+  color: @theme_dark_fg_color;
   border: none;
   background-color: rgba(28, 31, 32, 0.7);
   background-clip: padding-box;
@@ -248,7 +248,7 @@ entry {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: @theme_fg_color;
   border-color: @borders;
-  background-color: alpha(white, 0.7);
+  background-color: alpha(@theme_base_color, 0.7);
   box-shadow: solid 0 1px 0 1px rgba(0, 0, 0, 0.2); }
   spinbutton:not(.vertical) image.left,
   entry image.left {
@@ -679,10 +679,10 @@ button {
 button.osd {
   min-width: 24px;
   min-height: 32px;
-  color: @theme_unfocused_fg_color;
+  color: @theme_dark_fg_color;;
   border-radius: 5px;
   outline-color: rgba(238, 238, 236, 0.3);
-  color: @theme_unfocused_fg_color;
+  color: @theme_dark_fg_color;
   border-color: rgba(0, 0, 0, 0.7);
   background-color: transparent;
   background-image: image(rgba(28, 31, 32, 0.7));
@@ -744,7 +744,7 @@ button.osd {
 .csd popover.background.touch-selection button, .csd popover.background.magnifier button, popover.background.touch-selection button, popover.background.magnifier button, .app-notification button,
 .app-notification.frame button, .osd
 button {
-  color: @theme_unfocused_fg_color;
+  color: @theme_dark_fg_color;
   border-color: rgba(0, 0, 0, 0.7);
   background-color: transparent;
   background-image: image(rgba(28, 31, 32, 0.7));
@@ -1864,13 +1864,13 @@ headerbar {
   border-radius: 0;
   background-image: linear-gradient(to bottom, shade(@titlebar_bg_color, 1.1), shade(@titlebar_bg_color, 0.9));
   background-color: @titlebar_bg_color;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8); }
+  box-shadow: inset 0 1px alpha(@theme_base_color, 0.8); }
   .titlebar:backdrop:not(headerbar),
   headerbar:backdrop {
     border-color: shade(@borders, 0.95);
     background-color: @theme_bg_color;
     background-image: none;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 1px alpha(@theme_base_color, 0.8);
     transition: 200ms ease-out; }
   .titlebar:not(headerbar) .title,
   headerbar .title {
@@ -2947,11 +2947,8 @@ switch {
       border-color: @theme_unfocused_bg_color;
       background-color: shade(@borders, 0.95); }
   switch slider {
-    margin: -4px;
-    margin-left: -1px;
-    margin-right: -1px;
-    min-width: 4px;
-    min-height: 12px;
+    min-width: 20px;
+    min-height: 20px;
     border: 1px solid;
     border-radius: 20px;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -2961,7 +2958,7 @@ switch {
     text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
     -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
     background-image: linear-gradient(to bottom, @theme_bg_color, @theme_bg_color);
-    box-shadow: inset 0 1px @theme_bg_color, inset 0 -2px #ededec, inset 0 -1px #cacac8, 0 1px rgba(0, 0, 0, 0.1); }
+    box-shadow: inset 0 1px @theme_bg_color, inset 0 -2px shade(@theme_bg_color, 0.95), inset 0 -1px shade(@theme_bg_color, 0.85), 0 1px rgba(0, 0, 0, 0.1); }
   switch:hover slider {
     color: @theme_fg_color;
     outline-color: rgba(46, 52, 54, 0.3);
@@ -3476,7 +3473,7 @@ scale {
     background-color: @borders; }
   scale fill:disabled:backdrop, scale fill:disabled {
     border-color: transparent;
-    background-color: transparent; }
+    background-color: @borders; }
   .osd scale fill {
     background-color: rgba(91, 91, 90, 0.775); }
     .osd scale fill:disabled:backdrop, .osd scale fill:disabled {
@@ -3521,7 +3518,7 @@ scale slider {
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
       scale slider:backdrop label, scale slider:backdrop {
         color: @theme_insensitive_fg_color; }
-      scale slider:backdrop:disabled {
+      scale slider:disabled:backdrop {
         border-color: @borders;
         background-color: @theme_insensitive_bg_color;
         background-image: none;
@@ -4126,7 +4123,7 @@ levelbar trough {
   border: 1px solid;
   padding: 2px;
   border-radius: 0;
-  color: black;
+  @theme_fg_color;
   border-color: @borders;
   background-color: @theme_bg_color;
   box-shadow: inset 0 0 0 1px rgba(74, 144, 217, 0); }
@@ -4326,7 +4323,7 @@ separator {
  * Lists *
  *********/
 list {
-  color: black;
+  @theme_fg_color;
   background-color: @theme_bg_color;
   border-color: @borders; }
   list:backdrop {
@@ -4392,7 +4389,7 @@ expander arrow {
  * Calendar *
  ***********/
 calendar {
-  color: black;
+  @theme_fg_color;
   border: 1px solid @borders; }
   calendar:selected {
     border-radius: 0; }
@@ -4808,7 +4805,7 @@ colorswatch.dark overlay {
   colorswatch.dark overlay:backdrop {
     color: @theme_unfocused_bg_color; }
 colorswatch.light overlay {
-  color: black; }
+  @theme_fg_color; }
   colorswatch.light overlay:hover {
     border-color: rgba(0, 0, 0, 0.5); }
   colorswatch.light overlay:backdrop {

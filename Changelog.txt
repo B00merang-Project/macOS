@@ -20,3 +20,5 @@ v0.6 : NEW Gnome-Shell theme, toolbar buttons enhanced, new thumbnails, new grad
 v0.7 : Fixes to the gnome-shell theme to add compatibility with the dash to dock extension, new selected_bg_color, other color fixes, toolbar active button color fixed, changes to the cinnamon theme.
 --------------------------
 v0.8 : Fixes to entries and toolbar buttons, dock-like theme for cinnamon, color fixes, new backdrop colors
+--------------------------
+v0.9 : Fixes and corrections to the CSS structure and general colors for GTK 3.20, dark theme for GTK 3.20
