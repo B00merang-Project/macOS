@@ -115,7 +115,7 @@
 .view text,
 iconview text,
 textview text {
-  @theme_fg_color;
+  color: @theme_fg_color;
   background-color: @theme_base_color; }
   .view:backdrop, iconview:backdrop,
   .view text:backdrop,
@@ -4123,7 +4123,7 @@ levelbar trough {
   border: 1px solid;
   padding: 2px;
   border-radius: 0;
-  @theme_fg_color;
+  color: @theme_fg_color;
   border-color: @borders;
   background-color: @theme_bg_color;
   box-shadow: inset 0 0 0 1px rgba(74, 144, 217, 0); }
@@ -4323,7 +4323,7 @@ separator {
  * Lists *
  *********/
 list {
-  @theme_fg_color;
+  color: @theme_fg_color;
   background-color: @theme_bg_color;
   border-color: @borders; }
   list:backdrop {
@@ -4389,7 +4389,7 @@ expander arrow {
  * Calendar *
  ***********/
 calendar {
-  @theme_fg_color;
+  color: @theme_fg_color;
   border: 1px solid @borders; }
   calendar:selected {
     border-radius: 0; }
@@ -4805,7 +4805,7 @@ colorswatch.dark overlay {
   colorswatch.dark overlay:backdrop {
     color: @theme_unfocused_bg_color; }
 colorswatch.light overlay {
-  @theme_fg_color; }
+  color: @theme_fg_color; }
   colorswatch.light overlay:hover {
     border-color: rgba(0, 0, 0, 0.5); }
   colorswatch.light overlay:backdrop {
