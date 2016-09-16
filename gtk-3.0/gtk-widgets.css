@@ -19,7 +19,7 @@
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
-    -GtkPaned-handle-size: 4;
+    -GtkPaned-handle-size: 1;
     -GtkProgressBar-min-horizontal-bar-height: 6;
     -GtkProgressBar-min-vertical-bar-width: 6;
     -GtkRange-slider-width: 12;
@@ -2012,6 +2012,10 @@ GtkSidebarRow .sidebar-label:dir(rtl) {
 GtkStatusbar {
     padding: 4px;
     color: @theme_fg_color;
+}
+
+GtkStatusbar .frame {
+    border-width: 0;
 }
 
 /**********
