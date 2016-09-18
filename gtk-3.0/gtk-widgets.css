@@ -2342,7 +2342,11 @@ GtkStatusbar .button:checked,
 .header-bar .entry:active,
 .header-bar .entry:focus {
     border-color: shade(@titlebar_bg_color, 0.7);
-    background: @base-color;
+    background: @theme_base_color;
+}
+
+.header-bar .entry:selected {
+    background-color: @theme_selected_bg_color;
 }
 
 /***********
