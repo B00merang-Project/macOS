@@ -3415,7 +3415,7 @@ scale trough, scale fill, progressbar trough {
 
 progressbar progress {
   border: 1px solid @theme_selected_bg_color;
-  border-radius: 0;
+  border-radius: 4px;
   background-color: @theme_selected_bg_color; }
 
 /* progressbar color */
@@ -3501,8 +3501,7 @@ scale slider {
       border-color: shade(@theme_base_color, 0.9); }
     scale slider:disabled {
       border-color: @borders;
-      background-color: @theme_insensitive_bg_color;
-      background-image: none;
+      background-image: image(#f2f2f2);
       text-shadow: none;
       -gtk-icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
@@ -3520,8 +3519,7 @@ scale slider {
         color: @theme_insensitive_fg_color; }
       scale slider:disabled:backdrop {
         border-color: @borders;
-        background-color: @theme_insensitive_bg_color;
-        background-image: none;
+        background-image: image(#f2f2f2);
         text-shadow: none;
         -gtk-icon-shadow: none;
         box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
@@ -4067,6 +4065,7 @@ scale slider {
  *****************/
 progressbar {
   font-size: smaller;
+  border-radius: 4px; 
   color: @theme_selected_fg_color; }
   progressbar.horizontal trough,
   progressbar.horizontal progress {
@@ -4082,8 +4081,8 @@ progressbar {
     box-shadow: none;
     transition: 200ms ease-out; }
   progressbar progress {
-    border-radius: 0; }
-    progressbar progress.left {
+    border-radius: 4px; }
+/*    progressbar progress.left {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0; }
     progressbar progress.right {
@@ -4094,7 +4093,7 @@ progressbar {
       border-top-left-radius: 0; }
     progressbar progress.bottom {
       border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0; }
+      border-bottom-left-radius: 0; } */
   progressbar.osd {
     min-width: 3px;
     min-height: 3px;
