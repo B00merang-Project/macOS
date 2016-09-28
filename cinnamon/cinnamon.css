@@ -55,21 +55,21 @@ StScrollBar StBin#trough {
 
 StScrollBar StButton#vhandle,
 StScrollBar StButton#hhandle {
-	background-color: rgba(150,150,150,0.6);
-	border-radius: 6px;
-	border: none;
+    background-color: rgba(150,150,150,0.6);
+    border-radius: 6px;
+    border: none;
 }
 
  StScrollBar StButton#vhandle:hover,
  StScrollBar StButton#hhandle:hover,
  StScrollBar StButton#vhandle:focus,
  StScrollBar StButton#hhandle:focus {
-	background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.4);
 }
 
  StScrollBar StButton#vhandle:active,
  StScrollBar StButton#hhandle:active {
-	background-color: rgba(0,0,0,0.55);
+    background-color: rgba(0,0,0,0.55);
 }
 /* ===================================================================
  * Tooltips
@@ -174,30 +174,30 @@ StScrollBar StButton#hhandle {
  * ===================================================================*/
 
 .popup-menu-boxpointer {
-	-arrow-background-image: none;
-	-arrow-border-color: #3c4041;
-	-boxpointer-gap: 0;
-	-arrow-border-radius: 16px;
-	-arrow-border-width: 0px;
+    -arrow-background-image: none;
+    -arrow-border-color: #3c4041;
+    -boxpointer-gap: 0;
+    -arrow-border-radius: 16px;
+    -arrow-border-width: 0px;
 }
 .popup-menu {
-	color: #3c4041;
-	font-size: 9.5pt;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	min-width: 250px;
-	min-height: 80px;
-	border:rgba(0,0,0,0.8);
-	border-radius: 3px;
-	box-shadow: 0px 5px 11px 7px rgba(0,0,0,0.25);
-	background-color: rgba(245,245,245,0.9);
-/*	background-image: url('menu-background.png');*/
-	border-top: 0px;
+    color: #3c4041;
+    font-size: 9.5pt;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    min-width: 250px;
+    min-height: 80px;
+    border:rgba(0,0,0,0.8);
+    border-radius: 3px;
+    box-shadow: 0px 5px 11px 7px rgba(0,0,0,0.25);
+    background-color: rgba(245,245,245,0.9);
+/*    background-image: url('menu-background.png');*/
+    border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-	border-bottom: 0px;
+    border-bottom: 0px;
 }
 
 .popup-menu StEntry {
@@ -222,38 +222,38 @@ StScrollBar StButton#hhandle {
 
 }
 .popup-sub-menu {
-	color: #3c4041;	
-   	border: 1px rgba(150,150,150,0.5);
-	border-left: 0px;
-	padding-left: 14px;
-	border-right: 0px;
+    color: #3c4041;    
+       border: 1px rgba(150,150,150,0.5);
+    border-left: 0px;
+    padding-left: 14px;
+    border-right: 0px;
 }
 .popup-sub-menu .popup-menu-item:ltr {
-	padding-right: 0em;
+    padding-right: 0em;
 }
 .popup-sub-menu .popup-menu-item:rtl {
-	padding-left: 0em;
+    padding-left: 0em;
 }
 .popup-sub-menu StScrollBar {
-	padding: 4px;
-	padding-right: 0;
+    padding: 4px;
+    padding-right: 0;
 }
 .popup-sub-menu StScrollBar StBin#trough {
-	border-width: 0px;
+    border-width: 0px;
 }
 .popup-sub-menu StScrollBar StBin#vhandle {
-  	background-color: rgba(215,215,215,1);
-    	border-width: 0px;
+      background-color: rgba(215,215,215,1);
+    border-width: 0px;
 }
 .popup-combo-menu {
-   	 color: #eeeeee;
-    	background-gradient-direction: vertical;
- 	background-gradient-start: rgba(52,52,52,0.95);
- 	background-gradient-end: rgba(44,44,44,0.95);
-    	border: 1px solid rgba(255,255,255,0.1);
-    	padding:  0em;
-    	font-size: 7.5pt;
-    	border-radius: 2px;
+    color: #eeeeee;
+    background-gradient-direction: vertical;
+     background-gradient-start: rgba(52,52,52,0.95);
+     background-gradient-end: rgba(44,44,44,0.95);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding:  0em;
+    font-size: 7.5pt;
+    border-radius: 2px;
 }
 
 /* The remaining popup-menu sizing is all done in ems, so that if you
@@ -265,36 +265,36 @@ padding: 0.8em 0em;
 .popup-menu-item {
 padding: .4em 1.75em;
 spacing: 1em;
-    	border: 1px solid transparent;
-    	border-bottom: 0px;
-      	border-left: 0px;
-      	border-right: 0px;
+    border: 1px solid transparent;
+    border-bottom: 0px;
+      border-left: 0px;
+      border-right: 0px;
 }
 .popup-menu-item:active {
  color: #3c4041;
 border-image: url('background-assets/hover.svg') 2 2 2 2 stretch;
 border: 1px transparent;
-  	border-bottom: 0px;
-      	border-left: 0px;
-      	border-right: 0px;
+      border-bottom: 0px;
+      border-left: 0px;
+      border-right: 0px;
 }
 .popup-menu-item:insensitive {
-	color: #8c8c8c;
+    color: #8c8c8c;
 }
 .popup-image-menu-item {
 }
 .popup-combobox-item {
-	spacing: 1em;
+    spacing: 1em;
 }
 .popup-separator-menu-item {
-	background-color: #e4e4e4;
-	box-shadow: 0px 1px 1px 0px rgba(220,220,220,0.06);
-	border-radius: 5px; 
-    	-margin-horizontal: 14px;
-    	height: 1px;
+    background-color: #e4e4e4;
+    box-shadow: 0px 1px 1px 0px rgba(220,220,220,0.06);
+    border-radius: 5px; 
+    -margin-horizontal: 14px;
+    height: 1px;
 }
 .popup-alternating-menu-item:alternate {
-	font-weight: normal;
+    font-weight: normal;
 }
 .popup-slider-menu-item,
 .slider {
@@ -310,17 +310,17 @@ border: 1px transparent;
 }
 
 .popup-device-menu-item {
-	spacing: .5em;
+    spacing: .5em;
 }
 .popup-inactive-menu-item {
-	font-weight: normal;
-	color: #999;
+    font-weight: normal;
+    color: #999;
 }
 .popup-subtitle-menu-item {
-	font-weight: normal;
+    font-weight: normal;
 }
 .popup-menu-icon {
-	icon-size: 1em;
+    icon-size: 1em;
 }
 /* Switches (to be used in menus) */
 
@@ -350,8 +350,8 @@ border: 1px transparent;
  * Panel (panel.js)
  * ===================================================================*/
 #panel {
-	background-color: rgba(245,255,255,0.0);
-	box-shadow: 0 0 6px 1px rgba(20,20,20,0.5);
+    background-color: rgba(245,255,255,0.7);
+    box-shadow: 0 4px 6px 1px rgba(20,20,20,0.5);
     outline: 1px transparent;
     color: #326b65;
     font-size: 9pt;
@@ -359,21 +359,8 @@ border: 1px transparent;
     padding: 0px;
 }
 
-.panel-bottom #panelLeft, .panel-bottom #panelRight {
-	background: transparent;
-}
-
-.panel-bottom #panelCenter {
-	background-color: rgba(180,170,170,0.9);
-	border-radius: 4px 4px 0 0;
-}
-
-.panel-top #panelCenter, .panel-top #panelLeft, .panel-top #panelRight {
-	background-color: rgba(245,255,255,0.75);
-}
-
 #panelLeft, #panelCenter, #panelRight {
-	spacing: 0px;
+    spacing: 0px;
 }
 
 #panelLeft:ltr {
@@ -396,38 +383,38 @@ spacing: 0px;
 
 .panel-status-button,
 .panel-button {
--natural-hpadding: 5px;
--minimum-hpadding: 5px;
-font-weight: normal;
-border: 1px solid transparent;
-transition-duration: 150; 
+    -natural-hpadding: 5px;
+    -minimum-hpadding: 5px;
+    font-weight: normal;
+    border: 1px solid transparent;
+    transition-duration: 150; 
 }
 
 .panel-status-button:hover,
 .panel-button:hover {
-	background-color: #083854;
-        border-radius: 0px;
-	color:  #083854;
-	box-shadow: inset 0px -1px 0px 0px rgba(37,154,202,1);
-	transition-duration: 100;
+    background-color: #083854;
+    border-radius: 0px;
+    color:  #083854;
+    box-shadow: inset 0px -1px 0px 0px rgba(37,154,202,1);
+    transition-duration: 100;
 }
 
 .system-status-icon {
-icon-size: 1.3em;
+    icon-size: 1.3em;
 }
 
 #panelLeft:dnd {
-background: rgba(220,241,241,0.9);
+    background: rgba(220,241,241,0.9);
 
 }
 
 #panelCenter:dnd {
-background: rgba(230,210,230,0.95);
-border-radius: 0;
+    background: rgba(230,210,230,0.95);
+    border-radius: 0;
 }
 
 #panelRight:dnd {
-background: rgba(255,255,210,0.8);
+    background: rgba(255,255,210,0.8);
 }
 /* ===================================================================
  * Expo view
@@ -533,9 +520,9 @@ background: rgba(255,255,210,0.8);
 }
 
 .workspace-osd {
-	background-color: rgba(50,50,50,0.8);
-	border: 2px solid rgba(90,90,90,0.95);
-	border-radius: 4px;
+    background-color: rgba(50,50,50,0.8);
+    border: 2px solid rgba(90,90,90,0.95);
+    border-radius: 4px;
     padding: 12px 17px;
     color: #fff;
     font-weight: normal;
@@ -871,7 +858,7 @@ background: rgba(255,255,210,0.8);
 
 .switcher-list .item-box {
     padding: 8px;
-	border: 3px solid transparent;
+    border: 3px solid transparent;
 }
 
 .switcher-list .item-box:outlined {
@@ -881,7 +868,7 @@ background: rgba(255,255,210,0.8);
 .switcher-list .item-box:selected {
     font-weigth: normal;
     border-radius: 4px;
-	border: 3px solid white;
+    border: 3px solid white;
     color: #fff;
 }
 
@@ -1433,9 +1420,9 @@ background: rgba(255,255,210,0.8);
  * ===================================================================*/
 
 .menu-favorites-box {
-	margin: auto;
-	padding: 10px;
-	border-image: url('favorites-background.png') 11;
+    margin: auto;
+    padding: 10px;
+    border-image: url('favorites-background.png') 11;
 }
 
 .menu-favorites-button {
@@ -1923,7 +1910,7 @@ background: rgba(255,255,210,0.8);
 .applet-box:active {
     font-weight: normal;
     color: white; 
-	background-color: #155cc4;
+    background-color: #155cc4;
 }
 
 .applet-label {
@@ -1981,7 +1968,7 @@ background: rgba(255,255,210,0.8);
     padding: 10px;
     color: black;
     text-align: center;
-	border-radius: 4px;
+    border-radius: 4px;
 }
 
 .info-osd {
@@ -1991,7 +1978,7 @@ background: rgba(255,255,210,0.8);
     color: black;
     padding: 20px;
     text-align: center;
-	border-radius: 4px;
+    border-radius: 4px;
 }
 
 .osd-window {
@@ -1999,7 +1986,7 @@ background: rgba(255,255,210,0.8);
     padding: 20px;
     color: black;
     spacing: 1em;
-	border-radius: 4px;
+    border-radius: 4px;
 }
 
 .osd-window .level {

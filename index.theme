@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=OS X El Capitan
-Comment=A theme by Christian Medel (Elbullazul) simulating OS X 10.11 El Capitan
+Name=macOS Sierra
+Comment=A theme by Christian Medel (Elbullazul) simulating OS X 10.11 El Capitan / macOS Sierra
 Comment=v0.5
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=OS X El Capitan
-MetacityTheme=OS X El Capitan
-ButtonLayout=:minimize,maximize,close
+GtkTheme=macOS Sierra
+MetacityTheme=macOS Sierra
+ButtonLayout=close,minimize,maximize:

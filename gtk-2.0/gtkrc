@@ -781,26 +781,6 @@ widget "xfwm4-tabwin*" style "xfwm-tabwin"
 widget_class "*XfsmLogoutDialog*" style "xfsm-logout"
 widget_class "*XfsmLogoutDialog*GtkButton" style "xfsm-logout-button"
 
-style "panel" = "dark"
-{
-	xthickness = 0
-	ythickness = 0
-
-	bg_pixmap[NORMAL]	= "Panel/panel.png"
-	base[NORMAL] 		= "#000000"
-	base[ACTIVE] 		= "#000000"
-	bg[NORMAL] 		= "#1e1e1e"
-	bg[PRELIGHT]		= "#066dc1"
-	bg[SELECTED]		= "#066dc1"
-	text[NORMAL]		= @fg_color
-	text[ACTIVE]		= @fg_color
-	
-
-	engine "murrine" {
-		colorize_scrollbar = FALSE
-	}
-}
-
 # Panel for GTK2 environments (ex. LXDE and MATE)
 
 style "panel_task_button" = "dark"
