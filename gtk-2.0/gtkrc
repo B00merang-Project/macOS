@@ -178,7 +178,7 @@ style "murrine-notebook" = "murrine-notebook-bg" {
 	ythickness = 2
 
 	engine "murrine" {
-		roundness = 6
+		roundness = 0
 		gradient_shades = {1.1,1.0,1.0,0.9}
 	}
 }
