@@ -2191,6 +2191,7 @@ window.csd > .titlebar:not(headerbar) {
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 3px;
     border: none;
     background-image: -gtk-scaled(url("buttons/minimize-focused-normal.png"));
 }
