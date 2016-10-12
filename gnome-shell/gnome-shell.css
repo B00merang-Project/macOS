@@ -1,8 +1,9 @@
-﻿/* OS X El Capitan - Shell theme (spinoff from the Windows 10 SHELL theme)
+﻿/* 
+* macOS / OS X El Capitan Shell theme (spinoff from the Windows 10 SHELL theme)
 *
-*Author : Christian Medel (Elbullazul)
+* Author : Christian Medel (Elbullazul)
 *
-*More info : b00merang.weebly.com/os-x-el-capitan.html
+* More info : b00merang.weebly.com/macos-sierra.html
 *
 * Layout and code style adapted from the Paper theme & Flat Remix theme.
 *
@@ -514,8 +515,8 @@ StScrollBar {
 
 .switcher-list .item-box:selected {
 	border-radius: 4px;
-	background-color: rgba(255,255,255,0.4);
-	color: white; }
+	background-color: rgba(255,255,255,0.7);
+	color: #4c4c4c; }
 
 .switcher-list .thumbnail-box {
 	padding: 2px;
@@ -569,8 +570,8 @@ StScrollBar {
 .osd-window,
 .resize-popup,
 .switcher-list, .workspace-switcher-container {
-	color: white;
-	background-color: rgba(25,25,25,0.7);
+	color: transparent;
+	background-color: rgba(255,255,255,0.6);
 	border: none;
 	border-radius: 6px;
 	padding: 12px;
