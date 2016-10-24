@@ -1,7 +1,15 @@
-## macOS Sierra theme reproducing the clean and bright look of OS X and macOS ##
+# macOS Sierra 
+###Theme reproducing the clean and bright look of Apple's OS ###
 
 ![macOS-Sierra-OS-X](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/1279540_orig.png)
-More info on http://b00merang.weebly.com/macos-sierra.html
+
+**Maintainer :** [Elbullazul](https://github.com/Elbullazul)
+
+**Distributor :** [B00merang Project](https://github.com/B00merang-Project)
+
+**License :** GPL v3
+
+**More info :** http://b00merang.weebly.com/macos-sierra.html
 
 ###Manual installation###
 
@@ -25,8 +33,6 @@ xfconf-query -c xsettings -p /Net/ThemeName -s "macOS Sierra"
 - GTK+ 3.6 or above
 - Murrine and Pixmap theme engines
 
-### Code and license ###
+### Contribute ###
 
-License: GPL-3.0+
-
-Report bugs or contribute at http://b00merang.weebly.com/contact.html
+Contact us @ http://b00merang.weebly.com/contact.html
