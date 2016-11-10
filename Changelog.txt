@@ -23,3 +23,5 @@ v0.8 : Fixes to entries and toolbar buttons, dock-like theme for cinnamon, color
 --------------------------
 v0.9 : Fixes and corrections to the CSS structure and general colors for GTK 3.20, dark theme for GTK 3.20
 v0.9.1 : GTK 3.18 fixes
+--------------------------
+v1.0 : Stable version achieved at last! GTK 3.20 solid compatibility, color fixes and new unity theme
