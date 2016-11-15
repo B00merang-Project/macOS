@@ -219,11 +219,11 @@ StScrollBar StButton#hhandle {
 }
 
 .popup-submenu-menu-item:open {
-
 }
+
 .popup-sub-menu {
     color: #3c4041;    
-       border: 1px rgba(150,150,150,0.5);
+    border: 1px rgba(150,150,150,0.5);
     border-left: 0px;
     padding-left: 14px;
     border-right: 0px;
@@ -242,14 +242,14 @@ StScrollBar StButton#hhandle {
     border-width: 0px;
 }
 .popup-sub-menu StScrollBar StBin#vhandle {
-      background-color: rgba(215,215,215,1);
+    background-color: rgba(215,215,215,1);
     border-width: 0px;
 }
 .popup-combo-menu {
     color: #eeeeee;
     background-gradient-direction: vertical;
-     background-gradient-start: rgba(52,52,52,0.95);
-     background-gradient-end: rgba(44,44,44,0.95);
+    background-gradient-start: rgba(52,52,52,0.95);
+    background-gradient-end: rgba(44,44,44,0.95);
     border: 1px solid rgba(255,255,255,0.1);
     padding:  0em;
     font-size: 7.5pt;
@@ -260,24 +260,27 @@ StScrollBar StButton#hhandle {
  * override .popup-menu.font-size, everything else will scale with it.
  */
 .popup-menu-content {
-padding: 0.8em 0em;
+    padding: 0.8em 0em;
 }
+
 .popup-menu-item {
-padding: .4em 1.75em;
-spacing: 1em;
+    padding: .4em 1.75em;
+    spacing: 1em;
     border: 1px solid transparent;
     border-bottom: 0px;
-      border-left: 0px;
-      border-right: 0px;
+    border-left: 0px;
+    border-right: 0px;
 }
+
 .popup-menu-item:active {
- color: #3c4041;
-border-image: url('background-assets/hover.svg') 2 2 2 2 stretch;
-border: 1px transparent;
-      border-bottom: 0px;
-      border-left: 0px;
-      border-right: 0px;
+    color: #3c4041;
+    border-image: url('background-assets/hover.svg') 2 2 2 2 stretch;
+    border: 1px transparent;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
 }
+
 .popup-menu-item:insensitive {
     color: #8c8c8c;
 }

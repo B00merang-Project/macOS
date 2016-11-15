@@ -129,11 +129,10 @@
 }
 
 .slingshot .sidebar .button:hover {
-    border-image: url("../misc-assets/highlighted-2.svg") 6;
+    border-image: url("../background-assets/hover.svg") 6;
     border-color: transparent;
     background-color: transparent;
     box-shadow: none;
-    color: #fff;
 }
 
 .slingshot .sidebar .button:active,
@@ -141,17 +140,16 @@
     background-color: transparent;
     border-color: transparent;
     box-shadow: inset 0 0 0 transparent;
-    color: #fff;
 }
 
 .slingshot .sidebar .button:checked,
 .slingshot .sidebar .button:hover:checked,
 .slingshot .sidebar .button:active:checked {
-    border-image: url("../misc-assets/highlighted-2.svg") 6;
+    border-image: none;
     border-color: transparent;
     background-color: transparent;
     box-shadow: none;
-    color: #2975E9;
+    color: #000;
 }
 
 .slingshot .entry,
@@ -161,7 +159,7 @@
 }
 
 
-/*--- Linked Buttons ---*/
+/*--- Linked Buttons ---*
 
 
 /* Middle button */
@@ -190,7 +188,7 @@
 }
 
 
-/* Leftmost button */
+/* Leftmost button *
 
 .slingshot .linked .button:first-child {
     border-image: url("../buttons/linked-button-left.svg") 7;
@@ -216,7 +214,7 @@
 }
 
 
-/* Rightmost button */
+/* Rightmost button *
 
 .slingshot .linked .button:last-child {
     border-image: url("../buttons/linked-button-right.svg") 7;
@@ -245,7 +243,7 @@
 }
 
 
-/* Linked single button */
+/* Linked single button *
 
 .slingshot .linked .button:only-child {
     border-image: url("../buttons/button.svg") 7;
@@ -268,4 +266,4 @@
 .slingshot .linked .button:checked:only-child {
     border-image: url("../buttons/button-pressed.svg") 7;
     color: #fff;
-}
+} */

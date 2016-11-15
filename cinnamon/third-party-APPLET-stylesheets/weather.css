@@ -74,12 +74,12 @@
 
 .weather-forecast-icon {
     padding: 10px 15px 0 30px;
-    color: #fff;
+    color: #000;
 }
 
 .weather-forecast-databox {
     padding: 14px 30px 0 0;
-    color: #fff;
+    color: #000;
 }
 
 .weather-forecast-day {

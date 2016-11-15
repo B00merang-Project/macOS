@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-  <name>Windows 10 Theme</name>
+  <name>macOS Sierra</name>
   <author>Elbullazul</author>
   <copyright>2015 Elbullazul</copyright>
-  <date>Sept 9, 2015</date>
-  <description>Windows 10 window border for Windows 10 Theme</description>
+  <date>Sept 9, 2015; revised for macOS November 14th, 2016</date>
+  <description>mac-like decoration matching the theme</description>
 </info>
 
 <constant name="IconTitleSpacing" value="0"/>
