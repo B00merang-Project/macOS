@@ -95,7 +95,7 @@
     background-gradient-end: transparent;
     background-gradient-start: transparent;
     background-color: transparent;
-    color: #fff;
+    color: #000;
 }
 
 .slingshot .app:focus {
@@ -104,9 +104,8 @@
     background-gradient-end: transparent;
     background-gradient-start: transparent;
     background-color: transparent;
-    color: #fff;
+    color: #000;
 }
-
 
 /*--- Sidebar Buttons ---*/
 
