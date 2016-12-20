@@ -180,7 +180,8 @@ StScrollBar StButton#hhandle {
     -arrow-border-radius: 16px;
     -arrow-border-width: 0px;
 }
-.popup-menu {
+.popup-menu,
+.menu {
     color: #3c4041;
     font-size: 9.5pt;
     padding-left: 0px;

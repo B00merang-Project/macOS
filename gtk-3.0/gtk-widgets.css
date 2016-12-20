@@ -215,16 +215,18 @@ GtkAssistant .sidebar {
 
     padding: 3px 8px;
     border-width: 1px;
-    border-radius: 4px;
+    border-radius: 5px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.9);
-    background-color: @base_color;
-    background-image: linear-gradient(to bottom,                         
-                                      shade(@base_color, 0.98),
-                                      shade(@base_color, 0.97),
-                                      shade(@base_color, 0.95)
+    border-top-color: shade(@theme_bg_color, 0.9);
+    border-right-color: shade(@theme_bg_color, 0.8);
+    border-left-color: shade(@theme_bg_color, 0.8);
+    border-bottom-color: shade(@theme_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade(@theme_bg_color, 1.02), 1.1),
+                                      shade(shade(@theme_bg_color, 1.02), 1.04)
                                       );
     color: @theme_fg_color;
+    box-shadow: 0 0px 0px alpha(@dark_shadow, 0.10), 0 1px 2px alpha(@dark_shadow, 0.2);}
 }
 
 .button:hover {
@@ -305,6 +307,44 @@ GtkAssistant .sidebar {
 .button.default:active:hover {
     border-color: shade(@theme_selected_bg_color, 0.7);
     background-color: shade(@theme_selected_bg_color, 0.97);
+}
+
+/* flat button */
+.button.flat {
+    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-line-width: 0;
+
+    padding: 3px 8px;
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+}
+
+.button.flat:hover {
+    border-top-color: shade(@theme_bg_color, 0.9);
+    border-right-color: shade(@theme_bg_color, 0.8);
+    border-left-color: shade(@theme_bg_color, 0.8);
+    border-bottom-color: shade(@theme_bg_color, 0.7);
+    background-image: linear-gradient(to bottom,
+                                      shade(shade(@theme_bg_color, 1.02), 1.1),
+                                      shade(shade(@theme_bg_color, 1.02), 1.04)
+                                      );
+    color: @theme_fg_color;
+    box-shadow: 0 0px 0px alpha(@dark_shadow, 0.10), 0 1px 2px alpha(@dark_shadow, 0.2);}
+}
+
+.button.flat:active,
+.button.flat:checked {
+    background-image: linear-gradient(to bottom,
+                                      shade(@selected_bg_color, 1.2),
+                                      shade(@selected_bg_color, 0.95)
+                                      );
+    box-shadow: 0 0 1px 1px shade(@theme_selected_bg_color, 1.6);
+    color: @theme_selected_fg_color;
+    border-color: shade(@theme_selected_bg_color, 1.4);
 }
 
 /****************
@@ -503,13 +543,14 @@ GtkComboBox.combobox-entry .button:insensitive {
     border-width: 1px 1px 1px 1px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+    box-shadow: inset 0 -1px shade(@bg_color, 0.7);
 }
 
 /*********
  * entry *
  *********/
 .entry {
-    padding: 7px 3px;
+    padding: 7px 4px;
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.95);
@@ -533,6 +574,7 @@ GtkComboBox.combobox-entry .button:insensitive {
     box-shadow: inset 0 0 2px 1px shade(@theme_selected_bg_color, 1.15);
 }
 
+.entry:insensitive:backdrop,
 .entry:insensitive {
     background-color: shade(@theme_bg_color, 0.95);
     background-image: none;
@@ -1003,6 +1045,11 @@ GtkComboBox .menu {
     color: @menubar_fg_color;
 }
 
+.menubar:backdrop {
+    background-image: none;
+    background-color: @theme_unfocused_bg_color;
+}
+
 /***************
  * menubaritem *
  ***************/
@@ -1345,7 +1392,7 @@ GtkModelButton.button:selected {
  * pane separator *
  ******************/
 .pane-separator {
-    background-color: shade(@theme_bg_color, 0.85);
+    background-color: shade(@theme_bg_color, 0.95);
     color: transparent;
 }
 
@@ -1448,7 +1495,7 @@ GtkProgressBar {
     border-radius: 8px;
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@theme_selected_bg_color, 0.9);
+    border-color: @theme_selected_bg_color;
     background-color: @theme_selected_bg_color;
     background-image: linear-gradient(to bottom,
                                       @theme_selected_bg_color
@@ -1561,29 +1608,21 @@ GtkLevelBar.vertical {
 
 .scale.slider {
     border-radius: 8px;
+    border: 0px solid shade(@theme_bg_color, 0.8);
     background-color: shade(@theme_bg_color, 1.08);
     background-image: none;
     /* we will draw the border using box shadow for now */
-    box-shadow: inset 1px 0 shade(@theme_bg_color, 0.8),
-                inset 0 1px shade(@theme_bg_color, 0.8),
-                inset -1px 0 shade(@theme_bg_color, 0.8),
-                inset 0 -1px shade(@theme_bg_color, 0.8);
+    box-shadow: inset 0 1px white, inset 0 -2px #ededec, inset 0 -1px #cacac8, 0 1px rgba(0, 0, 0, 0.1);
 }
 
 .scale.slider:hover {
-    box-shadow: inset 1px 0 shade(@theme_bg_color, 0.7),
-                inset 0 1px shade(@theme_bg_color, 0.7),
-                inset -1px 0 shade(@theme_bg_color, 0.7),
-                inset 0 -1px shade(@theme_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
 }
 
 .scale.slider:insensitive {
     background-color: shade(@theme_bg_color, 0.9);
     background-image: none;
-    box-shadow: inset 1px 0 shade(@theme_bg_color, 0.85),
-                inset 0 1px shade(@theme_bg_color, 0.85),
-                inset -1px 0 shade(@theme_bg_color, 0.85),
-                inset 0 -1px shade(@theme_bg_color, 0.85);
+    border-color shade(@theme_bg_color, 0.85);
 }
 
 .scale.slider.fine-tune:active,
@@ -2319,6 +2358,11 @@ GtkColorButton.button {
     color: @titlebar_fg_color;
 }
 
+.header-bar:backdrop {
+    background-color: @theme_unfocused_bg_color;
+    background-image: none;
+}
+
 .header-bar .button.text-button {
     padding: 4px;
 }
@@ -2343,14 +2387,25 @@ GtkColorButton.button {
 
 .header-bar GtkComboBox,
 .header-bar .button { 
-    border-color: shade(@titlebar_bg_color, 0.95);
-    background-color: shade(@titlebar_bg_color, 1.09);
-    background-image: linear-gradient(to bottom,                         
-                                      @base_color,
-                                      shade(@base_color, 0.98),
-                                      shade(@base_color, 0.95)
-                                      );
+    border-width: 1px;
+    border-top-color: shade(@theme_bg_color, 0.9);
+    border-right-color: shade(@theme_bg_color, 0.8);
+    border-left-color: shade(@theme_bg_color, 0.8);
+    border-bottom-color: shade(@theme_bg_color, 0.7);
+    background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.95), 1.1));
     color: @titlebar_fg_color;
+    box-shadow: inset 0 -1px shade(@bg_color, 0.7);
+}
+
+.header-bar GtkComboBox:backdrop,
+.header-bar .button:backdrop { 
+    border-top-color: shade(@theme_bg_color, 0.95);
+    border-right-color: shade(@theme_bg_color, 0.85);
+    border-left-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 0.75);
+    background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.91), 1.1));
+    box-shadow: inset 0 -1px shade(@bg_color, 0.7);
+    color: shade(@toolbar_bg_color, 0.7);
 }
 
 /* workaround for adresstabs in Nautilus*/
@@ -2428,6 +2483,11 @@ GtkStatusbar .button:checked,
     color: @toolbar_fg_color;
 }
 
+.toolbar:backdrop {
+    background-image: none;
+    background-color: @theme_unfocused_bg_color;
+}
+
 .toolbar .button {
     padding: 2px;
 }
@@ -2474,14 +2534,15 @@ GtkStatusbar .button:checked,
 .primary-toolbar:backdrop,
 .primary-toolbar .toolbar:backdrop,
 .primary-toolbar.toolbar:backdrop {
-    background-color: @toolbar_bg_color;
+    background-image: none;
+    background-color: @theme_unfocused_bg_color;
 }
 
 /* primary toolbar button */
 
 .primary-toolbar GtkComboBox,
 .primary-toolbar .button {
-    padding: 6px;
+    padding: 4px 8px;
     border-width: 1px;
     border-color: transparent;
     border-radius: 4px;
@@ -2494,17 +2555,28 @@ GtkStatusbar .button:checked,
 .primary-toolbar .raised.button,
 .toolbar GtkComboBox,
 .toolbar .button {
-    padding: 6px;
+    padding: 4px 8px;
     border-width: 1px;
-    border-color: transparent;
-    background-color: shade(@toolbar_bg_color, 1.08);
-    background-image: linear-gradient(to bottom,
-                                      @theme_base_color,
-                                      shade(@theme_base_color, 0.98),
-                                      shade(@theme_base_color, 0.96)
-                                      );
-    box-shadow: inset 0 -1px @fg_color;
+    border-top-color: shade(@theme_bg_color, 0.9);
+    border-right-color: shade(@theme_bg_color, 0.8);
+    border-left-color: shade(@theme_bg_color, 0.8);
+    border-bottom-color: shade(@theme_bg_color, 0.7);
+    background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.95), 1.1));
+    box-shadow: inset 0 -1px shade(@bg_color, 0.7);
     color: @toolbar_fg_color;
+}
+
+.primary-toolbar .raised .button:backdrop,
+.primary-toolbar .raised.button:backdrop,
+.toolbar GtkComboBox:backdrop,
+.toolbar .button:backdrop {
+    border-top-color: shade(@theme_bg_color, 0.95);
+    border-right-color: shade(@theme_bg_color, 0.85);
+    border-left-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 0.75);
+    background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.91), 1.1));
+    box-shadow: inset 0 -1px shade(@bg_color, 0.7);
+    color: shade(@toolbar_bg_color, 0.7);
 }
 
 .primary-toolbar .button:hover,
@@ -2542,7 +2614,7 @@ GtkStatusbar .button:checked,
 .primary-toolbar .button:insensitive,
 .toolbar .button:insensitive {
     border-color: transparent;
-    background-color: shade(@toolbar_bg_color, 0.9);
+    background-color: transparent;
     background-image: none;
 }
 
@@ -2568,7 +2640,7 @@ GtkStatusbar .button:checked,
 
 .primary-toolbar .entry:backdrop,
 .toolbar .entry:backdrop {
-    background-color: shade(@theme_bg_color, 0.95);
+    background-color: shade(@theme_base_color, 0.98);
     border-color: shade(@toolbar_bg_color, 0.95);
 }
 
@@ -2664,7 +2736,7 @@ GtkStatusbar .button:checked,
 .inline-toolbar.toolbar .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton > .button:insensitive {
-    box-shadow: inset -1px 0 shade(@theme_bg_color, 0.85);
+    box-shadow: inset -1px 0 shade(@theme_bg_color, 0.9);
 }
 
 /* remove box shadow from last-child and only-child */
@@ -2903,7 +2975,7 @@ GtkStatusbar .button:checked,
 .toolbar .button.raised.linked:insensitive,
 .toolbar .raised.linked .button:insensitive,
 .toolbar .linked .button:insensitive {
-    box-shadow: inset -1px 0 shade(@toolbar_bg_color, 0.85);
+    box-shadow: none;
 }
 
 /* remove box shadow from last-child and only-child */
@@ -2937,7 +3009,7 @@ GtkStatusbar .button:checked,
 .toolbar .linked .button:insensitive:only-child,
 .toolbar .linked .button:active *:insensitive:last-child,
 .toolbar .linked .button:active *:insensitive:only-child {
-    box-shadow: inset 0 -1px shade(@theme_bg_color, 0.8);
+    box-shadow: inset 0 -1px shade(@theme_bg_color, 0.9);
     border-radius: 4px;
 }
 
@@ -3784,12 +3856,19 @@ GtkBubbleWindow .toolbar {
     border-radius: 4px 4px 0 0;
     background-color: transparent;
     background-image: linear-gradient(to bottom,
-                                      shade(@titlebar_bg_color, 1.08),
-                                      shade(@titlebar_bg_color, 1.05),
+                                      shade(@titlebar_bg_color, 1.03),
+                                      shade(@titlebar_bg_color, 1.01),
                                       @titlebar_bg_color
                                       );
 
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
+    text-shadow: none;
+}
+
+.titlebar:backdrop {
+    background-image: none;
+    background-color: @theme_unfocused_bg_color;
+    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
     text-shadow: none;
 }
 
@@ -3819,12 +3898,6 @@ GtkBubbleWindow .toolbar {
     font: bold;
 }
 
-.titlebar:backdrop {
-    background-image: none;
-    background-color: @titlebar_bg_color;
-    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
-    text-shadow: none;
-}
 
 .titlebar .titlebutton {
     padding: 2px;
