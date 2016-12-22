@@ -8,6 +8,7 @@
 @define-color tooltip_bg_color #cecece;
 @define-color tooltip_fg_color #4c4c4c;
 @define-color unfocused_bg_color #e4e4e4;
+@define-color unfocused_fg_color #8c8c8c;
 
 /* dark color scheme */
 @define-color dark_bg_color #f0f0f0;
@@ -22,7 +23,10 @@
 @define-color theme_selected_fg_color @selected_fg_color;
 @define-color theme_tooltip_bg_color @tooltip_bg_color;
 @define-color theme_tooltip_fg_color @tooltip_fg_color;
+
+/* global unfocused color scheme */
 @define-color theme_unfocused_bg_color @unfocused_bg_color;
+@define-color theme_unfocused_fg_color @unfocused_fg_color;
 
 /* shadow effects */
 @define-color light_shadow #fff;

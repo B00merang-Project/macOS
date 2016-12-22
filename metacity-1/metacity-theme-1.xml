@@ -44,19 +44,11 @@
 </frame_geometry>
 
 <draw_ops name="title-text-focused">
-  <clip x="5" y="0" width="width" height="height"/>
-<icon  x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -70"
-         y="(height-mini_icon_height) / 2 + 2"
-         width="mini_icon_width-1" height="mini_icon_height-1"/>
-<title color="#4c4c4c" x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -48" y="(height - title_height) / 2"/> 
+ <title color="#4c4c4c" x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -72" y="(height - title_height) / 2 - 3"/>
 </draw_ops>
 
 <draw_ops name="title-text-unfocused">
-  <clip x="5" y="0" width="width" height="height"/>
-<icon  x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -70"
-         y="(height-mini_icon_height) / 2 + 2"
-         width="mini_icon_width-1" height="mini_icon_height-1"/>
- <title color="#9f9f9f" x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -48" y="(height - title_height) / 2"/>  
+  <title color="#9f9f9f" x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing -72" y="(height - title_height) / 2 - 3"/>
 </draw_ops>
 
 <draw_ops name="blank">

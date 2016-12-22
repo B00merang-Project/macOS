@@ -271,6 +271,20 @@ GtkAssistant .sidebar {
     border-color: shade(@theme_selected_bg_color, 1.4);
 }
 
+.button:checked:backdrop {
+    background-image: none;
+    box-shadow: 0 0 1px 1px shade(@theme_unfocused_bg_color, 0.9);
+    color: @theme_fg_color;
+    border-color: shade(@theme_unfocused_bg_color, 0.8);
+    background-color: shade(@theme_unfocused_bg_color, 0.85);
+}
+
+.button:backdrop {
+    color: @theme_unfocused_fg_color;
+    background-color: @theme_unfocused_bg_color;
+    background-image: none;
+}
+
 .button:insensitive {
     border-color: shade(@theme_bg_color, 0.85);
     background-color: shade(@theme_bg_color, 0.9);
@@ -582,6 +596,7 @@ GtkComboBox.combobox-entry .button:insensitive {
 }
 
 .entry:backdrop {
+    color: @theme_unfocused_fg_color;
     background-color: shade(@theme_bg_color, 1.05);
 }
 
@@ -1047,6 +1062,7 @@ GtkComboBox .menu {
 
 .menubar:backdrop {
     background-image: none;
+    color: @theme_unfocused_fg_color;
     background-color: @theme_unfocused_bg_color;
 }
 
@@ -1074,6 +1090,11 @@ GtkComboBox .menu {
 
 .menubar .menuitem *:hover {
     color: shade(@menubar_fg_color, 1.08);
+}
+
+.menubar.menuitem:backdrop,
+.menubar .menuitem:backdrop {
+    color: @theme_unfocused_fg_color;
 }
 
 /************
@@ -1316,6 +1337,19 @@ GtkModelButton.button:selected {
                                       shade(@bg_color, 0.75)
                                       );
     border-color: shade(@theme_bg_color, 0.65);
+}
+
+.notebook tab:backdrop {
+    color: @theme_unfocused_fg_color;
+    background-image: none;
+    background-color: shade(@theme_unfocused_bg_color, 0.95);
+}
+
+.notebook tab:active:backdrop,
+.notebook tab:checked:backdrop {
+    color: @theme_unfocused_fg_color;
+    background-image: none;
+    background-color: shade(@theme_unfocused_bg_color, 0.85);
 }
 
 .notebook tab.top {
@@ -2361,6 +2395,7 @@ GtkColorButton.button {
 .header-bar:backdrop {
     background-color: @theme_unfocused_bg_color;
     background-image: none;
+    color: @theme_unfocused_fg_color;
 }
 
 .header-bar .button.text-button {
@@ -2377,7 +2412,8 @@ GtkColorButton.button {
 }
 
 .header-bar .title:backdrop {
-    background-image: linear-gradient(to bottom, @titlebar_bg_color);
+    background-color: @theme_unfocused_bg_color;
+    background-image: none;
 }
 
 .header-bar .subtitle {
@@ -2395,17 +2431,6 @@ GtkColorButton.button {
     background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.95), 1.1));
     color: @titlebar_fg_color;
     box-shadow: inset 0 -1px shade(@bg_color, 0.7);
-}
-
-.header-bar GtkComboBox:backdrop,
-.header-bar .button:backdrop { 
-    border-top-color: shade(@theme_bg_color, 0.95);
-    border-right-color: shade(@theme_bg_color, 0.85);
-    border-left-color: shade(@theme_bg_color, 0.85);
-    border-bottom-color: shade(@theme_bg_color, 0.75);
-    background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.91), 1.1));
-    box-shadow: inset 0 -1px shade(@bg_color, 0.7);
-    color: shade(@toolbar_bg_color, 0.7);
 }
 
 /* workaround for adresstabs in Nautilus*/
@@ -2457,6 +2482,27 @@ GtkStatusbar .button:checked,
     background-image: none;
 }
 
+.header-bar GtkComboBox:backdrop,
+.header-bar .button:backdrop { 
+    border-top-color: shade(@theme_bg_color, 0.95);
+    border-right-color: shade(@theme_bg_color, 0.85);
+    border-left-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 0.75);
+    background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.91), 1.1));
+    box-shadow: inset 0 -1px shade(@bg_color, 0.7);
+    color: @theme_unfocused_fg_color;
+}
+
+GtkStatusbar .button:checked:backdrop,
+.header-bar .button:checked:backdrop,
+.header-bar .button:checked:active:backdrop,
+.header-bar .button:checked:hover:backdrop {
+    background-image: none;
+    background-color: shade(@theme_unfocused_bg_color, 0.8);
+    border-color: shade(@theme_unfocused_bg_color, 0.75);
+    color: shade(@theme_unfocused_fg_color, 0.8);
+}
+
 .header-bar .entry {
     border-color: shade(@titlebar_bg_color, 0.95);
     background: alpha(@base_color, 0.4);
@@ -2485,6 +2531,7 @@ GtkStatusbar .button:checked,
 
 .toolbar:backdrop {
     background-image: none;
+    color: @theme_unfocused_fg_color;
     background-color: @theme_unfocused_bg_color;
 }
 
@@ -2534,6 +2581,7 @@ GtkStatusbar .button:checked,
 .primary-toolbar:backdrop,
 .primary-toolbar .toolbar:backdrop,
 .primary-toolbar.toolbar:backdrop {
+    color: @theme_unfocused_fg_color;
     background-image: none;
     background-color: @theme_unfocused_bg_color;
 }
@@ -2576,7 +2624,17 @@ GtkStatusbar .button:checked,
     border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.91), 1.1));
     box-shadow: inset 0 -1px shade(@bg_color, 0.7);
-    color: shade(@toolbar_bg_color, 0.7);
+    color: @theme_unfocused_fg_color;
+}
+
+.primary-toolbar .raised .button:checked:backdrop,
+.primary-toolbar .raised.button:checked:backdrop,
+.toolbar GtkComboBox:checked:backdrop,
+.toolbar .button:checked:backdrop {
+    background-image: none;
+    background-color: shade(@theme_unfocused_bg_color, 0.8);
+    border-color: shade(@theme_unfocused_bg_color, 0.75);
+    color: shade(@theme_unfocused_fg_color, 0.9);
 }
 
 .primary-toolbar .button:hover,
@@ -3868,7 +3926,7 @@ GtkBubbleWindow .toolbar {
 .titlebar:backdrop {
     background-image: none;
     background-color: @theme_unfocused_bg_color;
-    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
+    color: @theme_unfocused_fg_color;
     text-shadow: none;
 }
 
@@ -3903,20 +3961,20 @@ GtkBubbleWindow .toolbar {
     padding: 2px;
     border-style: none;
     background: none;
-    color: @theme_selected_bg_color;
+    color: @theme_fg_color;
     icon-shadow: none;
 }
 
 .titlebar .titlebutton:hover,
 .titlebar .titlebutton:hover:focus {
     background: none;
-    color: @theme_selected_bg_color;
+    color: @theme_fg_color;
 }
 
 .titlebar .titlebutton:active,
 .titlebar .titlebutton:active:hover {
     background: none;
-    color: @theme_selected_bg_color;
+    color: @theme_fg_color;
     box-shadow: none;
 }
 
@@ -3938,7 +3996,7 @@ GtkBubbleWindow .toolbar {
 
 .titlebar .titlebutton:backdrop {
     background-image: none;
-    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
+    color: @theme_unfocused_fg_color;
     icon-shadow: none;
 }
 
