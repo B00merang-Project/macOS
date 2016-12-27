@@ -192,7 +192,7 @@ assistant .sidebar {
   border: none; }
   assistant .sidebar:backdrop {
     background-color: @theme_unfocused_bg_color;
-    border-color: none; }
+    border-color: transparent; }
 assistant.csd .sidebar {
   border-top-style: none; }
 assistant .sidebar label {
@@ -249,7 +249,7 @@ entry {
   color: @theme_fg_color;
   border-color: @borders;
   background-color: alpha(@theme_base_color, 0.7);
-  box-shadow: solid 0 1px 0 1px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.2); }
   spinbutton:not(.vertical) image.left,
   entry image.left {
     padding-left: 0;
@@ -535,7 +535,7 @@ button {
   button:checked {
     color: @theme_fg_color;
     outline-color: rgba(46, 52, 54, 0.3);
-    border-color: none;
+    border-color: transparent;
     background-image: none;
     background-color: transparent;  /* transparent button for titlebar action buttons */
     box-shadow: none;
@@ -1848,7 +1848,7 @@ searchbar,
 .location-bar {
   border-style: solid;
   border-color: @borders;
-  background-color: theme_bg_color; } /*#d9d9d7*/
+  background-color: @theme_bg_color; } /*#d9d9d7*/
   .inline-toolbar:backdrop, searchbar:backdrop,
   .location-bar:backdrop {
     border-color: shade(@borders, 0.95);
@@ -2783,7 +2783,7 @@ scrollbar {
   scrollbar.right {
     border-left: 1px solid transparent; }
   scrollbar:backdrop {
-    background-color: @shade(theme_bg_color, 0.9);
+    background-color: shade(@theme_bg_color, 0.9);
     border-color: shade(@borders, 0.95);
     transition: 200ms ease-out; }
   scrollbar slider {
@@ -2810,7 +2810,7 @@ scrollbar {
   scrollbar.fine-tune.vertical slider {
     border-width: 2px; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
-    border-color: solid 1px 0 0 0 shade(@theme_bg_color, 0.8);
+    border-color: 1px 0 0 0 shade(@theme_bg_color, 0.8);
     opacity: 1;
     margin: 0;
     background-color: shade(@theme_bg_color, 0.9); }
@@ -4435,7 +4435,7 @@ row:selected colorswatch {
 colorswatch#editor-color-sample {
   border-radius: 0; }
   colorswatch#editor-color-sample overlay {
-    border-radius: 4.0; }
+    border-radius: 4px; }
 
 colorchooser .popover.osd {
   border-radius: 5px; }
