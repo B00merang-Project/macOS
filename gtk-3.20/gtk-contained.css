@@ -1868,14 +1868,12 @@ headerbar {
   border-color: @borders;
   border-radius: 0;
   background-image: linear-gradient(to bottom, shade(@titlebar_bg_color, 1.1), shade(@titlebar_bg_color, 0.9));
-  background-color: @titlebar_bg_color;
-  box-shadow: inset 0 1px alpha(@theme_base_color, 0.8); }
+  background-color: @titlebar_bg_color; }
   .titlebar:backdrop:not(headerbar),
   headerbar:backdrop {
     border-color: shade(@borders, 0.95);
     background-color: @theme_bg_color;
     background-image: none;
-    box-shadow: inset 0 1px alpha(@theme_base_color, 0.8);
     transition: 200ms ease-out; }
   .titlebar:not(headerbar) .title,
   headerbar .title {
@@ -2168,6 +2166,8 @@ headerbar button {
   margin-top: 6px;
   margin-bottom: 6px; }
 
+/* this causes bug in unity, so removed
+
 .background:not(.tiled):not(.maximized) .titlebar:backdrop, .background:not(.tiled):not(.maximized) .titlebar {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px; }
@@ -2176,6 +2176,7 @@ window:not(.tiled):not(.maximized) separator:first-child + headerbar:backdrop, w
   border-top-left-radius: 6px; }
 window:not(.tiled):not(.maximized) headerbar:last-child:backdrop, window:not(.tiled):not(.maximized) headerbar:last-child {
   border-top-right-radius: 6px; }
+*/
 
 window.csd > .titlebar:not(headerbar) {
   padding: 0;
@@ -2196,7 +2197,7 @@ window.csd > .titlebar:not(headerbar) {
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 3px;
+    padding: 0px;
     border: none;
     background-image: -gtk-scaled(url("buttons/minimize-focused-normal.png"));
 }
