@@ -14,6 +14,7 @@
 /* dark color scheme */
 @define-color dark_bg_color #373737;
 @define-color dark_fg_color #f1f1f1;
+@define-color borders shade(@theme_bg_color, 0.95);
 
 /* colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;
