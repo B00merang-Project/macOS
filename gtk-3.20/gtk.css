@@ -1,68 +1,87 @@
-/* search for rgba value important! 46, 52, 54 */
-
 /* default color scheme */
 @define-color bg_color #F5F5F5;
 @define-color fg_color #4c4c4c;
 @define-color base_color #ffffff;
 @define-color text_color #4c4c4c;
-@define-color selected_bg_color #066DC1;
+@define-color selected_bg_color #3b82d6;
 @define-color selected_fg_color #ffffff;
-@define-color tooltip_bg_color #fff;
+@define-color tooltip_bg_color #cecece;
 @define-color tooltip_fg_color #4c4c4c;
-@define-color theme_dark_fg_color #fff;
-@define-color theme_dark_bg_color #e4e4e4;
-@define-color progressbar_color #4c4c4c;
+@define-color unfocused_bg_color #e4e4e4;
+@define-color unfocused_fg_color #8c8c8c;
 
-/* extra color definitions */
-@define-color titlebar_bg_color #cecece;
-@define-color titlebar_fg_color #4c4c4c;
-@define-color sidebar_bg_color @titlebar_bg_color;
-@define-color panel_bg_color @theme_bg_color;
-@define-color panel_fg_color @theme_fg_color;
+/* dark color scheme */
+@define-color dark_bg_color #f0f0f0;
+@define-color dark_fg_color #4c4c4c;
 
-@define-color outline_color #f5f5f5;
-
-/* actual colors used in code */
-@define-color theme_fg_color @fg_color;
-@define-color theme_text_color @text_color;
+/* colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;
+@define-color theme_fg_color @fg_color;
 @define-color theme_base_color @base_color;
+@define-color theme_text_color @text_color;
 @define-color theme_selected_bg_color @selected_bg_color;
 @define-color theme_selected_fg_color @selected_fg_color;
-@define-color insensitive_bg_color #fcfcfc;
-@define-color insensitive_fg_color #6c6c6c;
-@define-color insensitive_base_color #ffffff;
-@define-color theme_unfocused_fg_color #6c6c6c;
-@define-color theme_unfocused_text_color black;
-@define-color theme_unfocused_bg_color #f5f5f5;
-@define-color theme_unfocused_base_color #fefefe;
-@define-color theme_unfocused_selected_bg_color #c8c8c8;
-@define-color theme_unfocused_selected_fg_color #000000;
+@define-color theme_tooltip_bg_color @tooltip_bg_color;
+@define-color theme_tooltip_fg_color @tooltip_fg_color;
 
-@define-color borders #aaaaaa;
-@define-color unfocused_borders #8c8c8c;
+/* global unfocused color scheme */
+@define-color theme_unfocused_bg_color @unfocused_bg_color;
+@define-color theme_unfocused_fg_color @unfocused_fg_color;
 
-/* these are pretty self explicative */
+/* shadow effects */
+@define-color light_shadow #fff;
+@define-color dark_shadow #000;
+@define-color borders shade(@theme_bg_color, 0.95);
+
+/* misc colors used by gtk+ */
+@define-color info_fg_color rgb (58, 135, 173);
+@define-color info_bg_color rgb (217, 237, 247);
+@define-color warning_fg_color rgb (192, 152, 83);
+@define-color warning_bg_color rgb (252, 248, 227);
+@define-color question_fg_color rgb (214, 73, 55);
+@define-color question_bg_color rgb (252, 229, 213);
+@define-color error_fg_color rgb (185, 74, 72);
+@define-color error_bg_color rgb (242, 222, 222);
+@define-color link_color #fc6f5d;
+@define-color success_color #53a93f;
 @define-color warning_color #f57900;
 @define-color error_color #cc0000;
-@define-color success_color #73d216;
 
-/* these colors are exported for the window manager and shouldn't be used in applications,
-read if you used those and something break with a version upgrade you're on your own... */
-@define-color wm_title shade(#2e3436, 1.8);
-@define-color wm_unfocused_title #8b8e8f;
-@define-color wm_highlight rgba(255, 255, 255, 0.8);
-@define-color wm_borders_edge rgba(255, 255, 255, 0.8);
-@define-color wm_bg_a shade(#e8e8e7, 1.2);
-@define-color wm_bg_b #e8e8e7;
-@define-color wm_shadow alpha(black, 0.35);
-@define-color wm_border alpha(black, 0.18);
-@define-color wm_button_hover_color_a shade(#e8e8e7, 1.3);
-@define-color wm_button_hover_color_b #e8e8e7;
-@define-color wm_button_active_color_a shade(#e8e8e7, 0.85);
-@define-color wm_button_active_color_b shade(#e8e8e7, 0.89);
-@define-color wm_button_active_color_c shade(#e8e8e7, 0.9);
-@define-color content_view_bg #ffffff;
+/* widget colors */
+@define-color titlebar_bg_color @dark_bg_color;
+@define-color titlebar_fg_color @dark_fg_color;
+@define-color menubar_bg_color @dark_bg_color;
+@define-color menubar_fg_color @dark_fg_color;
+@define-color toolbar_bg_color @dark_bg_color; /*@theme_bg_color;*/
+@define-color toolbar_fg_color @dark_fg_color; /*@theme_fg_color;*/
+@define-color menu_bg_color #F5F5F5;
+@define-color menu_fg_color @fg_color;
+@define-color panel_bg_color #f5f5f5;
+@define-color panel_fg_color @dark_fg_color;
 
-@import url("gtk-contained.css");
+/* osd */
+@define-color osd_base @dark_bg_color;
+@define-color osd_fg @dark_fg_color;
+@define-color osd_bg alpha(@osd_base, 0.8);
+
+/* lightdm greeter colors */
+@define-color lightdm_bg_color @dark_bg_color;
+@define-color lightdm_fg_color @dark_fg_color;
+
+/* window manager colors */
+@define-color wm_bg @titlebar_bg_color;
+@define-color wm_border_focused mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.21);
+@define-color wm_border_unfocused mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.12);
+@define-color wm_title_focused mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
+@define-color wm_title_unfocused mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
+@define-color wm_icons_focused mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
+@define-color wm_icons_focused_prelight @selected_bg_color;
+@define-color wm_icons_focused_pressed shade(@selected_bg_color, 0.8);
+@define-color wm_icons_unfocused mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
+@define-color wm_icons_unfocused_prelight @selected_bg_color;
+@define-color wm_icons_unfocused_pressed shade(@selected_bg_color, 0.8);
+
+@import url("gtk-widgets.css");
+@import url("gtk-widgets-assets.css");
 @import url("apps/unity.css");
+@import url("apps/gnome-terminal.css");

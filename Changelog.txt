@@ -27,3 +27,7 @@ v0.9.1 : GTK 3.18 fixes
 v1.0 : Stable version achieved at last! GTK 3.20 solid compatibility, color fixes and new unity theme
 --------------------------
 v1.1 : Flatten colors & make brighter look, more like the current macOS Sierra theme
+--------------------------
+v1.2 : Some code fixes for dark theme
+--------------------------
+v2.0 : new gtk 3.20 code base
