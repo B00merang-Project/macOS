@@ -33,7 +33,7 @@
     -GtkTextView-error-underline-color: @error_color;
     -GtkToolButton-icon-spacing: 6;
     -GtkToolItemGroup-expander-size: 8;
-    -GtkTreeView-expander-size: 8;
+    -treeview-expander-size: 8;
     -GtkWindow-resize-grip-height: 0;
     -GtkWindow-resize-grip-width: 0;
     -WnckTasklist-fade-overlay-rect: 0;
@@ -292,7 +292,7 @@ button.flat {
     border-style: solid;
     box-shadow: none;
     border-color: transparent;
-    background-color: trarnsparent;
+    background-color: transparent;
     background-image: none;
 }
 
@@ -405,20 +405,20 @@ treeview header:last-child button {
 /****************
  * content view *
  ****************/
-.content-viewview {
+.content-view.view {
     background-color: @theme_base_color;
 }
 
-.content-viewview :hover {
+.content-view.view :hover {
     background-color: alpha(@theme_selected_bg_color, 0.6);
 }
 
-.content-viewview :selected,
-.content-viewview :active {
+.content-view.view :selected,
+.content-view.view :active {
     background-color: @theme_selected_bg_color;
 }
 
-.content-viewview :disabled {
+.content-view.view :disabled {
     background-color: shade(@theme_base_color, 0.9);
 }
 
@@ -434,8 +434,8 @@ view.content-view check:active {
     background-color: transparent;
 }
 
-.content-viewview  check,
-.content-viewview  check:active {
+.content-view.view check,
+.content-view.view check:active {
     background-color: transparent;
 }
 
@@ -562,13 +562,13 @@ entry:backdrop {
     background-color: shade(@theme_bg_color, 1.05);
 }
 
-entry progressbar {
+entry progress {
     border-width: 0;
     border-radius: 6px;
     box-shadow: none;
-    background-color: @theme_selected_bg_color;
+    background-color: @theme_bg_color;
     background-image: none;
-    color: @theme_selected_fg_color;
+    color: @theme_fg_color;
 }
 
 /* tweak to prevent double shadow in gedit search box */
@@ -599,16 +599,16 @@ expander:active {
 /**************
  * list boxes *
  **************/
- list {
+list {
     background-color: shade(@theme_bg_color, 0.97);
     color: @theme_fg_color;
 }
 
- list-row:hover {
+list-row:hover {
     background-color: shade(@theme_bg_color, 1.02);
 }
 
- list-row:selected {
+list-row:selected {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
@@ -616,15 +616,13 @@ expander:active {
 /*********
  * frame *
  *********/
- frame {
+frame {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
     box-shadow: none;
 }
-
-
 
 /*******************
  * scrolled window *
@@ -656,7 +654,7 @@ view cell:selected:focus {
     color: @theme_selected_fg_color;
 }
 
-.content-viewview .rubberband,
+.content-view.view .rubberband,
 view .rubberband,
 .rubberband,
 view rubberband,
@@ -989,13 +987,13 @@ combobox menu {
     background-color: @menu_bg_color;
 }
 
-.primary-toolbar  menu,
+.primary-toolbar menu,
 .primary-toolbar button menu,
-toolbar  menu,
+toolbar menu,
 toolbar .primary-toolbar menu,
-headerbar  menu,
+headerbar menu,
 headerbar .primary-toolbar menu,
- menu {
+menu {
     padding: 0;
     border-radius: 0;
     border-style: none;
@@ -1004,17 +1002,17 @@ headerbar .primary-toolbar menu,
 }
 
 /* Hover-effect on play-button in ubuntu soundmenu */
- menu:selected {
+menu:selected {
     background-color: @selected_bg_color;
 }
 
- menu button:hover,
- menu button:active,
- menu button:active *:disabled,
- menu button:disabled,
- menu button {
+menu button:hover,
+menu button:active,
+menu button:active *:disabled,
+menu button:disabled,
+menu button {
     border-width: 0;
-    background-color: @menu_bg_color;
+    background-color: transparent;
     background-image: none;
 }
 
@@ -1031,7 +1029,7 @@ headerbar .primary-toolbar menu,
 /***********
  * menubar *
  ***********/
- menubar {
+menubar {
     -GtkWidget-window-dragging: true;
 
     border-style: none;
@@ -1040,7 +1038,7 @@ headerbar .primary-toolbar menu,
     color: @menubar_fg_color;
 }
 
- menubar:backdrop {
+menubar:backdrop {
     background-image: none;
     color: @theme_unfocused_fg_color;
     background-color: @theme_unfocused_bg_color;
@@ -1049,8 +1047,8 @@ headerbar .primary-toolbar menu,
 /***************
  * menubaritem *
  ***************/
- menubar menuitem,
- menubar > menuitem {
+menubar menuitem,
+menubar > menuitem {
     padding: 3px 5px;
     border-width: 1px;
     border-style: solid;
@@ -1060,20 +1058,20 @@ headerbar .primary-toolbar menu,
     color: @menubar_fg_color;
 }
 
- menubar menuitem:hover,
- menubar > menuitem:hover {
+menubar menuitem:hover,
+menubar > menuitem:hover {
     border-color: mix(@menubar_bg_color, @menubar_fg_color, 0.21);
     background-color: mix(@menubar_bg_color, @menubar_fg_color, 0.21);
     background-image: none;
     color: shade(@menubar_fg_color, 1.08);
 }
 
- menubar > menuitem *:hover {
+menubar > menuitem *:hover {
     color: shade(@menubar_fg_color, 1.08);
 }
 
- menubar menuitem:backdrop,
- menubar > menuitem:backdrop {
+menubar menuitem:backdrop,
+menubar > menuitem:backdrop {
     color: @theme_unfocused_fg_color;
 }
 
@@ -1087,33 +1085,33 @@ treemenu > menuitem {
 }
 
 menuitem,
- menu > menuitem {
+menu > menuitem {
     padding: 3px;
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
     border-radius: 0;
-    background-color: transparent;
+    background-color: @menu_bg_color;
     background-image: none;
     color: @menu_fg_color;
 }
 
- menu menuitem:hover,
- menu menuitem:active {
+menu menuitem:hover,
+menu menuitem:active {
     border-color: shade(@theme_selected_bg_color, 0.9);
     background-color: @theme_selected_bg_color;
     background-image: none;
 }
 
- menu menuitem:active,
- menu menuitem *:active,
- menu menuitem:hover,
- menu menuitem *:hover {
+menu menuitem:active,
+menu menuitem *:active,
+menu menuitem:hover,
+menu menuitem *:hover {
     color: @theme_selected_fg_color;
 }
 
- menu  menuitem:disabled,
- menu  menuitem *:disabled {
+menu menuitem:disabled,
+menu menuitem *:disabled {
     color: mix(@menu_fg_color, @menu_bg_color, 0.5);
 }
 
@@ -1156,15 +1154,15 @@ menuitem entry:focus {
     border-color: shade(@menu_bg_color, 0.7);
 }
 
-menuitem  accelerator {
+menuitem accelerator {
     color: alpha(@menu_fg_color, 0.6);
 }
 
-menuitem  accelerator:hover {
+menuitem accelerator:hover {
     color: alpha(@theme_selected_fg_color, 0.8);
 }
 
-menuitem  accelerator:disabled {
+menuitem accelerator:disabled {
     color: alpha(mix(@menu_fg_color, @menu_bg_color, 0.5), 0.6);
 }
 
@@ -1524,12 +1522,12 @@ progress row:selected:focus {
 }
 
 /* level bars as used for password quality or remaining power */
-levelbar {
+Gtklevelbar {
     -levelbar-min-block-width: 34;
     -levelbar-min-block-height: 2;
 }
 
-levelbar.vertical {
+Gtklevelbar.vertical {
     -levelbar-min-block-width: 2;
     -levelbar-min-block-height: 34;
 }
@@ -2234,7 +2232,7 @@ switch {
 /************
  * textview *
  ************/
-textview {
+Gtktextview {
     background-color: @theme_base_color;
     color: @theme_text_color;
 }
@@ -2243,7 +2241,7 @@ textview {
 label.separator {
   color: @theme_fg_color; }
   label.separator:backdrop {
-    color: @insensitive_fg_color; }
+    color: shade(@theme_fg_color, 0.9); }
 label selection {
   background-color: @theme_selected_bg_color;
   color: @theme_selected_fg_color; }
@@ -3317,18 +3315,18 @@ headerbar .linked button:disabled:only-child {
 /************
  * treeview *
  ************/
-GtkTreeView {
-    -GtkTreeView-vertical-separator: 0;
+treeview {
+    -treeview-vertical-separator: 0;
 }
 
-GtkTreeView.dnd {
+treeview.dnd {
     border-width: 1px;
     border-style: solid;
     border-color: @theme_selected_bg_color;
     border-radius: 0;
 }
 
-GtkTreeview entry {
+treeview entry {
     padding: 0 6px;
     border-radius: 0;
     background-color: @theme_base_color;
@@ -3338,29 +3336,29 @@ GtkTreeview entry {
 /************
  * viewport *
  ************/
-viewport frame {
+GtkViewport frame {
     border-width: 0;
 }
 
-view {
+.view {
     background-color: @theme_base_color;
     color: @theme_text_color;
 }
 
-view :disabled,
-view :disabled:disabled {
+.view:disabled,
+.view:disabled:disabled {
     background-color: shade(@theme_base_color, 0.9);
     color: mix(@theme_fg_color, @theme_bg_color, 0.5);
 }
 
-view :selected,
-view :selected:focus {
+.view:selected,
+.view:selected:focus {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
 
 /* backdrop state */
-view :selected:backdrop, iconview:selected:backdrop, view :selected:backdrop, iconview:selected:backdrop {
+.view:selected:backdrop, iconview:selected:backdrop, .view:selected:backdrop, iconview:selected:backdrop {
     background-color: shade(@theme_bg_color, 0.8); 
 }
 
@@ -3671,7 +3669,7 @@ progressbar.osdprogress {
 }
 
 .osd view,
-.osdview {
+.osd.view {
     background-color: @osd_base;
 }
 
