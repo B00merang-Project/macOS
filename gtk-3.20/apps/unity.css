@@ -75,6 +75,8 @@ UnityPanelWidget,
     color: @panel_fg_color;
 }
 
+.menuitem:hover,
+.menuitem *:hover,
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
     background-image: none;
