@@ -26,6 +26,7 @@ To set the theme in Xfce, run the following commands in Terminal,
 
 ```
 xfconf-query -c xsettings -p /Net/ThemeName -s "macOS Sierra"
+xfconf-query -c xfwm4 -p /general/theme -s "macOS Sierra"
 ```
 
 ### Requirements ###
