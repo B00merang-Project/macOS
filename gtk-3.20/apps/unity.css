@@ -75,8 +75,14 @@ UnityPanelWidget,
     color: @panel_fg_color;
 }
 
-.menuitem:hover,
-.menuitem *:hover,
+/* new menubar function in unity 7.5 */
+UnityDecoration.menuitem,
+UnityDecoration .menuitem {
+    border-radius: 0;
+}
+
+UnityDecoration .menuitem:hover,
+UnityDecoration .menuitem *:hover,
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
     background-image: none;
