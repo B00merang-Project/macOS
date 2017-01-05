@@ -1,6 +1,6 @@
 #OS X El Capitan v0.6
 
-gtk-color-scheme = "bg_color:#e4e4e4\nfg_color:#4c4c4c\nbase_color:#fff\ntext_color:#4c4c4c\nselected_bg_color:#116cd6\nselected_fg_color:#ffffff\ntooltip_bg_color:#fff\ntooltip_fg_color:#4c4c4c\ntitlebar_bg_color:#e4e4e4\ntitlebar_fg_color:#4c4c4c\nmenubar_bg_color:#e4e4e4\nmenubar_fg_color:#4c4c4c\ntoolbar_bg_color:#e4e4e4\ntoolbar_fg_color:#4c4c4c\nmenu_bg_color:#F5F5F5\nmenu_fg_color:#4c4c4c\npanel_bg_color:#F5F5F5\npanel_fg_color:#4c4c4c\nlink_color:#D1EDFE"
+gtk-color-scheme = "bg_color:#F5F5F5\nfg_color:#4c4c4c\nbase_color:#fff\ntext_color:#4c4c4c\nselected_bg_color:#116cd6\nselected_fg_color:#ffffff\ntooltip_bg_color:#fff\ntooltip_fg_color:#4c4c4c\ntitlebar_bg_color:#f0f0f0\ntitlebar_fg_color:#4c4c4c\nmenubar_bg_color:#f0f0f0\nmenubar_fg_color:#4c4c4c\ntoolbar_bg_color:#f0f0f0\ntoolbar_fg_color:#4c4c4c\nmenu_bg_color:#F5F5F5\nmenu_fg_color:#4c4c4c\npanel_bg_color:#F5F5F5\npanel_fg_color:#4c4c4c\nlink_color:#D1EDFE"
 
 # Default Style
 
@@ -616,7 +616,7 @@ style "chromium-toolbar-button" {
 
 style "chrome-gtk-frame" {
 	ChromeGtkFrame::frame-color = @titlebar_bg_color
-	ChromeGtkFrame::inactive-frame-color = @titlebar_bg_color
+	ChromeGtkFrame::inactive-frame-color = "#e4e4e4"
 
 	ChromeGtkFrame::frame-gradient-size = 0
 	ChromeGtkFrame::frame-gradient-color = @titlebar_bg_color
