@@ -1,19 +1,30 @@
 /******************
  * window actions *
  ******************/
+
 .titlebar .titlebutton.minimize {
     color: transparent;
     border-image: none;
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/minimize-focused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/minimize-focused-normal.svg"));
 }
+
 .titlebar .titlebutton.minimize:backdrop {
-    background-image: -gtk-scaled(url("buttons/minimize-unfocused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/minimize-unfocused-normal.svg"));
     color: transparent;
 }
-.titlebar .titlebutton.minimize:hover,
+
+.titlebar .titlebutton.minimize:hover {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/minimize-focused-active.svg"));
+}
+
 .titlebar .titlebutton.minimize:active,
 .titlebar .titlebutton.minimize:checked {
     color: transparent;
@@ -21,22 +32,33 @@
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/minimize-focused-active.png"));
+    background-image: -gtk-scaled(url("buttons/minimize-focused-pressed.svg"));
 }
+
 .titlebar .titlebutton.maximize {
    color: transparent;
     border-image: none;
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/maximize-focused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/maximize-focused-normal.svg"));
 }
+
 .titlebar .titlebutton.maximize:backdrop {
-    background-image: -gtk-scaled(url("buttons/maximize-unfocused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/maximize-unfocused-normal.svg"));
     color: transparent;
 }
 
-.titlebar .titlebutton.maximize:hover, 
+
+.titlebar .titlebutton.maximize:hover {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/maximize-focused-active.svg"));
+}
+
 .titlebar .titlebutton.maximize:active,
 .titlebar .titlebutton.maximize:checked  {
     color: transparent;
@@ -44,22 +66,33 @@
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/maximize-focused-active.png"));
+    background-image: -gtk-scaled(url("buttons/maximize-focused-pressed.svg"));
 }
+
 .titlebar .titlebutton.close {
    color: transparent;
     border-image: none;
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/close-focused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/close-focused-normal.svg"));
 }
+
 .titlebar .titlebutton.close:backdrop {
-    background-image: -gtk-scaled(url("buttons/close-unfocused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/close-unfocused-normal.svg"));
     color: transparent;
 }
 
-.titlebar .titlebutton.close:hover,
+
+.titlebar .titlebutton.close:hover {
+   color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/close-focused-active.svg"));
+}
+
 .titlebar .titlebutton.close:active,
 .titlebar .titlebutton.close:checked  {
    color: transparent;
@@ -67,12 +100,12 @@
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/close-focused-active.png"));
+    background-image: -gtk-scaled(url("buttons/close-focused-pressed.svg"));
 }
 
-/*********************************
- * check and radio (gnome 3.18+) *
- *********************************/
+/*******************
+ * check and radio *
+ *******************/
 check,
 check row:selected,
 check row:selected:focus {
