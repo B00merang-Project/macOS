@@ -333,6 +333,7 @@ GtkAssistant .sidebar {
     border-radius: 5px;
     border-style: solid;
     border-color: transparent;
+    box-shadow: none;
     background-color: transparent;
     background-image: none;
 }
