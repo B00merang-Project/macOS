@@ -6,7 +6,7 @@ BottomRoundness=0
 #The thickness (in pixels) of lines drawn.
 LineWidth=1
 #The color (RGBA) of the outer stroke.
-OuterStrokeColor=0;;0;;0;;150
+OuterStrokeColor=0;;0;;0;;120
 #The starting color (RGBA) of the fill gradient.
 FillStartColor=240;;240;;240;;190
 #The ending color (RGBA) of the fill gradient.
