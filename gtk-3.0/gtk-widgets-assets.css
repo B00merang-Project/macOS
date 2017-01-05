@@ -90,39 +90,39 @@
  * Touch text selection handles *
  ********************************/
 .cursor-handle.bottom {
-	background-image: url("assets/slider-horiz.png");
+	background-image: url("assets/slider-horiz.svg");
 }
 
 .cursor-handle.top {
-	background-image: url("assets/slider-horiz.png");
+	background-image: url("assets/slider-horiz.svg");
 }
 
 /* menuitem */
 
 .menuitem.check:active {
-    background-image: url("assets/menuitem-checkbox-checked.png");
+    background-image: url("assets/menuitem-checkbox-checked.svg");
 }
 
 .menuitem.check:active:insensitive {
-    background-image: url("assets/menuitem-checkbox-checked-insensitive.png");
+    background-image: url("assets/menuitem-checkbox-checked-insensitive.svg");
 }
 
 .menuitem.check:inconsistent,
 .menuitem.radio:inconsistent {
-    background-image: url("assets/menuitem-checkbox-mixed.png");
+    background-image: url("assets/menuitem-checkbox-mixed.svg");
 }
 
 .menuitem.check:inconsistent:insensitive,
 .menuitem.radio:inconsistent:insensitive {
-    background-image: url("assets/menuitem-checkbox-mixed-insensitive.png");
+    background-image: url("assets/menuitem-checkbox-mixed-insensitive.svg");
 }
 
 .menuitem.radio:active {
-    background-image: url("assets/menuitem-radio-checked.png");
+    background-image: url("assets/menuitem-radio-checked.svg");
 }
 
 .menuitem.radio:active:insensitive {
-    background-image: url("assets/menuitem-radio-checked-insensitive.png");
+    background-image: url("assets/menuitem-radio-checked-insensitive.svg");
 }
 
 /*For GNOME-SHELL only*/
@@ -136,11 +136,11 @@
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/minimize-focused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/minimize-focused-normal.svg"));
 }
 
 .titlebar .titlebutton.minimize:backdrop {
-    background-image: -gtk-scaled(url("buttons/minimize-unfocused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/minimize-unfocused-normal.svg"));
     color: transparent;
 }
 
@@ -152,7 +152,7 @@
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/minimize-focused-active.png"));
+    background-image: -gtk-scaled(url("buttons/minimize-focused-active.svg"));
 }
 
 .titlebar .titlebutton.maximize {
@@ -161,11 +161,11 @@
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/maximize-focused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/maximize-focused-normal.svg"));
 }
 
 .titlebar .titlebutton.maximize:backdrop {
-    background-image: -gtk-scaled(url("buttons/maximize-unfocused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/maximize-unfocused-normal.svg"));
     color: transparent;
 }
 
@@ -178,7 +178,7 @@
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/maximize-focused-active.png"));
+    background-image: -gtk-scaled(url("buttons/maximize-focused-active.svg"));
 }
 
 .titlebar .titlebutton.close {
@@ -187,11 +187,11 @@
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/close-focused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/close-focused-normal.svg"));
 }
 
 .titlebar .titlebutton.close:backdrop {
-    background-image: -gtk-scaled(url("buttons/close-unfocused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/close-unfocused-normal.svg"));
     color: transparent;
 }
 
@@ -204,7 +204,7 @@
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/close-focused-active.png"));
+    background-image: -gtk-scaled(url("buttons/close-focused-active.svg"));
 }
 
 /*********************************
