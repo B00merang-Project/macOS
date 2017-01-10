@@ -31,3 +31,5 @@ v1.1 : Flatten colors & make brighter look, more like the current macOS Sierra t
 v1.2 : Some code fixes for dark theme
 --------------------------
 v2.0 : new gtk 3.20 code base
+--------------------------
+v2.1 : Xfwm theme for complete Xfce support
