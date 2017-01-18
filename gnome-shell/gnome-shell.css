@@ -1,4 +1,4 @@
-﻿/* 
+﻿/*
 * macOS / OS X El Capitan Shell theme (spinoff from the Windows 10 SHELL theme)
 *
 * Author : Christian Medel (Elbullazul)
@@ -1249,7 +1249,6 @@ StScrollBar {
 .grid-search-result:checked .overview-icon {
 /* activities bottom-button selected-bg-color*/
 	background: rgba(60,60,60,0.9);
-	border: 0;
 	box-shadow: inset 0 -2px 0 transparent;
 	border-radius: 4px;
 }
@@ -1389,7 +1388,7 @@ StScrollBar {
 	.notification-banner:hover, .notification-banner:focus {
 		margin: 5px;
 		background-color: rgba(255,255,255,0.75);
-		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5); 
+		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
 		border-radius: 4px;
 }
 	.notification-banner .notification-icon {
@@ -2066,7 +2065,7 @@ StScrollBar {
 	background: rgba(60,60,60,0.95);
 	margin-top: 0.5em;
 	padding: 4px 32px;
-	color: 	white;	
+	color: 	white;
 	font-weight: normal;
 	box-shadow: none;
 	text-shadow: none;
