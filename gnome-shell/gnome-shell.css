@@ -570,7 +570,7 @@ StScrollBar {
 .osd-window,
 .resize-popup,
 .switcher-list, .workspace-switcher-container {
-	color: transparent;
+	color: #5c5c5c;
 	background-color: rgba(255,255,255,0.6);
 	border: none;
 	border-radius: 6px;
@@ -1302,7 +1302,8 @@ StScrollBar {
 }
 
 .app-well-app.app-folder > .overview-icon {
-	background-color: rgba(0, 0, 0, 0.7); }
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 4px; }
 
 .show-apps:checked .show-apps-icon,
 .show-apps:focus .show-apps-icon {
