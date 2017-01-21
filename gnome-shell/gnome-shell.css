@@ -1312,7 +1312,7 @@ StScrollBar {
 
 .app-folder-popup {
 	-arrow-border-radius: 8px;
-	-arrow-background-color: rgba(250,250,250,0.95);
+	-arrow-background-color: rgba(250,250,250,0.73);
 	-arrow-base: 24px;
 	-arrow-rise: 0px; }
 
