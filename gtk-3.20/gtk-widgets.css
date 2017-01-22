@@ -643,19 +643,23 @@ scrolledwindow viewport frame {
 /************
  * iconview *
  ************/
-view cell:selected,
-view cell:selected:focus {
+view.view.cell:selected,
+view.view.cell:selected:focus {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_selected_bg_color, 0.9);
-    border-radius: 4px;
+    border-radius: 0px;
     background-color: @theme_selected_bg_color;
     background-image: none;
     color: @theme_selected_fg_color;
 }
 
-.content-view.view .rubberband,
-view .rubberband,
+.content-view.view.rubberband,
+view rubberband,
+rubberband,
+.view.rubberband,
+view rubberband,
+rubberband,
 .rubberband,
 view rubberband,
 rubberband {

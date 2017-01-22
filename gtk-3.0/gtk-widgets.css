@@ -2244,30 +2244,6 @@ GtkSwitch.trough:active:insensitive {
     background-image: url("assets/on-disabled.png");
 }
 
-.toolbar.menubar GtkSwitch.trough,
-.primary-toolbar .toolbar GtkSwitch.trough,
-.primary-toolbar.toolbar GtkSwitch.trough {
-    background-image: url("assets/switch-dark-off.svg");
-}
-
-.toolbar.menubar GtkSwitch.trough:active,
-.primary-toolbar .toolbar GtkSwitch.trough:active,
-.primary-toolbar.toolbar GtkSwitch.trough:active {
-    background-image: url("assets/switch-dark-on.svg");
-}
-
-.toolbar.menubar GtkSwitch.trough:insensitive,
-.primary-toolbar .toolbar GtkSwitch.trough:insensitive,
-.primary-toolbar.toolbar GtkSwitch.trough:insensitive {
-    background-image: url("assets/switch-dark-off-disabled.svg");
-}
-
-.toolbar.menubar GtkSwitch.trough:active:insensitive,
-.primary-toolbar .toolbar GtkSwitch.trough:active:insensitive,
-.primary-toolbar.toolbar GtkSwitch.trough:active:insensitive {
-    background-image: url("assets/switch-dark-on-disabled.svg");
-}
-
 GtkSwitch.slider {
     border: none;
     border-image: none;
