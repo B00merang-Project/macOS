@@ -1254,7 +1254,13 @@ StScrollBar {
 }
 
 .app-well-app:hover .overview-icon, .app-well-app:focus .overview-icon, .app-well-app:selected .overview-icon,
-.app-well-app.app-folder:hover .overview-icon,
+.app-well-app.app-folder:hover .overview-icon {
+	/* added hover indicator */
+	background-color: transparent;
+	border: 1px solid rgba(255,255,255,1);
+	border-radius: 4px;
+}
+
 .app-well-app.app-folder:focus .overview-icon,
 .app-well-app.app-folder:selected .overview-icon,
 .show-apps:hover .overview-icon,
@@ -1312,7 +1318,7 @@ StScrollBar {
 
 .app-folder-popup {
 	-arrow-border-radius: 8px;
-	-arrow-background-color: rgba(250,250,250,0.95);
+	-arrow-background-color: rgba(250,250,250,0.73);
 	-arrow-base: 24px;
 	-arrow-rise: 0px; }
 
