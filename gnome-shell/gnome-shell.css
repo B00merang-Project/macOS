@@ -1248,14 +1248,6 @@ StScrollBar {
 	border-radius: 4px;
 }
 
-.app-well-app:hover .overview-icon, .app-well-app:focus .overview-icon, .app-well-app:selected .overview-icon,
-.app-well-app.app-folder:hover .overview-icon {
-	/* added hover indicator */
-	background-color: transparent;
-	border: 1px solid rgba(255,255,255,1);
-	border-radius: 4px;
-}
-
 .app-well-app.app-folder:focus .overview-icon,
 .app-well-app.app-folder:selected .overview-icon,
 .show-apps:hover .overview-icon,
