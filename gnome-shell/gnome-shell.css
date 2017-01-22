@@ -629,10 +629,6 @@ StScrollBar {
 			-st-icon-style: symbolic;
 			margin-left: 4px;
 			margin-right: 4px; }
-		#panel .panel-button:hover,#panel .panel-button:overview:hover {
-			color: gray;
-			text-shadow:none;
-			icon-shadow:none;	}
 		#panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
 			background-color: rgba(0,0,0,0.95);
 			box-shadow: none;
