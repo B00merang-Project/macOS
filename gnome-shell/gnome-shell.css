@@ -1136,7 +1136,7 @@ StScrollBar {
 	background-gradient-direction: horizontal;
 	background-gradient-start: rgba(140,140,140,0.7);
 	background-gradient-end: rgba(180,180,180,0.7);
-	border-color: rgba(100,100,100,0.8);
+  border-color: rgba(100,100,100,0.8);
 	box-shadow: 0;
 	padding: 0 0;
 }
@@ -1162,8 +1162,8 @@ StScrollBar {
 	border-radius: 4px;
 	padding: 4px 12px;
 	color: black;
-	border: solid 1px gray;
-	background-color: rgba(255,255,255,0.98);
+  background-color: rgba(220, 220, 220, 0.9);
+  box-shadow: 0 0px 3px 0 rgba(25,25,25,0.5);
 	text-align: center;
 	-x-offset: 8px;
 }
