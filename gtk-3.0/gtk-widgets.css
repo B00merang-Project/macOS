@@ -351,8 +351,7 @@ GtkAssistant .sidebar {
     box-shadow: 0 0px 0px alpha(@dark_shadow, 0.10), 0 1px 2px alpha(@dark_shadow, 0.2);
 }
 
-.button.flat:active,
-.button.flat:checked {
+.button.flat:active {
     background-image: linear-gradient(to bottom,
                                       shade(@selected_bg_color, 1.2),
                                       shade(@selected_bg_color, 0.95)
