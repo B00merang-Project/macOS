@@ -236,7 +236,7 @@
 .check,
 .check row:selected,
 .check row:selected:focus {
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.svg");
+    -gtk-icon-source: url("assets/checkbox-unchecked.svg");
 }
 
 .check:insensitive,
@@ -248,7 +248,7 @@
 .check:active, .check:checked,
 .check row:selected:active, .check row:selected:checked,
 .check row:selected:focus:active, .check row:selected:focus:checked {
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.svg");
+    -gtk-icon-source: url("assets/checkbox-checked.svg");
 }
 
 .check:active:insensitive, .check:checked:insensitive,
