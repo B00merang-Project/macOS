@@ -1,0 +1,15 @@
+.csd {
+  background-color: alpha(@theme_bg_color, 0.9);
+}
+
+.titlebar {
+  background: alpha(@titlebar_bg_color, 0.3);
+  background-image: linear-gradient(to bottom, 
+                        alpha(shade(@titlebar_bg_color, 1.03), 0.3),
+                        alpha(shade(@titlebar_bg_color, 1.01), 0.3),
+                        alpha(@titlebar_bg_color, 0.3)));
+}
+
+NemoWindow.background > GtkGrid > GtkPaned > .pane-separator,
+MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator {
+  background-color: rgba(53, 57, 69, 0.95); }

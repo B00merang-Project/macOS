@@ -217,10 +217,10 @@ GtkAssistant .sidebar {
     border-width: 1px;
     border-radius: 5px;
     border-style: solid;
-    border-top-color: shade(@theme_bg_color, 0.9);
-    border-right-color: shade(@theme_bg_color, 0.8);
-    border-left-color: shade(@theme_bg_color, 0.8);
-    border-bottom-color: shade(@theme_bg_color, 0.7);
+    border-top-color: shade(@theme_bg_color, 0.95);
+    border-right-color: shade(@theme_bg_color, 0.85);
+    border-left-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom,
                                       shade(shade(@theme_bg_color, 1.02), 1.1),
                                       shade(shade(@theme_bg_color, 1.02), 1.04)
@@ -339,10 +339,10 @@ GtkAssistant .sidebar {
 }
 
 .button.flat:hover {
-    border-top-color: shade(@theme_bg_color, 0.9);
-    border-right-color: shade(@theme_bg_color, 0.8);
-    border-left-color: shade(@theme_bg_color, 0.8);
-    border-bottom-color: shade(@theme_bg_color, 0.7);
+    border-top-color: shade(@theme_bg_color, 0.95);
+    border-right-color: shade(@theme_bg_color, 0.85);
+    border-left-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom,
                                       shade(shade(@theme_bg_color, 1.02), 1.1),
                                       shade(shade(@theme_bg_color, 1.02), 1.04)
@@ -2370,7 +2370,7 @@ GtkColorButton.button {
     border-style: solid;
     border-color: shade(@titlebar_bg_color, 0.8);
     background-color: @titlebar_bg_color;
-    background-image: none;
+    background-image: linear-gradient(to bottom, @titlebar_bg_color 15%, shade(@titlebar_bg_color, 0.9));
     color: @titlebar_fg_color;
 }
 
@@ -2406,10 +2406,10 @@ GtkColorButton.button {
 .header-bar GtkComboBox,
 .header-bar .button { 
     border-width: 1px;
-    border-top-color: shade(@theme_bg_color, 0.9);
-    border-right-color: shade(@theme_bg_color, 0.8);
-    border-left-color: shade(@theme_bg_color, 0.8);
-    border-bottom-color: shade(@theme_bg_color, 0.7);
+    border-top-color: shade(@theme_bg_color, 0.95);
+    border-right-color: shade(@theme_bg_color, 0.85);
+    border-left-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.95), 1.1));
     color: @titlebar_fg_color;
     box-shadow: inset 0 -1px shade(@bg_color, 0.7);
@@ -2424,9 +2424,9 @@ GtkStatusbar .button:checked,
                                       shade(@selected_bg_color, 1.2),
                                       shade(@selected_bg_color, 0.95)
                                       );
-    background-color: shade(@bg_color, 0.5);
-    border-color: shade(@bg_color, 0.45);
-    color:@theme_selected_fg_color;
+    background-color: @theme_selected_bg_color;
+    border-color: shade(@selected_bg_color, 1.3);
+    color: @theme_selected_fg_color;
 }
 
 .header-bar .button:hover {
@@ -2552,11 +2552,7 @@ GtkStatusbar .button:checked:backdrop,
     border-style: solid;
     border-color: shade(@toolbar_bg_color, 0.8);
     background-color: transparent;
-    background-image: linear-gradient(to bottom,
-                                      @titlebar_bg_color,
-                                      shade(@titlebar_bg_color, 0.98),
-                                      shade(@titlebar_bg_color, 0.96)
-                                      );
+    background-image: linear-gradient(to bottom, @titlebar_bg_color 15%, shade(@titlebar_bg_color, 0.9));
     color: @toolbar_fg_color;
 }
 
@@ -2587,10 +2583,10 @@ GtkStatusbar .button:checked:backdrop,
 .toolbar .button {
     padding: 4px 8px;
     border-width: 1px;
-    border-top-color: shade(@theme_bg_color, 0.9);
-    border-right-color: shade(@theme_bg_color, 0.8);
-    border-left-color: shade(@theme_bg_color, 0.8);
-    border-bottom-color: shade(@theme_bg_color, 0.7);
+    border-top-color: shade(@theme_bg_color, 0.95);
+    border-right-color: shade(@theme_bg_color, 0.85);
+    border-left-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.95), 1.1));
     box-shadow: inset 0 -1px shade(@bg_color, 0.7);
     color: @toolbar_fg_color;

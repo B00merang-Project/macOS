@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="checkbox-mixed.svg">
+   sodipodi:docname="radio-mixed-unfocused.svg">
   <metadata
      id="metadata20">
     <rdf:RDF>
@@ -35,21 +35,21 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="640"
-     inkscape:window-height="480"
+     inkscape:window-width="1366"
+     inkscape:window-height="710"
      id="namedview18"
      showgrid="false"
      inkscape:zoom="16.875"
-     inkscape:cx="8"
+     inkscape:cx="8.0592593"
      inkscape:cy="8"
      inkscape:window-x="0"
-     inkscape:window-y="27"
-     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <defs
      id="defs4">
     <linearGradient
-       id="linearGradient3809">
+       id="linearGradient3793">
       <stop
          offset="0"
          style="stop-color:#e5e5e5"
@@ -60,31 +60,26 @@
          id="stop9" />
     </linearGradient>
     <linearGradient
-       gradientTransform="translate(0 -16)"
-       id="linearGradient3832"
-       xlink:href="#linearGradient3809"
+       gradientTransform="matrix(0 1 -1 0 16 0)"
+       id="linearGradient3819"
+       xlink:href="#linearGradient3793"
        x1="1"
        x2="15"
        gradientUnits="userSpaceOnUse" />
   </defs>
-  <rect
-     width="14"
-     x="1"
-     y="-15"
-     rx="1"
-     height="14"
-     style="fill:#ffffff"
-     transform="rotate(90)"
-     id="rect12" />
   <path
-     style="fill:#aaa"
-     d="M 2,0 C 0.892,0 0,0.892 0,2 l 0,12 c 0,1.108 0.892,2 2,2 l 12,0 c 1.108,0 2,-0.892 2,-2 L 16,2 C 16,0.892 15.108,0 14,0 L 2,0 z m 0,1 12,0 c 0.554,0 1,0.446 1,1 l 0,12 c 0,0.554 -0.446,1 -1,1 L 2,15 C 1.446,15 1,14.554 1,14 L 1,2 C 1,1.446 1.446,1 2,1 z"
+     style="fill:#ffffff"
+     d="M 7.9999998,15 C 4.1340073,15 1.0000003,11.865993 1.0000003,7.9999999 c 0,-3.8659932 3.1340069,-7 6.9999995,-7 3.8659932,0 7.0000002,3.1340068 7.0000002,7 C 15,11.865993 11.865993,15 7.9999997,15 z"
+     id="path12" />
+  <path
+     style="fill:#aaaaaa;fill-opacity:0.94117647"
+     d="M 8,0 C 3.581722,0 0,3.581722 0,8 c 0,4.418278 3.581722,8 8,8 4.418278,0 8,-3.581722 8,-8 C 16,3.581722 12.418278,0 8,0 z m 0,1 c 3.865993,0 7,3.1340068 7,7 0,3.865993 -3.134007,7 -7,7 C 4.1340068,15 1,11.865993 1,8 1,4.1340068 4.1340068,1 8,1 z"
      id="path14" />
   <rect
      width="8"
      x="4"
      y="7"
      height="2"
-     style="fill:#808080"
+     style="fill:#393939;fill-opacity:0.94117647"
      id="rect16" />
 </svg>

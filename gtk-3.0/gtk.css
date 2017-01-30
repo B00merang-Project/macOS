@@ -5,7 +5,7 @@
 @define-color text_color #4c4c4c;
 @define-color selected_bg_color #3b82d6;
 @define-color selected_fg_color #ffffff;
-@define-color tooltip_bg_color #cecece;
+@define-color tooltip_bg_color #ffffff;
 @define-color tooltip_fg_color #4c4c4c;
 @define-color unfocused_bg_color #e4e4e4;
 @define-color unfocused_fg_color #8c8c8c;
@@ -89,3 +89,4 @@
 @import url("apps/nemo.css");
 @import url("apps/synaptic.css");
 @import url("apps/lightdm-gtk-greeter.css");
+@import url("vibrancy.css");
