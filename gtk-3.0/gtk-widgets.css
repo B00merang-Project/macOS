@@ -1426,7 +1426,7 @@ GtkModelButton.button:selected {
  * pane separator *
  ******************/
 .pane-separator {
-    background-color: shade(@theme_bg_color, 0.95);
+    background-color: transparent;
     color: transparent;
 }
 
