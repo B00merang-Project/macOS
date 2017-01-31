@@ -1,15 +1,15 @@
-.csd {
-  background-color: alpha(@theme_bg_color, 0.9);
-}
+FeedReaderreaderUI.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar,
+GeditWindow.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar {
+  background: none;
+  background-color: alpha(@titlebar_bg_color, 0.9); }
+  GeditWindow.background.csd > .titlebar > GtkHeaderBar.header-bar.titlebar:backdrop {
+    background-color: @theme_unfocused_bg_color; }
+FeedReaderreaderUI.background.csd > FeedReaderreaderHeaderbar.titlebar,
+GeditWindow.background.csd > .titlebar {
+  background: none;
+  background-color: transparent; }
 
-.titlebar {
-  background: alpha(@titlebar_bg_color, 0.3);
-  background-image: linear-gradient(to bottom, 
-                        alpha(shade(@titlebar_bg_color, 1.03), 0.3),
-                        alpha(shade(@titlebar_bg_color, 1.01), 0.3),
-                        alpha(@titlebar_bg_color, 0.3)));
-}
+/*GeditWindow.background.csd {
+  background-color: transparent; }*/
 
-NemoWindow.background > GtkGrid > GtkPaned > .pane-separator,
-MarlinViewWindow.background > GtkBox > GtkPaned > .pane-separator {
-  background-color: rgba(53, 57, 69, 0.95); }
+
