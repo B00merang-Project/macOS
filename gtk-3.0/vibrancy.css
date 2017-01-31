@@ -14,8 +14,10 @@ GeditWindow.background.csd {
   background-color: transparent; }
 
 GeditWindow GtkStatusbar {
-  background: @theme_bg_color;
-}
+  background: @theme_bg_color; }
+
+.gedit-bottom-panel-paned {
+  background-color: @theme_base_color; }
 
 /* Nautilus sidebar & headerbar transparency */
 .sidebar,
