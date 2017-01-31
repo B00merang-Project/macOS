@@ -33,3 +33,5 @@ v1.2 : Some code fixes for dark theme
 v2.0 : new gtk 3.20 code base
 --------------------------
 v2.1 : Xfwm theme for complete Xfce support
+--------------------------
+v2.2 : Color corrections & added transparency to gedit & nautilus (for gnome/unity)
