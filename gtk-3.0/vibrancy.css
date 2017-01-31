@@ -12,4 +12,20 @@ GeditWindow.background.csd > .titlebar {
 /*GeditWindow.background.csd {
   background-color: transparent; }*/
 
-
+GtkFileChooserDialog GtkPlacesSidebar.sidebar .scrollbar .slider,
+NautilusWindow GtkPlacesSidebar.sidebar .scrollbar .slider, NemoWindow .sidebar .scrollbar .slider, NemoWindow .source-list.sidebar.view .scrollbar .slider,
+MarlinViewWindow .sidebar .scrollbar .slider,
+MarlinViewWindow .source-list.sidebar.view .scrollbar .slider, GeditFileBrowserWidget .scrollbar .slider {
+  background-color: rgba(231, 234, 238, 0.7); }
+  GtkFileChooserDialog GtkPlacesSidebar.sidebar .scrollbar .slider:hover,
+  NautilusWindow GtkPlacesSidebar.sidebar .scrollbar .slider:hover, NemoWindow .sidebar .scrollbar .slider:hover,
+  MarlinViewWindow .sidebar .scrollbar .slider:hover, GeditFileBrowserWidget .scrollbar .slider:hover {
+    background-color: #f6f7f9; }
+  GtkFileChooserDialog GtkPlacesSidebar.sidebar .scrollbar .slider:prelight:active,
+  NautilusWindow GtkPlacesSidebar.sidebar .scrollbar .slider:prelight:active, NemoWindow .sidebar .scrollbar .slider:prelight:active,
+  MarlinViewWindow .sidebar .scrollbar .slider:prelight:active, GeditFileBrowserWidget .scrollbar .slider:prelight:active {
+    background-color: #5294e2; }
+  GtkFileChooserDialog GtkPlacesSidebar.sidebar .scrollbar .slider:insensitive,
+  NautilusWindow GtkPlacesSidebar.sidebar .scrollbar .slider:insensitive, NemoWindow .sidebar .scrollbar .slider:insensitive,
+  MarlinViewWindow .sidebar .scrollbar .slider:insensitive, GeditFileBrowserWidget .scrollbar .slider:insensitive {
+    background-color: transparent; }
