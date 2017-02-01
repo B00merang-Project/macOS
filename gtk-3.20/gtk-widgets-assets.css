@@ -216,7 +216,7 @@ radio row:selected:focus:indeterminate:disabled {
 menuitem check {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.svg"));
 	color: @theme_fg_color;
-	icon-shadow: none; 
+	-gtk-icon-shadow: none; 
 }
 menuitem check:active, menuitem check:checked {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.svg"));
@@ -233,7 +233,7 @@ menuitem check:disabled {
 menuitem radio {
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-unselected.svg"));
 	color: @theme_fg_color;
-	icon-shadow: none; 
+	-gtk-icon-shadow: none; 
 }
 menuitem radio:active, menuitem radio:checked {
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-selected.svg"));
