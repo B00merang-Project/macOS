@@ -109,7 +109,7 @@
 check,
 check row:selected,
 check row:selected:focus {
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.svg");
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.svg"));
 }
 
 check:backdrop,
@@ -118,15 +118,15 @@ check row:selected:focus:backdrop {
     -gtk-icon-source: url("assets/checkbox-unchecked-unfocused.svg");
 }
 
-check:insensitive,
-check row:selected:insensitive,
-check row:selected:focus:insensitive {
+check:disabled,
+check row:selected:disabled,
+check row:selected:focus:disabled {
     -gtk-icon-source: url("assets/checkbox-unchecked-insensitive.svg");
 }
 check:active,  check:checked,
 check row:selected:active,  check row:selected:checked,
 check row:selected:focus:active,  check row:selected:focus:checked {
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.svg");
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.svg"));
 }
 
 check:active:backdrop, check:checked:backdrop,
@@ -135,9 +135,9 @@ check row:selected:focus:active:backdrop, check row:selected:focus:checked:backd
     -gtk-icon-source: url("assets/checkbox-checked-unfocused.svg");
 }
 
-check:active:insensitive,  check:checked:insensitive,
-check row:selected:active:insensitive,  check row:selected:checked:insensitive,
-check row:selected:focus:active:insensitive,  check row:selected:focus:checked:insensitive {
+check:active:disabled,  check:checked:disabled,
+check row:selected:active:disabled,  check row:selected:checked:disabled,
+check row:selected:focus:active:disabled,  check row:selected:focus:checked:disabled {
     -gtk-icon-source: url("assets/checkbox-checked-insensitive.svg");
 }
 
@@ -153,9 +153,9 @@ check row:selected:focus:indeterminate:backdrop {
     -gtk-icon-source: url("assets/checkbox-mixed-unfocused.svg");
 }
 
-check:indeterminate:insensitive,
-check row:selected:indeterminate:insensitive,
-check row:selected:focus:indeterminate:insensitive {
+check:indeterminate:disabled,
+check row:selected:indeterminate:disabled,
+check row:selected:focus:indeterminate:disabled {
     -gtk-icon-source: url("assets/checkbox-mixed-insensitive.svg");
 }
 radio,
@@ -170,9 +170,9 @@ radio row:selected:focus:backdrop {
     -gtk-icon-source: url("assets/radio-unselected-unfocused.svg");
 }
 
-radio:insensitive,
-radio row:selected:insensitive,
-radio row:selected:focus:insensitive {
+radio:disabled,
+radio row:selected:disabled,
+radio row:selected:focus:disabled {
     -gtk-icon-source: url("assets/radio-unselected-insensitive.svg");
 }
 radio:active,  radio:checked,
@@ -187,9 +187,9 @@ radio row:selected:focus:active:backdrop, radio row:selected:focus:checked:backd
     -gtk-icon-source: url("assets/radio-selected-unfocused.svg");
 }
 
-radio:active:insensitive,  radio:checked:insensitive,
-radio row:selected:active:insensitive,  radio row:selected:checked:insensitive,
-radio row:selected:focus:active:insensitive,  radio row:selected:focus:checked:insensitive {
+radio:active:disabled,  radio:checked:disabled,
+radio row:selected:active:disabled,  radio row:selected:checked:disabled,
+radio row:selected:focus:active:disabled,  radio row:selected:focus:checked:disabled {
     -gtk-icon-source: url("assets/radio-selected-insensitive.svg");
 }
 radio:indeterminate,
@@ -205,9 +205,9 @@ radio row:selected:focus:indeterminate:backdrop {
     -gtk-icon-source: url("assets/radio-mixed-unfocused.svg");
 }
 
-radio:indeterminate:insensitive,
-radio row:selected:indeterminate:insensitive,
-radio row:selected:focus:indeterminate:insensitive {
+radio:indeterminate:disabled,
+radio row:selected:indeterminate:disabled,
+radio row:selected:focus:indeterminate:disabled {
     -gtk-icon-source: url("assets/radio-mixed-insensitive.svg");
 }
 /**************************
@@ -227,7 +227,7 @@ menuitem check:indeterminate {
 menuitem check:active:hover {
 	color: @theme_selected_fg_color;
 }
-menuitem check:insensitive {
+menuitem check:disabled {
 	color: @insensitive_fg_color; 
 }
 menuitem radio {
@@ -244,7 +244,7 @@ menuitem radio:indeterminate {
 menuitem radio:hover {
 	color: @theme_selected_fg_color;
 }
-menuitem radio:insensitive {
+menuitem radio:disabled {
 	color: @insensitive_fg_color; 
 }
 
