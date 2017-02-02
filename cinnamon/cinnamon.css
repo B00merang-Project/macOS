@@ -757,12 +757,12 @@ spacing: 0px;
     opacity: 255px;
     mouseover-opacity: 255px;
     width: 34em;
-    color: #ffffff;
+    color: #000;
 }
 
 #notification.multi-line-notification {
     padding: 8px 8px 8px 8px;
-    color: #ffffff;
+    color: #000;
 }
 
 .notification-with-image {
@@ -794,8 +794,8 @@ spacing: 0px;
     border-radius: 0;
     height: 22px;
     width: 220px;
-    color: #fff;
-    caret-color: #fff;
+    color: #000;
+    caret-color: #000;
     font-size: 9pt;
     font-weight: normal;
     caret-size: 1px;
