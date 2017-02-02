@@ -1016,7 +1016,6 @@ GtkInfoBar {
 GtkTreeMenu.menu,
 GtkMenuToolButton.menu,
 GtkComboBox .menu {
-    background-color: @menu_bg_color;
 }
 
 .primary-toolbar .menu,
@@ -1029,7 +1028,7 @@ GtkComboBox .menu {
     padding: 0;
     border-radius: 0;
     border-style: none;
-    background-color: @menu_bg_color;
+    background-color: alpha(@menu_bg_color, 0.8);
     color: @menu_fg_color;
 }
 

@@ -32,3 +32,13 @@ NautilusWindow.background.csd {
     background: none;
     background-color: alpha(@titlebar_bg_color, 0.95);
 }
+
+/* make menu transparent (gnome) */
+.csd .popup {
+    background: transparent;
+}
+
+.background.csd .menu,
+.csd .popup {
+    border-radius: 0;
+}

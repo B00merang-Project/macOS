@@ -16,22 +16,10 @@
     background-image: url("assets/checkbox-unchecked-insensitive.svg");
 }
 
-.check:hover,
-.check row:selected:hover,
-.check row:selected:focus:hover {
-    background-image: url("assets/checkbox-unchecked-over.svg");
-}
-
 .check:active,
 .check row:selected:active,
 .check row:selected:focus:active {
     background-image: url("assets/checkbox-checked.svg");
-}
-
-.check:active:hover,
-.check row:selected:active:hover,
-.check row:selected:focus:active:hover {
-    background-image: url("assets/checkbox-checked-over.svg");
 }
 
 .check:active:insensitive,
@@ -62,16 +50,8 @@
     background-image: url("assets/radio-unselected-insensitive.svg");
 }
 
-.radio:hover {
-    background-image: url("assets/radio-unselected-over.svg");
-}
-
 .radio:active {
     background-image: url("assets/radio-selected.svg");
-}
-
-.radio:active:hover {
-    background-image: url("assets/radio-selected-over.svg");
 }
 
 .radio:active:insensitive {
