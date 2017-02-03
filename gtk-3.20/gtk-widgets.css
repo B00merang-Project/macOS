@@ -208,10 +208,10 @@ button {
     border-width: 1px;
     border-radius: 5px;
     border-style: solid;
-    border-top-color: shade(@theme_bg_color, 0.9);
-    border-right-color: shade(@theme_bg_color, 0.8);
-    border-left-color: shade(@theme_bg_color, 0.8);
-    border-bottom-color: shade(@theme_bg_color, 0.7);
+    border-top-color: shade(@theme_bg_color, 0.95);
+    border-right-color: shade(@theme_bg_color, 0.85);
+    border-left-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom, @theme_base_color);
     color: @theme_fg_color;
     box-shadow: 0 1px 2px alpha(@dark_shadow, 0.2);}
@@ -297,10 +297,10 @@ button.flat {
 }
 
 button.flat:hover {
-    border-top-color: shade(@theme_bg_color, 0.9);
-    border-right-color: shade(@theme_bg_color, 0.8);
-    border-left-color: shade(@theme_bg_color, 0.8);
-    border-bottom-color: shade(@theme_bg_color, 0.7);
+    border-top-color: shade(@theme_bg_color, 0.95);
+    border-right-color: shade(@theme_bg_color, 0.85);
+    border-left-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom,
                                       shade(shade(@theme_bg_color, 1.02), 1.1),
                                       shade(shade(@theme_bg_color, 1.02), 1.04)
@@ -2429,10 +2429,10 @@ headerbar combobox,
 headerbar button { 
     padding: 4px 10px;
     border-width: 1px;
-    border-top-color: shade(@theme_bg_color, 0.9);
-    border-right-color: shade(@theme_bg_color, 0.8);
-    border-left-color: shade(@theme_bg_color, 0.8);
-    border-bottom-color: shade(@theme_bg_color, 0.7);
+    border-top-color: shade(@theme_bg_color, 0.95);
+    border-right-color: shade(@theme_bg_color, 0.85);
+    border-left-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom, @theme_base_color);
     background-color: transparent;
     color: @titlebar_fg_color;
@@ -2610,10 +2610,10 @@ toolbar combobox,
 toolbar button {
     padding: 4px 8px;
     border-width: 1px;
-    border-top-color: shade(@theme_bg_color, 0.9);
-    border-right-color: shade(@theme_bg_color, 0.8);
-    border-left-color: shade(@theme_bg_color, 0.8);
-    border-bottom-color: shade(@theme_bg_color, 0.7);
+    border-top-color: shade(@theme_bg_color, 0.95);
+    border-right-color: shade(@theme_bg_color, 0.85);
+    border-left-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.95), 1.1));
     box-shadow: inset 0 -1px shade(@bg_color, 0.7);
     color: @toolbar_fg_color;
