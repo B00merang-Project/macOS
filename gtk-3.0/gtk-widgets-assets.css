@@ -77,34 +77,6 @@
 	background-image: url("assets/slider-horiz.png");
 }
 
-/* menuitem */
-
-.menuitem.check:active {
-    background-image: url("assets/menuitem-checkbox-checked.png");
-}
-
-.menuitem.check:active:insensitive {
-    background-image: url("assets/menuitem-checkbox-checked-insensitive.png");
-}
-
-.menuitem.check:inconsistent,
-.menuitem.radio:inconsistent {
-    background-image: url("assets/menuitem-checkbox-mixed.png");
-}
-
-.menuitem.check:inconsistent:insensitive,
-.menuitem.radio:inconsistent:insensitive {
-    background-image: url("assets/menuitem-checkbox-mixed-insensitive.png");
-}
-
-.menuitem.radio:active {
-    background-image: url("assets/menuitem-radio-checked.png");
-}
-
-.menuitem.radio:active:insensitive {
-    background-image: url("assets/menuitem-radio-checked-insensitive.png");
-}
-
 /******************
  * window actions *
  ******************/
