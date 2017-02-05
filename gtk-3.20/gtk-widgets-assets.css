@@ -123,6 +123,13 @@ check row:selected:disabled,
 check row:selected:focus:disabled {
     -gtk-icon-source: url("assets/checkbox-unchecked-insensitive.svg");
 }
+
+check:disabled:backdrop,
+check row:selected:disabled:backdrop,
+check row:selected:focus:disabled:backdrop {
+    -gtk-icon-source: url("assets/checkbox-unchecked-insensitive-unfocused.svg");
+}
+
 check:active,  check:checked,
 check row:selected:active,  check row:selected:checked,
 check row:selected:focus:active,  check row:selected:focus:checked {
@@ -139,6 +146,12 @@ check:active:disabled,  check:checked:disabled,
 check row:selected:active:disabled,  check row:selected:checked:disabled,
 check row:selected:focus:active:disabled,  check row:selected:focus:checked:disabled {
     -gtk-icon-source: url("assets/checkbox-checked-insensitive.svg");
+}
+
+check:active:disabled:backdrop,  check:checked:disabled:backdrop,
+check row:selected:active:disabled:backdrop,  check row:selected:checked:disabled:backdrop,
+check row:selected:focus:active:disabled:backdrop,  check row:selected:focus:checked:disabled:backdrop {
+    -gtk-icon-source: url("assets/checkbox-checked-insensitive-unfocused.svg");
 }
 
 check:indeterminate,
@@ -158,6 +171,13 @@ check row:selected:indeterminate:disabled,
 check row:selected:focus:indeterminate:disabled {
     -gtk-icon-source: url("assets/checkbox-mixed-insensitive.svg");
 }
+
+check:indeterminate:disabled:backdrop,
+check row:selected:indeterminate:disabled:backdrop,
+check row:selected:focus:indeterminate:disabled:backdrop {
+    -gtk-icon-source: url("assets/checkbox-mixed-insensitive-unfocused.svg");
+}
+
 radio,
 radio row:selected,
 radio row:selected:focus {
@@ -175,6 +195,13 @@ radio row:selected:disabled,
 radio row:selected:focus:disabled {
     -gtk-icon-source: url("assets/radio-unselected-insensitive.svg");
 }
+
+radio:disabled:backdrop,
+radio row:selected:disabled:backdrop,
+radio row:selected:focus:disabled:backdrop {
+    -gtk-icon-source: url("assets/radio-unselected-insensitive-unfocused.svg");
+}
+
 radio:active,  radio:checked,
 radio row:selected:active,  radio row:selected:checked,
 radio row:selected:focus:active,  radio row:selected:focus:checked {
@@ -192,6 +219,13 @@ radio row:selected:active:disabled,  radio row:selected:checked:disabled,
 radio row:selected:focus:active:disabled,  radio row:selected:focus:checked:disabled {
     -gtk-icon-source: url("assets/radio-selected-insensitive.svg");
 }
+
+radio:active:disabled:backdrop,  radio:checked:disabled:backdrop,
+radio row:selected:active:disabled:backdrop,  radio row:selected:checked:disabled:backdrop,
+radio row:selected:focus:active:disabled:backdrop,  radio row:selected:focus:checked:disabled:backdrop {
+    -gtk-icon-source: url("assets/radio-selected-insensitive-unfocused.svg");
+}
+
 radio:indeterminate,
 radio row:selected:indeterminate,
 radio row:selected:focus:indeterminate {
@@ -210,6 +244,13 @@ radio row:selected:indeterminate:disabled,
 radio row:selected:focus:indeterminate:disabled {
     -gtk-icon-source: url("assets/radio-mixed-insensitive.svg");
 }
+
+radio:indeterminate:disabled:backdrop,
+radio row:selected:indeterminate:disabled:backdrop,
+radio row:selected:focus:indeterminate:disabled:backdrop {
+    -gtk-icon-source: url("assets/radio-mixed-insensitive-unfocused.svg");
+}
+
 /**************************
  * menuitem check & radio *
  **************************/

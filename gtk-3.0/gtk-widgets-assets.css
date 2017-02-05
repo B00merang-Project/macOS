@@ -203,6 +203,12 @@
     -gtk-icon-source: url("assets/checkbox-unchecked-insensitive.svg");
 }
 
+.check:insensitive:backdrop,
+.check row:selected:insensitive:backdrop,
+.check row:selected:focus:insensitive:backdrop {
+    -gtk-icon-source: url("assets/checkbox-unchecked-insensitive-unfocused.svg");
+}
+
 .check:active, .check:checked,
 .check row:selected:active, .check row:selected:checked,
 .check row:selected:focus:active, .check row:selected:focus:checked {
@@ -221,6 +227,11 @@
     -gtk-icon-source: url("assets/checkbox-checked-insensitive.svg");
 }
 
+.check:active:insensitive:backdrop, .check:checked:insensitive:backdrop,
+.check row:selected:active:insensitive:backdrop, .check row:selected:checked:insensitive:backdrop,
+.check row:selected:focus:active:insensitive:backdrop, .check row:selected:focus:checked:insensitive:backdrop {
+    -gtk-icon-source: url("assets/checkbox-checked-insensitive-unfocused.svg");
+}
 
 .check:inconsistent,
 .check row:selected:inconsistent,
@@ -238,6 +249,12 @@
 .check row:selected:inconsistent:insensitive,
 .check row:selected:focus:inconsistent:insensitive {
     -gtk-icon-source: url("assets/checkbox-mixed-insensitive.svg");
+}
+
+.check:inconsistent:insensitive:backdrop,
+.check row:selected:inconsistent:insensitive:backdrop,
+.check row:selected:focus:inconsistent:insensitive:backdrop {
+    -gtk-icon-source: url("assets/checkbox-mixed-insensitive-unfocused.svg");
 }
 
 .radio,
@@ -258,6 +275,12 @@
     -gtk-icon-source: url("assets/radio-unselected-insensitive.svg");
 }
 
+.radio:insensitive:backdrop,
+.radio row:selected:insensitive:backdrop,
+.radio row:selected:focus:insensitive:backdrop {
+    -gtk-icon-source: url("assets/radio-unselected-insensitive-unfocused.svg");
+}
+
 .radio:active, .radio:checked,
 .radio row:selected:active, .radio row:selected:checked,
 .radio row:selected:focus:active, .radio row:selected:focus:checked {
@@ -276,6 +299,12 @@
     -gtk-icon-source: url("assets/radio-selected-insensitive.svg");
 }
 
+.radio:active:insensitive:backdrop, .radio:checked:insensitive:backdrop,
+.radio row:selected:active:insensitive:backdrop, .radio row:selected:checked:insensitive:backdrop,
+.radio row:selected:focus:active:insensitive:backdrop, .radio row:selected:focus:checked:insensitive:backdrop {
+    -gtk-icon-source: url("assets/radio-selected-insensitive-unfocused.svg");
+}
+
 .radio:inconsistent,
 .radio row:selected:inconsistent,
 .radio row:selected:focus:inconsistent {
@@ -292,6 +321,12 @@
 .radio row:selected:inconsistent:insensitive,
 .radio row:selected:focus:inconsistent:insensitive {
     -gtk-icon-source: url("assets/radio-mixed-insensitive.svg");
+}
+
+.radio:inconsistent:insensitive:backdrop,
+.radio row:selected:inconsistent:insensitive:backdrop,
+.radio row:selected:focus:inconsistent:insensitive:backdrop {
+    -gtk-icon-source: url("assets/radio-mixed-insensitive-unfocused.svg");
 }
 
 /**************************
