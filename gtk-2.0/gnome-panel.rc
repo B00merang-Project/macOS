@@ -12,7 +12,7 @@ style "panel" = "dark"
 	bg[NORMAL] 			= "#151515"
 	bg[PRELIGHT]		= "#1f1f1f"	
 	bg[SELECTED]		= "#004D8C"
-	text[NORMAL]		= @fg_color_dark
+	text[NORMAL]		= @fg_color
 
 	engine "murrine" {
 		colorize_scrollbar = FALSE
