@@ -3275,6 +3275,26 @@ GtkStatusbar .button:checked:backdrop,
     border-radius: 4px;
 }
 
+/* remove annoying bug of always rounding wrong child! (thanks Arc theme) */
+.linked:not(.vertical):not(.path-bar) > .button:active + .entry,
+.linked:not(.vertical):not(.path-bar) > .button:checked + .entry {
+  border-left-color: #5294e2; }
+
+.linked:not(.vertical):not(.path-bar) > .button + .button {
+  border-left-style: none; }
+
+.linked:not(.vertical):not(.path-bar) > .button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover:not(:only-child),
+.linked:not(.vertical):not(.path-bar) > .button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover + .button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action) {
+  box-shadow: inset 1px 0 #cfd6e6; }
+
+.linked:not(.vertical):not(.path-bar) > .button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):first-child:hover,
+.linked:not(.vertical):not(.path-bar) > .button:active + .button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
+.linked:not(.vertical):not(.path-bar) > .button:checked + .button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
+.linked:not(.vertical):not(.path-bar) > .button.suggested-action + .button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
+.linked:not(.vertical):not(.path-bar) > .button.destructive-action + .button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
+.linked:not(.vertical):not(.path-bar) > .entry + .button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover:not(:only-child) {
+  box-shadow: none; }
+
 /***********
  * tooltip *
  ***********/
