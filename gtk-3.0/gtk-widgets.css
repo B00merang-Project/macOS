@@ -2416,6 +2416,7 @@ GtkColorButton.button {
 .header-bar GtkComboBox,
 .header-bar .button { 
     border-width: 1px;
+    box-shadow: none;
     border-top-color: shade(@theme_bg_color, 0.95);
     border-right-color: shade(@theme_bg_color, 0.85);
     border-left-color: shade(@theme_bg_color, 0.85);
@@ -2580,6 +2581,7 @@ GtkStatusbar .button:checked:backdrop,
     border-radius: 4px;
     background-color: shade(@theme_base_color, 0.95);
     border-width: 1px;
+    box-shadow: none;
     border-top-color: shade(@theme_bg_color, 0.95);
     border-right-color: shade(@theme_bg_color, 0.85);
     border-left-color: shade(@theme_bg_color, 0.85);
