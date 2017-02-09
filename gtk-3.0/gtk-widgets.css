@@ -1218,6 +1218,17 @@ GtkPopover {
     box-shadow: 0 2px 3px alpha(black, 0.5);
 }
 
+GtkPopover .button.flat:hover,
+GtkPopover .button.flat:active {
+    border-width: 0;
+    border-radius: 0;
+    border-color: transparent;
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+    background-image: none;
+    box-shadow: none;
+}
+
 GtkPopover.osd {
     box-shadow: 0 2px 7px 3px alpha(black, 0.5);
 }
