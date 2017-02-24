@@ -43,8 +43,8 @@ style "murrine-default" {
 	GtkRange::stepper_spacing = 0
 	GtkRange::trough-under-steppers = 1
 
-	GtkScale::slider-length = 16
-	GtkScale::slider-width = 16
+	GtkScale::slider-length = 14
+	GtkScale::slider-width = 14
 	GtkScale::trough-side-details = 1
 
 	GtkScrollbar::activate-slider = 1
