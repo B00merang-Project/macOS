@@ -3925,12 +3925,12 @@ GtkBubbleWindow .toolbar {
 .titlebar {
     border-radius: 4px 4px 0 0;
     background-color: transparent;
-    background-image: linear-gradient(to bottom,
+/*    background-image: linear-gradient(to bottom,
                                       shade(@titlebar_bg_color, 1.03),
                                       shade(@titlebar_bg_color, 1.01),
                                       @titlebar_bg_color
-                                      );
-
+                                      ); */
+    background-image: linear-gradient(to bottom, #f3f3f3, #bcbcbc);
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
 }

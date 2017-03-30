@@ -11,7 +11,7 @@
 @define-color unfocused_fg_color #8c8c8c;
 
 /* dark color scheme */
-@define-color dark_bg_color #f0f0f0;
+@define-color dark_bg_color #e0dee1;
 @define-color dark_fg_color #4c4c4c;
 
 /* colormap actually used by the theme, to be overridden in other css files */

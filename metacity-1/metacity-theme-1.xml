@@ -56,15 +56,15 @@
 
 <draw_ops name="title">
   <gradient type="vertical" x="0" y="0" width="width" height="height">
-    <color value="#efefef"/>
-    <color value="#f0f0f0"/>
+    <color value="#f7f7f7"/>
+    <color value="#e0dee1"/>
   </gradient>
 </draw_ops>
 
 <draw_ops name="title-shaded">
   <gradient type="vertical" x="0" y="0" width="width" height="height">
-    <color value="#efefef"/>
-    <color value="#f0f0f0"/>
+    <color value="#f7f7f7"/>
+    <color value="#e0dee1"/>
   </gradient>
 </draw_ops>
 
@@ -75,8 +75,8 @@
 
 <draw_ops name="title-max">
   <gradient type="vertical" x="0" y="0" width="width" height="height">
-    <color value="#efefef"/>
-    <color value="#f0f0f0"/>
+    <color value="#f7f7f7"/>
+    <color value="#e0dee1"/>
   </gradient>
 </draw_ops>
 

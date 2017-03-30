@@ -1,4 +1,4 @@
-gtk-color-scheme = "bg_color:#F5F5F5\nfg_color:#4c4c4c\nbase_color:#fff\ntext_color:#4c4c4c\nselected_bg_color:#3b82d6\nselected_fg_color:#ffffff\ntooltip_bg_color:#fff\ntooltip_fg_color:#4c4c4c\ntitlebar_bg_color:#f0f0f0\ntitlebar_fg_color:#4c4c4c\nmenubar_bg_color:#f0f0f0\nmenubar_fg_color:#4c4c4c\ntoolbar_bg_color:#f0f0f0\ntoolbar_fg_color:#4c4c4c\nmenu_bg_color:#F5F5F5\nmenu_fg_color:#4c4c4c\npanel_bg_color:#F5F5F5\npanel_fg_color:#4c4c4c\nlink_color:#D1EDFE"
+gtk-color-scheme = "bg_color:#F5F5F5\nfg_color:#4c4c4c\nbase_color:#fff\ntext_color:#4c4c4c\nselected_bg_color:#3b82d6\nselected_fg_color:#ffffff\ntooltip_bg_color:#fff\ntooltip_fg_color:#4c4c4c\ntitlebar_bg_color:#e0dee1\ntitlebar_fg_color:#4c4c4c\nmenubar_bg_color:#e0dee1\nmenubar_fg_color:#4c4c4c\ntoolbar_bg_color:#e0dee1\ntoolbar_fg_color:#4c4c4c\nmenu_bg_color:#F5F5F5\nmenu_fg_color:#4c4c4c\npanel_bg_color:#F5F5F5\npanel_fg_color:#4c4c4c\nlink_color:#D1EDFE"
 
 # Default Style
 
