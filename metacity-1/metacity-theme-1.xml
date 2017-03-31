@@ -11,9 +11,9 @@
 <constant name="IconTitleSpacing" value="0"/>
 
 <frame_geometry name="normal"  rounded_top_left="3"  rounded_top_right="3" rounded_bottom_left="false" rounded_bottom_right="false" title_scale="medium">
-  <distance name="left_width" value="1"/>
-  <distance name="right_width" value="1"/>
-  <distance name="bottom_height" value="1"/>
+  <distance name="left_width" value="0"/>
+  <distance name="right_width" value="0"/>
+  <distance name="bottom_height" value="0"/>
   <distance name="left_titlebar_edge" value="6"/>
   <distance name="right_titlebar_edge" value="6"/>
   <distance name="button_width" value="20"/>
