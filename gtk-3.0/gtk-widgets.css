@@ -1556,6 +1556,12 @@ GtkProgressBar {
                                       );
 }
 
+.progressbar:backdrop {
+    border-color: shade(@theme_unfocused_bg_color, 0.85);
+    background-color: shade(@theme_unfocused_bg_color, 0.85);
+    background-image: linear-gradient(to bottom, shade(@theme_unfocused_bg_color, 0.85));
+}
+
 .trough,
 .trough row,
 .trough row:hover,
@@ -2625,6 +2631,14 @@ GtkStatusbar .button:checked:backdrop,
     border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.91), 1.1));
     color: @theme_unfocused_fg_color;
+}
+
+.toolbar .button,
+.toolbar .button:backdrop {
+    border-color: transparent;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 .primary-toolbar .raised .button:checked:backdrop,
@@ -3930,7 +3944,7 @@ GtkBubbleWindow .toolbar {
                                       shade(@titlebar_bg_color, 1.01),
                                       @titlebar_bg_color
                                       ); */
-    background-image: linear-gradient(to bottom, #f3f3f3, #bcbcbc);
+    background-image: linear-gradient(to bottom, shade(@titlebar_bg_color, 1.1), shade(@titlebar_bg_color, 0.84));
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
 }

@@ -1512,6 +1512,12 @@ progress row:selected:focus {
                                       );
 }
 
+progressbar:backdrop {
+    border-color: shade(@theme_unfocused_bg_color, 0.85);
+    background-color: shade(@theme_unfocused_bg_color, 0.85);
+    background-image: linear-gradient(to bottom, shade(@theme_unfocused_bg_color, 0.85));
+}
+
  trough,
  trough row,
  trough row:hover,
@@ -2614,6 +2620,14 @@ toolbar button {
     border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: linear-gradient(to bottom, shade(shade(@theme_bg_color, 0.95), 1.1));
     color: @toolbar_fg_color;
+}
+
+toolbar button,
+toolbar button:backdrop {
+    border-color: transparent;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 .primary-toolbar .raised button:backdrop,
@@ -3912,12 +3926,7 @@ GtkBubbleWindow toolbar {
 .titlebar {
     border-radius: 4px 4px 0 0;
     background-color: transparent;
-/*    background-image: linear-gradient(to bottom,
-                                      shade(@titlebar_bg_color, 1.03),
-                                      shade(@titlebar_bg_color, 1.01),
-                                      @titlebar_bg_color
-                                      ); */
-    background-image: linear-gradient(to bottom, #f3f3f3, #bcbcbc);
+    background-image: linear-gradient(to bottom, shade(@titlebar_bg_color, 1.1), shade(@titlebar_bg_color, 0.84));
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
 }
