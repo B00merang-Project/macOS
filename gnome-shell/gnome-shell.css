@@ -1134,8 +1134,8 @@ StScrollBar {
 	font-size: 20pt;
 	background: rgba(160,160,160,0.7);
 	background-gradient-direction: horizontal;
-	background-gradient-start: rgba(140,140,140,0.7);
-	background-gradient-end: rgba(180,180,180,0.7);
+	background-gradient-start: rgba(240,240,240,0.7);
+	background-gradient-end: rgba(240,240,240,0.7);
   border-color: rgba(100,100,100,0.8);
 	box-shadow: 0;
 	padding: 0 0;
