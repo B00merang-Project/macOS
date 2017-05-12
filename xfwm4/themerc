@@ -13,7 +13,7 @@ title_vertical_offset_inactive=0
 title_shadow_active=false
 title_shadow_inactive=false
 
-button_layout=HMC|O
+button_layout=CHM|O
 
 active_text_color=#4c4c4c
 inactive_text_color=#9f9f9f
