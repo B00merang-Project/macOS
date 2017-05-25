@@ -579,6 +579,19 @@ entry entry {
     border: none;
 }
 
+/* nemo icon view entry */
+.nemo-window .nemo-window-pane widget.entry {
+    border: 1px solid;
+    border-radius: 3px;
+    color: @theme_fg_color;
+    border-color: @theme_selected_bg_color;
+    background-color: @theme_base_color; }
+  
+.nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
 /************
  * expander *
  ************/
@@ -1959,6 +1972,23 @@ NemoWindow .sidebar .cell {
     padding: 2px 2px; 
 }
 
+filechooser placessidebar.sidebar,
+.nautilus-window placessidebar.sidebar {
+  background-color: #353945; }
+
+.nemo-window .sidebar {
+  background-color: @theme_bg_color; }
+  .nemo-window .sidebar .view, .nemo-window .sidebar iconview, .nemo-window .sidebar row {
+    background-color: transparent; }
+    .nemo-window .sidebar .view.cell:selected, .nemo-window .sidebar iconview.cell:selected, .nemo-window .sidebar row.cell:selected {
+      background-color: @theme_bg_color; }
+    /* .nemo-window .sidebar .view.expander, .nemo-window .sidebar iconview.expander, .nemo-window .sidebar row.expander {
+      color: #787e8a; } */
+      /* .nemo-window .sidebar .view.expander:hover, .nemo-window .sidebar iconview.expander:hover, .nemo-window .sidebar row.expander:hover {
+        color: #BAC3CF; } */
+  .nemo-window .sidebar separator {
+    background-color: transparent; }
+
 /* Sidebar spacing for 3.20 */
 placessidebar > viewport.frame {
   border-style: none; }
@@ -2066,12 +2096,12 @@ spinner {
 /*************
  * statusbar *
  *************/
-GtkStatusbar {
+statusbar {
     padding: 4px;
     color: @theme_fg_color;
 }
 
-GtkStatusbar  frame {
+statusbar > frame {
     border-width: 0;
 }
 
@@ -2549,7 +2579,7 @@ toolbar menubar {
 .primary-toolbar .raised button,
 toolbar combobox,
 toolbar button {
-    padding: 4px 8px;
+    padding: 6px 10px;
     border-width: 1px;
     border-top-color: shade(@theme_bg_color, 0.95);
     border-right-color: shade(@theme_bg_color, 0.85);
@@ -2557,14 +2587,6 @@ toolbar button {
     border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: image(shade(shade(@theme_bg_color, 0.95), 1.1));
     color: @toolbar_fg_color;
-}
-
-toolbar button,
-toolbar button:backdrop {
-    border-color: transparent;
-    background-image: none;
-    background-color: transparent;
-    box-shadow: none;
 }
 
 .primary-toolbar .raised button:backdrop,
@@ -2624,8 +2646,8 @@ toolbar button:active:hover:focus {
 
 .primary-toolbar button:disabled,
 toolbar button:disabled {
-    border-color: transparent;
-    background-color: transparent;
+    border-color: shade(@theme_base_color, 0.7);
+    background-color: shade(@theme_base_color, 0.8);
     background-image: none;
 }
 
@@ -3957,15 +3979,19 @@ decoration {
     
 /* CSD */
 headerbar.default-decoration,
-headerbar.default-decoration:backdrop,
 .csd headerbar.default-decoration, 
-.csd headerbar.default-decoration:backdrop,
 .default-decoration.titlebar:not(headerbar),
-.default-decoration.titlebar:backdrop:not(headerbar),
-.csd .default-decoration.titlebar:not(headerbar),
-.csd .default-decoration.titlebar:backdrop:not(headerbar) {
+.csd .default-decoration.titlebar:not(headerbar) {
     min-height: 28px;
     padding: 0 3px;
-    background-color: @theme_bg_color;
-    background-image: image(@theme_bg_color);
+    background-color: @toolbar_bg_color;
+    background-image: image(@toolbar_bg_color);
     border-bottom-width: 0; }
+
+headerbar.default-decoration:backdrop,
+.csd headerbar.default-decoration:backdrop,
+.default-decoration.titlebar:backdrop:not(headerbar),
+.csd .default-decoration.titlebar:backdrop:not(headerbar) {
+    background-color: @theme_unfocused_bg_color;
+    background-image: image(@theme_unfocused_bg_color);
+}
