@@ -1978,16 +1978,19 @@ filechooser placessidebar.sidebar,
 
 .nemo-window .sidebar {
   background-color: @theme_bg_color; }
-  .nemo-window .sidebar .view, .nemo-window .sidebar iconview, .nemo-window .sidebar row {
-    background-color: transparent; }
-    .nemo-window .sidebar .view.cell:selected, .nemo-window .sidebar iconview.cell:selected, .nemo-window .sidebar row.cell:selected {
-      background-color: @theme_bg_color; }
-    /* .nemo-window .sidebar .view.expander, .nemo-window .sidebar iconview.expander, .nemo-window .sidebar row.expander {
-      color: #787e8a; } */
-      /* .nemo-window .sidebar .view.expander:hover, .nemo-window .sidebar iconview.expander:hover, .nemo-window .sidebar row.expander:hover {
-        color: #BAC3CF; } */
-  .nemo-window .sidebar separator {
-    background-color: transparent; }
+.nemo-window .sidebar .view, .nemo-window .sidebar iconview, .nemo-window .sidebar row {
+  background-color: transparent; }
+.nemo-window .sidebar .view.cell:selected, .nemo-window .sidebar iconview.cell:selected, .nemo-window .sidebar row.cell:selected {
+  border-color: shade(@theme_bg_color, 0.85);
+  background-color: shade(@theme_bg_color, 0.85);
+  background-image: none;
+  color: @theme_fg_color; }
+/* .nemo-window .sidebar .view.expander, .nemo-window .sidebar iconview.expander, .nemo-window .sidebar row.expander {
+  color: #787e8a; } */
+/* .nemo-window .sidebar .view.expander:hover, .nemo-window .sidebar iconview.expander:hover, .nemo-window .sidebar row.expander:hover {
+  color: #BAC3CF; } */
+.nemo-window .sidebar separator {
+  background-color: transparent; }
 
 /* Sidebar spacing for 3.20 */
 placessidebar > viewport.frame {
