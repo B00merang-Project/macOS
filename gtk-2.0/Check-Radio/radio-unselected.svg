@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="15"
+   viewBox="0 0 15 14"
+   height="14"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="radio-unselected.svg">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="714"
+     id="namedview16"
+     showgrid="false"
+     inkscape:zoom="5.9662135"
+     inkscape:cx="19.858747"
+     inkscape:cy="14.386815"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3793">
+      <stop
+         offset="0"
+         style="stop-color:#e5e5e5"
+         id="stop7" />
+      <stop
+         offset="1"
+         style="stop-color:#f9f9f9"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(0,1,-1,0,16,0)"
+       xlink:href="#linearGradient3793"
+       id="linearGradient3799"
+       x1="1"
+       x2="15"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <path
+     style="fill:#ffffff"
+     d="M 7.5,13.125 C 4.1172561,13.125 1.375,10.382744 1.375,7 1.375,3.6172559 4.1172561,0.875 7.5,0.875 c 3.382744,0 6.125,2.7422559 6.125,6.125 0,3.382744 -2.742256,6.125 -6.125,6.125 z"
+     id="path12"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:#bfbfbf;fill-opacity:0.98431373"
+     d="m 7.5,0 c -3.8659932,0 -7,3.1340067 -7,7 0,3.865993 3.1340068,7 7,7 3.865993,0 7,-3.134007 7,-7 0,-3.8659933 -3.134007,-7 -7,-7 z m 0,0.875 c 3.382744,0 6.125,2.7422559 6.125,6.125 0,3.382744 -2.742256,6.125 -6.125,6.125 C 4.1172559,13.125 1.375,10.382744 1.375,7 1.375,3.6172559 4.1172559,0.875 7.5,0.875 Z"
+     id="path14"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:0.2;fill:#000000"
+     d="m 7.5,0 c -3.865993,0 -7,3.1340068 -7,7 0,0.1476323 0.01321,0.2921363 0.0222168,0.4375 C 0.74906652,3.7762786 3.7816393,0.875 7.5,0.875 c 3.718361,0 6.750934,2.9012786 6.977783,6.5625 C 14.48679,7.2921363 14.5,7.1476323 14.5,7 14.5,3.1340068 11.365993,0 7.5,0 Z"
+     id="path4154"
+     inkscape:connector-curvature="0" />
+</svg>
