@@ -199,10 +199,51 @@ GtkAssistant .sidebar {
     color: mix(@theme_fg_color, @theme_bg_color, 0.1);
 }
 
+/****************
+ * link buttons *
+ ****************/
+*:link, button:link, button:visited {
+    color: @link_color;
+}
+
+*:link:visited, button:visited {
+    color: mix(@link_color, @theme_fg_color, 0.2);
+}
+
+*:selected *:link:visited, *:selected button:visited:link, *:selected button:visited {
+    color: mix(@link_color, @theme_selected_fg_color, 0.65);
+}
+
+*:link:hover, button:hover:link, button:hover:visited {
+    color: shade(mix(@link_color, @theme_fg_color, 0.2), 1.15);
+}
+
+*:selected *:link:hover, *:selected button:hover:link, *:selected button:hover:visited {
+    color: mix(@link_color, @theme_selected_fg_color, 0.75);
+}
+
+*:link:active, button:active:link, button:active:visited {
+    color: shade(@link_color, 0.85);
+}
+
+*:selected *:link:active, *:selected button:active:link, *:selected button:active:visited {
+    color: mix(@link_color, @theme_selected_fg_color, 0.5);
+}
+
+infobar.info *:link, infobar.info button:link, infobar.info button:visited, infobar.question *:link, infobar.question button:link, infobar.question button:visited, infobar.warning *:link, infobar.warning button:link, infobar.warning button:visited, infobar.error *:link, infobar.error button:link, infobar.error button:visited, *:link:selected, button:selected:link, button:selected:visited, headerbar.selection-mode .subtitle:link, .selection-mode.titlebar:not(headerbar) .subtitle:link,
+*:selected *:link,
+*:selected button:link,
+*:selected button:visited {
+    color: mix(@link_color, @theme_selected_fg_color, 0.5);
+}
+
+button:link > label, button:visited > label {
+    text-decoration-line: underline;
+}
+
 /**********
  * button *
  **********/
-/* Marker : button*/
 button {
     padding: 3px 8px;
     border-width: 1px;
