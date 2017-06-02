@@ -1,0 +1,33 @@
+.budgie-container {
+    background-color: transparent;
+}
+
+calendar.raven-calendar {
+    padding: 3px;
+    color: @raven_bg_color;
+
+calendar.raven-calendar:indeterminate {
+    color: gtkalpha(currentColor,0.3);
+}
+
+calendar.raven-calendar:selected {
+    color: @selected_bg_color;
+}
+
+calendar.raven-calendar.header {
+    color: @raven_fg_color;
+    border: none;
+    border-radius: 0;
+}
+
+calendar.raven-calendar.button,
+calendar.raven-calendar.button:focus {
+    color: gtkalpha(currentColor,0.5);
+    background-color: transparent;
+}
+
+calendar.raven-calendar button:hover {
+    color: @raven_fg_color;
+    background-color: transparent;
+}
+

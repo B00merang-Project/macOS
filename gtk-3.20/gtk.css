@@ -81,6 +81,10 @@
 @define-color wm_icons_unfocused_prelight @selected_bg_color;
 @define-color wm_icons_unfocused_pressed shade(@selected_bg_color, 0.8);
 
+/* budgie colors */
+@define-color raven_bg_color rgba(0,0,0,0.9);
+@define-color raven_fg_color #fff;
+
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-assets.css");
 @import url("apps/unity.css");
