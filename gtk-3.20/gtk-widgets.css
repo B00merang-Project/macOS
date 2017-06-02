@@ -68,6 +68,7 @@
 *:selected:backdrop,
 *:selected:focus:backdrop {
     background-color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@theme_bg_color, 0.8);
     color: @theme_fg_color;
 }
 
@@ -561,7 +562,6 @@ calendar highlight {
     border-width: 1px 1px 1px 1px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    box-shadow: inset 0 -1px shade(@bg_color, 0.7);
 }
 
 /*********
@@ -636,19 +636,30 @@ entry entry {
 /************
  * expander *
  ************/
+expander arrow {
+    min-width: 16px;
+    min-height: 16px;
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+expander arrow:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
+
+expander arrow:checked {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
 expander {
     color: alpha(currentColor, 0.7);
-    border: alpha(currentColor, 0.7);
 }
 
 expander:hover {
     color: alpha(currentColor, 0.8);
-    border-color: alpha(currentColor, 0.8);
 }
 
-expander:active {
+expander:checked {
     color: alpha(currentColor, 0.9);
-    border-color: alpha(currentColor, 0.9);
 }
 
 /**************
@@ -1024,18 +1035,13 @@ grip {
     background-color: transparent;
 }
 
-.arrow {
-    color: alpha(currentColor, 0.7);
-}
-
-/* GTK 3.20  arrow */
 arrow,
 combobox arrow {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-  min-height: 16px;
-  min-width: 16px; }
-combobox:drop(active) {
-  box-shadow: none; }
+    color: alpha(currentColor, 0.7);
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+    min-height: 16px;
+    min-width: 16px;
+}
 
 /********
  * menu *
@@ -1172,6 +1178,25 @@ menu menuitem *:hover {
 menu menuitem:disabled,
 menu menuitem *:disabled {
     color: mix(@menu_fg_color, @menu_bg_color, 0.5);
+}
+
+/* menu arrow */
+menu menuitem arrow,
+.menu menuitem arrow {
+    min-height: 16px;
+    min-width: 16px;
+}
+
+menu menuitem arrow:dir(ltr),
+.menu menuitem arrow:dir(ltr) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+    margin-left: 10px;
+}
+
+menu menuitem arrow:dir(rtl),
+.menu menuitem arrow:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+    margin-right: 10px;
 }
 
 menuitem check,
@@ -1361,7 +1386,7 @@ notebook tab:checked:backdrop {
 }
 
 notebook tab label {
-    color: mix(@theme_text_color, @theme_base_color, 0.3);
+    /*color: mix(@theme_text_color, @theme_base_color, 0.3);*/
 }
 
 notebook .active-page,
@@ -1500,54 +1525,30 @@ progressbar {
     padding: 0;
     border-width: 0px;
     border-radius: 8px;
-    min-width: 6px;
-    min-height: 6px;
+    background-color: transparent;
 }
 
-progress,
-progress row,
-progress row:hover,
-progress row:selected,
-progress row:selected:focus, 
-progress row:selected:focus {
+progressbar progress {
+    border: none;
     border-radius: 8px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: @theme_selected_bg_color;
-    background-color: @theme_selected_bg_color;
     background-image: image(@theme_selected_bg_color);
 }
 
-progressbar:backdrop {
-    border-color: shade(@theme_unfocused_bg_color, 0.85);
-    background-color: shade(@theme_unfocused_bg_color, 0.85);
+progressbar progress:backdrop {
     background-image: image(shade(@theme_unfocused_bg_color, 0.85));
 }
 
- trough,
- trough row,
- trough row:hover,
- trough row:selected,
- trough row:selected:focus {
-    border-width: 1px;
-    border-style: solid;
+progressbar trough {
+    border: none;
     border-radius: 8px;
-    border-color: shade(@theme_bg_color, 0.85);
     background-color: shade(@theme_bg_color, 0.9);
-    background-image: none;
+}
+
+progressbar trough:backdrop {
+    background-color: shade(@theme_unfocused_bg_color, 0.95);
 }
 
 /* level bars as used for password quality or remaining power */
-Gtklevelbar {
-    -levelbar-min-block-width: 34;
-    -levelbar-min-block-height: 2;
-}
-
-Gtklevelbar.vertical {
-    -levelbar-min-block-width: 2;
-    -levelbar-min-block-height: 34;
-}
-
 levelbar trough {
     padding: 1px;
     border-radius: 4px;
@@ -2514,7 +2515,6 @@ headerbar button:backdrop {
     border-left-color: shade(@theme_bg_color, 0.85);
     border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: image(shade(shade(@theme_bg_color, 0.91), 1.1));
-    box-shadow: inset 0 -1px shade(@bg_color, 0.7);
     color: @theme_unfocused_fg_color;
 }
 
@@ -2647,7 +2647,6 @@ toolbar button:backdrop {
     border-left-color: shade(@theme_bg_color, 0.85);
     border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: image(shade(shade(@theme_bg_color, 0.91), 1.1));
-    box-shadow: inset 0 -1px shade(@bg_color, 0.7);
     color: @theme_unfocused_fg_color;
 }
 
@@ -3387,7 +3386,7 @@ GtkViewport frame {
 
 /* backdrop state */
 .view:selected:backdrop, iconview:selected:backdrop, .view:selected:backdrop, iconview:selected:backdrop {
-    background-color: shade(@theme_bg_color, 0.8); 
+    background-color: shade(@theme_bg_color, 0.8);
 }
 
 /**************
