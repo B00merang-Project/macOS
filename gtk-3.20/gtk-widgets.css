@@ -1424,6 +1424,62 @@ notebook tab button:active:hover {
     background-color: transparent;
 }
 
+notebook > header.top > tabs > arrow.up,
+notebook > header.bottom > tabs > arrow.up {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+notebook > header.top > tabs > arrow.up:last-child,
+notebook > header.bottom > tabs > arrow.up:last-child {
+    margin-left: 2px;
+}
+
+notebook > header.top > tabs > arrow.down,
+notebook > header.bottom > tabs > arrow.down {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+
+notebook > header.top > tabs > arrow.down:first-child,
+notebook > header.bottom > tabs > arrow.down:first-child {
+    margin-right: 2px;
+}
+
+notebook > header.left > tabs > arrow.up,
+notebook > header.right > tabs > arrow.up {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+notebook > header.left > tabs > arrow.up:last-child,
+notebook > header.right > tabs > arrow.up:last-child {
+    margin-top: 2px;
+}
+
+notebook > header.left > tabs > arrow.down,
+notebook > header.right > tabs > arrow.down {
+    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+notebook > header.left > tabs > arrow.down:first-child,
+notebook > header.right > tabs > arrow.down:first-child {
+    margin-bottom: 2px;
+}
+
+notebook > header > tabs > arrow {
+    color: @theme_fg_color;
+}
+
+notebook > header > tabs > arrow:hover {
+    color: shade(@theme_fg_color, 1.2);
+}
+
+notebook > header > tabs > arrow:active {
+    color: shade(@theme_fg_color, 0.8);
+}
+
+notebook > header > tabs > arrow:disabled {
+    color: shade(@theme_bg_color, 0.6);
+}
+
 /******************
  * pane separator *
  ******************/
