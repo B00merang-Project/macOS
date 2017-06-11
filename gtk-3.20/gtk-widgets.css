@@ -2070,13 +2070,13 @@ NemoWindow .sidebar .cell {
     padding: 2px 2px; 
 }
 
-filechooser placessidebar.sidebar,
+/*filechooser placessidebar.sidebar,
 .nautilus-window placessidebar.sidebar {
   background-color: @theme_bg_color; }
 
 filechooser placessidebar.sidebar:backdrop,
 .nautilus-window placessidebar.sidebar:backdrop {
-    background-color: @theme_fg_color; }
+    background-color: @theme_fg_color; }*/
 
 .nemo-window .sidebar {
   background-color: @theme_bg_color; }
