@@ -682,7 +682,7 @@ list-row:selected {
 /*********
  * frame *
  *********/
-frame {
+frame > border {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.85);
@@ -3992,7 +3992,6 @@ GtkBubbleWindow toolbar {
  * CSD *
  *******/
 decoration {
-  color: red;
   border-radius: 4px 4px 0 0;
   border-width: 0px;
   box-shadow: 0 3px 9px 1px rgba(0,0,0,0.3), 0 0 0 1px rgba(0, 0, 0, 0.23);

@@ -7,6 +7,7 @@
 @define-color budgie_bg_color rgb(131,138,160);
 @define-color budgie_dark_bg_color rgb(31,33,40);
 @define-color raven_bg_color rgb(50,50,50); /*rgba(53,57,69,0.93);*/
+@define-color panel_bg_color rgba(255,255,255,0.8)
 
 /* Official budgie code: https://github.com/budgie-desktop/budgie-desktop/tree/master/src/theme/3.20 */
 
@@ -175,7 +176,10 @@ popover row  {
     color:@budgie_fg_color;
     background-color:@budgie_selected_bg_color; }
 
-.budgie-panel button,
+.budgie-panel button {
+    color: #000;
+}
+
 .raven button,
 .drop-shadow button,
 .budgie-session-dialog button,
@@ -214,7 +218,10 @@ popover row  {
     background-color: alpha(@budgie_bg_color,0);
     border-color: alpha(@budgie_dark_bg_color,0); }
 
-.budgie-panel button:hover,
+.budgie-panel button:hover {
+    color: #000;
+}
+
 .raven button:hover,
 .drop-shadow button:hover,
 .budgie-session-dialog button:hover,
@@ -225,19 +232,26 @@ popover row  {
     background-color: rgba(174,179,193,0.31);
     border-color: alpha(@budgie_dark_bg_color,0.62); }
 
-.budgie-panel button:active,
+/* raven checked buttons */
 .raven button:active,
+.raven button:checked {
+    background-image: none;
+    background-color: alpha(@budgie_fg_color, 0.7);
+    color: #000;
+}
+
+.budgie-panel button:active,
 .drop-shadow button:active,
 .budgie-session-dialog button:active,
 .budgie-polkit-dialog button:active,
 .budgie-run-dialog button:active,
 .budgie-panel button:checked,
-.raven button:checked,
 .drop-shadow button:checked,
 .budgie-session-dialog button:checked,
 .budgie-polkit-dialog button:checked,
 .budgie-run-dialog button:checked {
     color:@budgie_fg_color;
+    background-image: none;
     background-color:@budgie_selected_bg_color;
     border-color: alpha(@budgie_dark_bg_color,0.62); }
 
@@ -4219,7 +4233,7 @@ button.raven-trigger {
 
 .budgie-panel {
     color:#000;
-    background-color: alpha(@budgie_fg_color,0.8);
+    background-color: @panel_bg_color;
     background-image: none;
     box-shadow: none;
     border: none; }
@@ -4507,7 +4521,7 @@ button.raven-trigger {
 
 .raven .raven-background {
     color:@budgie_fg_color;
-    background-color: rgba(26,29,38,0.4);
+    /*background-color: rgba(26,29,38,0.4);*/
     border-bottom:1px solid rgba(26,29,38,0.4); }
 
 .raven .raven-background.middle {
@@ -4521,7 +4535,7 @@ button.raven-trigger {
 
 .raven-mpris {
     color:@budgie_fg_color;
-    background-color: rgba(26,28,34,0.93);
+    /*background-color: rgba(26,28,34,0.93);*/
     border:solid rgba(18,19,23,0.98);
     border-width:1px 0; }
 
