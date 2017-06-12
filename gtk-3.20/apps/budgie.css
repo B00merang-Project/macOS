@@ -2,12 +2,12 @@
    Author: Elbullazul (B00merang Project) */
 @define-color budgie_selected_bg_color #5294E2;
 @define-color budgie_borders #1f1f1f;
+@define-color panel_bg_color alpha(@budgie_fg_color,0.8);
 @define-color raven_borders rgb(15,17,22);
 @define-color budgie_fg_color rgb(255,255,255);
 @define-color budgie_bg_color rgb(131,138,160);
 @define-color budgie_dark_bg_color rgb(31,33,40);
 @define-color raven_bg_color rgb(50,50,50); /*rgba(53,57,69,0.93);*/
-@define-color panel_bg_color rgba(255,255,255,0.8)
 
 /* Official budgie code: https://github.com/budgie-desktop/budgie-desktop/tree/master/src/theme/3.20 */
 
@@ -232,12 +232,12 @@ popover row  {
     background-color: rgba(174,179,193,0.31);
     border-color: alpha(@budgie_dark_bg_color,0.62); }
 
-/* raven checked buttons */
+/* sidebar checked buttons */
 .raven button:active,
 .raven button:checked {
-    background-image: none;
     background-color: alpha(@budgie_fg_color, 0.7);
     color: #000;
+    background-image: none;
 }
 
 .budgie-panel button:active,
@@ -4035,6 +4035,7 @@ popover row  {
 .budgie-polkit-dialog calendar.raven-calendar,
 .budgie-run-dialog calendar.raven-calendar {
     padding:3px;
+    background-color: transparent;
     color:@budgie_fg_color; }
 
 .budgie-panel calendar.raven-calendar:indeterminate,
@@ -4075,8 +4076,7 @@ popover row  {
 .budgie-session-dialog calendar.raven-calendar.button:focus,
 .budgie-polkit-dialog calendar.raven-calendar.button:focus,
 .budgie-run-dialog calendar.raven-calendar.button:focus {
-    color:alpha(currentColor,
-    .5);
+    color:alpha(currentColor,0.5);
     background-color: transparent; }
 
 .budgie-panel calendar.raven-calendar.button:hover,
@@ -4521,7 +4521,7 @@ button.raven-trigger {
 
 .raven .raven-background {
     color:@budgie_fg_color;
-    /*background-color: rgba(26,29,38,0.4);*/
+/*    background-color: rgba(26,29,38,0.4);*/
     border-bottom:1px solid rgba(26,29,38,0.4); }
 
 .raven .raven-background.middle {
@@ -4535,7 +4535,7 @@ button.raven-trigger {
 
 .raven-mpris {
     color:@budgie_fg_color;
-    /*background-color: rgba(26,28,34,0.93);*/
+/*    background-color: rgba(26,28,34,0.93);*/
     border:solid rgba(18,19,23,0.98);
     border-width:1px 0; }
 
