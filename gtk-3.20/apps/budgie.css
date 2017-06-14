@@ -3681,8 +3681,9 @@ popover row  {
     font-size:1px;
     outline-color: transparent;
     background-color: alpha(@budgie_fg_color, 0.4);
-    /*background-image: url('../assets/off.png');/*-gtk-scaled(url("../assets/off.png"),
-     url("../assets/switch@2.png"));*/ }
+    /*background-image: url('../assets/off.png');*/
+        /*-gtk-scaled(url("../assets/off.png"),
+         url("../assets/switch@2.png"));*/ }
 
 .budgie-panel switch slider,
 .raven switch slider,
@@ -3734,9 +3735,9 @@ popover row  {
 .budgie-polkit-dialog switch:checked,
 .budgie-run-dialog switch:checked {
     background-color: #4ed464;
-    /*background-image: url('../assets/on.png'); 
-    /*-gtk-scaled(url("../assets/on.png"),
-     url("../assets/switch-active@2.png"));*/ }
+    /*background-image: url('../assets/on.png');*/
+        /*-gtk-scaled(url("../assets/on.png"),
+         url("../assets/switch-active@2.png"));*/ }
 
 .budgie-panel switch:disabled,
 .raven switch:disabled,

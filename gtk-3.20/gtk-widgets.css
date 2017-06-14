@@ -3,23 +3,14 @@
 
 /* default */
 * {
-    -GtkArrow-arrow-scaling: 0.5;
-    -GtkButton-child-displacement-x: 0;
-    -GtkButton-child-displacement-y: 0;
-    -GtkButton-default-border: 0;
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 1;
-    -GtkButton-interior-focus: true;
     -GtkButtonBox-child-min-height: 24;
     -GtkButtonBox-child-internal-pad-y: 1;
     -GtkCheckButton-indicator-size: 16;
-    -GtkCheckMenuItem-indicator-size: 14;
-    -GtkExpander-expander-size: 8;
     -GtkHTML-link-color: @link_color;
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkPaned-handle-size: 2;
-    -progressbar-min-horizontal-bar-height: 6;
-    -progressbar-min-vertical-bar-width: 6;
+    -Gtkprogressbar-min-horizontal-bar-height: 6;
+    -Gtkprogressbar-min-vertical-bar-width: 6;
     -GtkRange-slider-width: 12;
     -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-border: 0;
@@ -27,13 +18,13 @@
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
     -GtkScrollbar-min-slider-length: 80;
-    -scrolledwindow-scrollbar-spacing: 0;
-    -scrolledwindow-scrollbars-within-bevel: 1;
-    -statusbar-shadow-type: none;
+    -Gtkscrolledwindow-scrollbar-spacing: 0;
+    -Gtkscrolledwindow-scrollbars-within-bevel: 1;
+    -Gtkstatusbar-shadow-type: none;
     -GtkTextView-error-underline-color: @error_color;
-    -toolbutton-icon-spacing: 6;
+    -Gtktoolbutton-icon-spacing: 6;
     -GtkToolItemGroup-expander-size: 8;
-    -treeview-expander-size: 8;
+    -Gtktreeview-expander-size: 8;
     -GtkWindow-resize-grip-height: 0;
     -GtkWindow-resize-grip-width: 0;
     -WnckTasklist-fade-overlay-rect: 0;
@@ -187,7 +178,7 @@ entry:disabled {
  * assistant *
  *************/
 GtkAssistant .sidebar  highlight {
-    font: bold;
+    font-weight: bold;
 }
 
 GtkAssistant .sidebar {
@@ -256,7 +247,7 @@ button {
     border-bottom-color: shade(@theme_bg_color, 0.75);
     background-image: image(@theme_base_color);
     color: @theme_fg_color;
-    box-shadow: 0 1px 2px alpha(@dark_shadow, 0.2);}
+    box-shadow: 0 1px 2px alpha(@dark_shadow, 0.2);
 }
 
 button:hover {
@@ -348,7 +339,7 @@ button.flat:hover {
                                       shade(shade(@theme_bg_color, 1.02), 1.04)
                                       );
     color: @theme_fg_color;
-    box-shadow: 0 1px 2px alpha(@dark_shadow, 0.2);}
+    box-shadow: 0 1px 2px alpha(@dark_shadow, 0.2);
 }
 
 button.flat:active,
@@ -1022,9 +1013,6 @@ view image:selected:hover {
 }
 
 .floating-bar button {
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 0;
-
     border-style: none;
     background-color: transparent;
     background-image: none;
@@ -1506,7 +1494,7 @@ notebook > header > tabs > arrow:disabled {
  ******************/
 paned > separator {
     background-color: shade(@theme_bg_color, 0.95);
-    background-image: image(@theme_bg_color, 0.95);
+    background-image: image(shade(@theme_bg_color, 0.95));
     color: transparent;
     border-style: none;
 }
@@ -2676,7 +2664,7 @@ button.color {
   padding-right: 0;
 }
 
-.path-bar button.slider-button:dir-ltr {
+.path-bar button.slider-button:dir(ltr) {
   border-right-width: 0;
 }
 
@@ -2706,12 +2694,12 @@ headerbar button.image-button {
 }
 /* pantheon photos label fix */
 headerbar .title {
-    font: bold;
+    font-weight: bold;
     padding: 0 12px;
 }
 
 headerbar .subtitle {
-    font: smaller;
+    font-size: smaller;
     padding: 0 12px;
 }
 
@@ -3677,12 +3665,12 @@ GtkViewport frame {
 }
 
 .action-bar .title {
-    font: bold;
+    font-weight: bold;
     padding: 0 12px;
 }
 
 .action-bar .subtitle {
-    font: smaller;
+    font-size: smaller;
     padding: 0 12px;
 }
 
@@ -3703,18 +3691,18 @@ GtkViewport frame {
 /********************
  * various choosers *
  ********************/
-GtkFontButton separator,
-GtkFileChooserButton separator {
+fontbutton separator,
+filechooser button separator {
     /* always disable separators */
     -GtkWidget-horizontal-separator: 0;
     -GtkWidget-vertical-separator: 0;
 }
 
-GtkFontButton label:last-child {
+fontbutton label:last-child {
     color: alpha(currentColor, 0.7);
 }
 
-GtkFileChooserButton image:last-child {
+filechooser button image:last-child {
     color: alpha(currentColor, 0.7);
 }
 
@@ -4310,7 +4298,7 @@ messagedialog.csd decoration {
 }
 
 .titlebar:backdrop,
-.titlebar:not(headerbar):backrop {
+.titlebar:not(headerbar):backdrop {
     background-image: none;
     background-color: @theme_unfocused_bg_color;
     color: @theme_unfocused_fg_color;
