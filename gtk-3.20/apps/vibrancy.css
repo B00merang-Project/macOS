@@ -10,7 +10,7 @@ filechooser placessidebar list,
 .sidebar view,
 .sidebar > view,
 .sidebar scrolledwindow {
-    background-color: alpha(@theme_bg_color, 0.7);
+    background-color: alpha(@theme_bg_color, 0.8);
 }
 
 .sidebar:backdrop,
