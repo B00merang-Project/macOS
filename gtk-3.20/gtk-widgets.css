@@ -3722,6 +3722,10 @@ GtkOverlay.osd {
     background-origin: border-box;
 }
 
+.app-notification border {
+    border: none;
+}
+
 .osd button,
 .osd button {
     padding: 4px;
