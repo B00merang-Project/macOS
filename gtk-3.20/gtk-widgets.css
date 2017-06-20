@@ -3,31 +3,14 @@
 
 /* default */
 * {
-    -GtkButtonBox-child-min-height: 24;
-    -GtkButtonBox-child-internal-pad-y: 1;
-    -GtkCheckButton-indicator-size: 16;
-    -GtkHTML-link-color: @link_color;
-    -GtkIMHtml-hyperlink-color: @link_color;
     -GtkPaned-handle-size: 2;
-    -Gtkprogressbar-min-horizontal-bar-height: 6;
-    -Gtkprogressbar-min-vertical-bar-width: 6;
-    -GtkRange-slider-width: 12;
-    -GtkRange-stepper-spacing: 0;
-    -GtkRange-trough-border: 0;
-    -GtkRange-trough-under-steppers: 1;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
-    -GtkScrollbar-min-slider-length: 80;
-    -Gtkscrolledwindow-scrollbar-spacing: 0;
-    -Gtkscrolledwindow-scrollbars-within-bevel: 1;
-    -Gtkstatusbar-shadow-type: none;
+    -GtkScrolledwindow-scrollbar-spacing: 0;
+    -GtkScrolledwindow-scrollbars-within-bevel: 1;
     -GtkTextView-error-underline-color: @error_color;
-    -Gtktoolbutton-icon-spacing: 6;
-    -GtkToolItemGroup-expander-size: 8;
-    -Gtktreeview-expander-size: 8;
-    -GtkWindow-resize-grip-height: 0;
-    -GtkWindow-resize-grip-width: 0;
-    -WnckTasklist-fade-overlay-rect: 0;
+    -GtkToolbutton-icon-spacing: 6;
+    -GtkTreeview-expander-size: 8;
 
     background-clip: padding-box;
 
@@ -1204,6 +1187,8 @@ menuitem radio:hover,
 menuitem check:disabled,
 menuitem radio:disabled {
     border-style: none;
+    min-width: 16px;
+    min-height: 16px;
     background-color: transparent;
     background-image: none;
 }
@@ -4218,7 +4203,12 @@ decoration:backdrop {
     transition: 200ms ease-out;
 }
 
-.maximized decoration, .fullscreen decoration, .tiled decoration {
+.maximized headerbar,
+.maximized headerbar:backdrop,
+.tiled .titlebar:not(headerbar),
+.tiled .titlebar:backdrop:not(headerbar),
+.maximized .titlebar:not(headerbar),
+.maximized .titlebar:backdrop:not(headerbar) {
     border-radius: 0;
 }
 
