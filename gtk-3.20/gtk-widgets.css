@@ -1600,20 +1600,41 @@ progressbar {
     background-color: transparent;
 }
 
-progressbar progress {
+progressbar progress,
+treeview.view.progressbar,
+treeview.view.progressbar:focus {
     border: none;
     border-radius: 8px;
-    background-image: image(@theme_selected_bg_color);
+    color: @theme_selected_fg_color;
+    background-color: @theme_selected_bg_color;
+}
+
+row:selected progressbar progress,
+treeview.view.progressbar:selected,
+treeview.view.progressbar:selected:focus,
+treeview.view.progressbar:focus:selected,
+treeview.view.progressbar:focus:selected:focus {
+    color: @theme_selected_fg_color;
+    background-color: @theme_selected_fg_color;
 }
 
 progressbar progress:backdrop {
     background-image: image(shade(@theme_unfocused_bg_color, 0.85));
 }
 
-progressbar trough {
+progressbar trough,
+treeview.view.trough,
+row:selected progressbar trough {
     border: none;
     border-radius: 8px;
+    color: @theme_fg_color;
     background-color: shade(@theme_bg_color, 0.9);
+}
+
+treeview.view.trough:selected,
+treeview.view.trough:selected:focus {
+    color: @theme_fg_color;
+    background-color: shade(@theme_bg_color, 0.85);
 }
 
 progressbar trough:backdrop {
@@ -2900,10 +2921,6 @@ toolbar button:checked:backdrop {
 .primary-toolbar button:hover,
 .primary-toolbar button:checked,
 toolbar button:hover {
-    border-color: transparent;
-    background-color: shade(@toolbar_bg_color, 0.5);
-    background-image: none;
-    color: @theme_selected_fg_color;
 }
 
 .primary-toolbar button:active,
