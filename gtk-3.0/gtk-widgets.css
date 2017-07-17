@@ -286,15 +286,17 @@ GtkAssistant .sidebar {
 }
 
 .button:insensitive {
-    border-color: shade(@theme_bg_color, 0.85);
+    /*border-color: shade(@theme_bg_color, 0.85);
     background-color: shade(@theme_bg_color, 0.9);
-    background-image: none;
+    background-image: none;*/
+    color: alpha(@theme_fg_color, 0.7);
 }
 
 .button:active *:insensitive {
-    border-color: shade(@theme_bg_color, 0.75);
+    /*border-color: shade(@theme_bg_color, 0.75);
     background-color: shade(@theme_bg_color, 0.80);
-    background-image: none;
+    background-image: none;*/
+    color: alpha(@theme_fg_color, 0.7);
 }
 
 /* default button */
@@ -2480,15 +2482,17 @@ GtkStatusbar .button:checked,
 }
 
 .header-bar .button:insensitive {
-    border-color: shade(@titlebar_bg_color, 0.95);
+    /*border-color: shade(@titlebar_bg_color, 0.95);
     background-color: shade(@titlebar_bg_color, 0.9);
-    background-image: none;
+    background-image: none;*/
+    color: alpha(@theme_fg_color, 0.7);
 }
 
 .header-bar .button:active *:insensitive {
-    border-color: shade(@titlebar_bg_color, 0.9);
+    /*border-color: shade(@titlebar_bg_color, 0.9);
     background-color: shade(@titlebar_bg_color, 0.80);
-    background-image: none;
+    background-image: none;*/
+    color: alpha(@theme_fg_color, 0.7);
 }
 
 .header-bar GtkComboBox:backdrop,
@@ -2683,12 +2687,14 @@ GtkStatusbar .button:checked:backdrop,
 
 .primary-toolbar .button:insensitive,
 .toolbar .button:insensitive {
+    color: alpha(@theme_fg_color, 0.7);
 }
 
 .primary-toolbar .button:active *:insensitive,
 .toolbar .button:active *:insensitive {
-    border-color: transparent;
-    background-image: none;
+    /*border-color: transparent;
+    background-image: none;*/
+    color: alpha(@theme_fg_color, 0.7);
 }
 
 .primary-toolbar .entry,
