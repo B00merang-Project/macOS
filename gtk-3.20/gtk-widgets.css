@@ -289,9 +289,10 @@ button:backdrop {
 }
 
 button:disabled {
-    border-color: shade(@theme_bg_color, 0.85);
+    /*border-color: shade(@theme_bg_color, 0.85);
     background-color: shade(@theme_bg_color, 0.9);
-    background-image: none;
+    background-image: none;*/
+    color: alpha(@theme_fg_color, 0.7);
 }
 
 button:active *:disabled {
@@ -2711,7 +2712,7 @@ headerbar .subtitle {
 
 headerbar combobox,
 headerbar button { 
-    padding: 4px 20px;
+    padding: 4px 8px;
     border-width: 1px;
     border-top-color: shade(@theme_bg_color, 0.95);
     border-right-color: shade(@theme_bg_color, 0.85);
@@ -2755,15 +2756,17 @@ headerbar button:active:hover:focus {
 
 /* bug in disabled headerbar buttons */
 headerbar button:disabled {
-    border-color: shade(@titlebar_bg_color, 0.85);
+/*    border-color: shade(@titlebar_bg_color, 0.85);
     background-color: shade(@titlebar_bg_color, 0.9);
-    background-image: none;
+    background-image: none;*/
+    color: alpha(@theme_fg_color, 0.7);
 }
 
 headerbar button:active *:disabled {
-    border-color: shade(@titlebar_bg_color, 0.9);
+/*    border-color: shade(@titlebar_bg_color, 0.9);
     background-color: shade(@titlebar_bg_color, 0.80);
-    background-image: none;
+    background-image: none;*/
+    color: alpha(@theme_fg_color, 0.7);
 }
 
 headerbar combobox:backdrop,
@@ -2948,16 +2951,18 @@ toolbar button:active:hover:focus {
 
 .primary-toolbar button:disabled,
 toolbar button:disabled {
-    border-color: shade(@theme_base_color, 0.7);
+    /*border-color: shade(@theme_base_color, 0.7);
     background-color: shade(@theme_base_color, 0.8);
-    background-image: none;
+    background-image: none;*/
+    color: alpha(@theme_fg_color, 0.7);
 }
 
 .primary-toolbar button:active *:disabled,
 toolbar button:active *:disabled {
-    border-color: transparent;
+    /*border-color: transparent;
     background-color: shade(@toolbar_bg_color, 0.80);
-    background-image: none;
+    background-image: none;*/
+    color: alpha(@theme_fg_color, 0.7);
 }
 
 .primary-toolbar entry,
