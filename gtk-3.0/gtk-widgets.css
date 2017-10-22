@@ -653,8 +653,8 @@ GtkComboBox.combobox-entry .button:insensitive {
 
 .list-row:selected {
     background-color: @theme_selected_bg_color;
-    /*color: @theme_selected_fg_color;*/
-    color: @theme_fg_color;
+    color: @theme_selected_fg_color;
+    /*color: @theme_fg_color;*/
 }
 
 /*********
