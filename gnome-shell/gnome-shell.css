@@ -710,7 +710,7 @@ StScrollBar {
 	background-image: none;
 	background-gradient-direction: none;
 	box-shadow: none;
-	color: gray;
+	color: #4c4c4c;
 	border: none;
 	background-color: rgba(160,160,160,0.2); }
 .datemenu-today-button:active,
@@ -1376,7 +1376,7 @@ StScrollBar {
 	width: 34em;
 	margin: 5px;
 	border-radius: 4px;
-	color: gray;
+	color: #4c4c4c;
 	background-color: rgba(255,255,255,0.75);
 	border: none;
 	border-width: 0px;
@@ -1401,7 +1401,7 @@ StScrollBar {
 	.notification-banner .notification-button {
 		border: none;
 		padding: 4px 4px 5px;
-		color: gray;
+		color: #4c4c4c;
 		font-weight: normal;
 		background-color: rgba(255,255,255,0.75);
 		border-color: rgba(0,0,0,0.1);
@@ -1416,7 +1416,7 @@ StScrollBar {
 			border-radius: 0 0 4px 4px; }
 		.notification-banner .notification-button:hover, .notification-banner .notification-buttonfocus, .notification-banner .notification-button:focus {
 			background-color: rgba(255,255,255,0.85);
-			color: gray; }
+			color: #4c4c4c; }
 
 .notification StEntry,
 .notification-banner StEntry {
@@ -1451,7 +1451,7 @@ StScrollBar {
 	width: 34em;
 	margin: 5px;
 	border-radius: 0;
-	color: white;
+	color: #1c1c1c;
 	background-color: rgba(40,40,40,0.4);
 	border: none;
 	border-width: 0px;
@@ -1575,12 +1575,12 @@ StScrollBar {
 	border:none;
 	text-shadow:none;
 	text-align: center;
-	color: white;
+	color: #1c1c1c;
 	padding: 2px 10px;
 	background-image: none;
 	background-gradient-direction: none; }
 	.hotplug-notification-item:focus {
-		color: white;
+		color: #1c1c1c;
 		padding: 2px 10px; }
 	.hotplug-notification-item:hover {
 		background-color: rgba(60,60,60,0.95);
@@ -1935,7 +1935,7 @@ StScrollBar {
 		padding: 12px 6px;
 		border: 1px solid rgba(238, 238, 236, 0.5);
 		background-color: rgba(60,60,60,0.95);
-		color: white;
+		color: #1c1c1c;
 		border-radius: 0px; }
 	.screen-shield-notifications-container .notification {
 		margin-right: 15px; }

@@ -1,5 +1,5 @@
-vte-terminal.terminal-screen {
-    -TerminalScreen-background-darkness: 0.95;
+vte-terminal.terminal-screen,
+terminal-window {
     background-color: #fff;
     color: #000;
 }
