@@ -235,7 +235,7 @@ button:checked {
     border-color: shade(@theme_selected_bg_color, 1.4);
 }
 
-button:focus:not(combobox button):not(:backdrop) {
+button:focus:not(button.combo):not(:backdrop) {
     background-image: linear-gradient(to bottom,
                         shade(@selected_bg_color, 1.25),
                         shade(@selected_bg_color, 0.99)
@@ -2671,6 +2671,10 @@ headerbar entry {
     padding: 7.5px 8px;
     border: none;
 }
+
+headerbar switch {
+    margin: 8px;
+}    
 
 /***********
  * toolbar *
