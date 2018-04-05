@@ -14,6 +14,9 @@
 @define-color dark_bg_color #e0dee1;
 @define-color dark_fg_color #4c4c4c;
 
+@define-color panebar_bg_color #f6f6f6;
+@define-color panebar_fg_color #4c4c4c;
+
 /* colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;
 @define-color theme_fg_color @fg_color;
@@ -56,7 +59,8 @@
 @define-color toolbar_fg_color @dark_fg_color; /*@theme_fg_color;*/
 @define-color menu_bg_color @base_color;
 @define-color menu_fg_color @fg_color;
-@define-color panel_bg_color #f5f5f5;
+/* GTK somehow doesn't like panel_* named colors. Use panebar* colors instead */
+@define-color panel_bg_color #f6f6f6;
 @define-color panel_fg_color @dark_fg_color;
 
 /* osd */
@@ -92,3 +96,4 @@
 @import url("apps/libreoffice.css");
 @import url("apps/gnome-terminal.css");
 @import url("apps/vibrancy.css");
+@import url("apps/gnome-flashback.css");

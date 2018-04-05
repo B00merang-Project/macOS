@@ -6,14 +6,15 @@
 @define-color selected_bg_color #066DC1;
 @define-color selected_bg_color2 #4a8cc1;
 @define-color selected_fg_color #ffffff;
-@define-color tooltip_bg_color #fff;
+@define-color tooltip_bg_color #373737;
 @define-color tooltip_fg_color #4c4c4c;
 @define-color unfocused_bg_color #545454;
 @define-color unfocused_fg_color #8c8c8c;
 
 /* dark color scheme */
-@define-color dark_bg_color #373737;
-@define-color dark_fg_color #f1f1f1;
+@define-color borders #424242;
+@define-color panebar_bg_color #000000;
+@define-color panebar_fg_color #ffffff;
 
 /* colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;
@@ -30,43 +31,44 @@
 @define-color theme_unfocused_fg_color @unfocused_fg_color;
 
 /* shadow effects */
-@define-color light_shadow #fff;
-@define-color dark_shadow #000;
+@define-color light_shadow #ffffff;
+@define-color shadow #000000;
 
 /* misc colors used by gtk+ */
-@define-color info_fg_color rgb (58, 135, 173);
-@define-color info_bg_color rgb (217, 237, 247);
-@define-color warning_fg_color rgb (192, 152, 83);
-@define-color warning_bg_color rgb (252, 248, 227);
-@define-color question_fg_color rgb (214, 73, 55);
-@define-color question_bg_color rgb (252, 229, 213);
-@define-color error_fg_color rgb (185, 74, 72);
-@define-color error_bg_color rgb (242, 222, 222);
+@define-color info_fg_color rgb(58, 135, 173);
+@define-color info_bg_color rgb(217, 237, 247);
+@define-color warning_fg_color rgb(192, 152, 83);
+@define-color warning_bg_color rgb(252, 248, 227);
+@define-color question_fg_color rgb(214, 73, 55);
+@define-color question_bg_color rgb(252, 229, 213);
+@define-color error_fg_color rgb(185, 74, 72);
+@define-color error_bg_color rgb(242, 222, 222);
 @define-color link_color #fc6f5d;
 @define-color success_color #53a93f;
 @define-color warning_color #f57900;
 @define-color error_color #cc0000;
 
 /* widget colors */
-@define-color titlebar_bg_color @dark_bg_color;
-@define-color titlebar_fg_color @dark_fg_color;
-@define-color menubar_bg_color @dark_bg_color;
-@define-color menubar_fg_color @dark_fg_color;
-@define-color toolbar_bg_color @dark_bg_color; /*@theme_bg_color;*/
-@define-color toolbar_fg_color @dark_fg_color; /*@theme_fg_color;*/
-@define-color menu_bg_color #1f1f1f;
+@define-color titlebar_bg_color @bg_color;
+@define-color titlebar_fg_color @fg_color;
+@define-color menubar_bg_color @bg_color;
+@define-color menubar_fg_color @fg_color;
+@define-color toolbar_bg_color @bg_color; /*@theme_bg_color;*/
+@define-color toolbar_fg_color @fg_color; /*@theme_fg_color;*/
+@define-color menu_bg_color @base_color;
 @define-color menu_fg_color @fg_color;
+/* GTK somehow doesn't like panel_* named colors. Use panebar* colors instead */
 @define-color panel_bg_color @dark_bg_color;
 @define-color panel_fg_color @dark_fg_color;
 
 /* osd */
-@define-color osd_base @dark_bg_color;
-@define-color osd_fg @dark_fg_color;
+@define-color osd_base @bg_color;
+@define-color osd_fg @fg_color;
 @define-color osd_bg alpha(@osd_base, 0.8);
 
 /* lightdm greeter colors */
-@define-color lightdm_bg_color @dark_bg_color;
-@define-color lightdm_fg_color @dark_fg_color;
+@define-color lightdm_bg_color @bg_color;
+@define-color lightdm_fg_color @fg_color;
 
 /* window manager colors */
 @define-color wm_bg @titlebar_bg_color;
@@ -81,7 +83,15 @@
 @define-color wm_icons_unfocused_prelight @selected_bg_color;
 @define-color wm_icons_unfocused_pressed shade(@selected_bg_color, 0.8);
 
+/* budgie colors */
+@define-color raven_bg_color rgba(0,0,0,0.9);
+@define-color raven_fg_color #ffffff;
+
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-assets.css");
 @import url("apps/unity.css");
+@import url("apps/budgie.css");
+@import url("apps/libreoffice.css");
 @import url("apps/gnome-terminal.css");
+@import url("apps/vibrancy.css");
+@import url("apps/gnome-flashback.css");

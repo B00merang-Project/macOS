@@ -235,7 +235,7 @@ button:checked {
     border-color: shade(@theme_selected_bg_color, 1.4);
 }
 
-button:focus:not(button.combo):not(:backdrop) {
+button:focus:not(.combo):not(:backdrop) {
     background-image: linear-gradient(to bottom,
                         shade(@selected_bg_color, 1.25),
                         shade(@selected_bg_color, 0.99)
@@ -1076,7 +1076,6 @@ menubar:backdrop {
 /***************
  * menubaritem *
  ***************/
-menubar menuitem,
 menubar > menuitem {
     padding: 3px 5px;
     border-width: 1px;
@@ -1087,7 +1086,6 @@ menubar > menuitem {
     color: @menubar_fg_color;
 }
 
-menubar menuitem:hover,
 menubar > menuitem:hover {
     border-color: mix(@menubar_bg_color, @menubar_fg_color, 0.21);
     background-color: @theme_selected_bg_color;
@@ -1099,7 +1097,6 @@ menubar > menuitem *:hover {
     color: shade(@menubar_fg_color, 1.08);
 }
 
-menubar menuitem:backdrop,
 menubar > menuitem:backdrop {
     color: @theme_unfocused_fg_color;
 }
@@ -1107,14 +1104,13 @@ menubar > menuitem:backdrop {
 /************
  * menuitem *
  ************/
-treemenu menuitem,
-treemenu > menuitem {
+treemenu menuitem {
     padding: 0;
     border-width: 0;
 }
 
 menuitem,
-menu > menuitem {
+menu menuitem {
     padding: 3px;
     border-width: 1px;
     border-style: solid;
@@ -2633,7 +2629,7 @@ headerbar {
 }
 
 headerbar:backdrop {
-    background-color: @theme_unfocused_bg_color;
+    background-color: transparent;
     background-image: none;
     color: @theme_unfocused_fg_color;
 }
