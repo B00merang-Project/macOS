@@ -1376,31 +1376,25 @@ notebook tab .active-page label {
 /* close button styling */
 notebook tab button,
 notebook tab button:hover,
+notebook tab button:focus,
 notebook tab button:active,
-notebook tab button:backdrop {
-/*    padding: 1px;
-    border-width: 1px;
-    border-radius: 0px;
-    border-style: solid;
-    border-color: transparent;
-    background-image: none;
-    background-color: transparent;
-    color: mix(@theme_text_color, @theme_base_color, 0.5);
-}
-
-notebook tab button:hover {
-    color: @theme_text_color;
-    border-color: shade(@theme_base_color, 0.8);
-}
-
-notebook tab button:active,
-notebook tab button:active:hover {
-    border-color: shade(@theme_base_color, 0.7);
-    background-color: shade(@theme_base_color, 0.95);
-} */
+notebook tab button:checked,
+notebook tab button:active:hover,
+notebook tab button:checked:hover,
+notebook tab button:backdrop,
+notebook tab:checked button,
+notebook tab:checked button:hover,
+notebook tab:checked button:focus,
+notebook tab:checked button:active,
+notebook tab:checked button:checked,
+notebook tab:checked button:active:hover,
+notebook tab:checked button:checked:hover,
+notebook tab:checked button:backdrop {
     border-color: transparent;
     box-shadow: none;
     background-color: transparent;
+    background-image: none;
+    color: @theme_fg_color;
 }
 
 notebook > header.top > tabs > arrow.up,
@@ -2370,12 +2364,6 @@ switch:backdrop:checked {
     background-color: shade(#4ed464, 0.8);
 }
 
-    /*    switch:backdrop:disabled {
-    color: transparent;
-    border-color: shade(@borders, 1.3);
-    background-color: shade(@borders, 1.3);
-}
- */
 switch slider {
     min-width: 20px;
     min-height: 20px;
@@ -4181,11 +4169,12 @@ messagedialog.csd decoration {
     border-radius: 4px 4px 0 0;
     background-color: transparent;
     background-image: linear-gradient(to bottom,
-                        shade(@titlebar_bg_color, 1.1),
-                        shade(@titlebar_bg_color, 0.85)
+                        shade(@titlebar_bg_color, 1.05),
+                        shade(@titlebar_bg_color, 0.95)
                       );
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
+    min-height: 10px;
 }
 
 .titlebar:backdrop,
