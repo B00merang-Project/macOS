@@ -275,8 +275,8 @@ button:checked:disabled {
     border-color: shade(@theme_bg_color, 0.75);
     background-color: shade(@theme_bg_color, 0.80);
     background-image: linear-gradient(to bottom,
-                        shade(@theme_bg_color, 0.85),
-                        shade(@theme_bg_color, 0.7)
+                        shade(@theme_bg_color, 0.89),
+                        shade(@theme_bg_color, 0.85)
                       );
     box-shadow: 0 0 1px shade(@theme_bg_color, 0.6);
 }
@@ -421,7 +421,7 @@ treeview header:last-child button {
 }
 
 view.content-view {
-    -view-icon-size: 40;
+    -gtk-icon-size: 40;
 }
 
 view.content-view check {
@@ -510,6 +510,30 @@ button.combo:disabled {
     border-width: 1px 1px 1px 1px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+}
+
+combobox button:not(:only-child) {
+    background-image: linear-gradient(to bottom,
+                        shade(@selected_bg_color, 1.2),
+                        shade(@selected_bg_color, 0.95)
+                      );
+    box-shadow: 0 0 1px 1px shade(@theme_selected_bg_color, 1.6);
+    color: @theme_selected_fg_color;
+    border-color: shade(@theme_selected_bg_color, 1.4);
+}
+
+combobox button:not(:only-child):disabled {
+    border-top-color: shade(@theme_bg_color, 0.95);
+    border-right-color: shade(@theme_bg_color, 0.85);
+    border-left-color: shade(@theme_bg_color, 0.85);
+    border-bottom-color: shade(@theme_bg_color, 0.75);
+    background-image: linear-gradient(to bottom,
+                        shade(@theme_base_color, 0.95),
+                        shade(@theme_base_color, 0.92)
+                      );
+    background-color: @theme_base_color;
+    color: alpha(@theme_fg_color, 0.8);
+    box-shadow: 0 1px 2px alpha(@dark_shadow, 0.2);
 }
 
 /*********
@@ -682,13 +706,9 @@ view.view.cell:selected:focus {
 
 .content-view.view.rubberband,
 view rubberband,
-rubberband,
 .view.rubberband,
-view rubberband,
 rubberband,
-.rubberband,
-view rubberband,
-rubberband {
+.rubberband {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_selected_bg_color, 0.9);
@@ -911,16 +931,16 @@ infobar {
 /*******************
  * symbolic images *
  *******************/
- image {
+image {
     color: alpha(currentColor, 0.5);
 }
 
- image:hover {
+image:hover {
     color: alpha(currentColor, 0.9);
 }
 
- image:selected,
- image:selected:hover {
+image:selected,
+image:selected:hover {
     color: @theme_selected_fg_color;
 }
 
@@ -977,8 +997,7 @@ view image:selected:hover {
     background-image: none;
 }
 
-view label:disabled,
-label:disabled {
+.dim-label {
     color: alpha(currentColor, 0.5);
 }
 
@@ -1043,14 +1062,14 @@ menu button {
 
 menu > arrow.top,
 .menu > arrow.top {
-    margin-top: -6px;
+    margin-top: -3px;
     border-bottom: 1px solid shade(@theme_bg_color, 0.9);
     -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 
 menu > arrow.bottom,
 .menu > arrow.bottom {
-    margin-bottom: -6px;
+    margin-bottom: -3px;
     border-top: 1px solid shade(@theme_bg_color, 0.9);
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
@@ -1212,7 +1231,7 @@ menuitem accelerator:disabled {
     color: alpha(mix(@menu_fg_color, @menu_bg_color, 0.5), 0.6);
 }
 
-GtkModelMenuItem box image {
+modelbutton > image {
     padding-right: 4px;
 }
 
@@ -1471,7 +1490,6 @@ paned .sidebar {
     border-style: none;
 }
 
-
 /**************
  * over under *
  **************/
@@ -1555,7 +1573,6 @@ undershoot.right {
     background-origin: content-box;
     background-position: right center;
 }
-
 
 .overlay-bar {
     background-color: rgba(0, 0, 0, 0.8);
@@ -1690,12 +1707,13 @@ levelbar block.empty {
     background-image: none;
 }
 
-/* Gtk Scale & slider */
-
+/*********
+ * Scale *
+ *********/
 scale {
     padding: 0;
-    border-width: 1px;
-    border-radius: 4px;
+    min-height: 8px;
+    min-width: 8px;
 }
 
 scale slider {
@@ -1703,7 +1721,6 @@ scale slider {
     border: none;
     background-color: shade(@theme_bg_color, 1.08);
     background-image: none;
-    /*box-shadow: 0 1px rgba(0, 0, 0, 0.1);*/
     box-shadow: 0 2px 2px 1px rgba(0,0,0,0.09);
 
     /* widget sizing */
@@ -1758,6 +1775,72 @@ scale highlight left:disabled {
     border-color: shade(@theme_bg_color, 0.85);
     background-color: shade(@theme_bg_color, 0.9);
     background-image: none;
+}
+
+scale value {
+    color: alpha(currentColor,0.55); 
+}
+
+scale marks {
+    color: alpha(currentColor,0.55); 
+}
+
+scale marks.top {
+    margin-bottom: 6px;
+    margin-top: -12px; 
+}
+
+scale marks.bottom {
+    margin-top: 6px;
+    margin-bottom: -12px; 
+}
+
+scale marks.top {
+    margin-right: 6px;
+    margin-left: -12px; 
+}
+
+scale marks.bottom {
+    margin-left: 6px;
+    margin-right: -12px; 
+}
+
+scale.fine-tune marks.top {
+    margin-bottom: 6px;
+    margin-top: -9px; 
+}
+
+scale.fine-tune marks.bottom {
+    margin-top: 6px;
+    margin-bottom: -9px; 
+}
+
+scale.fine-tune marks.top {
+    margin-right: 6px;
+    margin-left: -9px; 
+}
+
+scale.fine-tune marks.bottom {
+    margin-left: 6px;
+    margin-right: -9px; 
+}
+
+scale.horizontal indicator {
+    min-height: 6px;
+    min-width: 1px; 
+}
+
+scale.horizontal.fine-tune indicator {
+    min-height: 3px; 
+}
+
+scale.vertical indicator {
+    min-height: 1px;
+    min-width: 6px; 
+}
+
+scale.vertical.fine-tune indicator {
+    min-width: 3px;
 }
 
 /*************
@@ -2289,23 +2372,24 @@ spinbutton.vertical button.down {
  * spinner *
  ***********/
 @keyframes spin {
-  to {
-    -gtk-icon-transform: rotate(1turn);
-}
- }
-spinner {
-  background: none;
-  opacity: 0;
-  -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+    to {
+        -gtk-icon-transform: rotate(1turn);
+    }
 }
 
-  spinner:checked {
+spinner {
+    background: none;
+    opacity: 0;
+    -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+}
+
+spinner:checked {
     opacity: 1;
     animation: spin 1s linear infinite;
 }
 
-    spinner:checked:disabled {
-      opacity: 0.5;
+spinner:checked:disabled {
+    opacity: 0.5;
 }
 
 
@@ -2459,8 +2543,8 @@ popover.background radiobutton:selected,
 treeview.view:selected:focus,
 treeview.view:selected,
 row:selected, calendar:selected {
-  background-color: @theme_selected_bg_color;
-  color: @theme_selected_fg_color;
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 /*****************
@@ -3509,7 +3593,7 @@ GtkViewport frame {
 /**************
  * action-bar *
  **************/
-.action-bar {
+actionbar {
     padding: 4px;
     border-width: 1px 0 0 0;
     border-style: solid;
@@ -3519,20 +3603,20 @@ GtkViewport frame {
     color: @theme_fg_color;
 }
 
-.action-bar button.text-button {
+actionbar button.text-button {
     padding: 4px;
 }
 
-.action-bar button .image-button {
+actionbar button .image-button {
     padding: 6px;
 }
 
-.action-bar .title {
+actionbar .title {
     font-weight: bold;
     padding: 0 12px;
 }
 
-.action-bar .subtitle {
+actionbar .subtitle {
     font-size: smaller;
     padding: 0 12px;
 }
@@ -3583,6 +3667,10 @@ filechooser button image:last-child {
     color: @theme_text_color;
 }
 
+.app-notification border {
+    border: none;
+}
+
 /*******
  * osd *
  *******/
@@ -3600,10 +3688,6 @@ GtkOverlay.osd {
     background-origin: border-box;
 }
 
-.app-notification border {
-    border: none;
-}
-
 .osd button,
 .osd button {
     padding: 4px;
@@ -3616,8 +3700,6 @@ GtkOverlay.osd {
     color: @osd_fg;
 }
 
-.osd button:hover,
-.osd button:hover,
 .osd button:hover {
     border-color: shade(@osd_bg, 0.7);
     background-color: shade(@osd_bg, 1.10);
@@ -3625,8 +3707,7 @@ GtkOverlay.osd {
 }
 
 .osd button:active,
-.osd button:active,
-.osd GtkMenuButton button:active {
+.osd menubutton button:active {
     border-color: shade(@osd_bg, 0.8);
     background-color: shade(@osd_bg, 0.95);
     background-image: none;
@@ -3634,7 +3715,7 @@ GtkOverlay.osd {
 
 .osd button:active:hover,
 .osd button:active:hover,
-.osd GtkMenuButton button:active:hover {
+.osd menubutton button:active:hover {
     border-color: shade(@osd_bg, 0.7);
 }
 
@@ -3741,7 +3822,7 @@ GtkOverlay.osd {
     background-color: shade(@osd_bg, 0.8);
 }
 
-.osdprogress {
+.osd progress {
     background-color: @osd_fg;
 }
 
@@ -3808,8 +3889,8 @@ progressbar.osd trough {
     background-color: transparent;
 }
 
-.osd progressbarprogress,
-progressbar.osdprogress {
+.osd progressbar progress,
+progressbar.osd progress {
     border-style: none;
     border-radius: 0;
     background-color: @theme_selected_bg_color;
@@ -3821,6 +3902,7 @@ progressbar.osdprogress {
     background-color: @osd_base;
 }
 
+/* TODO: Try to fix this */
 .osd .scrollbar trough {
     background-color: @osd_bg;
 }
@@ -4125,8 +4207,8 @@ messagedialog.csd decoration {
 .solid-csd decoration {
     margin: 0;
     padding: 4px;
-    background-color: @bg_color;
-    border: solid 1px shade(@bg_color, 0.8);
+    background-color: @theme_bg_color;
+    border: solid 1px shade(@theme_bg_color, 0.8);
     border-radius: 0;
     box-shadow: inset 0 0 0 3px rgba(0,0,0,0.3), inset 0 1px rgba(20, 20, 20, 0.8);
 }
