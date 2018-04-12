@@ -421,7 +421,6 @@ treeview header:last-child button {
 }
 
 view.content-view {
-    -gtk-icon-size: 40;
 }
 
 view.content-view check {
@@ -502,14 +501,22 @@ calendar highlight {
     border-bottom-right-radius: 0;
 }
 
+.linked button {
+    margin-bottom: 1px;
+}
+
 button.combo,
 button.combo:hover,
 button.combo:active,
 button.combo:disabled {
-    margin-bottom: 1px;
     border-width: 1px 1px 1px 1px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+    padding: 7px 4px;
+}
+
+button.combo:only-child {
+    padding: 3px 8px;
 }
 
 combobox button:not(:only-child) {
@@ -1280,7 +1287,7 @@ modelbutton.flat,
 modelbutton.flat:active,
 modelbutton.flat:disabled,
 modelbutton.flat:active:disabled {
-    padding: 6px 8px;
+    padding: 2px 8px;
     background-color: transparent;
     background-image: none;
     border-color: transparent;
@@ -2763,14 +2770,6 @@ toolbar:backdrop {
 
 toolbar button {
     padding: 2px 2px;
-}
-
-toolbar button.text-button {
-    padding: 2px 4px;
-}
-
-toolbar button .image-button {
-    padding: 4px 3px 3px 4px;
 }
 
 toolbar:disabled {
