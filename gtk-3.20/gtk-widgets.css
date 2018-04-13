@@ -2419,13 +2419,9 @@ switch {
     font-weight: bold;
     font-size: 0;
     outline-offset: -4px;
-    margin: 0;
+    margin: 4px;
     border: 1px solid @borders;
     border-radius: 16px;
-/*  box-shadow: inset 0 -1px alpha(#4c4c4c, 0.1),
-              inset 0 2px alpha(#4c4c4c, 0.1),
-              inset 0 1px alpha(#4c4c4c, 0.1), 0 
-              -1px rgba(0, 0, 0, 0.1); */
     background-color: @borders;
 }
 
@@ -2746,10 +2742,6 @@ headerbar entry {
     padding: 7.5px 8px;
     border: none;
 }
-
-headerbar switch {
-    margin: 8px;
-}    
 
 /***********
  * toolbar *
