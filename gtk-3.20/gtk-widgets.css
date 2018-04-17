@@ -681,6 +681,10 @@ statusbar frame > border {
     border: none;
 }
 
+.frame {
+	background: none;
+}
+
 /*******************
  * scrolled window *
  *******************/
@@ -1357,6 +1361,12 @@ notebook view {
     border-width: 0;
     background-color: @theme_base_color;
     color: @theme_text_color;
+}
+
+notebook > stack:not(:only-child) {
+    background-color: @theme_base_color;
+    border: 1px solid shade(@theme_bg_color, 0.8);
+    box-shadow: none;
 }
 
 notebook tab {
@@ -3511,25 +3521,29 @@ headerbar .linked button:disabled:only-child {
  * tooltip *
  ***********/
 tooltip {
-    border-width: 1px;
-    border-style: solid;
-    border-color: shade(@theme_tooltip_bg_color, 0.8);
     border-radius: 4px;
-    background-color: @theme_tooltip_bg_color;
-    background-image: none;
-    color: @theme_tooltip_fg_color;
+    box-shadow: none;
+}
+
+tooltip.background {
+    border: 1px solid shade(@tooltip_bg_color, 0.8);
+    background-color: @tooltip_bg_color;
+    background-clip: padding-box;
+}
+
+tooltip.background label {
+    padding: 1px;
 }
 
 tooltip * {
     background-color: transparent;
-    border-radius: 4px;
+    color: @tooltip_fg_color;
 }
 
-tooltip.csd decoration {
+tooltip decoration {
     border-radius: 4px;
     box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
 }
-
 
 /************
  * treeview *

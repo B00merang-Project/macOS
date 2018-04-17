@@ -7,7 +7,7 @@
 @define-color selected_bg_color2 #4a8cc1;
 @define-color selected_fg_color #ffffff;
 @define-color tooltip_bg_color #373737;
-@define-color tooltip_fg_color #4c4c4c;
+@define-color tooltip_fg_color #fff;
 @define-color unfocused_bg_color #545454;
 @define-color unfocused_fg_color #8c8c8c;
 
