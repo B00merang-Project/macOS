@@ -1,7 +1,7 @@
 # macOS High Sierra 
 ### Theme reproducing the clean and bright look of Apple's OS [(dark theme here)](https://github.com/B00merang-Project/macOS-High-Sierra-Dark)
 
-![macOS-High Sierra](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2016-12-20-14-07-38_3_orig.png)
+![macOS-High Sierra](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/macos-high-sierra-2_orig.png)
 
 ### Recommended icon theme: [La Capitaine](https://github.com/keeferrourke/la-capitaine-icon-theme)
 
