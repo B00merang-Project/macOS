@@ -783,7 +783,8 @@ StScrollBar {
 .calendar-nonwork-day {
 	color: #8c8c8c; }
 
-.calendar-today {
+.calendar-today,
+.calendar-day-base:selected {
 	background-image: none;
 	text-shadow:none;
 	font-weight: normal;
@@ -796,7 +797,7 @@ StScrollBar {
 	font-weight: normal; }
 
 .calendar-other-month-day {
-	color: rgba(255,255,255,0.8);
+	color: rgba(0,0,0,0.35);
 	opacity: 0.5; }
 
 /* Message list */
@@ -1259,10 +1260,10 @@ StScrollBar {
 }
 /* Active App underline */
 .app-well-app-running-dot {
-	width: 6px;
-	height: 6px;
-	border-radius: 3px;
-	background-color: rgba(40,40,40,0.8);
+	width: 4px;
+	height: 4px;
+	border-radius: 6px;
+	background-color: black;
 	margin-bottom: 0px;
 	margin-top: 6px;
 }
