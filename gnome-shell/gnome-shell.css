@@ -84,13 +84,13 @@ StScrollBar {
 		border-radius: 0;
 		background-color: transparent; }
 	StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
-		border-radius: 0px;
-		background-color: #e4e4e4;
-		margin: 3px; }
+		border-radius: 8px;
+		background-color: #4c4c4c;
+		margin: 4px; }
 		StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
-			background-color: #e4e4e4; }
+			background-color: #4c4c4c; }
 		StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
-			background-color:#e4e4e4; }
+			background-color:#4c4c4c; }
 
 /* Slider */
 .slider {
@@ -902,14 +902,14 @@ StScrollBar {
 	border: 1px solid rgba(0,0,0,0.2);
 }
 .system-menu-action:hover, .system-menu-action:focus {
-	color: #4c4c4c;
-	background-color:rgba(28,122,236,0.6);
+	color: #fff;
+	background-color: #1c7aec;
 	border: none;
 	padding: 14px;
 }
 .system-menu-action:active {
-	background-color: rgba(0,0,0,0.3);
-	color: #4c4c4c;
+	background-color: #1c7aec;
+	color: #fff;
 }
 .system-menu-action > StIcon {
 	icon-size: 20px;
