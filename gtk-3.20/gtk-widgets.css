@@ -1053,6 +1053,14 @@ menu {
     color: @menu_fg_color;
 }
 
+.csd menu, .csd
+.menu {
+    padding: 4px 0px;
+    border-radius: 4px;
+    border: 1px solid shade(@theme_bg_color, 0.9);
+    box-shadow: none;
+}
+
 menu:selected {
     background-color: @selected_bg_color;
 }
@@ -4167,11 +4175,6 @@ decoration:backdrop {
 
 .ssd decoration {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23);
-}
-
-.csd.popup decoration {
-    border-radius: 0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
 }
 
 /*tooltip.csd decoration {
