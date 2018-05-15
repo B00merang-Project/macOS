@@ -501,10 +501,6 @@ calendar highlight {
     border-bottom-right-radius: 0;
 }
 
-.linked button {
-    margin-bottom: 1px;
-}
-
 button.combo,
 button.combo:hover,
 button.combo:active,
