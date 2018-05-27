@@ -258,16 +258,9 @@ button:checked:backdrop {
 
 button:backdrop {
     color: @theme_unfocused_fg_color;
-/*    background-image: linear-gradient(to bottom,
-                        @theme_unfocused_bg_color,
-                        shade(@theme_unfocused_bg_color, 0.99)
-                      );*/
 }
 
 button:disabled {
-    /*border-color: shade(@theme_bg_color, 0.85);
-    background-color: shade(@theme_bg_color, 0.9);
-    background-image: none;*/
     color: alpha(@theme_fg_color, 0.7);
 }
 
@@ -489,28 +482,9 @@ calendar highlight {
     color: @theme_selected_bg_color;
 }
 
-/******************
- * combobox entry *
- ******************/
- combobox entry,
- combobox entry:active,
- combobox entry:focus,
- combobox entry:disabled {
-    border-width: 1px 0 1px 1px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-button.combo,
-button.combo:hover,
-button.combo:active,
-button.combo:disabled {
-    border-width: 1px 1px 1px 1px;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    padding: 7px 4px;
-}
-
+/************
+ * combobox *
+ ************/
 button.combo:only-child {
     padding: 3px 8px;
 }
@@ -2302,22 +2276,6 @@ button.sidebar-button {
 /**************
  * spinbutton *
  **************/
-
-spinbutton {
-    color: mix(@theme_text_color, @theme_base_color, 0.4);
-    padding: 2px 4px;
-    border-width: 0;
-    border-radius: 0;
-    border-style: none;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
-}
-
-spinbutton:disabled {
-    color: mix(@theme_text_color, @theme_base_color, 0.7);
-}
-
 /* HORIZONTAL */
 spinbutton.horizontal entry {
     border-bottom-width: 0;
@@ -2705,12 +2663,10 @@ headerbar button.image-button {
 /* pantheon photos label fix */
 headerbar .title {
     font-weight: bold;
-    padding: 0 12px;
 }
 
 headerbar .subtitle {
     font-size: smaller;
-    padding: 0 12px;
 }
 
 headerbar combobox,
@@ -2721,8 +2677,7 @@ headerbar button {
 
 headerbar button:checked,
 headerbar button:checked:backdrop {
-    background-image: none;
-    background-color: shade(@theme_bg_color, 0.5);
+    background-image: image(shade(@theme_bg_color, 0.5));
     color: @theme_selected_fg_color;
     border-color: shade(@theme_bg_color, 0.55);
     box-shadow: none;
@@ -2972,529 +2927,84 @@ toolbar entry:backdrop {
     background-image: none;
 }
 
-/******************
- * linked buttons *
- *****************/
-/* set up shadows for visual separation */
-.linked button,
-.inline-toolbar toolbar button,
-.inline-toolbar toolbar toolbutton button,
-.inline-toolbar toolbar toolbutton > button {
-    box-shadow: inset -1px 0 shade(@theme_bg_color, 0.9);
-}
-
-.linked button:active,
-.inline-toolbar toolbar button:active,
-.inline-toolbar toolbar toolbutton button:active,
-.inline-toolbar toolbar toolbutton > button:active {
-    box-shadow: inset -1px 0 shade(@theme_bg_color, 0.9),
-                inset 1px 0 alpha(@dark_shadow, 0.07),
-                inset 0 1px alpha(@dark_shadow, 0.08),
-                inset 0 -1px alpha(@dark_shadow, 0.05);
-}
-
-.linked button:disabled,
-.inline-toolbar toolbar button:disabled,
-.inline-toolbar toolbar toolbutton button:disabled,
-.inline-toolbar toolbar toolbutton > button:disabled {
-    box-shadow: inset -1px 0 shade(@theme_bg_color, 0.9);
-}
-
-/* remove box shadow from last-child and only-child */
-.linked button:last-child,
-.linked button:only-child,
-.linked button:disabled:last-child,
-.linked button:disabled:only-child,
-.linked button:active *:disabled:last-child,
-.linked button:active *:disabled:only-child,
-.inline-toolbar toolbar button:last-child,
-.inline-toolbar toolbar button:only-child,
-.inline-toolbar toolbar button:disabled:last-child,
-.inline-toolbar toolbar button:disabled:only-child,
-.inline-toolbar toolbar button:active *:disabled:last-child,
-.inline-toolbar toolbar button:active *:disabled:only-child,
-.inline-toolbar toolbar toolbutton:last-child > button,
-.inline-toolbar toolbar toolbutton:only-child > button,
-.inline-toolbar toolbar toolbutton:last-child > button:disabled,
-.inline-toolbar toolbar toolbutton:only-child > button:disabled,
-.inline-toolbar toolbar toolbutton:last-child > button:active *:disabled,
-.inline-toolbar toolbar toolbutton:only-child > button:active *:disabled {
-    box-shadow: none;
-}
-
-/* add back the inset shadow effect */
-.linked button:active:last-child,
-.linked button:active:only-child,
-.inline-toolbar toolbar button:active:last-child,
-.inline-toolbar toolbar button:active:only-child,
-.inline-toolbar toolbar toolbutton:last-child > button:active,
-.inline-toolbar toolbar toolbutton:only-child > button:active {
-    box-shadow: inset 1px 0 alpha(@dark_shadow, 0.07),
-                inset 0 1px alpha(@dark_shadow, 0.08),
-                inset -1px 0 alpha(@dark_shadow, 0.07);
-}
-
-/* middle button */
-.linked entry,
-.linked button,
-.linked button:active,
-.linked button:active:hover,
-.linked button:disabled,
-.inline-toolbar toolbar button,
-.inline-toolbar toolbar button:active,
-.inline-toolbar toolbar button:disabled,
-.inline-toolbar toolbar toolbutton button,
-.inline-toolbar toolbar toolbutton button:active,
-.inline-toolbar toolbar toolbutton button:disabled {
-    border-width: 1px;
+/* linked widgets */
+.linked entry, .linked button, .linked combobox box.linked button {
     border-radius: 0;
-    border-right-width: 0;
     border-left-width: 0;
 }
 
-/*leftmost button */
-.linked entry:first-child,
-.linked button:first-child,
-.linked button:active:first-child,
-.linked button:active:hover:first-child,
-.linked button:disabled:first-child,
-.inline-toolbar toolbar button:first-child,
-.inline-toolbar toolbar button:active:first-child,
-.inline-toolbar toolbar button:disabled:first-child,
-.inline-toolbar toolbar toolbutton:first-child button,
-.inline-toolbar toolbar toolbutton:first-child button:active,
-.inline-toolbar toolbar toolbutton:first-child button:disabled {
-    border-width: 1px;
-    border-radius: 4px;
-    border-right-width: 0;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+.linked entry:first-child, .linked button:first-child, .linked combobox:first-child box.linked button {
+    border-left-width: 1px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 
-/* rightmost button */
-.linked entry:last-child,
-.linked button:last-child,
-.linked button:active:last-child,
-.linked button:active:hover:last-child,
-.linked button:disabled:last-child,
-.inline-toolbar toolbar button:last-child,
-.inline-toolbar toolbar button:active:last-child,
-.inline-toolbar toolbar button:disabled:last-child,
-.inline-toolbar toolbar toolbutton:last-child button,
-.inline-toolbar toolbar toolbutton:last-child button:active,
-.inline-toolbar toolbar toolbutton:last-child button:disabled {
-    border-width: 1px;
-    border-radius: 4px;
+.linked entry:last-child, .linked button:last-child, .linked combobox:last-child box.linked button {
     border-left-width: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
-/* linked single button */
-.linked entry:only-child,
-.linked button:only-child,
-.linked button:active:only-child,
-.linked button:active:hover:only-child,
-.linked button:disabled:only-child,
-.inline-toolbar toolbar button:only-child,
-.inline-toolbar toolbar button:active:only-child,
-.inline-toolbar toolbar button:disabled:only-child,
-.inline-toolbar toolbar toolbutton:only-child button,
-.inline-toolbar toolbar toolbutton:only-child button:active,
-.inline-toolbar toolbar toolbutton:only-child button:disabled {
+.linked entry:only-child, .linked button:only-child, combobox:only-child box.linked button {
     border-width: 1px;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
-/* linked button shadows (vertical) */
-.linked.vertical button,
-.inline-toolbar toolbar.vertical button,
-.inline-toolbar toolbar.vertical toolbutton > button {
-    box-shadow: inset 0 -1px shade(@theme_bg_color, 0.9);
+.linked entry:focus, .linked entry:last-child:focus {
+    box-shadow: -1px 0 @theme_selected_bg_color;
 }
-
-.linked.vertical button:active,
-.inline-toolbar toolbar.vertical button:active,
-.inline-toolbar toolbar.vertical toolbutton > button:active {
-    box-shadow: inset 0 -1px shade(@theme_bg_color, 0.9),
-                inset 1px 0 alpha(@dark_shadow, 0.07),
-                inset 0 1px alpha(@dark_shadow, 0.08),
-                inset -1px 0 alpha(@dark_shadow, 0.07);
-}
-
-.linked.vertical button:disabled,
-.inline-toolbar toolbar.vertical button:disabled,
-.inline-toolbar toolbar.vertical toolbutton > button:disabled {
-    box-shadow: inset 0 -1px shade(@theme_bg_color, 0.85);
-}
-
-/* remove box shadow from last-child and only-child */
-.linked.vertical button:last-child,
-.linked.vertical button:only-child,
-.linked.vertical button:disabled:last-child,
-.linked.vertical button:disabled:only-child,
-.linked.vertical button:active *:disabled:last-child,
-.linked.vertical button:active *:disabled:only-child,
-.inline-toolbar toolbar.vertical button:last-child,
-.inline-toolbar toolbar.vertical button:only-child,
-.inline-toolbar toolbar.vertical button:disabled:last-child,
-.inline-toolbar toolbar.vertical button:disabled:only-child,
-.inline-toolbar toolbar.vertical button:active *:disabled:last-child,
-.inline-toolbar toolbar.vertical button:active *:disabled:only-child,
-.inline-toolbar toolbar.vertical toolbutton:last-child > button,
-.inline-toolbar toolbar.vertical toolbutton:only-child > button,
-.inline-toolbar toolbar.vertical toolbutton:last-child > button:disabled,
-.inline-toolbar toolbar.vertical toolbutton:only-child > button:disabled,
-.inline-toolbar toolbar.vertical toolbutton:last-child > button:active *:disabled,
-.inline-toolbar toolbar.vertical toolbutton:only-child > button:active *:disabled {
+    
+.linked entry:first-child:focus {
     box-shadow: none;
 }
 
-/* add back the inset shadow effect */
-.linked.vertical button:active:last-child,
-.linked.vertical button:active:only-child,
-.inline-toolbar toolbar.vertical button:active:last-child,
-.inline-toolbar toolbar.vertical button:active:only-child,
-.inline-toolbar toolbar.vertical toolbutton:last-child > button:active,
-.inline-toolbar toolbar.vertical toolbutton:only-child > button:active {
-    box-shadow: inset 1px 0 alpha(@dark_shadow, 0.07),
-                inset 0 1px alpha(@dark_shadow, 0.08),
-                inset -1px 0 alpha(@dark_shadow, 0.07);
-}
-
-/* middle button (vertical) */
-.linked.vertical entry,
-.linked.vertical button,
-.linked.vertical button:active,
-.linked.vertical button:active:hover,
-.linked.vertical button:disabled {
-    border-width: 1px;
-    border-radius: 0;
+.vertical.linked entry, .vertical.linked button, .vertical.linked combobox box.linked button {
+    border-left-width: 1px;
     border-top-width: 0;
-    border-bottom-width: 0;
+    border-radius: 0;
 }
 
-/* top button (vertical) */
-.linked.vertical entry:first-child,
-.linked.vertical button:first-child,
-.linked.vertical button:active:first-child,
-.linked.vertical button:active:hover:first-child,
-.linked.vertical button:disabled:first-child {
-    border-width: 1px;
-    border-radius: 4px;
-    border-bottom-width: 0;
-    border-bottom-right-radius: 0;
+.vertical.linked entry:first-child, .vertical.linked button:first-child, .vertical.linked combobox:first-child box.linked button {
+    border-top-width: 1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
-/* bottom button (vertical) */
-.linked.vertical entry:last-child,
-.linked.vertical button:last-child,
-.linked.vertical button:active:last-child,
-.linked.vertical button:active:hover:last-child,
-.linked.vertical button:disabled:last-child {
-    border-width: 1px;
-    border-radius: 4px;
+.vertical.linked entry:last-child, .vertical.linked button:last-child, .vertical.linked combobox:last-child box.linked button {
     border-top-width: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
-/* linked single button (vertical) */
-.linked.vertical entry:only-child,
-.linked.vertical button:only-child,
-.linked.vertical button:active:only-child,
-.linked.vertical button:active:hover:only-child,
-.linked.vertical button:disabled:only-child {
-    border-width: 1px;
-    border-radius: 4px;
+.vertical.linked entry:only-child, .vertical.linked button:only-child, .vertical.linked combobox .linked:only-child button {
+    border-top-width: 1px;
+}
+    
+.vertical.linked entry:focus, .vertical.linked entry:last-child:focus {
+    box-shadow: 0 -1px @theme_selected_bg_color;
 }
 
-/* linked toolbar buttons */
-.primary-toolbar button.raised.linked,
-.primary-toolbar .raised.linked button,
-toolbar button.raised.linked,
-toolbar .raised.linked button,
-toolbar .linked button {
-    box-shadow: inset -1px 0 shade(@toolbar_bg_color, 0.98),
-                inset 0 -1px shade(@theme_bg_color, 0.8);
-}
-
-.primary-toolbar button.raised.linked:active,
-.primary-toolbar .raised.linked button:active,
-toolbar button.raised.linked:active,
-toolbar .raised.linked button:active,
-toolbar .linked button:active {
-    box-shadow: inset -1px 0 shade(@toolbar_bg_color, 0.9),
-                inset 1px 0 alpha(@dark_shadow, 0.07),
-                inset 0 1px alpha(@dark_shadow, 0.08),
-                inset 0 -1px alpha(@dark_shadow, 0.05);
-}
-
-.primary-toolbar button.raised.linked:disabled,
-.primary-toolbar .raised.linked button:disabled,
-toolbar button.raised.linked:disabled,
-toolbar .raised.linked button:disabled,
-toolbar .linked button:disabled {
+.vertical.linked entry:first-child:focus {
     box-shadow: none;
 }
 
-/* remove box shadow from last-child and only-child */
-.primary-toolbar button.raised.linked:last-child,
-.primary-toolbar button.raised.linked:only-child,
-.primary-toolbar button:disabled.raised.linked:last-child,
-.primary-toolbar button:disabled.raised.linked:only-child,
-.primary-toolbar button:active *:disabled.raised.linked:last-child,
-.primary-toolbar button:active *:disabled.raised.linked:only-child,
-.primary-toolbar .raised.linked button:last-child,
-.primary-toolbar .raised.linked button:only-child,
-.primary-toolbar .raised.linked button:disabled:last-child,
-.primary-toolbar .raised.linked button:disabled:only-child,
-.primary-toolbar .raised.linked button:active *:disabled:last-child,
-.primary-toolbar .raised.linked button:active *:disabled:only-child,
-toolbar button.raised.linked:last-child,
-toolbar button.raised.linked:only-child,
-toolbar button:disabled.raised.linked:last-child,
-toolbar button:disabled.raised.linked:only-child,
-toolbar button:active *:disabled.raised.linked:last-child,
-toolbar button:active *:disabled.raised.linked:only-child,
-toolbar .raised.linked button:last-child,
-toolbar .raised.linked button:only-child,
-toolbar .raised.linked button:disabled:last-child,
-toolbar .raised.linked button:disabled:only-child,
-toolbar .raised.linked button:active *:disabled:last-child,
-toolbar .raised.linked button:active *:disabled:only-child,
-toolbar .linked button:last-child,
-toolbar .linked button:only-child,
-toolbar .linked button:disabled:last-child,
-toolbar .linked button:disabled:only-child,
-toolbar .linked button:active *:disabled:last-child,
-toolbar .linked button:active *:disabled:only-child {
-    box-shadow: inset 0 -1px shade(@theme_bg_color, 0.9);
-    border-radius: 4px;
-}
-
-/* add back the inset shadow effect */
-.primary-toolbar button:active.raised.linked:last-child,
-.primary-toolbar button:active.raised.linked:only-child,
-.primary-toolbar .raised.linked button:active:last-child,
-.primary-toolbar .raised.linked button:active:only-child,
-toolbar button:active.raised.linked:last-child,
-toolbar button:active.raised.linked:only-child,
-toolbar .raised.linked button:active:last-child,
-toolbar .raised.linked button:active:only-child,
-toolbar .linked button:active:last-child,
-toolbar .linked button:active:only-child {
-    box-shadow: inset 1px 0 alpha(@dark_shadow, 0.07),
-                inset 0 1px alpha(@dark_shadow, 0.08),
-                inset -1px 0 alpha(@dark_shadow, 0.07);
-}
-
-/* middle button */
-.primary-toolbar button.raised.linked,
-.primary-toolbar button.raised.linked:active,
-.primary-toolbar button.raised.linked:disabled,
-.primary-toolbar .raised.linked button,
-.primary-toolbar .raised.linked button:active,
-.primary-toolbar .raised.linked button:disabled,
-toolbar button.raised.linked,
-toolbar button.raised.linked:active,
-toolbar button.raised.linked:disabled,
-toolbar .raised.linked button,
-toolbar .raised.linked button:active,
-toolbar .raised.linked button:disabled,
-toolbar .linked button,
-toolbar .linked button:active,
-toolbar .linked button:disabled {
+.vertical.linked spinbutton button:first-child {
     border-width: 1px;
-    border-radius: 0px;
-    border-right-width: 0;
-    border-left-width: 0;
+    border-top-width: 0;
+    border-left-width: 1px;
 }
 
-/* leftmost button */
-.primary-toolbar button.raised.linked:first-child,
-.primary-toolbar button.raised.linked:active:first-child,
-.primary-toolbar button.raised.linked:disabled:first-child,
-.primary-toolbar .raised.linked button:first-child,
-.primary-toolbar .raised.linked button:active:first-child,
-.primary-toolbar .raised.linked button:disabled:first-child,
-toolbar button.raised.linked:first-child,
-toolbar button.raised.linked:active:first-child,
-toolbar button.raised.linked:disabled:first-child,
-toolbar .raised.linked button:first-child,
-toolbar .raised.linked button:active:first-child,
-toolbar .raised.linked button:disabled:first-child,
-toolbar .linked button:first-child,
-toolbar .linked button:active:first-child {
-    border-width: 1px;
-    border-radius: 4px;
-    border-right-width: 0;
-    border-bottom-right-radius: 0;
+.vertical.linked spinbutton button:last-child {
+    border-width: 0;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
     border-top-right-radius: 0;
-}
-
-/* rightmost button */
-.primary-toolbar button.raised.linked:last-child,
-.primary-toolbar button.raised.linked:active:last-child,
-.primary-toolbar button.raised.linked:disabled:last-child,
-.primary-toolbar .raised.linked button:last-child,
-.primary-toolbar .raised.linked button:active:last-child,
-.primary-toolbar .raised.linked button:disabled:last-child,
-toolbar button.raised.linked:last-child,
-toolbar button.raised.linked:active:last-child,
-toolbar button.raised.linked:disabled:last-child,
-toolbar .raised.linked button:last-child,
-toolbar .raised.linked button:active:last-child,
-toolbar .raised.linked button:disabled:last-child,
-toolbar .linked button:last-child,
-toolbar .linked button:active:last-child,
-toolbar .linked button:disabled:last-child {
-    border-width: 1px;
-    border-radius: 4px;
-    border-left-width: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-}
-
-/* linked single button */
-.primary-toolbar button.raised.linked:only-child,
-.primary-toolbar button.raised.linked:active:only-child,
-.primary-toolbar button.raised.linked:disabled:only-child,
-.primary-toolbar .raised.linked button:only-child,
-.primary-toolbar .raised.linked button:active:only-child,
-.primary-toolbar .raised.linked button:disabled:only-child,
-toolbar button.raised.linked:only-child,
-toolbar button.raised.linked:active:only-child,
-toolbar button.raised.linked:disabled:only-child,
-toolbar .raised.linked button:only-child,
-toolbar .raised.linked button:active:only-child,
-toolbar .raised.linked button:disabled:only-child,
-toolbar .linked button:only-child,
-toolbar .linked button:active:only-child,
-toolbar .linked button:disabled:only-child {
-    border-width: 1px;
-    border-radius: 4px;
-}
-
-/* linked titlebar buttons */
-headerbar button.raised.linked,
-headerbar .raised.linked button,
-headerbar .linked button {
-    box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.9);
-}
-
-headerbar button.raised.linked:active,
-headerbar .raised.linked button:active,
-headerbar .linked button:active {
-    box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.9),
-                inset 1px 0 alpha(@dark_shadow, 0.07),
-                inset 0 1px alpha(@dark_shadow, 0.08),
-                inset 0 -1px alpha(@dark_shadow, 0.05);
-}
-
-headerbar button.raised.linked:disabled,
-headerbar .raised.linked button:disabled,
-headerbar .linked button:disabled {
-    box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.85);
-}
-
-/* remove box shadow from last-child and only-child */
-headerbar button.raised.linked:last-child,
-headerbar button.raised.linked:only-child,
-headerbar button:disabled.raised.linked:last-child,
-headerbar button:disabled.raised.linked:only-child,
-headerbar button:active *:disabled.raised.linked:last-child,
-headerbar button:active *:disabled.raised.linked:only-child,
-headerbar .raised.linked button:last-child,
-headerbar .raised.linked button:only-child,
-headerbar .raised.linked button:disabled:last-child,
-headerbar .raised.linked button:disabled:only-child,
-headerbar .raised.linked button:active *:disabled:last-child,
-headerbar .raised.linked button:active *:disabled:only-child,
-headerbar .linked button:last-child,
-headerbar .linked button:only-child,
-headerbar .linked button:disabled:last-child,
-headerbar .linked button:disabled:only-child,
-headerbar .linked button:active *:disabled:last-child,
-headerbar .linked button:active *:disabled:only-child {
-    box-shadow: none;
-}
-
-/* add back the inset shadow effect */
-headerbar button:active.raised.linked:last-child,
-headerbar button:active.raised.linked:only-child,
-headerbar .raised.linked button:active:last-child,
-headerbar .raised.linked button:active:only-child,
-headerbar .linked button:active:last-child,
-headerbar .linked button:active:only-child {
-    box-shadow: inset 1px 0 alpha(@dark_shadow, 0.07),
-                inset 0 1px alpha(@dark_shadow, 0.08),
-                inset -1px 0 alpha(@dark_shadow, 0.07);
-}
-
-/* middle button */
-headerbar button.raised.linked,
-headerbar button.raised.linked:active,
-headerbar button.raised.linked:disabled,
-headerbar .raised.linked button,
-headerbar .raised.linked button:active,
-headerbar .raised.linked button:disabled,
-headerbar .linked button,
-headerbar .linked button:active,
-headerbar .linked button:disabled {
-    border-width: 1px;
-    border-radius: 0;
-    border-right-width: 0;
-    border-left-width: 0;
-}
-
-/* leftmost button */
-headerbar button.raised.linked:first-child,
-headerbar button.raised.linked:active:first-child,
-headerbar button.raised.linked:disabled:first-child,
-headerbar .raised.linked button:first-child,
-headerbar .raised.linked button:active:first-child,
-headerbar .raised.linked button:disabled:first-child,
-headerbar .linked button:first-child,
-headerbar .linked button:active:first-child,
-headerbar .linked button:disabled:first-child {
-    border-width: 1px;
-    border-radius: 4px;
-    border-right-width: 0;
     border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-}
-
-/* rightmost button */
-headerbar button.raised.linked:last-child,
-headerbar button.raised.linked:active:last-child,
-headerbar button.raised.linked:disabled:last-child,
-headerbar .raised.linked button:last-child,
-headerbar .raised.linked button:active:last-child,
-headerbar .raised.linked button:disabled:last-child,
-headerbar .linked button:last-child,
-headerbar .linked button:active:last-child,
-headerbar .linked button:disabled:last-child {
-    border-width: 1px;
-    border-radius: 4px;
-    border-left-width: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-}
-
-/* linked single button */
-headerbar button.raised.linked:only-child,
-headerbar button.raised.linked:active:only-child,
-headerbar button.raised.linked:disabled:only-child,
-headerbar .raised.linked button:only-child,
-headerbar .raised.linked button:active:only-child,
-headerbar .raised.linked button:disabled:only-child,
-headerbar .linked button:only-child,
-headerbar .linked button:active:only-child,
-headerbar .linked button:disabled:only-child {
-    border-width: 1px;
-    border-radius: 4px;
 }
 
 /***********
@@ -3960,30 +3470,24 @@ progressbar.osd progress {
 /******************************
  * suggested action buttons *
  ******************************/
-.suggested-action button {
-    border-width: 1px;
-    border-style: solid;
-    border-color: shade(@theme_selected_bg_color, 0.9);
-    border-radius: 4px;
-    background-color: shade(@theme_selected_bg_color, 1.18);
-    background-image: none;
-    color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.1);
+button.suggested-action {
+    background-image: linear-gradient(to bottom,
+                        shade(@selected_bg_color, 1.25),
+                        shade(@selected_bg_color, 0.99)
+                      );
+    box-shadow: 0 0 1px 1px shade(@theme_selected_bg_color, 1.65);
+    color: @theme_selected_fg_color;
+    border-color: shade(@theme_selected_bg_color, 1.5);
 }
 
-.suggested-action button:hover {
-    border-color: shade(@theme_selected_bg_color, 0.8);
-    background-color: shade(@theme_selected_bg_color, 1.20);
-    background-image: none;
-}
-
-.suggested-action button:active {
-    border-color: shade(@theme_selected_bg_color, 0.9);
-    background-color: shade(@theme_selected_bg_color, 1.05);
-    background-image: none;
-}
-
-.suggested-action button:hover:active {
-    border-color: shade(@theme_selected_bg_color, 0.8);
+button.suggested-action:active {
+    background-image: linear-gradient(to bottom,
+                            shade(@selected_bg_color, 1.2),
+                            shade(@selected_bg_color, 0.95)
+                          );
+    box-shadow: 0 0 1px 1px shade(@theme_selected_bg_color, 1.6);
+    color: @theme_selected_fg_color;
+    border-color: shade(@theme_selected_bg_color, 1.4);
 }
 
 /******************
@@ -4043,9 +3547,9 @@ progressbar.osd progress {
 }
 
 /* suggested button */
-.selection-mode headerbar .suggested-action button,
-.selection-mode toolbar .suggested-action button,
-.selection-mode toolbar toolbutton.suggested-action button {
+.selection-mode headerbar button.suggested-action,
+.selection-mode toolbar button.suggested-action,
+.selection-mode toolbar toolbuttonbutton.suggested-action {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_selected_bg_color, 0.9);
@@ -4055,25 +3559,25 @@ progressbar.osd progress {
     color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.1);
 }
 
-.selection-mode headerbar .suggested-action button:hover,
-.selection-mode toolbar .suggested-action button:hover,
-.selection-mode toolbar toolbutton.suggested-action button:hover {
+.selection-mode headerbar button.suggested-action:hover,
+.selection-mode toolbar button.suggested-action:hover,
+.selection-mode toolbar toolbuttonbutton.suggested-action:hover {
     border-color: shade(@theme_selected_bg_color, 0.8);
     background-color: shade(@theme_selected_bg_color, 1.20);
     background-image: none;
 }
 
-.selection-mode headerbar .suggested-action button:active,
-.selection-mode toolbar .suggested-action button:active,
+.selection-mode headerbar button.suggested-action:active,
+.selection-mode toolbar button.suggested-action:active,
 .selection-mode toolbar toolbutton.suggested-action:active {
     border-color: shade(@theme_selected_bg_color, 0.9);
     background-color: shade(@theme_selected_bg_color, 1.05);
     background-image: none;
 }
 
-.selection-mode headerbar .suggested-action button:hover:active,
-.selection-mode toolbar .suggested-action button:hover:active,
-.selection-mode toolbar toolbutton.suggested-action button:hover:active {
+.selection-mode headerbar button.suggested-action:hover:active,
+.selection-mode toolbar button.suggested-action:hover:active,
+.selection-mode toolbar toolbuttonbutton.suggested-action:hover:active {
     border-color: shade(@theme_selected_bg_color, 0.8);
 }
 
@@ -4223,6 +3727,10 @@ messagedialog.csd decoration {
     background-image: none;
     color: @theme_unfocused_fg_color;
     -gtk-icon-shadow: none;
+}
+
+.titlebar button.flat.toggle:active {
+    background-color: transparent;
 }
 
 /* decoration for windows */
