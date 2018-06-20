@@ -36,7 +36,7 @@ xfconf-query -c xfwm4 -p /general/theme -s "macOS High Sierra"
 ### Requirements
 
 - GTK+ 3.18 or above
-- Murrine and Pixmap theme engines
+- Murrine and Pixmap theme engines (usually present in the `gtk-engines` package)
 
 ### Contribute
 
