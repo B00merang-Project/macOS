@@ -602,6 +602,7 @@ infobar {
   border-style: solid;
   border-color: shade(@info_bg_color, 0.8);
   color: @info_fg_color;
+  background-image: none;
   background-color: @info_bg_color; }
   .info button {
     border-color: shade(@info_bg_color, 0.8);
@@ -629,6 +630,7 @@ infobar {
   border-style: solid;
   border-color: shade(@warning_bg_color, 0.8);
   color: @warning_fg_color;
+  background-image: none;
   background-color: @warning_bg_color; }
   .warning button {
     border-color: shade(@warning_bg_color, 0.8);
@@ -661,6 +663,7 @@ infobar {
   .question button {
     border-color: shade(@question_bg_color, 0.8);
     color: @question_fg_color;
+    background-image: none;
     background-color: shade(@question_bg_color, 1.08); }
     .question button:hover {
       border-color: shade(@question_bg_color, 0.85);
@@ -683,6 +686,7 @@ infobar {
   border-style: solid;
   border-color: shade(@error_bg_color, 0.8);
   background-color: @error_bg_color;
+  background-image: none;
   color: @error_fg_color; }
   .error button {
     border-color: shade(@error_bg_color, 0.8);
@@ -2511,6 +2515,9 @@ panel-toplevel.background na-tray-applet {
   .mate-panel-menu-bar menubar, .mate-panel-menu-bar menubar menuitem, .mate-panel-menu-bar togglebutton {
     border-color: transparent;
     background-color: transparent; }
+  .mate-panel-menu-bar menubar menuitem:hover .mate-panel-menu-bar:active {
+    color: @theme_selected_fg_color;
+    background-color: @theme_selected_bg_color; }
   .mate-panel-menu-bar .menubar > .menuitem {
     padding-top: 0;
     padding-bottom: 0; }

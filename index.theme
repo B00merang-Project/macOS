@@ -8,6 +8,6 @@ Encoding=UTF-8
 [X-GNOME-Metatheme]
 GtkTheme=macOS
 MetacityTheme=macOS
-IconTheme=La capitaine
+IconTheme=La Capitaine
 CursorTheme=DMZ-Black
 ButtonLayout=close,minimize,maximize:
