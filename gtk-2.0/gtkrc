@@ -54,12 +54,12 @@ style "default"
 	GtkScale		::trough-side-details			= 1
 
 	GtkScrollbar		::min-slider-length			= 50
-	GtkScrollbar		::slider-width				= 8
+	GtkScrollbar		::slider-width				= 7
 	#GtkScrollbar		::activate-slider			= 1
 	GtkScrollbar		::trough-border				= 0
 	GtkScrollbar		::has-backward-stepper 			= 0
 	GtkScrollbar		::has-forward-stepper			= 0
-  GtkScrollbar    ::trough-border = 2
+  GtkScrollbar    ::trough-border = 3
 
 	GtkScrolledWindow	::scrollbar-spacing			= 0
 	GtkScrolledWindow	::scrollbars-within-bevel		= 1
@@ -436,7 +436,7 @@ style "scrollbar"
 	{
 		colorize_scrollbar	= FALSE
 		roundness	= 10
-		border_shades	= {2.0,2.0}
+		border_shades	= {1.0,1.0}
 		trough_shades	= {1.2,1.2}
 		contrast	= 0.0
 		gradient_shades	= {1.0,1.0,1.0,1.0}
