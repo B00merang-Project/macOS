@@ -4,7 +4,7 @@
 # January 3rd, 2017
 # License: GPL v3
 
-button_offset=0
+button_offset=2
 button_spacing=2
 full_width_title=true
 title_horizontal_offset=2
