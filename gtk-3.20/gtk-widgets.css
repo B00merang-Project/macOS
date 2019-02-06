@@ -202,7 +202,7 @@ button {
   border-left-color: shade(@borders, 1.05);
   border-right-color: shade(@borders, 1.05);
   background-color: @theme_base_color;
-  background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.1), @theme_bg_color);
+  background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.4), mix(shade(@theme_bg_color, 1.2), @dark_shadow, 0.02));
   -gtk-outline-radius: 4px; }
   button:hover {
     color: @theme_fg_color;
@@ -230,6 +230,7 @@ button {
       color: @theme_unfocused_disabled_fg_color; }
   button:backdrop {
     color: @theme_unfocused_fg_color;
+    border-color: @unfocused_borders;
     background-color: @theme_unfocused_base_color; }
 button.flat {
   border-color: transparent;
@@ -244,7 +245,7 @@ button.flat {
     border-right-color: shade(@borders, 1.05);
     color: @theme_fg_color;
     background-color: @theme_base_color;
-    background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.1), @theme_bg_color); }
+    background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.4), mix(shade(@theme_bg_color, 1.2), @dark_shadow, 0.02)); }
   button.flat:active, button.flat:checked {
     color: @theme_fg_color;
     background-image: none;
@@ -488,7 +489,7 @@ entry {
   color: @theme_text_color;
   caret-color: currentColor;
   background-color: @theme_base_color;
-  background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.1), @theme_bg_color); }
+  background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.4), mix(shade(@theme_bg_color, 1.2), @dark_shadow, 0.02)); }
   entry:active, entry:focus {
     border-color: shade(@theme_selected_bg_color, 1.5);
     box-shadow: 0 0 2px 2px shade(@theme_selected_bg_color, 1.5); }
@@ -1249,7 +1250,7 @@ scale {
     border-radius: 100%;
     box-shadow: 0 1px 2px 1px alpha(@dark_shadow, 0.09);
     color: @theme_fg_color;
-    background-color: @theme_base_color; }
+    background-color: shade(@theme_bg_color, 1.4); }
     scale slider:hover {
       color: @theme_fg_color;
       background-color: @theme_base_color; }
@@ -1570,7 +1571,7 @@ switch {
     border-radius: 100%;
     color: @theme_fg_color;
     box-shadow: 0 2px 2px 1px alpha(@dark_shadow, 0.09);
-    background-color: @theme_base_color; }
+    background-color: shade(@theme_bg_color, 1.4); }
   switch:disabled slider {
     background-color: @theme_disabled_base_color; }
   switch:disabled:backdrop slider {
@@ -1699,7 +1700,7 @@ headerbar, headerbar:not(.titlebar) {
     border-left-color: shade(@borders, 1.05);
     border-right-color: shade(@borders, 1.05);
     background-color: @theme_base_color;
-    background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.1), @theme_bg_color);
+    background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.4), mix(shade(@theme_bg_color, 1.2), @dark_shadow, 0.02));
     -gtk-outline-radius: 4px; }
     headerbar button:hover, headerbar:not(.titlebar) button:hover {
       color: @headerbar_fg_color;
@@ -1727,6 +1728,7 @@ headerbar, headerbar:not(.titlebar) {
         color: @theme_unfocused_disabled_fg_color; }
     headerbar button:backdrop, headerbar:not(.titlebar) button:backdrop {
       color: @theme_unfocused_fg_color;
+      border-color: @unfocused_borders;
       background-color: @theme_unfocused_base_color; }
   headerbar entry, headerbar:not(.titlebar) entry {
     padding: 4px 8px; }
@@ -1755,7 +1757,7 @@ toolbar {
       border-right-color: shade(@borders, 1.05);
       color: @toolbar_fg_color;
       background-color: @theme_base_color;
-      background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.1), @theme_bg_color); }
+      background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.4), mix(shade(@theme_bg_color, 1.2), @dark_shadow, 0.02)); }
     toolbar button.flat:active, toolbar button.flat:checked {
       color: @toolbar_fg_color;
       background-image: none;
@@ -1799,7 +1801,7 @@ toolbar {
     border-left-color: shade(@borders, 1.05);
     border-right-color: shade(@borders, 1.05);
     background-color: @theme_base_color;
-    background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.1), @theme_bg_color);
+    background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.4), mix(shade(@theme_bg_color, 1.2), @dark_shadow, 0.02));
     -gtk-outline-radius: 4px; }
     .primary-toolbar button:hover, .primary-toolbar .raised button:hover {
       color: @toolbar_fg_color;
@@ -1827,6 +1829,7 @@ toolbar {
         color: @theme_unfocused_disabled_fg_color; }
     .primary-toolbar button:backdrop, .primary-toolbar .raised button:backdrop {
       color: @theme_unfocused_fg_color;
+      border-color: @unfocused_borders;
       background-color: @theme_unfocused_base_color; }
 
 .inline-toolbar toolbar {
@@ -1851,7 +1854,7 @@ toolbar {
     border-left-color: shade(@borders, 1.05);
     border-right-color: shade(@borders, 1.05);
     background-color: @theme_base_color;
-    background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.1), @theme_bg_color);
+    background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.4), mix(shade(@theme_bg_color, 1.2), @dark_shadow, 0.02));
     -gtk-outline-radius: 4px; }
     .inline-toolbar toolbar button:hover {
       color: @toolbar_fg_color;
@@ -1879,6 +1882,7 @@ toolbar {
         color: @theme_unfocused_disabled_fg_color; }
     .inline-toolbar toolbar button:backdrop {
       color: @theme_unfocused_fg_color;
+      border-color: @unfocused_borders;
       background-color: @theme_unfocused_base_color; }
 
 .linked button, .linked .raised button, .inline-toolbar button, .inline-toolbar .raised button, .primary-toolbar button, .primary-toolbar .raised button {
