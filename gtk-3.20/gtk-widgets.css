@@ -1695,7 +1695,7 @@ headerbar, headerbar:not(.titlebar) {
     border-width: 1px;
     border-radius: 4px;
     color: @headerbar_fg_color;
-    border-color: shade(@borders, 0.9);
+    border-color: @borders;
     border-top-color: shade(@borders, 1.1);
     border-left-color: shade(@borders, 1.05);
     border-right-color: shade(@borders, 1.05);
