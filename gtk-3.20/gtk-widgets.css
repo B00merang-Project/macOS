@@ -2003,9 +2003,6 @@ toolbar {
     background-image: linear-gradient(to bottom, shade(@theme_selected_bg_color, 1.2), shade(@theme_selected_bg_color, 1.05));
     color: @theme_selected_fg_color; }
 
-stackswitcher button.text-button {
-  min-width: 80px; }
-
 tooltip {
   border-radius: 4px;
   box-shadow: none; }
