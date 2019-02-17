@@ -4,7 +4,7 @@
 @define-color fg_color #ffffff;
 @define-color base_color #1d1e22;
 @define-color text_color #ffffff;
-@define-color selected_bg_color #007aff;
+@define-color selected_bg_color #0375f8;
 @define-color selected_fg_color #ffffff;
 @define-color disabled_bg_color mix(@fg_color, @bg_color, 0.95);
 @define-color disabled_fg_color mix(@fg_color, @bg_color, 0.5);
@@ -63,7 +63,7 @@
 @define-color question_bg_color #2C2C2C;
 @define-color error_fg_color #FFFFFF;
 @define-color error_bg_color #FF0000;
-@define-color link_color #1D8ECE;
+@define-color link_color #0057d8;
 @define-color error_color #CC0000;
 @define-color success_color #4ed464;
 @define-color warning_color #FF9900;
