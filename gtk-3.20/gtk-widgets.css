@@ -1708,7 +1708,7 @@ headerbar, headerbar:not(.titlebar) {
       background-color: shade(@theme_base_color, 1.1); }
     headerbar button:active, headerbar button:checked, headerbar:not(.titlebar) button:active, headerbar:not(.titlebar) button:checked {
       color: @theme_selected_fg_color;
-      border-color: shade(shade(@borders, 0.9), 0.9);
+      border-color: shade(@borders, 0.9);
       background-image: none;
       background-color: mix(@headerbar_fg_color, @theme_base_color, 0.5); }
       headerbar button:active:backdrop, headerbar button:checked:backdrop, headerbar:not(.titlebar) button:active:backdrop, headerbar:not(.titlebar) button:checked:backdrop {
@@ -2116,6 +2116,7 @@ searchbar {
   border-style: solid;
   border-color: shade(@osd_bg, 0.8);
   border-radius: 4px;
+  background-image: none;
   background-color: shade(@osd_bg, 1.08);
   color: @osd_fg; }
   .osd button:hover, button.osd:hover {
@@ -2148,6 +2149,7 @@ searchbar {
     border-style: solid;
     border-color: shade(@osd_bg, 0.8);
     border-radius: 4px;
+    background-image: none;
     background-color: shade(@osd_bg, 1.08);
     color: @osd_fg; }
     .osd toolbar button:hover, toolbar.osd button:hover {
