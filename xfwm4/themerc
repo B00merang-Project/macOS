@@ -18,7 +18,7 @@ title_shadow_inactive=false
 active_text_color=#4c4c4c
 inactive_text_color=#9f9f9f
 
-placement_ratio=20
+#placement_ratio=20
 shadow_delta_height=0
 shadow_delta_width=0
 shadow_delta_x=0

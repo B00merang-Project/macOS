@@ -240,7 +240,7 @@ style "button" = "wider"
 		contrast            = 0.2
 		highlight_shade     = 1.0
 		lightborder_shade   = 1.0
-		gradient_shades     = {1.1,1.0,1.0,0.97}
+		gradient_shades     = {1.1,1.0,1.0,0.98}
 		border_shades       = { 1.0, 1.0 }
 		shadow_shades       = {1.0,1.0}
 		reliefstyle         = 0
@@ -280,7 +280,7 @@ style "menu"
 	GtkMenuBar	:: shadow-type		= GTK_SHADOW_NONE
 
 	bg[SELECTED]      = @selected_bg_color
-	bg[NORMAL]        = @base_color
+	bg[NORMAL]        = mix(0.5, @bg_color, @base_color)
 	bg[PRELIGHT]      = @selected_bg_color
 	bg[ACTIVE]        = shade (1.18, @bg_color)
 	bg[INSENSITIVE]   = shade (0.95, @bg_color)
