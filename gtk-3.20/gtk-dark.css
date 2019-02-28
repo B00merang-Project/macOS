@@ -78,7 +78,7 @@
 @define-color toolbar_fg_color @fg_color;
 @define-color sidebar_bg_color alpha(@bg_color, 0.85);
 @define-color sidebar_fg_color @fg_color;
-@define-color taskbar_bg_color #000000;
+@define-color taskbar_bg_color #b3b3b3;
 @define-color taskbar_fg_color #ffffff;
 @define-color titlebar_bg_color @bg_color;
 @define-color titlebar_fg_color @fg_color;
