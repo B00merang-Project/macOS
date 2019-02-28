@@ -270,7 +270,7 @@ style "notebook-button" = "notebook-bg"
 style "notebook-bg"
 {
 	bg[NORMAL] = @base_color
-	bg[ACTIVE] = @base_color
+	bg[ACTIVE] = @bg_color
 }
 
 style "notebook" = "notebook-bg"

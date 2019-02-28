@@ -1289,7 +1289,7 @@ scale {
 
 scrollbar {
   border: none;
-  background-color: @theme_base_color; }
+  background-color: shade(@theme_bg_color, 1.2); }
   scrollbar trough {
     border: none;
     border-radius: 0; }
