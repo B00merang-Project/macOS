@@ -268,6 +268,8 @@ button.flat {
       color: alpha(@theme_fg_color, 0.7);
       background-color: transparent; }
   button.flat:backdrop {
+    border-color: transparent;
+    background-color: transparent;
     color: @theme_unfocused_fg_color; }
 
 checkbutton.text-button, radiobutton.text-button {
@@ -1783,6 +1785,8 @@ toolbar {
         color: alpha(@toolbar_fg_color, 0.7);
         background-color: transparent; }
     toolbar button.flat:backdrop {
+      border-color: transparent;
+      background-color: transparent;
       color: @theme_unfocused_fg_color; }
   toolbar menubar {
     -GtkToolbar-button-relief: normal; }
@@ -2014,10 +2018,13 @@ toolbar {
   min-height: 20px;
   min-width: 80px;
   box-shadow: none; }
-  .stack-switcher button:checked, .stack-switcher button:checked:hover, .stack-switcher button:checked:focus, .stack-switcher button:checked:backdrop, .stack-switcher button:checked:hover:backdrop, .stack-switcher button:active, .stack-switcher button:active:hover, .stack-switcher button:active:focus, .stack-switcher button:active:backdrop, .stack-switcher button:active:hover:backdrop {
+  .stack-switcher button:checked, .stack-switcher button:checked:hover, .stack-switcher button:checked:focus, .stack-switcher button:active, .stack-switcher button:active:hover, .stack-switcher button:active:focus {
     background-color: transparent;
     background-image: linear-gradient(to bottom, shade(@theme_selected_bg_color, 1.4), shade(@theme_selected_bg_color, 1.05));
     color: @theme_selected_fg_color; }
+    .stack-switcher button:checked:backdrop, .stack-switcher button:checked:hover:backdrop, .stack-switcher button:checked:focus:backdrop, .stack-switcher button:active:backdrop, .stack-switcher button:active:hover:backdrop, .stack-switcher button:active:focus:backdrop {
+      background-image: linear-gradient(to bottom, shade(@theme_unfocused_bg_color, 0.9), shade(@theme_unfocused_bg_color, 1.05));
+      color: @theme_unfocused_fg_color; }
 
 tooltip {
   border-radius: 4px;
