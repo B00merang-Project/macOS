@@ -494,11 +494,11 @@ entry {
   background-color: @theme_base_color;
   background-image: linear-gradient(to bottom, shade(@theme_bg_color, 1.4), mix(shade(@theme_bg_color, 1.2), @dark_shadow, 0.02)); }
   entry:active, entry:focus {
-    border-color: shade(@theme_selected_bg_color, 1.5);
-    box-shadow: 0 0 2px 2px shade(@theme_selected_bg_color, 1.5); }
+    border-color: @borders;
+    box-shadow: 0 0 0 4px @theme_selected_base_color; }
   entry:selected, entry:selected:focus, entry selection, entry selection:focus {
     color: @theme_selected_fg_color;
-    background-color: @theme_selected_bg_color; }
+    background-color: @theme_selected_base_color; }
   entry:disabled {
     color: @theme_disabled_text_color; }
     entry:disabled:backdrop {
@@ -1592,8 +1592,8 @@ textview {
   color: @theme_text_color;
   background-color: @theme_base_color; }
   textview text:selected, textview text selection, textview text:selected:focus, textview text selection:focus {
-    color: @theme_selected_fg_color;
-    background-color: @theme_selected_bg_color; }
+    color: @theme_selected_text_color;
+    background-color: @theme_selected_base_color; }
 
 colorswatch.top {
   border-top-left-radius: 2.5px;
@@ -1934,10 +1934,8 @@ toolbar {
   .linked entry:only-child, .inline-toolbar entry:only-child, .primary-toolbar entry:only-child {
     border-width: 1px;
     border-radius: 4px; }
-  .linked entry:focus, .linked entry:last-child:focus, .inline-toolbar entry:focus, .inline-toolbar entry:last-child:focus, .primary-toolbar entry:focus, .primary-toolbar entry:last-child:focus {
-    box-shadow: 0 0 2px 2px shade(@theme_selected_bg_color, 1.5), -1px 0 shade(@theme_selected_bg_color, 1.5); }
-  .linked entry:first-child:focus, .inline-toolbar entry:first-child:focus, .primary-toolbar entry:first-child:focus {
-    box-shadow: 0 0 2px 2px shade(@theme_selected_bg_color, 1.5); }
+  .linked entry:focus, .inline-toolbar entry:focus, .primary-toolbar entry:focus {
+    box-shadow: 0 0 0 4px @theme_selected_base_color; }
 .linked combobox box.linked button, .inline-toolbar combobox box.linked button, .primary-toolbar combobox box.linked button {
   border-radius: 0;
   border-left-width: 0; }
@@ -1991,10 +1989,8 @@ toolbar {
     border-bottom-right-radius: 4px; }
   .vertical.linked entry:only-child {
     border-top-width: 1px; }
-  .vertical.linked entry:focus, .vertical.linked entry:last-child:focus {
-    box-shadow: 0 0 2px 2px shade(@theme_selected_bg_color, 1.5), 0 -1px shade(@theme_selected_bg_color, 1.5); }
-  .vertical.linked entry:first-child:focus {
-    box-shadow: inset 0 0 2px 2px shade(@theme_selected_bg_color, 1.5); }
+  .vertical.linked entry:focus {
+    box-shadow: 0 0 0 4px @theme_selected_base_color; }
 .vertical.linked combobox box.linked button {
   border-left-width: 1px;
   border-top-width: 0;
