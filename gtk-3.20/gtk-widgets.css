@@ -2484,11 +2484,13 @@ messagedialog {
   min-height: 30px;
   color: @titlebar_fg_color;
   background-color: @titlebar_bg_color;
-  background-image: linear-gradient(to bottom, shade(@titlebar_bg_color, 0.95), shade(@titlebar_bg_color, 0.9)); }
+  background-image: linear-gradient(to bottom, shade(@titlebar_bg_color, 0.965), shade(@titlebar_bg_color, 0.9));
+  box-shadow: 0 1px @borders; }
   .titlebar:backdrop, .titlebar:not(headerbar):backdrop, headerbar.default-decoration:backdrop, .csd headerbar.default-decoration:backdrop, .default-decoration.titlebar:not(headerbar):backdrop, .csd .default-decoration.titlebar:not(headerbar):backdrop {
     color: @theme_unfocused_fg_color;
     background-image: none;
-    background-color: @theme_unfocused_bg_color; }
+    background-color: @theme_unfocused_bg_color;
+    box-shadow: 0 1px @unfocused_borders; }
 
 .caja-desktop, .nemo-desktop.nemo-canvas-item, .nautilus-desktop.nautilus-canvas-item {
   color: @desktop_item_fg;
