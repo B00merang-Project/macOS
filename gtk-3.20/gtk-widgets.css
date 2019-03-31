@@ -2367,10 +2367,10 @@ headerbar.selection-mode, toolbar.selection-mode {
 decoration {
   border-radius: 4px 4px 0 0;
   border-width: 0px;
-  box-shadow: 0 3px 9px 1px alpha(@dark_shadow, 0.3), 0 0 0 1px alpha(@dark_shadow, 0.25);
+  box-shadow: 0 10px 15px 1px alpha(@dark_shadow, 0.3), 0 0 0 1px alpha(@dark_shadow, 0.25);
   margin: 10px; }
   decoration:backdrop {
-    box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px alpha(@dark_shadow, 0.2), 0 0 0 1px alpha(@dark_shadow, 0.25); }
+    box-shadow: 0 10px 15px 1px transparent, 0 2px 6px 2px alpha(@dark_shadow, 0.2), 0 0 0 1px alpha(@dark_shadow, 0.25); }
   .fullscreen decoration, .tiled decoration {
     border-radius: 0; }
   .popup decoration {
