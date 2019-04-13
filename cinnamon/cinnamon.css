@@ -188,7 +188,6 @@ StScrollBar StButton#hhandle {
     padding-right: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
-    min-width: 250px;
     min-height: 80px;
     border:rgba(0,0,0,0.8);
     border-radius: 3px;
