@@ -2078,7 +2078,7 @@ treeview {
     color: @theme_selected_fg_color;
     background-color: @theme_selected_bg_color; }
   treeview header button {
-    border-width: 0;
+    border-width: 0 1px 1px 0;
     border-radius: 0; }
     treeview header button, treeview header button:active, treeview header button:focus, treeview header button:active:focus {
       background-image: none;
@@ -2087,7 +2087,7 @@ treeview {
       color: @theme_fg_color;
       background-color: @theme_bg_color; }
   treeview header:last-child button {
-    border-width: 0; }
+    border-width: 0 0 1px 0; }
   treeview entry, treeview entry.flat {
     border-radius: 0;
     background-image: none;
