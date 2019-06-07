@@ -541,6 +541,7 @@ entry {
     background-color: mix(@theme_bg_color, @theme_disabled_bg_color, 0.1); }
   entry:backdrop {
     color: @theme_unfocused_fg_color;
+    border-color: @unfocused_borders;
     background-color: @theme_unfocused_bg_color;
     background-image: none; }
   entry > image.left {
