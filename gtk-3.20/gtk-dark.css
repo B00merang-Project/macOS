@@ -2434,18 +2434,18 @@ headerbar.selection-mode, toolbar.selection-mode {
 decoration {
   border-radius: 4px 4px 0 0;
   border-width: 0px;
-  box-shadow: 0 10px 15px 1px alpha(black, 0.3), 0 0 0 1px alpha(black, 0.25);
+  box-shadow: 0 10px 15px 1px alpha(#000000, 0.3), 0 0 0 1px alpha(#000000, 0.25);
   margin: 10px; }
   decoration:backdrop {
-    box-shadow: 0 10px 15px 1px transparent, 0 2px 6px 2px alpha(black, 0.2), 0 0 0 1px alpha(black, 0.25); }
+    box-shadow: 0 10px 15px 1px transparent, 0 2px 6px 2px alpha(#000000, 0.2), 0 0 0 1px alpha(#000000, 0.25); }
   .fullscreen decoration, .tiled decoration {
     border-radius: 0; }
   .popup decoration {
-    box-shadow: 0 0 0 1px alpha(black, 0.1);
+    box-shadow: 0 0 0 1px alpha(#000000, 0.1);
     border-radius: 4px; }
   .ssd decoration {
     border-radius: 4px 4px 0 0;
-    box-shadow: 0 0 0 1px alpha(black, 0.1); }
+    box-shadow: 0 0 0 1px alpha(#000000, 0.1); }
     .ssd decoration.maximized {
       border-radius: 0; }
   tooltip.csd decoration {
@@ -2872,12 +2872,12 @@ UnityPanelWidget, .unity-panel {
 read if you used those and something break with a version upgrade you're on your own... */
 @define-color wm_title shade(#FFFFFF, 1.8);
 @define-color wm_unfocused_title #8C8C8C;
-@define-color wm_highlight transparent;
+@define-color wm_highlight #000000;
 @define-color wm_borders_edge shade(#3B3B3B, 0.9);
 @define-color wm_bg_a shade(#3B3B3B, 1.2);
 @define-color wm_bg_b #3B3B3B;
-@define-color wm_shadow alpha(transparent, 0.35);
-@define-color wm_border alpha(transparent, 0.18);
+@define-color wm_shadow alpha(#000000, 0.35);
+@define-color wm_border alpha(#000000, 0.18);
 @define-color wm_button_hover_color_a shade(#3B3B3B, 1.3);
 @define-color wm_button_hover_color_b #3B3B3B;
 @define-color wm_button_active_color_a shade(#3B3B3B, 0.85);
