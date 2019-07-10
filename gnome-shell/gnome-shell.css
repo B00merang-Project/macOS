@@ -29,7 +29,7 @@ stage {
 	border: none;
 	margin-top: 0.5em;
 	padding: 10px 32px;
-	color: #3b82d6;
+	color: #0375F8;
 	font-weight: normal;
 	background-color: transparent;
 	box-shadow: none;
@@ -55,7 +55,7 @@ StEntry {
 	box-shadow: none;
 	background-gradient-direction: none;
 	border-color: #acacac;
-	selection-background-color:#3b82d6;
+	selection-background-color:#0375F8;
 	selected-color: white; }
 	StEntry:focus {
 		background-color: #fff;
@@ -99,8 +99,8 @@ StScrollBar {
 	-slider-height: 1px;
 	-slider-background-color: #939393;
 	-slider-border-color: #adadad;
-	-slider-active-background-color:#3b82d6;
-	-slider-active-border-color:#3b82d6;
+	-slider-active-background-color:#0375F8;
+	-slider-active-border-color:#0375F8;
 	-slider-border-width: 0px;
 	-slider-handle-radius: 8px;
 }
@@ -615,7 +615,7 @@ StScrollBar {
 			margin-left: 2px;
 			margin-right: 0px; }
 		#panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
-			background-color: #3b82d6;
+			background-color: #0375F8;
 			box-shadow: none;
 			background-image: none;
 			background-gradient-direction: none;
@@ -788,8 +788,8 @@ StScrollBar {
 	background-image: none;
 	text-shadow:none;
 	font-weight: normal;
-	color: white;  /*#3b82d6*/
-	background-color: #3b82d6;
+	color: white;  /*#0375F8*/
+	background-color: #0375F8;
 	border: none; }
 
 .calendar-day-with-events {
@@ -1426,7 +1426,7 @@ StScrollBar {
 	border-radius: 4px;
 	background-gradient-direction: none;
 	box-shadow: none;
-	selection-background-color: #3b82d6;
+	selection-background-color: #0375F8;
 	selected-color: white;}
 	.notification StEntry:focus,
 	.notification-banner StEntry:focus {
@@ -1705,7 +1705,7 @@ StScrollBar {
 		padding: 3px 18px; }
 		.login-dialog .modal-dialog-button:default {
 			color: white;
-			background-color: #3b82d6;
+			background-color: #0375F8;
 			border: none;
 			box-shadow: none;
 			icon-shadow: none; }
@@ -1910,7 +1910,7 @@ StScrollBar {
 		spacing: 4px; }
 
 .lg-dialog StEntry {
-	selection-background-color: #3b82d6;
+	selection-background-color: #0375F8;
 	selected-color: white; }
 .lg-dialog .shell-link {
 	color: #fc6f5d; }
@@ -1973,7 +1973,7 @@ StScrollBar {
 	background-color: transparent;
 	margin-top: 0.5em;
 	padding: 4px 36px;
-	color: #3b82d6;
+	color: #0375F8;
 	font-weight: normal;
 	box-shadow: none;
 	icon-shadow: none;
