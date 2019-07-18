@@ -542,17 +542,16 @@ list {
   list separator, list separator:backdrop {
     background: none; }
 
-frame > border {
+.frame, frame > border {
   border-width: 1px;
   border-style: solid;
   border-color: shade(#3B3B3B, 0.9);
   border-radius: 0;
-  box-shadow: none; }
-frame.flat > border, frame > border.flat, statusbar frame > border {
-  border: none; }
-
-.frame {
+  box-shadow: none;
   background: none; }
+
+frame.flat > border, frame > border.flat, .frame.flat {
+  border-style: none; }
 
 iconview:selected, iconview:selected:focus, iconview text:selected, iconview text selection, iconview text:selected:focus, iconview text selection:focus {
   border-width: 1px;
@@ -2049,7 +2048,7 @@ filechooser .sidebar row.expander, filechooser .sidebar view row.expander, filec
   color: #FFFFFF; }
   filechooser .sidebar row.expander:hover, filechooser .sidebar view row.expander:hover, filechooser .sidebar row.sidebar-row.expander:hover, filechooser .sidebar .view.expander:hover, filechooser .sidebar iconview.expander:hover, .nautilus-window .sidebar row.expander:hover, .nautilus-window .sidebar view row.expander:hover, .nautilus-window .sidebar row.sidebar-row.expander:hover, .nautilus-window .sidebar .view.expander:hover, .nautilus-window .sidebar iconview.expander:hover, .nemo-window .sidebar row.expander:hover, .nemo-window .sidebar view row.expander:hover, .nemo-window .sidebar row.sidebar-row.expander:hover, .nemo-window .sidebar .view.expander:hover, .nemo-window .sidebar iconview.expander:hover {
     color: #0375F8; }
-filechooser .sidebar frame, filechooser .sidebar.frame, .nautilus-window .sidebar frame, .nautilus-window .sidebar.frame, .nemo-window .sidebar frame, .nemo-window .sidebar.frame {
+filechooser .sidebar frame > border, filechooser .sidebar .frame, .nautilus-window .sidebar frame > border, .nautilus-window .sidebar .frame, .nemo-window .sidebar frame > border, .nemo-window .sidebar .frame {
   border: none; }
 filechooser .sidebar separator, filechooser .sidebar separator:backdrop, .nautilus-window .sidebar separator, .nautilus-window .sidebar separator:backdrop, .nemo-window .sidebar separator, .nemo-window .sidebar separator:backdrop {
   background-color: transparent; }
@@ -2082,7 +2081,7 @@ filechooser .sidebar separator, filechooser .sidebar separator:backdrop, .nautil
   color: #FFFFFF; }
   .caja-navigation-window .caja-side-pane row.expander:hover, .caja-navigation-window .caja-side-pane view row.expander:hover, .caja-navigation-window .caja-side-pane row.sidebar-row.expander:hover, .caja-navigation-window .caja-side-pane .view.expander:hover, .caja-navigation-window .caja-side-pane iconview.expander:hover {
     color: #0375F8; }
-.caja-navigation-window .caja-side-pane frame, .caja-navigation-window .caja-side-pane.frame {
+.caja-navigation-window .caja-side-pane frame > border, .caja-navigation-window .caja-side-pane .frame {
   border: none; }
 .caja-navigation-window .caja-side-pane separator, .caja-navigation-window .caja-side-pane separator:backdrop {
   background-color: transparent; }
