@@ -253,26 +253,12 @@ checkbutton.text-button, radiobutton.text-button {
   padding: 4px;
   outline-offset: 0; }
 
-checkbutton {
-  padding: 4px; }
-  checkbutton:hover, checkbutton:active:hover, checkbutton:selected, checkbutton:focus {
-    padding: 4px;
-    border-style: none;
-    background-color: transparent; }
-
-view.content-view check, .content-view.view check {
-  background-color: transparent; }
-  view.content-view check:hover, view.content-view check:active, view.content-view check:disabled, view.content-view check:selected, .content-view.view check:hover, .content-view.view check:active, .content-view.view check:disabled, .content-view.view check:selected {
-    background-color: transparent; }
-
-check, radio, check:disabled, radio:disabled {
+check, .check, radio, .radio {
   margin: 4px;
-  border-style: none;
-  background-color: transparent; }
+  min-height: 16px;
+  min-width: 16px; }
 
 check, .check {
-  min-height: 16px;
-  min-width: 16px;
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked-@2.png")); }
   check:backdrop, .check:backdrop {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-unfocused.png"), url("assets/checkbox-unchecked-unfocused-@2.png")); }
@@ -298,8 +284,6 @@ check, .check {
         -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive-unfocused.png"), url("assets/checkbox-mixed-insensitive-unfocused-@2.png")); }
 
 radio, .radio {
-  min-height: 16px;
-  min-width: 16px;
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"), url("assets/radio-unchecked-@2.png")); }
   radio:backdrop, .radio:backdrop {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-unfocused.png"), url("assets/radio-unchecked-unfocused-@2.png")); }
