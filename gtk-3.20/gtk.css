@@ -1078,10 +1078,22 @@ progressbar {
   background-color: transparent; }
   progressbar progress {
     border: none;
-    border-radius: 10px;
+    border-radius: 1px;
     background-color: #0375F8; }
     progressbar progress:backdrop {
       background-color: shade(#E4E4E4, 0.7); }
+    progressbar progress.left {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px; }
+    progressbar progress.right {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px; }
+    progressbar progress.top {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px; }
+    progressbar progress.bottom {
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px; }
   progressbar trough {
     border-radius: 10px;
     background-color: alpha(black, 0.1); }
@@ -2463,8 +2475,10 @@ decoration {
   .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
     border-radius: 0; }
   .popup decoration {
-    box-shadow: 0 6px 5px 1px alpha(#000000, 0.2), 0 0 0 1px alpha(#000000, 0.1);
-    border-radius: 4px; }
+    box-shadow: none; }
+  .csd.popup decoration {
+    border-radius: 4px;
+    box-shadow: 0 6px 5px 1px alpha(#000000, 0.2), 0 0 0 1px alpha(#000000, 0.1); }
   .ssd decoration {
     border-radius: 4px 4px 0 0;
     box-shadow: 0 0 0 1px alpha(#000000, 0.1); }
