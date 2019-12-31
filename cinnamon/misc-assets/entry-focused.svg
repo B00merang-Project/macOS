@@ -7,7 +7,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="90.000000"
@@ -16,8 +15,8 @@
    height="24"
    id="svg11300"
    sodipodi:version="0.32"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="entry-focused.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="entry (copy).svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
    style="display:inline;enable-background:new">
@@ -31,17 +30,17 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="21.823887"
-     inkscape:cx="9.2048975"
+     inkscape:cx="0.75085813"
      inkscape:cy="13.832854"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="846"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="0"
      width="400px"
      height="300px"
      inkscape:snap-nodes="true"
@@ -74,50 +73,7 @@
        snapvisiblegridlinesonly="true" />
   </sodipodi:namedview>
   <defs
-     id="defs3">
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient3814">
-      <stop
-         style="stop-color:#000000;stop-opacity:1;"
-         offset="0"
-         id="stop3816" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0;"
-         offset="1"
-         id="stop3818" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient3806">
-      <stop
-         style="stop-color:#000000;stop-opacity:1;"
-         offset="0"
-         id="stop3808" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0;"
-         offset="1"
-         id="stop3810" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3806"
-       id="linearGradient3812"
-       x1="24"
-       y1="2"
-       x2="24"
-       y2="22"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3814"
-       id="linearGradient3822"
-       x1="24"
-       y1="2"
-       x2="24"
-       y2="22"
-       gradientUnits="userSpaceOnUse" />
-  </defs>
+     id="defs3" />
   <metadata
      id="metadata4">
     <rdf:RDF>
@@ -175,12 +131,12 @@
      id="layer1"
      transform="translate(0,-276)">
     <path
-       style="opacity:0.4;fill:#000000;fill-opacity:1;stroke:none"
+       style="opacity:1;fill:#0375f8;fill-opacity:1;stroke:none"
        d="M 3 1 C 1.892 1 1 1.892 1 3 L 1 21 C 1 22.108 1.892 23 3 23 L 21 23 C 22.108 23 23 22.108 23 21 L 23 3 C 23 1.892 22.108 1 21 1 L 3 1 z M 4 2 L 20 2 C 21.108 2 22 2.892 22 4 L 22 20 C 22 21.108 21.108 22 20 22 L 4 22 C 2.892 22 2 21.108 2 20 L 2 4 C 2 2.892 2.892 2 4 2 z "
        transform="translate(0,276)"
        id="rect3023" />
     <rect
-       style="opacity:0.7;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="opacity:0.80000000000000004;fill:#f9f9f9;fill-opacity:1;stroke:none"
        id="rect3021"
        width="20"
        height="20"
@@ -189,15 +145,5 @@
        transform="translate(0,276)"
        ry="2"
        rx="2" />
-    <path
-       style="opacity:0.08;fill:url(#linearGradient3822);fill-opacity:1;stroke:none"
-       d="M 4 2 C 2.892 2 2 2.892 2 4 L 2 20 C 2 21.108 2.892 22 4 22 L 20 22 C 21.108 22 22 21.108 22 20 L 22 4 C 22 2.892 21.108 2 20 2 L 4 2 z M 6 4 L 18 4 C 19.108 4 20 4.892 20 6 L 20 18 C 20 19.108 19.108 20 18 20 L 6 20 C 4.892 20 4 19.108 4 18 L 4 6 C 4 4.892 4.892 4 6 4 z "
-       transform="translate(0,276)"
-       id="rect3033" />
-    <path
-       style="opacity:0.2;fill:url(#linearGradient3812);fill-opacity:1;stroke:none"
-       d="M 4 2 C 2.892 2 2 2.892 2 4 L 2 20 C 2 21.108 2.892 22 4 22 L 20 22 C 21.108 22 22 21.108 22 20 L 22 4 C 22 2.892 21.108 2 20 2 L 4 2 z M 5 3 L 19 3 C 20.108 3 21 3.892 21 5 L 21 19 C 21 20.108 20.108 21 19 21 L 5 21 C 3.892 21 3 20.108 3 19 L 3 5 C 3 3.892 3.892 3 5 3 z "
-       transform="translate(0,276)"
-       id="rect3028" />
   </g>
 </svg>

@@ -15,8 +15,8 @@
    height="24"
    id="svg11300"
    sodipodi:version="0.32"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="button.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="window-name.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
    style="display:inline;enable-background:new">
@@ -30,17 +30,17 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="15.328321"
-     inkscape:cx="-3.5251333"
+     inkscape:cx="-15.268102"
      inkscape:cy="11.698413"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="650"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="0"
      width="400px"
      height="300px"
      inkscape:snap-nodes="true"
@@ -130,18 +130,11 @@
      id="layer1"
      transform="translate(0,-276)">
     <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;opacity:0.1"
-       d="M 3 1 C 1.892 1 1 1.892 1 3 L 1 21 C 1 22.108 1.892 23 3 23 L 21 23 C 22.108 23 23 22.108 23 21 L 23 3 C 23 1.892 22.108 1 21 1 L 3 1 z M 4 2 L 20 2 C 21.108 2 22 2.892 22 4 L 22 20 C 22 21.108 21.108 22 20 22 L 4 22 C 2.892 22 2 21.108 2 20 L 2 4 C 2 2.892 2.892 2 4 2 z "
+       style="opacity:0.75;fill:#ffffff;fill-opacity:1;stroke:none"
+       d="M 3,1 C 1.892,1 1,1.892 1,3 v 18 c 0,1.108 0.892,2 2,2 h 18 c 1.108,0 2,-0.892 2,-2 V 3 C 23,1.892 22.108,1 21,1 Z"
        transform="translate(0,276)"
-       id="rect3005" />
-    <rect
-       rx="2"
-       ry="2"
-       y="278"
-       x="2"
-       height="20"
-       width="20"
-       id="rect3003"
-       style="opacity:0.12000000000000000;fill:#ffffff;fill-opacity:1;stroke:none" />
+       id="rect3005"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssssss" />
   </g>
 </svg>

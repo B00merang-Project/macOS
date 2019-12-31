@@ -117,8 +117,8 @@
 
 <draw_ops name="titlebar_focused">
 	<gradient type="vertical" x="0" y="0" width="width" height="height">
-    <color value="shade/gtk:bg[NORMAL]/0.99"/>
-    <color value="shade/gtk:bg[NORMAL]/0.9"/>
+    <color value="shade/gtk:bg[NORMAL]/0.925"/>
+    <color value="shade/gtk:bg[NORMAL]/0.905"/>
   </gradient>
 </draw_ops>
 
@@ -128,8 +128,8 @@
 
 <draw_ops name="titlebar_max">
   <gradient type="vertical" x="0" y="0" width="width" height="height">
-    <color value="shade/gtk:bg[NORMAL]/0.99"/>
-    <color value="shade/gtk:bg[NORMAL]/0.9"/>
+    <color value="shade/gtk:bg[NORMAL]/0.925"/>
+    <color value="shade/gtk:bg[NORMAL]/0.905"/>
   </gradient>
 </draw_ops>
 
