@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-	<name>Arc</name>
-	<author>horst3180</author>
-	<copyright>horst3180</copyright>
-	<date>2015</date>
-	<description>Arc Metacity theme</description>
+    <!-- based on Arc metacity theme -->
+	<name>macOS</name>
+	<author>Elbullazul</author>
+	<copyright>b00merang Group</copyright>
+	<date>2019</date>
+	<description>macOS theme</description>
 </info>
 
 <!-- meaningfull constants -->
