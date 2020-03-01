@@ -189,6 +189,10 @@ StScrollBar StButton#hhandle:active {
   border-bottom: 0px;
 }
 
+.menu {
+  padding-right: 10px;
+}
+
 .menu StEntry,
 .popup-menu StEntry {
   border-image: url("misc-assets/entry.svg") 7;
