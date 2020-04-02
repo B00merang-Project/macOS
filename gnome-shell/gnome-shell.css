@@ -1871,7 +1871,7 @@ StScrollBar {
 		background-color: rgba(255, 255, 255, 0.5); }
 
 #LookingGlassDialog {
-	background-color: rgba(255,255,255,0.95);
+	background-color: rgba(60,60,60,0.9);
 	spacing: 4px;
 	padding: 4px;
 	border: none;
