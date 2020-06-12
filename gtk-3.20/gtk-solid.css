@@ -1549,8 +1549,6 @@ headerbar, headerbar:not(.titlebar) {
     border-color: shade(#E4E4E4, 0.9);
     color: #8C8C8C;
     background-color: #E4E4E4; }
-  .titlebar headerbar, .titlebar headerbar:backdrop, .titlebar headerbar:not(.titlebar), .titlebar headerbar:not(.titlebar):backdrop {
-    background-color: transparent; }
   .tiled headerbar:backdrop, .tiled headerbar, .tiled-top headerbar:backdrop, .tiled-top headerbar, .tiled-right headerbar:backdrop, .tiled-right headerbar, .tiled-bottom headerbar:backdrop, .tiled-bottom headerbar, .tiled-left headerbar:backdrop, .tiled-left headerbar, .maximized headerbar:backdrop, .maximized headerbar, .fullscreen headerbar:backdrop, .fullscreen headerbar, .tiled headerbar:not(.titlebar):backdrop, .tiled headerbar:not(.titlebar), .tiled-top headerbar:not(.titlebar):backdrop, .tiled-top headerbar:not(.titlebar), .tiled-right headerbar:not(.titlebar):backdrop, .tiled-right headerbar:not(.titlebar), .tiled-bottom headerbar:not(.titlebar):backdrop, .tiled-bottom headerbar:not(.titlebar), .tiled-left headerbar:not(.titlebar):backdrop, .tiled-left headerbar:not(.titlebar), .maximized headerbar:not(.titlebar):backdrop, .maximized headerbar:not(.titlebar), .fullscreen headerbar:not(.titlebar):backdrop, .fullscreen headerbar:not(.titlebar) {
     border-radius: 0; }
   headerbar .title, headerbar:not(.titlebar) .title {
@@ -1955,9 +1953,13 @@ tooltip {
 textview {
   color: #000000;
   background-color: #FFFFFF; }
-  textview text:selected, textview text selection, textview text:selected:focus, textview text selection:focus {
-    color: #000000;
-    background-color: #96C4F5; }
+  textview text {
+    background-color: #FFFFFF; }
+    textview text:selected, textview text selection, textview text:selected:focus, textview text selection:focus {
+      color: #000000;
+      background-color: #96C4F5; }
+    textview text:backdrop {
+      background-color: #FFFFFF; }
 
 treeview {
   -treeview-vertical-separator: 0; }
@@ -2516,20 +2518,18 @@ window.background.csd.popup {
   .tiled .titlebar:not(headerbar), .tiled .titlebar:backdrop:not(headerbar), .maximized .titlebar:not(headerbar), .maximized .titlebar:backdrop:not(headerbar) {
     border-radius: 0; }
 
-.titlebar, .titlebar:not(headerbar), headerbar.default-decoration, .csd headerbar.default-decoration, .default-decoration.titlebar:not(headerbar), .csd .default-decoration.titlebar:not(headerbar) {
+.titlebar, .titlebar:not(headerbar), headerbar.default-decoration, .csd headerbar.default-decoration, .default-decoration.titlebar:not(headerbar), .csd .default-decoration.titlebar:not(headerbar), headerbar .titlebar {
   min-height: 30px;
   color: #000000;
   background-color: #F5F5F5;
   background-image: linear-gradient(to bottom, shade(#F5F5F5, 0.965), shade(#F5F5F5, 0.9));
   border-bottom: 1px solid shade(shade(#F5F5F5, 0.9), 0.9); }
-  .titlebar .titlebar, .titlebar:not(headerbar) .titlebar, headerbar.default-decoration .titlebar, .csd headerbar.default-decoration .titlebar, .default-decoration.titlebar:not(headerbar) .titlebar, .csd .default-decoration.titlebar:not(headerbar) .titlebar {
-    border-bottom: none; }
-  .titlebar:backdrop, .titlebar:not(headerbar):backdrop, headerbar.default-decoration:backdrop, .csd headerbar.default-decoration:backdrop, .default-decoration.titlebar:not(headerbar):backdrop, .csd .default-decoration.titlebar:not(headerbar):backdrop {
+  .titlebar:backdrop, .titlebar:not(headerbar):backdrop, headerbar.default-decoration:backdrop, .csd headerbar.default-decoration:backdrop, .default-decoration.titlebar:not(headerbar):backdrop, .csd .default-decoration.titlebar:not(headerbar):backdrop, headerbar .titlebar:backdrop {
     color: #8C8C8C;
     background-image: none;
     background-color: #E4E4E4;
     border-color: shade(#E4E4E4, 0.9); }
-  window.ssd .titlebar, window.ssd .titlebar:not(headerbar), window.ssd headerbar.default-decoration, window.ssd .csd headerbar.default-decoration, window.ssd .default-decoration.titlebar:not(headerbar), window.ssd .csd .default-decoration.titlebar:not(headerbar) {
+  window.ssd .titlebar, window.ssd .titlebar:not(headerbar), window.ssd headerbar.default-decoration, window.ssd .csd headerbar.default-decoration, window.ssd .default-decoration.titlebar:not(headerbar), window.ssd .csd .default-decoration.titlebar:not(headerbar), window.ssd headerbar .titlebar {
     border-bottom: none;
     min-height: 20px; }
 
