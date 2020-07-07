@@ -395,7 +395,7 @@ StScrollBar {
 		.popup-menu .popup-menu-item:rtl {
 			padding: .4em 0em .4em 1.75em; }
 		.popup-menu .popup-menu-item:checked {
-			background-color: rgba(200,200,200,0.95);
+			background-color: rgba(200,200,200,0);
 			box-shadow: none;
 			font-weight: normal; }
 		.popup-menu .popup-menu-item:hover, .popup-menu .popup-menu-item:focus {
@@ -422,7 +422,7 @@ StScrollBar {
 
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
-	background-color: rgba(255,255,255,0.85);
+	background-color: rgba(255,255,255,0.25);
 	-arrow-background-color: transparent;
 	-arrow-border-width: 0px;
 	-arrow-border-color: transparent;
@@ -571,7 +571,7 @@ StScrollBar {
 	font-weight: normal;
 	color: black;
 	height: 24px;
-	background-color: rgba(255,255,255,0.75);
+	background-color: rgba(255,255,255,0.25);
 	box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
 	text-shadow: none;
 }
@@ -660,6 +660,8 @@ StScrollBar {
 }
 
 .calendar {
+  border: none;
+  background-color: rgba(255,255,255,0.25);
 	margin-bottom: 1em; }
 
 .calendar,
@@ -1124,11 +1126,11 @@ StScrollBar {
 	font-size: 20pt;
 	background: rgba(160,160,160,0.7);
 	background-gradient-direction: none;
-	background-color: rgba(220,220,220,0.7);
-    border: none;
+	background-color: rgba(255,255,255,0.25);
+  border: none;
 	box-shadow: 0;
 	padding: 0 0;
-	border-radius: 4px 4px 0 0;
+	border-radius: 14px;
 }
 
 #dash .placeholder {
@@ -1193,11 +1195,10 @@ StScrollBar {
 	icon-shadow: none;
 }
 .app-view-control:first-child {
-	border-radius: 4px 0 0 4px;
+	border-radius: 8px;
 }
 .app-view-control:last-child {
-	border-right-width: 0;
-	border-radius: 0 4px 4px 0;
+	border-radius: 8px;
 }
 
 .search-provider-icon:active, .search-provider-icon:checked,
