@@ -1300,19 +1300,13 @@ separator {
       border-color: mix(#343236, #FFFFFF, 0.075); }
   .titlebar separator, .titlebar:not(headerbar) > separator, .titlebar separator.titlebutton, .titlebar:not(headerbar) > separator.titlebutton {
     -GtkWidget-window-dragging: true;
-    background-color: mix(#2F2934, #FFFFFF, 0.1); }
-    .titlebar separator:backdrop, .titlebar:not(headerbar) > separator:backdrop, .titlebar separator.titlebutton:backdrop, .titlebar:not(headerbar) > separator.titlebutton:backdrop {
-      background-color: shade(#25262A, 0.9); }
+    background-color: transparent; }
   headerbar separator.titlebutton, .titlebar:not(headerbar) separator.titlebutton {
     min-width: 1px;
     min-height: 1px;
-    background-color: mix(#2F2934, #FFFFFF, 0.1); }
-    headerbar separator.titlebutton:backdrop, .titlebar:not(headerbar) separator.titlebutton:backdrop {
-      background-color: shade(#25262A, 0.9); }
+    background-color: transparent; }
   .titlebutton button separator, .titlebutton separator.titlebutton {
-    border-color: mix(#2F2934, #FFFFFF, 0.1); }
-    .titlebutton button separator:backdrop, .titlebutton separator.titlebutton:backdrop {
-      border-color: shade(#25262A, 0.9); }
+    background-color: transparent; }
   menu separator {
     background-color: mix(alpha(mix(#242226, #343236, 0.5), 0.9), #FFFFFF, 0.1); }
   menuitem separator {
@@ -1927,9 +1921,11 @@ stackswitcher button.text-button {
   min-width: 80px;
   box-shadow: none; }
   stackswitcher button.text-button:active, stackswitcher button.text-button:active:hover, stackswitcher button.text-button:active:focus, stackswitcher button.text-button:checked, stackswitcher button.text-button:checked:hover, stackswitcher button.text-button:checked:focus {
+    border-color: #2E7CF7;
     background-color: #2E7CF7;
     color: #FFFFFF; }
     stackswitcher button.text-button:active:backdrop, stackswitcher button.text-button:active:hover:backdrop, stackswitcher button.text-button:active:focus:backdrop, stackswitcher button.text-button:checked:backdrop, stackswitcher button.text-button:checked:hover:backdrop, stackswitcher button.text-button:checked:focus:backdrop {
+      border-color: shade(#25262A, 1.3);
       background-color: shade(#25262A, 1.3);
       color: #8C8C8C; }
 
