@@ -14,7 +14,7 @@
 <constant name="C_title_unfocused" value="#8c8c8c" />
 
 <constant name="C_wm_bg_focused" value="#ffffff" />
-<constant name="C_wm_bg_unfocused" value="#ffffff" />
+<constant name="C_wm_bg_unfocused" value="#fbfbfb" />
 <constant name="C_wm_border" value="#cbccd0" />
 <constant name="C_wm_border_unfocused" value="#cfcfcf" />
 <constant name="C_wm_highlight" value="rgba(0,0,0,0)" />
@@ -108,33 +108,27 @@
 	<!-- window decorations -->
 
 <draw_ops name="entire_background_focused">
-  <rectangle color="shade/gtk:bg[NORMAL]/0.9" x="0" y="0" width="width" height="height" filled="true" />
+  <rectangle color="C_wm_bg_focused" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
 
 <draw_ops name="entire_background_unfocused">
-  <rectangle color="shade/gtk:bg[NORMAL]/0.93" x="0" y="0" width="width" height="height" filled="true" />
+  <rectangle color="C_wm_bg_unfocused" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_focused">
-	<gradient type="vertical" x="0" y="0" width="width" height="height">
-    <color value="shade/gtk:bg[NORMAL]/0.925"/>
-    <color value="shade/gtk:bg[NORMAL]/0.905"/>
-  </gradient>
+	<rectangle color="C_wm_bg_focused" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_unfocused">
-	<rectangle color="shade/gtk:bg[NORMAL]/0.93" x="0" y="0" width="width" height="height" filled="true" />
+	<rectangle color="C_wm_bg_unfocused" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_max">
-  <gradient type="vertical" x="0" y="0" width="width" height="height">
-    <color value="shade/gtk:bg[NORMAL]/0.925"/>
-    <color value="shade/gtk:bg[NORMAL]/0.905"/>
-  </gradient>
+	<rectangle color="C_wm_bg_focused" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_max_unfocused">
-	<rectangle color="shade/gtk:bg[NORMAL]/0.93" x="0" y="0" width="width" height="height" filled="true" />
+	<rectangle color="C_wm_bg_unfocused" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_small_focused">

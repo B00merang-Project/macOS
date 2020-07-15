@@ -181,7 +181,7 @@ StScrollBar StButton#hhandle:active {
   border:rgba(0,0,0,0.8);
   border-radius: 3px;
   box-shadow: 0px 5px 11px 7px rgba(0,0,0,0.25);
-  background-color: rgba(255,255,255,0.25);
+  background-color: rgba(255,255,255,0.75);
   /*background-color: rgba(255,255,255,0.9);*/
   border-top: 0px;
   border-left: 0px;
@@ -206,6 +206,7 @@ StScrollBar StButton#hhandle:active {
   selected-color: #000000;
   selection-background-color: #0375f8;
   padding: 4px 12px 3px 12px;
+  margin-right: 10px;
 }
 
 .menu StEntry:focus,
