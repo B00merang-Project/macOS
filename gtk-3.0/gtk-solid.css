@@ -105,39 +105,28 @@ assistant .sidebar {
   color: #000000;
   background-color: #FFFFFF; }
 
-button:link > label, button:visited > label,
-*:link,
-button:link,
-button:visited {
+button:link > label, button:visited > label, *:link, button:link, button:visited {
   color: #0057D8; }
-  button:link > label:visited, button:visited > label:visited,
-  *:link:visited,
-  button:visited {
+  button:link > label:visited, button:visited > label:visited, *:link:visited, button:visited {
     color: mix(#0057D8, #000000, 0.2); }
-    *:selected button:link > label:visited, *:selected button:visited > label:visited, *:selected
-    *:link:visited, *:selected
-    button:visited:link, *:selected
-    button:visited {
+    *:selected button:link > label:visited, *:selected button:visited > label:visited,
+    *:selected *:link:visited,
+    *:selected button:visited:link,
+    *:selected button:visited {
       color: mix(#FFFFFF, #2E7CF7, 0.4); }
-  button:link > label:hover, button:visited > label:hover,
-  *:link:hover,
-  button:hover:link,
-  button:hover:visited {
+  button:link > label:hover, button:visited > label:hover, *:link:hover, button:hover:link, button:hover:visited {
     color: shade(#0057D8, 1.1); }
-    *:selected button:link > label:hover, *:selected button:visited > label:hover, *:selected
-    *:link:hover, *:selected
-    button:hover:link, *:selected
-    button:hover:visited {
+    *:selected button:link > label:hover, *:selected button:visited > label:hover,
+    *:selected *:link:hover,
+    *:selected button:hover:link,
+    *:selected button:hover:visited {
       color: mix(#FFFFFF, #2E7CF7, 0.9); }
-  button:link > label:active, button:visited > label:active,
-  *:link:active,
-  button:active:link,
-  button:active:visited {
+  button:link > label:active, button:visited > label:active, *:link:active, button:active:link, button:active:visited {
     color: #0057D8; }
-    *:selected button:link > label:active, *:selected button:visited > label:active, *:selected
-    *:link:active, *:selected
-    button:active:link, *:selected
-    button:active:visited {
+    *:selected button:link > label:active, *:selected button:visited > label:active,
+    *:selected *:link:active,
+    *:selected button:active:link,
+    *:selected button:active:visited {
       color: mix(#FFFFFF, #2E7CF7, 0.8); }
   button:link > label:backdrop:backdrop:hover, button:visited > label:backdrop:backdrop:hover, button:link > label:backdrop:backdrop:hover:selected, button:visited > label:backdrop:backdrop:hover:selected, button:link > label:backdrop, button:visited > label:backdrop,
   *:link:backdrop:backdrop:hover,
@@ -153,10 +142,10 @@ button:visited {
   button:link > label:selected, button:visited > label:selected, *:selected button:link > label, *:selected button:visited > label,
   *:link:selected,
   button:selected:link,
-  button:selected:visited, *:selected
-  *:link, *:selected
-  button:link, *:selected
-  button:visited {
+  button:selected:visited,
+  *:selected *:link,
+  *:selected button:link,
+  *:selected button:visited {
     color: mix(#FFFFFF, #2E7CF7, 0.8); }
 
 button:link, button:visited {
@@ -1630,11 +1619,11 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
 
 .nautilus-window headerbar {
   background-color: transparent;
-  background-image: linear-gradient(to right, shade(#FFFFFF, 0.95) 188px, shade(#FFFFFF, 0.9), #FFFFFF 189px);
-  border-image: linear-gradient(to right, shade(#FFFFFF, 0.95) 188px, shade(#FFFFFF, 0.9) 189px) 1 stretch; }
+  background-image: linear-gradient(to right, shade(#FFFFFF, 0.95) 200px, shade(#FFFFFF, 0.9), #FFFFFF 201px);
+  border-image: linear-gradient(to right, shade(#FFFFFF, 0.95) 200px, shade(#FFFFFF, 0.9) 201px) 1 stretch; }
   .nautilus-window headerbar:backdrop {
-    background-image: linear-gradient(to right, #FBFBFB 188px, shade(#FBFBFB, 0.9), #FBFBFB 189px);
-    border-image: linear-gradient(to right, #FBFBFB 188px, shade(#FBFBFB, 0.9) 189px) 1 stretch; }
+    background-image: linear-gradient(to right, #FBFBFB 200px, shade(#FBFBFB, 0.9), #FBFBFB 201px);
+    border-image: linear-gradient(to right, #FBFBFB 200px, shade(#FBFBFB, 0.9) 201px) 1 stretch; }
   .nautilus-window headerbar separator.titlebutton {
     margin-right: 100px; }
 
@@ -2039,10 +2028,12 @@ treeview {
       color: shade(#8C8C8C, 0.8);
       background-color: shade(#FBFBFB, 0.7); }
 
-filechooser.csd.background, filechooser placessidebar list, .nautilus-window.csd.background, .nautilus-window placessidebar list, .nemo-window.csd.background, .nemo-window placessidebar list {
+filechooser placessidebar list, .nautilus-window placessidebar list, .nemo-window placessidebar list {
   background-color: shade(#FFFFFF, 0.95); }
-  filechooser.csd.background:backdrop, filechooser placessidebar list:backdrop, .nautilus-window.csd.background:backdrop, .nautilus-window placessidebar list:backdrop, .nemo-window.csd.background:backdrop, .nemo-window placessidebar list:backdrop {
+  filechooser placessidebar list:backdrop, .nautilus-window placessidebar list:backdrop, .nemo-window placessidebar list:backdrop {
     background-color: #FBFBFB; }
+filechooser.csd.background, .nautilus-window.csd.background, .nemo-window.csd.background {
+  background: transparent; }
 filechooser .sidebar row, filechooser .sidebar row:focus, filechooser .sidebar view row, filechooser .sidebar view row:focus, filechooser .sidebar row.sidebar-row, filechooser .sidebar row.sidebar-row:focus, filechooser .sidebar .view, filechooser .sidebar .view:focus, filechooser .sidebar iconview, filechooser .sidebar iconview:focus, .nautilus-window .sidebar row, .nautilus-window .sidebar row:focus, .nautilus-window .sidebar view row, .nautilus-window .sidebar view row:focus, .nautilus-window .sidebar row.sidebar-row, .nautilus-window .sidebar row.sidebar-row:focus, .nautilus-window .sidebar .view, .nautilus-window .sidebar .view:focus, .nautilus-window .sidebar iconview, .nautilus-window .sidebar iconview:focus, .nemo-window .sidebar row, .nemo-window .sidebar row:focus, .nemo-window .sidebar view row, .nemo-window .sidebar view row:focus, .nemo-window .sidebar row.sidebar-row, .nemo-window .sidebar row.sidebar-row:focus, .nemo-window .sidebar .view, .nemo-window .sidebar .view:focus, .nemo-window .sidebar iconview, .nemo-window .sidebar iconview:focus {
   border: none;
   color: #000000;
@@ -2075,9 +2066,6 @@ filechooser .sidebar frame > border, filechooser .sidebar .frame, .nautilus-wind
   border: none; }
 filechooser .sidebar separator, filechooser .sidebar separator:backdrop, .nautilus-window .sidebar separator, .nautilus-window .sidebar separator:backdrop, .nemo-window .sidebar separator, .nemo-window .sidebar separator:backdrop {
   background-color: transparent; }
-
-.nautilus-window.csd.background {
-  background: transparent; }
 
 .caja-navigation-window .caja-side-pane row, .caja-navigation-window .caja-side-pane row:focus, .caja-navigation-window .caja-side-pane view row, .caja-navigation-window .caja-side-pane view row:focus, .caja-navigation-window .caja-side-pane row.sidebar-row, .caja-navigation-window .caja-side-pane row.sidebar-row:focus, .caja-navigation-window .caja-side-pane .view, .caja-navigation-window .caja-side-pane .view:focus, .caja-navigation-window .caja-side-pane iconview, .caja-navigation-window .caja-side-pane iconview:focus {
   border: none;
