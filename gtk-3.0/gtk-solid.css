@@ -1614,14 +1614,13 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
   box-shadow: none; }
 
 .nautilus-window headerbar {
+  padding-left: 100px;
   background-color: transparent;
   background-image: linear-gradient(to right, shade(#FFFFFF, 0.95) 200px, shade(#FFFFFF, 0.9), #FFFFFF 201px);
   border-image: linear-gradient(to right, shade(#FFFFFF, 0.95) 200px, shade(#FFFFFF, 0.9) 201px) 1 stretch; }
   .nautilus-window headerbar:backdrop {
     background-image: linear-gradient(to right, #FBFBFB 200px, shade(#FBFBFB, 0.9), #FBFBFB 201px);
     border-image: linear-gradient(to right, #FBFBFB 200px, shade(#FBFBFB, 0.9) 201px) 1 stretch; }
-  .nautilus-window headerbar .path-bar {
-    margin-left: 100px; }
 
 window.ssd .titlebar {
   border-bottom: none;
