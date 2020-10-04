@@ -385,6 +385,7 @@ StScrollBar {
 		color: black;
 		background-gradient-direction: none;
 		border-width: 0px;
+		padding-left: 14px;
 		box-shadow: none;}
 	.popup-menu .popup-menu-content {
 		padding: 1em 0em; }
@@ -434,8 +435,8 @@ StScrollBar {
 }
 
 .popup-separator-menu-item {
-	height: 1px;
-	margin: 6px 46px;
+	height: 0;
+	margin: 6px 0;
 	background-color: transparent;
 	border-color: rgba(0,0,0,0.15);
 	border-bottom-width: 1px;
