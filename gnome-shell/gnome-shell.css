@@ -1972,9 +1972,9 @@ StScrollBar {
 	font-weight: normal;
 	box-shadow: none;
 	icon-shadow: none;
-    height: 30px;
-    margin: 2px;
-    font-size: 13pt;
+  height: 30px;
+  margin: 0;
+  font-size: 13pt;
 }
 
 .modal-dialog-button:focus,
