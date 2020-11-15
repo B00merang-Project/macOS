@@ -166,7 +166,11 @@ button {
   border-radius: 8px;
   color: #000000;
   border-color: shade(#FFFFFF, 0.9);
+  border-left-color: shade(shade(#FFFFFF, 0.9), 0.95);
+  border-right-color: shade(shade(#FFFFFF, 0.9), 0.95);
+  border-bottom-color: shade(shade(#FFFFFF, 0.9), 0.9);
   background-color: #FFFFFF;
+  box-shadow: 0 0 2px 0 alpha(black, 0.1);
   -gtk-outline-radius: 8px; }
   button:active, button:checked {
     color: #000000;
@@ -196,7 +200,8 @@ button {
     border-color: transparent;
     border-radius: 8px;
     color: #000000;
-    background-color: transparent; }
+    background-color: transparent;
+    box-shadow: none; }
     button.flat:hover {
       color: #000000;
       background-color: #FFFFFF; }
@@ -364,10 +369,14 @@ entry {
   border-width: 1px;
   border-style: solid;
   border-color: shade(#FFFFFF, 0.9);
+  border-left-color: shade(shade(#FFFFFF, 0.9), 0.95);
+  border-right-color: shade(shade(#FFFFFF, 0.9), 0.95);
+  border-bottom-color: shade(shade(#FFFFFF, 0.9), 0.9);
   border-radius: 8px;
   color: #000000;
   caret-color: currentColor;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  box-shadow: 0 0 2px 0 alpha(black, 0.1); }
   entry:active, entry:focus {
     box-shadow: 0 0 0 4px #96C4F5; }
   entry:selected, entry:selected:focus, entry selection, entry selection:focus {
@@ -1029,22 +1038,10 @@ progressbar {
   background-color: transparent; }
   progressbar progress {
     border: none;
-    border-radius: 1px;
+    border-radius: 10px;
     background-color: #2E7CF7; }
     progressbar progress:backdrop {
       background-color: shade(#FBFBFB, 0.7); }
-    progressbar progress.left {
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px; }
-    progressbar progress.right {
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px; }
-    progressbar progress.top {
-      border-top-right-radius: 10px;
-      border-top-left-radius: 10px; }
-    progressbar progress.bottom {
-      border-bottom-right-radius: 10px;
-      border-bottom-left-radius: 10px; }
   progressbar trough {
     border-radius: 10px;
     background-color: alpha(black, 0.1); }
@@ -1546,7 +1543,8 @@ headerbar {
     border-color: transparent;
     border-radius: 8px;
     color: #000000;
-    background-color: transparent; }
+    background-color: transparent;
+    box-shadow: none; }
     headerbar button:hover {
       color: #000000;
       background-color: #FFFFFF; }
@@ -1640,7 +1638,8 @@ toolbar {
     border-color: transparent;
     border-radius: 8px;
     color: #000000;
-    background-color: transparent; }
+    background-color: transparent;
+    box-shadow: none; }
     toolbar button.flat:hover {
       color: #000000;
       background-color: #FFFFFF; }
@@ -1686,7 +1685,11 @@ toolbar {
     border-radius: 8px;
     color: #000000;
     border-color: shade(#FFFFFF, 0.9);
+    border-left-color: shade(shade(#FFFFFF, 0.9), 0.95);
+    border-right-color: shade(shade(#FFFFFF, 0.9), 0.95);
+    border-bottom-color: shade(shade(#FFFFFF, 0.9), 0.9);
     background-color: #FFFFFF;
+    box-shadow: 0 0 2px 0 alpha(black, 0.1);
     -gtk-outline-radius: 8px; }
     .primary-toolbar button:active, .primary-toolbar button:checked, .primary-toolbar .raised button:active, .primary-toolbar .raised button:checked {
       color: #000000;
@@ -1730,7 +1733,11 @@ toolbar {
     border-radius: 8px;
     color: #000000;
     border-color: shade(#FFFFFF, 0.9);
+    border-left-color: shade(shade(#FFFFFF, 0.9), 0.95);
+    border-right-color: shade(shade(#FFFFFF, 0.9), 0.95);
+    border-bottom-color: shade(shade(#FFFFFF, 0.9), 0.9);
     background-color: #FFFFFF;
+    box-shadow: 0 0 2px 0 alpha(black, 0.1);
     -gtk-outline-radius: 8px; }
     .inline-toolbar toolbutton > button:active, .inline-toolbar toolbutton > button:checked {
       color: #000000;
@@ -2714,7 +2721,11 @@ panel-toplevel.background na-tray-applet {
     border-radius: 8px;
     color: #000000;
     border-color: shade(#FFFFFF, 0.9);
+    border-left-color: shade(shade(#FFFFFF, 0.9), 0.95);
+    border-right-color: shade(shade(#FFFFFF, 0.9), 0.95);
+    border-bottom-color: shade(shade(#FFFFFF, 0.9), 0.9);
     background-color: #FFFFFF;
+    box-shadow: 0 0 2px 0 alpha(black, 0.1);
     -gtk-outline-radius: 8px; }
     #XfceNotifyWindow.osd button:active, #XfceNotifyWindow.osd button:checked {
       color: #000000;

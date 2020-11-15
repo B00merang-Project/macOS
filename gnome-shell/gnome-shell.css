@@ -423,7 +423,7 @@ StScrollBar {
 
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
-	background-color: rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.7);
 	-arrow-background-color: transparent;
 	-arrow-border-width: 0px;
 	-arrow-border-color: transparent;
@@ -571,7 +571,7 @@ StScrollBar {
 #panel {
 	font-weight: normal;
 	color: black;
-	height: 24px;
+	height: 28px;
 	background-color: rgba(255,255,255,0.25);
 	box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
 	text-shadow: none;
@@ -1888,16 +1888,16 @@ StScrollBar {
 		-natural-hpadding: 12px;
 		-minimum-hpadding: 6px;
 		font-weight: normal;
-		color: black;
+		color: white;
 		transition-duration: 100ms;
 		padding-left: .3em;
 		padding-right: .3em; }
 		#LookingGlassDialog .notebook-tab:hover {
-			color: black; }
+			color: white; }
 		#LookingGlassDialog .notebook-tab:selected {
-			border-bottom-width: 2px;
-			border-color:#026ec4;
-			color: black; }
+			background-color:#026ec4;
+			box-shadow: none !important;
+			color: white; }
 	#LookingGlassDialog StBoxLayout#EvalBox {
 		padding: 4px;
 		spacing: 4px; }
