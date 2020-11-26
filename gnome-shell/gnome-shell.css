@@ -462,14 +462,17 @@ StScrollBar {
 	spacing: 1em;
 	margin: 32px;
 	min-width: 64px;
-	min-height: 64px; }
+	min-height: 64px;
+	background-color: rgba(255,255,255,0.6);
+	color: black; }
 	.osd-window .osd-monitor-label {
 		font-size: 3em; }
 	.osd-window .level {
-		height: 0.6em;
-		border-radius: 0.3em;
-		background-color: rgba(25,25,25,1.0);
-		color: white; }
+		-barlevel-height: 8px;
+    -barlevel-background-color: rgba(0,0,0,0.5);
+    -barlevel-active-background-color: white;
+    -barlevel-overdrive-color: #0375F8;
+    -barlevel-overdrive-separator-width: 3px; }
 
 /* App Switcher (alt-tab) */
 .switcher-popup {
@@ -542,7 +545,6 @@ StScrollBar {
 	border-radius: 6px; }
 
 /* Alt-tab shadow color*/
-.osd-window,
 .resize-popup,
 .switcher-list, .workspace-switcher-container {
 	color: #5c5c5c;
