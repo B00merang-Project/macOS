@@ -808,7 +808,6 @@ StScrollBar StButton#hhandle:active {
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 20px 8px rgba(20,20,20,0.5);
-  color: transparent;
   padding: 20px;
   font-size: 9pt;
   font-weight: normal;
