@@ -723,7 +723,7 @@ menu, .menu {
   border-radius: 8px;
   border-style: none;
   color: #FFFFFF;
-  background-color: rgba(44, 42, 46, 0.9); }
+  background-color: #2c2a2e; }
   .csd menu, .csd .menu {
     padding: 4px 0px;
     border-radius: 8px;
@@ -731,16 +731,16 @@ menu, .menu {
   menu > arrow, .menu > arrow {
     padding: 4px;
     border-color: transparent;
-    background-color: rgba(44, 42, 46, 0.9);
+    background-color: #2c2a2e;
     min-width: 16px;
     min-height: 16px; }
     menu > arrow.top, .menu > arrow.top {
       margin-top: -6px;
-      border-bottom: 1px solid rgba(40, 38, 41, 0.9);
+      border-bottom: 1px solid #282629;
       -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
     menu > arrow.bottom, .menu > arrow.bottom {
       margin-bottom: -6px;
-      border-top: 1px solid rgba(40, 38, 41, 0.9);
+      border-top: 1px solid #282629;
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
 menubar, .menubar {
@@ -780,7 +780,7 @@ menu menuitem, .menu menuitem {
     color: #FFFFFF;
     background-color: #2E7CF7; }
   menu menuitem:disabled, .menu menuitem:disabled {
-    color: rgba(155, 154, 156, 0.95); }
+    color: #969597; }
   menu menuitem arrow, .menu menuitem arrow {
     min-width: 16px;
     min-height: 16px; }
@@ -806,7 +806,7 @@ popover, popover.background {
   border-radius: 8px;
   color: #FFFFFF;
   background-clip: border-box;
-  background-color: rgba(44, 42, 46, 0.9);
+  background-color: #2c2a2e;
   box-shadow: none; }
   .csd popover, popover, .csd popover.background, popover.background {
     border: 1px solid #474747; }
@@ -1307,11 +1307,11 @@ separator {
   .titlebutton button separator, .titlebutton separator.titlebutton {
     background-color: transparent; }
   menu separator {
-    background-color: rgba(67, 65, 69, 0.91); }
+    background-color: #413f43; }
   menuitem separator {
     border-width: 1px;
     border-style: none;
-    color: rgba(58, 57, 59, 0.95); }
+    color: #3a393b; }
   popover separator {
     border: 0;
     color: alpha(currentColor, 0.5);

@@ -723,7 +723,7 @@ menu, .menu {
   border-radius: 8px;
   border-style: none;
   color: #000000;
-  background-color: rgba(255, 255, 255, 0.9); }
+  background-color: #FFFFFF; }
   .csd menu, .csd .menu {
     padding: 4px 0px;
     border-radius: 8px;
@@ -731,16 +731,16 @@ menu, .menu {
   menu > arrow, .menu > arrow {
     padding: 4px;
     border-color: transparent;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #FFFFFF;
     min-width: 16px;
     min-height: 16px; }
     menu > arrow.top, .menu > arrow.top {
       margin-top: -6px;
-      border-bottom: 1px solid rgba(230, 230, 230, 0.9);
+      border-bottom: 1px solid #e6e6e6;
       -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
     menu > arrow.bottom, .menu > arrow.bottom {
       margin-bottom: -6px;
-      border-top: 1px solid rgba(230, 230, 230, 0.9);
+      border-top: 1px solid #e6e6e6;
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
 menubar, .menubar {
@@ -780,7 +780,7 @@ menu menuitem, .menu menuitem {
     color: #FFFFFF;
     background-color: #2E7CF7; }
   menu menuitem:disabled, .menu menuitem:disabled {
-    color: rgba(121, 121, 121, 0.95); }
+    color: gray; }
   menu menuitem arrow, .menu menuitem arrow {
     min-width: 16px;
     min-height: 16px; }
@@ -806,7 +806,7 @@ popover, popover.background {
   border-radius: 8px;
   color: #000000;
   background-clip: border-box;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #FFFFFF;
   box-shadow: none; }
   .csd popover, popover, .csd popover.background, popover.background {
     border: 1px solid #e6e6e6; }
@@ -1307,11 +1307,11 @@ separator {
   .titlebutton button separator, .titlebutton separator.titlebutton {
     background-color: transparent; }
   menu separator {
-    background-color: rgba(227, 227, 227, 0.91); }
+    background-color: #e6e6e6; }
   menuitem separator {
     border-width: 1px;
     border-style: none;
-    color: rgba(242, 242, 242, 0.95); }
+    color: #f3f3f3; }
   popover separator {
     border: 0;
     color: alpha(currentColor, 0.5);
