@@ -2572,6 +2572,8 @@ panel-toplevel.background button {
     box-shadow: none;
     background-image: none;
     background-color: #2E7CF7; }
+    panel-toplevel.background button:active label, panel-toplevel.background button:checked label {
+      color: #FFFFFF; }
 
 #tasklist-button {
   color: #000000;
@@ -2588,6 +2590,8 @@ panel-toplevel.background button {
     box-shadow: none;
     background-image: none;
     background-color: #2E7CF7; }
+    #tasklist-button:active label, #tasklist-button:checked label {
+      color: #FFFFFF; }
   #tasklist-button label {
     color: rgba(0, 0, 0, 0.7); }
     #tasklist-button label:hover {
@@ -2639,6 +2643,8 @@ panel-toplevel.background na-tray-applet {
       box-shadow: none;
       background-image: none;
       background-color: #2E7CF7; }
+      .mate-panel-menu-bar > .button:not(#tasklist-button):active label, .mate-panel-menu-bar > .button:not(#tasklist-button):checked label {
+        color: #FFFFFF; }
   .mate-panel-menu-bar #tasklist-button {
     color: #000000;
     background-color: #FFFFFF;
@@ -2654,6 +2660,8 @@ panel-toplevel.background na-tray-applet {
       box-shadow: none;
       background-image: none;
       background-color: #2E7CF7; }
+      .mate-panel-menu-bar #tasklist-button:active label, .mate-panel-menu-bar #tasklist-button:checked label {
+        color: #FFFFFF; }
   .mate-panel-menu-bar PanelSeparator {
     color: #b3b3b3;
     padding-top: 4px;
@@ -2703,6 +2711,8 @@ panel-toplevel.background na-tray-applet {
       box-shadow: none;
       background-image: none;
       background-color: #2E7CF7; }
+      .xfce4-panel.panel button.flat:active label, .xfce4-panel.panel button.flat:checked label, .xfce4-panel.panel button.sidebar-button:active label, .xfce4-panel.panel button.sidebar-button:checked label {
+        color: #FFFFFF; }
   .xfce4-panel.panel .tasklist button {
     color: #000000;
     background-color: #FFFFFF;
@@ -2718,6 +2728,8 @@ panel-toplevel.background na-tray-applet {
       box-shadow: none;
       background-image: none;
       background-color: #2E7CF7; }
+      .xfce4-panel.panel .tasklist button:active label, .xfce4-panel.panel .tasklist button:checked label {
+        color: #FFFFFF; }
 
 #XfceNotifyWindow.osd {
   background-color: #FFFFFF;
