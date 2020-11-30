@@ -411,6 +411,8 @@ entry {
     border-color: transparent; }
   entry.search {
     border-radius: 40px; }
+  entry entry {
+    box-shadow: none; }
 
 expander arrow {
   min-width: 16px;
