@@ -1,0 +1,6 @@
+@mixin terminal() {
+  .terminal-screen, terminal-window, vte-terminal {
+    background-color: $terminal_bg_color;
+    color: $terminal_fg_color;
+  }
+}

@@ -1,0 +1,65 @@
+@mixin entry() {
+  entry {
+    padding: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $borders;
+    border-left-color: gtkshade($borders, 0.95);
+    border-right-color: gtkshade($borders, 0.95);
+    border-bottom-color: gtkshade($borders, 0.9);
+    border-radius: $entry_radius;
+    color: $text_color;
+    caret-color: currentColor;
+    background-color: $base_color;
+    box-shadow: 0 0 2px 0 gtkalpha($dark_shadow, 0.1);
+
+    &:active, &:focus { box-shadow: 0 0 0 4px $selected_base_color; }
+
+    &:selected, &:selected:focus, selection, selection:focus {
+      color: $selected_text_color;
+      background-color: $selected_base_color;
+    }
+
+    &:disabled {
+      color: $disabled_text_color;
+
+      &:backdrop {
+        color: $unfocused_disabled_fg_color;
+        border-color: $unfocused_borders;
+        background-color: $unfocused_disabled_base_color;
+      }
+    }
+
+    &:backdrop {
+      color: $unfocused_fg_color;
+      border-color: $unfocused_borders;
+      background-color: $unfocused_base_color;
+    }
+
+    > image {
+      &.left { padding-right: 5px; }
+      &.right { padding-left: 5px; }
+    }
+
+    progress {
+      margin: -4px -4px;
+      border-width: 0 0 2px;
+      border-radius: 0;
+      border-style: solid;
+      border-color: $selected_bg_color;
+      background-color: transparent;
+    }
+
+    &.flat, &.flat:focus {
+      min-height: 0;
+      padding: 3px;
+      border-radius: 0;
+      background-image: none;
+      border-color: transparent;
+    }
+
+    &.search { border-radius: 40px; }
+    
+    entry { box-shadow: none; }   // disable shadows for nested entries
+  }
+}

@@ -1,0 +1,39 @@
+@mixin menu() {
+  // transparency for popovers and menus
+  .background.popup { background-color: transparent; }
+
+  menu, .menu {
+    margin: 4px;
+    padding: 0;
+    border-radius: $menu_radius;
+    border-style: none;
+    color: $menu_fg_color;
+    background-color: $menu_bg_color;
+
+    .csd &, {
+      padding: 4px 0px;
+      border-radius: $menu_radius;
+      border: none;
+    }
+    
+    > arrow {
+      padding: 4px;
+      border-color: transparent;
+      background-color: $menu_bg_color;
+      min-width: 16px;
+      min-height: 16px;
+
+      &.top {
+        margin-top: -6px;
+        border-bottom: 1px solid gtkshade($menu_bg_color, 0.9);
+        -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+      }
+
+      &.bottom {
+        margin-bottom: -6px;
+        border-top: 1px solid gtkshade($menu_bg_color, 0.9);
+        -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+      }
+    }
+  }
+}

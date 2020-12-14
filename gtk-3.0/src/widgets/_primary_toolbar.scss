@@ -1,0 +1,22 @@
+@mixin primary_toolbar() {
+  .primary-toolbar {
+    -GtkWidget-window-dragging: true;
+
+    padding: 4px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: gtkmix($borders, $toolbar_bg_color, 0.5);
+    color: $toolbar_fg_color;
+    background-color: $toolbar_bg_color;
+
+    &:backdrop {
+      border-color: $unfocused_bg_color;
+      color: $unfocused_fg_color;
+      background-color: $unfocused_bg_color;
+    }
+
+    button, .raised button {
+      @include normal_buttons($base_color, $toolbar_fg_color, $borders);
+    }
+  }
+}

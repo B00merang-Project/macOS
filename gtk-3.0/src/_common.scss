@@ -1,0 +1,410 @@
+// wildcard settings
+* {
+  -GtkScrollbar-has-backward-stepper: $top_primary_stepper;
+  -GtkScrollbar-has-forward-stepper: $bottom_primary_stepper;
+  -GtkScrollbar-has-secondary-backward-stepper: $bottom_secondary_stepper;
+  -GtkScrollbar-has-secondary-forward-stepper: $top_secondary_stepper;
+  -GtkScrolledwindow-scrollbar-spacing: 0;
+  -GtkScrolledwindow-scrollbars-within-bevel: 1;
+  -GtkTextView-error-underline-color: $error_color;
+  -GtkToolbutton-icon-spacing: 6;
+  -GtkToolItemGroup-expander-size: 11;
+  -GtkWidget-text-handle-width: 20;
+  -GtkWidget-text-handle-height: 20;
+  -GtkDialog-button-spacing: 4;
+  -GtkDialog-action-area-border: 0;
+  -GtkTreeview-expander-size: 8;
+
+  background-clip: padding-box;
+
+  outline-width: $outline_width;
+  outline-offset: -3px;
+  outline-style: $outline_style;
+  outline-color: $outline_color;
+  -gtk-outline-radius: 0;
+}
+
+@include background();
+
+// Image effects 
+* {
+  &:disabled {
+    -gtk-icon-effect: dim;
+  }
+
+  &:hover {
+    -gtk-icon-effect: highlight;
+  }
+}
+
+.gtkstyle-fallback {
+  color: $fg_color;
+  background-color: $bg_color;
+
+  &:hover {
+    color: $fg_color;
+    background-color: gtkshade($bg_color, 1.1);
+  }
+
+  &:active {
+    color: $fg_color;
+    background-color: gtkshade($bg_color, 0.9);
+  }
+
+  &:disabled {
+    color: $disabled_fg_color;
+    background-color: $disabled_bg_color;
+  }
+
+  &:selected {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+  }
+}
+
+image, image:disabled, label, label:disabled, box, box:disabled {
+  background-color: transparent;
+}
+
+@include labels();
+
+@include transitions();
+
+assistant {
+  .sidebar label.highlight {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+  }
+
+  .sidebar {
+    padding: 4px;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-radius: 0;
+    border-right-color: $borders;
+    color: $fg_color;
+    background-color: $bg_color;
+  }
+}
+
+// link widgets
+%link,
+*:link {
+  color: $link_color;
+
+  &:visited {
+    color: gtkmix($link_color, $fg_color, 0.2);
+
+    *:selected & {
+      color: gtkmix($selected_fg_color, $selected_bg_color, 0.4);
+    }
+  }
+
+  &:hover {
+    color: gtkshade($link_color, 1.1);
+
+    *:selected & {
+      color: gtkmix($selected_fg_color, $selected_bg_color, 0.9);
+    }
+  }
+
+  &:active {
+    color: $link_color;
+
+    *:selected & {
+      color: gtkmix($selected_fg_color, $selected_bg_color, 0.8);
+    }
+  }
+
+  &:backdrop {
+    &:backdrop:hover, &:backdrop:hover:selected, & {
+      color: gtkmix($link_color, $unfocused_selected_bg_color, 0.3);
+    }
+  }
+
+  @at-root %link_selected,
+  &:selected, *:selected & {
+    color: gtkmix($selected_fg_color, $selected_bg_color, 0.8);
+  }
+}
+
+button:link, button:visited {
+  @extend *:link;
+
+  border-color: transparent;
+  background-color: transparent;
+  text-shadow: none;
+
+  &:hover, &:active, &:checked, &:focus:active {
+    border-color: transparent;
+    background-color: transparent;
+    text-shadow: none;
+  }
+
+  > label {
+    @extend %link;
+
+    text-decoration-line: underline;
+  }
+}
+
+@include button();
+
+@include checkradio();
+
+.content-view.view {
+  background-color: $base_color;
+
+  &:hover {
+    background-color: gtkalpha($selected_bg_color, 0.6);
+  }
+
+  &:selected, &:active {
+    background-color: $selected_bg_color;
+  }
+
+  &:disabled {
+    background-color: gtkshade($base_color, 0.9);
+  }
+}
+
+@include calendar();
+
+@include entry();
+
+@include expander();
+
+@include list();
+
+@include frame();
+
+@include iconview();
+
+@include flowbox();
+
+@include infobar();
+
+@include images();
+
+@include floating_bar();
+
+@include terminal();
+
+@include miscellaneous();
+
+@include menu();
+
+@include menubar();
+
+@include menubar_menuitem();
+
+@include menuitem();
+
+@include popover();
+
+@include modelbutton();
+
+@include notebook();
+
+@include paned();
+
+@include over_undershoot();
+
+@include progressbar();
+
+@include levelbar();
+
+@include scale();
+
+@include scrollbar();
+
+@include separator();
+
+@include spinbutton();
+
+// spinner 
+@keyframes spin {
+  to {
+    -gtk-icon-transform: rotate(1turn); }
+}
+
+spinner {
+  background: none;
+  opacity: 0;
+  -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+
+  &:checked {
+    opacity: 1;
+    animation: spin 1s linear infinite;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+@include statusbar();
+
+@include switch();
+
+// color chooser 
+colorswatch {
+  &.top {
+    border-top-left-radius: 2.5px;
+    border-top-right-radius: 2.5px;
+
+    overlay {
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+  }
+  &.bottom {
+    border-bottom-left-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+
+    overlay {
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
+
+  &.left, &:first-child:not(.top) {
+    border-top-left-radius: 2.5px;
+    border-bottom-left-radius: 2.5px;
+
+    overlay {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+  }
+
+  &.right, &:last-child:not(.bottom) {
+    border-top-right-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+
+    overlay {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
+
+  &.dark overlay {
+    color: gtkalpha($light_shadow, 0.7);
+
+    &:hover {
+      border-color: gtkalpha($dark_shadow, 0.5);
+    }
+  }
+
+  &.light overlay {
+    color: gtkalpha($light_shadow, 0.7);
+
+    &:hover {
+      border-color: gtkalpha($dark_shadow, 0.3);
+    }
+  }
+
+  overlay {
+    border: 1px solid gtkalpha($dark_shadow, 0.15);
+
+    &:hover {
+      background-color: gtkalpha($light_shadow, 0.2);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    overlay {
+      border-color: gtkalpha($dark_shadow, 0.6);
+      box-shadow: none;
+    }
+  }
+}
+
+button.color {
+  padding: 0;
+
+  colorswatch:first-child:last-child, colorswatch:first-child:last-child overlay {
+    margin: 4px;
+    border-radius: 0;
+  }
+}
+
+colorchooser {
+  .popover.osd {
+    border-radius: 0;
+  }
+
+  #add-color-button {
+    background-clip: padding-box;
+    border-color: gtkalpha($dark_shadow, 0.1);
+    background-color: gtkshade($bg_color, 0.95);
+    color: $fg_color;
+
+    &:hover {
+      border-color: gtkalpha($dark_shadow, 0.3);
+      background-color: gtkshade($bg_color, 0.90);
+      color: $fg_color;
+    }
+  }
+}
+
+@include pathbar();
+
+@include headerbar();
+
+@include toolbar();
+
+@include primary_toolbar();
+
+@include inline_toolbar();
+
+@include linked_widgets();
+
+@include linked_styles();
+
+@include tooltip();
+
+@include textview();
+
+@include treeview();
+
+@include view();
+
+@include sidebar();
+
+@include actionbar();
+
+@include searchbar();
+
+@include app_notifications();
+
+@include osd;
+
+@include destructive_button();
+
+@include suggested_button();
+
+@include headerbar_suggested_button();
+
+@include selection_mode();
+
+@include decoration();
+
+@include titlebar();
+
+@include messagedialog();
+
+// desktop theme rules
+@include desktop_icons();
+
+@include gnome_flashback();
+
+@include mate();
+
+@include xfce();
+
+@include nemo();
+
+@include unity();

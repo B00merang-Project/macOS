@@ -1,0 +1,94 @@
+@mixin separator() {
+  separator {
+    -gtk-icon-source: none;
+    min-width: 1px;
+    min-height: 1px;
+    background-color: $borders;
+
+    &:backdrop {
+      background-color: $unfocused_borders;
+    }
+
+    button & { margin: 4px 1px; }
+
+    .sidebar view &, view &, .separator, & {
+      border: none;
+      background-color: gtkmix($sidebar_bg_color, $sidebar_fg_color, 0.1);
+
+      &:backdrop {
+        border: none;
+        background-color: gtkmix($sidebar_bg_color, $sidebar_fg_color, 0.075);
+      }
+    }
+
+    .primary-toolbar &, toolbar & {
+      background-color: gtkmix($toolbar_bg_color, $toolbar_fg_color, 0.1);
+
+      &:backdrop {
+        background-color: gtkmix($toolbar_bg_color, $toolbar_fg_color, 0.075);
+      }
+    }
+    
+    .primary-toolbar button &, toolbar button &, .primary-toolbar:not(.libreoffice-toolbar) & {
+      background-color: gtkmix($toolbar_bg_color, $toolbar_fg_color, 0.1);
+
+      &:backdrop {
+        background-color: gtkmix($toolbar_bg_color, $toolbar_fg_color, 0.075);
+      }
+    }
+
+    headerbar & {
+      -GtkWidget-window-dragging: true;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      background-color: gtkmix($headerbar_bg_color, $headerbar_fg_color, 0.1);
+
+      &:backdrop {
+        background-color: gtkmix($headerbar_bg_color, $headerbar_fg_color, 0.075);
+      }
+    }
+    
+    headerbar button & {
+      border-color: gtkmix($headerbar_bg_color, $headerbar_fg_color, 0.1);
+
+      &:backdrop {
+        border-color: gtkmix($headerbar_bg_color, $headerbar_fg_color, 0.075);
+      }
+    }
+
+    .titlebar &, .titlebar:not(headerbar) > &, .titlebar &.titlebutton, .titlebar:not(headerbar) > &.titlebutton {
+      -GtkWidget-window-dragging: true;
+      background-color: $borders;
+      
+      &:backdrop { background-color: $unfocused_borders; }
+    }
+
+    headerbar &.titlebutton, .titlebar:not(headerbar) &.titlebutton {
+      min-width: 1px;
+      min-height: 1px;
+      background-color: transparent;
+    }
+    
+    .titlebutton button &, .titlebutton &.titlebutton {
+      background-color: transparent;
+    }
+
+    menu & {
+      background-color: gtkmix($menu_bg_color, $menu_fg_color, 0.1);
+    }
+    
+    menuitem & {
+      border-width: 1px;
+      border-style: none;
+      color: gtkmix($borders, $menu_bg_color, 0.5);
+    }
+
+    popover & {
+      border: 0;
+      color: gtkalpha(currentColor, 0.5);
+      background-color: transparent;
+    }
+
+    combobox & { border: none; }
+  }
+}

@@ -1,0 +1,53 @@
+@mixin decoration() {
+  decoration {
+    border-radius: $csd_radius $csd_radius 0 0;
+    border-width: 0px;
+    box-shadow: 0 10px 15px 1px gtkalpha($wm_shadow, 0.3), 0 0 0 1px gtkalpha($wm_shadow, 0.25);
+    margin: 10px;
+
+    &:backdrop {
+      box-shadow: 0 10px 15px 1px transparent, 0 2px 6px 2px gtkalpha($wm_shadow, 0.2), 0 0 0 1px gtkalpha($wm_shadow, 0.25);
+    }
+
+    .maximized &,
+    .fullscreen &,
+    .tiled &,
+    .tiled-top &,
+    .tiled-right &,
+    .tiled-bottom &,
+    .tiled-left & { border-radius: 0; }
+
+    .popup & { box-shadow: none; }
+
+    .csd.popup & {
+      border-radius: $menu_radius;
+      box-shadow: 0 6px 5px 1px gtkalpha($wm_shadow, 0.2), 0 0 0 1px gtkalpha($wm_shadow, 0.1);
+    }
+
+    .ssd & {
+      border-radius: $csd_radius $csd_radius 0 0;
+      box-shadow: 0 0 0 1px gtkalpha($wm_shadow, 0.1);
+
+      &.maximized {
+        border-radius: 0;
+      }
+    }
+
+    tooltip.csd & {
+      border-radius: $csd_radius;
+      box-shadow: none;
+    }
+
+    .solid-csd & {
+      margin: 1px;
+      border-radius: 0px;
+      background-color: gtkalpha($light_shadow, 0.95);
+      box-shadow: none;
+    }
+  }
+
+  // HACK: for rounded menus this has to override the .background definition
+  window.background.csd.popup {
+    border-radius: $csd_radius;
+  }
+}

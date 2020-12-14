@@ -1,0 +1,40 @@
+@mixin suggested_button() {
+  button.suggested-action {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: $button_radius;
+    border-color: $selected_bg_color;
+    color: $selected_fg_color;
+    background-image: linear-gradient(to bottom, gtkshade($selected_bg_color, 1.25), gtkshade($selected_bg_color, 1.1));
+
+    &:hover {
+    }
+
+    &:active, &:checked {
+      background-image: linear-gradient(to bottom, gtkshade($selected_bg_color, 1.1), gtkshade($selected_bg_color, 0.95));
+
+      &:backdrop {
+        color: $unfocused_selected_fg_color;
+      }
+    }
+
+    &:disabled {
+      border-color: gtkmix($selected_bg_color, $disabled_bg_color, 0.2);
+      color: gtkmix($selected_fg_color, $disabled_fg_color, 0.2);
+      background-image: linear-gradient(to bottom, gtkshade(gtkmix($selected_bg_color, $disabled_bg_color, 0.2), 1.2), gtkshade(gtkmix($selected_bg_color, $disabled_bg_color, 0.2), 1.05));
+
+      &:backdrop {
+        border-color: gtkmix($unfocused_selected_bg_color, $unfocused_disabled_bg_color, 0.2);
+        color: gtkmix($unfocused_selected_fg_color, $unfocused_disabled_fg_color, 0.2);
+        background-image: linear-gradient(to bottom, gtkshade(gtkmix($unfocused_selected_bg_color, $unfocused_disabled_bg_color, 0.2), 1.1), gtkshade(gtkmix($unfocused_selected_bg_color, $unfocused_disabled_bg_color, 0.2), 0.95));
+        
+      }
+    }
+
+    &:backdrop {
+      border-color: $unfocused_selected_bg_color;
+      color: $unfocused_selected_fg_color;
+      background-image: linear-gradient(to bottom, gtkshade($selected_bg_color, 1.2), gtkshade($selected_bg_color, 1.05));
+    }
+  }
+}

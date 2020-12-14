@@ -1,0 +1,134 @@
+@mixin headerbar_buttons($bg, $fg, $br)
+{
+  @include flat_buttons($bg, $fg, $br);
+}
+
+@mixin headerbar() {
+  headerbar {
+    min-height: 30px;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 0px;
+    color: $titlebar_fg_color;
+    background-color: $titlebar_bg_color;
+    border-bottom: 1px solid gtkshade($borders, 0.9);
+
+    &:backdrop {
+      color: $unfocused_fg_color;
+      background-image: none;
+      background-color: $unfocused_bg_color;
+      border-color: $unfocused_borders;
+    }
+    
+    .tiled &, .tiled &:backdrop,
+    .maximized &, .maximized &:backdrop {
+      border-radius: 0;
+    }
+    
+    // Fixes split headerbars
+    separator:first-child + &,
+    &:first-child {
+      &, &:backdrop {
+        border-top-left-radius: $csd_radius;
+
+        .maximized &,
+        .tiled & { border-radius: 0; }
+      }
+    }
+
+    &:last-child {
+      &, &:backdrop {
+        border-top-right-radius: $csd_radius;
+
+        .maximized &,
+        .tiled & { border-radius: 0; }
+      }
+    }
+    
+    .title {
+      padding-left: 12px;
+      padding-right: 12px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: smaller;
+      padding-left: 12px;
+      padding-right: 12px;
+      color: gtkalpha(currentColor, 0.7);
+    }
+
+    button { @include headerbar_buttons($base_color, $headerbar_fg_color, $borders); }
+    entry { padding: 4px 8px; }
+    &.titlebar, .titlebar & { border-radius: $csd_radius $csd_radius 0px 0px; }
+    
+    .titlebutton {
+      &.close, &.maximize, &.minimize, &:not(separator) {
+        padding: 2px 2px;
+        border: none;
+        color: transparent;
+        background-color: transparent;
+        -gtk-icon-shadow: none;
+        
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      
+      &.close {
+        background-image: url('assets/close-normal.svg');
+
+        &:hover { background-image: url('assets/close-hover.svg'); }
+        &:active { background-image: url('assets/close-active.svg'); }
+        &:backdrop { background-image: url('assets/close-backdrop.svg'); }
+      }
+
+      &.minimize {
+        background-image: url('assets/minimize-normal.svg');
+
+        &:hover { background-image: url('assets/minimize-hover.svg'); }
+        &:active { background-image: url('assets/minimize-active.svg'); }
+        &:backdrop { background-image: url('assets/minimize-backdrop.svg'); }
+      }
+
+      &.maximize {
+        background-image: url('assets/maximize-normal.svg');
+
+        &:hover { background-image: url('assets/maximize-hover.svg'); }
+        &:active { background-image: url('assets/maximize-active.svg'); }
+        &:backdrop { background-image: url('assets/maximize-backdrop.svg'); }
+      }
+    }
+  }
+
+  .titlebar:not(headerbar) {
+    window > &,
+    window.csd > & {
+      &, &:backdrop {
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
+  
+  .nautilus-window headerbar {
+    background-color: transparent;
+    background-image: linear-gradient(to right, $sidebar_bg_color $sidebar_width, $borders, $titlebar_bg_color $sidebar_width + 1);
+    border-image: linear-gradient(to right, $sidebar_bg_color $sidebar_width, $borders $sidebar_width + 1) 1 stretch;
+
+    &:backdrop {
+      background-image: linear-gradient(to right, $unfocused_bg_color $sidebar_width, $unfocused_borders, $unfocused_bg_color $sidebar_width + 1);
+      border-image: linear-gradient(to right, $unfocused_bg_color $sidebar_width, $unfocused_borders $sidebar_width + 1) 1 stretch;
+    }
+    // move header buttons away from fake sidebar portion
+    // TODO: Find a better way to do this
+    //separator.titlebutton { margin-right: 100px; }
+  }
+
+
+  window.ssd .titlebar {
+    border-bottom: none;
+    min-height: 20px;
+  }
+}

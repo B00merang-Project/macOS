@@ -1,0 +1,32 @@
+@mixin linked_styles() {
+  stackswitcher button.text-button {
+    min-width: 80px;
+    box-shadow: none;
+
+    &:active, &:checked {
+      &, &:hover, &:focus {
+        border-color: $selected_bg_color;
+        background-color: $selected_bg_color;
+        color: $selected_fg_color;
+        
+        &:backdrop {
+          border-color: $unfocused_selected_bg_color;
+          background-color: $unfocused_selected_bg_color;
+          color: $unfocused_fg_color;
+        }
+      }
+    }
+  }
+  
+  headerbar .linked button, headerbar .linked button:last-child {
+    border-width: 1px;
+    border-left-width: 1px;
+    border-radius: $button_radius;
+  }
+  
+  headerbar .linked.vertical button, .linked.vertical button:last-child {
+    border-width: 1px;
+    border-top-width: 1px;
+    border-radius: $button_radius;
+  }
+}

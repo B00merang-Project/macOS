@@ -1,0 +1,27 @@
+@mixin toolbar() {
+  toolbar {
+    padding: 4px;
+    border: none;
+    color: $toolbar_fg_color;
+    background-color: $toolbar_bg_color;
+
+    &:backdrop {
+      color: $unfocused_fg_color;
+      background-color: $unfocused_bg_color;
+    }
+
+    &:disabled {
+      color: $disabled_fg_color;
+      background-color: $disabled_bg_color;
+    }
+
+    button.flat {
+      @include flat_buttons($base_color, $toolbar_fg_color, $borders);
+    }
+
+    // menubar toolbars 
+    menubar {
+      -GtkToolbar-button-relief: normal;
+    }
+  }
+}
