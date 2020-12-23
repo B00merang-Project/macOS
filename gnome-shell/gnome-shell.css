@@ -1965,23 +1965,23 @@ StScrollBar {
 .candidate-page-button,
 .modal-dialog-button,
 .modal-dialog-linked-button {
-	border-radius: 0;
+	border-radius: 6px;
 	border: none;
-	background-color: transparent;
+	background-color: rgba(0, 0, 0, 0.1);
 	margin-top: 0.5em;
-	padding: 4px 36px;
-	color: #0375F8;
+	padding: 4px 32px;
+	color: #4c4c4c;
 	font-weight: normal;
 	box-shadow: none;
 	icon-shadow: none;
   height: 30px;
-  margin: 0;
-  font-size: 13pt;
+  margin: 3px;
 }
 
 .modal-dialog-button:focus,
 .modal-dialog-linked-button:focus {
-	font-weight: bold;
+	color: white;
+	background-color: #0375F8;
 }
 
 .candidate-page-button:active,
@@ -1995,6 +1995,7 @@ StScrollBar {
 .candidate-page-button:insensitive,
 .modal-dialog-button:insensitive {
 	color: rgba(0,0,0,0.5);
+	background-color: rgba(0, 0, 0, 0.05);
 	border: none;
 	box-shadow: none;
 	icon-shadow: none;}
