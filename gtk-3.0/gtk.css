@@ -1615,11 +1615,13 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
 
 .nautilus-window headerbar {
   background-color: transparent;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 200px, #e6e6e6, #FFFFFF 201px);
-  border-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 200px, #e6e6e6 201px) 1 stretch; }
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 188px, #e6e6e6, #FFFFFF 189px);
+  border-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 188px, #e6e6e6 189px) 1 stretch; }
   .nautilus-window headerbar:backdrop {
-    background-image: linear-gradient(to right, #FBFBFB 200px, #e2e2e2, #FBFBFB 201px);
-    border-image: linear-gradient(to right, #FBFBFB 200px, #e2e2e2 201px) 1 stretch; }
+    background-image: linear-gradient(to right, #FBFBFB 188px, #e2e2e2, #FBFBFB 189px);
+    border-image: linear-gradient(to right, #FBFBFB 188px, #e2e2e2 189px) 1 stretch; }
+  .nautilus-window headerbar box.horizontal.left {
+    margin-right: 100px; }
 
 window.ssd .titlebar {
   border-bottom: none;
