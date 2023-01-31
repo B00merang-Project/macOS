@@ -17,9 +17,6 @@ dnd {
 image:disabled {
   -gtk-icon-filter: opacity(0.5); }
 
-image, label, box {
-  background-color: transparent; }
-
 .view {
   color: #FFFFFF;
   background-color: #242226; }
@@ -69,11 +66,9 @@ rubberband, flowbox rubberband, treeview.view rubberband, .content-view rubberba
   background: none;
   background-color: rgba(46, 124, 247, 0.3); }
 
-flowbox flowboxchild {
-  padding: 3px;
-  border-radius: 8px; }
-  flowbox flowboxchild:selected {
-    outline-offset: -2px;
+flowbox > flowboxchild {
+  padding: 3px; }
+  flowbox > flowboxchild:selected {
     color: #FFFFFF;
     background-color: #2E7CF7; }
 
@@ -82,9 +77,28 @@ coverflow cover {
   background-color: #242226;
   border: 1px solid #646464; }
 
-label selection {
-  background-color: #2E7CF7;
+label:selected {
   color: #FFFFFF; }
+
+label > selection {
+  color: #FFFFFF;
+  background-color: #3D6896; }
+  label > selection:focus-within {
+    color: #3D6896; }
+
+label:disabled {
+  color: #9a999b; }
+  button label:disabled {
+    color: inherit; }
+  > selection label:disabled {
+    color: #648ac9; }
+    > selection label:disabled:backdrop {
+      color: #4b4b50; }
+
+label.error {
+  color: #CC0000; }
+  label.error:disabled {
+    color: rgba(204, 0, 0, 0.5); }
 
 .dim-label {
   opacity: 0.6;
@@ -138,7 +152,6 @@ window.assistant .sidebar > label {
   padding: 6px 12px; }
 
 window.assistant .sidebar > label.highlight {
-  color: #FFFFFF;
   background-color: #2E7CF7;
   border-radius: 8px; }
 
@@ -853,11 +866,11 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
 
 .nautilus-window headerbar {
   background-color: transparent;
-  background-image: linear-gradient(to right, rgba(52, 50, 54, 0.9) 188px, #474747, #2F2934 189px);
-  border-image: linear-gradient(to right, rgba(52, 50, 54, 0.9) 188px, #474747 189px) 1 stretch; }
+  background-image: linear-gradient(to right, rgba(52, 50, 54, 0.9) 241px, #474747, #2F2934 242px);
+  border-image: linear-gradient(to right, rgba(52, 50, 54, 0.9) 241px, #474747 242px) 1 stretch; }
   .nautilus-window headerbar:backdrop {
-    background-image: linear-gradient(to right, #25262A 188px, #222226, #25262A 189px);
-    border-image: linear-gradient(to right, #25262A 188px, #222226 189px) 1 stretch; }
+    background-image: linear-gradient(to right, #25262A 241px, #222226, #25262A 242px);
+    border-image: linear-gradient(to right, #25262A 241px, #222226 242px) 1 stretch; }
   .nautilus-window headerbar box.horizontal.left {
     margin-right: 100px; }
 
@@ -1557,38 +1570,20 @@ window.dialog.print drawing {
 window.dialog.print .dialog-action-box {
   margin: 12px; }
 
-.frame, frame > border {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #474747;
-  border-radius: 0;
-  box-shadow: none;
-  background: none; }
+frame,
+.frame {
+  border: 1px solid #474747; }
 
-frame.flat > border, frame > border.flat, .frame.flat {
-  border-style: none; }
+frame {
+  border-radius: 8px; }
+  frame > label {
+    margin: 4px; }
 
-actionbar {
-  padding: 4px;
-  border-width: 1px 0 0 0;
-  border-style: solid;
-  border-color: #474747;
-  color: #FFFFFF;
-  background-color: #343236; }
-  actionbar:backdrop {
-    border-color: #222226;
-    color: #8C8C8C;
-    background-color: #25262A; }
-  actionbar button.text-button {
-    padding: 4px; }
-  actionbar button .image-button {
-    padding: 6px; }
-  actionbar .title {
-    font-weight: bold;
-    padding: 0 12px; }
-  actionbar .subtitle {
-    font-size: smaller;
-    padding: 0 12px; }
+actionbar > revealer > box {
+  padding: 6px;
+  border-top: 1px solid #474747; }
+  actionbar > revealer > box, actionbar > revealer > box > box.start, actionbar > revealer > box > box.end {
+    border-spacing: 6px; }
 
 scrolledwindow > overshoot.top {
   background-image: radial-gradient(farthest-side at top, rgba(0, 0, 0, 0.5), transparent);
@@ -1748,6 +1743,22 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
   margin: 5px; }
   .app-notification border {
     border: none; }
+
+expander {
+  min-width: 16px;
+  min-height: 16px;
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+  expander:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
+  expander:disabled {
+    color: #9a999b; }
+  expander:checked {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+
+expander-widget > box > title {
+  border-radius: 8px; }
+  expander-widget > box > title:hover > expander {
+    color: white; }
 
 calendar {
   border-width: 1px;
@@ -1961,16 +1972,48 @@ button.sidebar-button:not(:hover):not(:active) > image {
   opacity: 0.5; }
 
 paned > separator {
-  border: none;
-  color: transparent;
-  background-color: #474747; }
-  paned > separator:backdrop {
-    background-color: #222226; }
+  min-width: 1px;
+  min-height: 1px;
+  -gtk-icon-source: none;
+  border-style: none;
+  background-color: transparent;
+  background-image: image(#474747);
+  background-size: 1px 1px; }
   paned > separator:selected {
-    background-color: #474747; }
+    background-image: image(#2E7CF7); }
+  paned > separator.wide {
+    min-width: 5px;
+    min-height: 5px;
+    background-color: #343236;
+    background-image: image(#474747), image(#474747);
+    background-size: 1px 1px, 1px 1px; }
 
-paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
-  border-style: none; }
+paned.horizontal > separator {
+  background-repeat: repeat-y; }
+  paned.horizontal > separator:dir(ltr) {
+    margin: 0 -8px 0 0;
+    padding: 0 8px 0 0;
+    background-position: left; }
+  paned.horizontal > separator:dir(rtl) {
+    margin: 0 0 0 -8px;
+    padding: 0 0 0 8px;
+    background-position: right; }
+  paned.horizontal > separator.wide {
+    margin: 0;
+    padding: 0;
+    background-repeat: repeat-y, repeat-y;
+    background-position: left, right; }
+
+paned.vertical > separator {
+  margin: 0 0 -8px 0;
+  padding: 0 0 8px 0;
+  background-repeat: repeat-x;
+  background-position: top; }
+  paned.vertical > separator.wide {
+    margin: 0;
+    padding: 0;
+    background-repeat: repeat-x, repeat-x;
+    background-position: bottom, top; }
 
 video {
   background: black; }
@@ -1979,19 +2022,15 @@ video {
     min-height: 64px;
     border-radius: 32px; }
 
-tooltip {
+tooltip.background {
+  border: 1px solid #474747;
   border-radius: 8px;
+  background-color: #000000;
+  padding: 4px;
   box-shadow: none; }
-  tooltip.background {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #474747;
-    background-color: #000000; }
-    tooltip.background label {
-      padding: 1px; }
-  tooltip * {
-    background-color: transparent;
-    color: #FFFFFF; }
+
+tooltip > box {
+  border-spacing: 6px; }
 
 colorswatch.top {
   border-top-left-radius: 2.5px;
@@ -2121,39 +2160,11 @@ button.color {
     border-style: none;
     border-radius: 5px; }
 
-.nautilus-window notebook,
-.nautilus-window notebook > stack:not(:only-child) searchbar {
-  background-color: #242226; }
-  .nautilus-window notebook:backdrop,
-  .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop {
-    background-color: #1C1E1F; }
-
-.caja-location-entry {
-  padding: 3px 5px; }
-
-.gedit-search-entry-occurrences-tag {
-  color: alpha(currentColor, 0.7);
-  border: none;
-  margin: 2px;
-  padding: 2px; }
-
-.gedit-search-slider {
-  border-color: #474747;
-  padding: 6px;
-  border-radius: 0 0 8px 8px;
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  background-color: #343236; }
-
 arrow, combobox arrow {
   color: alpha(currentColor, 0.75);
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
   min-height: 16px;
   min-width: 16px; }
-
-.context-menu, popover.touch-selection, .csd popover.touch-selection,
-popover.background.touch-selection, .csd popover.background.touch-selection {
-  font: initial; }
 
 .monospace {
   font-family: monospace; }
@@ -2328,12 +2339,11 @@ menubutton arrow {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
 .floating-bar {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #1f1d20;
+  border: 1px solid #474747;
   border-radius: 8px;
   background-color: #242226;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  box-shadow: none; }
   .floating-bar.top {
     border-top-width: 0px;
     border-top-right-radius: 0px;
@@ -2350,9 +2360,6 @@ menubutton arrow {
     border-right-width: 0px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px; }
-  .floating-bar button {
-    border-style: none;
-    background-color: transparent; }
 
 .terminal-screen, terminal-window, vte-terminal {
   background-color: #000000;
