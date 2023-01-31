@@ -78,22 +78,23 @@ coverflow cover {
   border: 1px solid #8a8a8a; }
 
 label:selected {
-  color: #FFFFFF; }
+  color: #000000; }
 
 label > selection {
   color: #000000;
   background-color: #96C4F5; }
   label > selection:focus-within {
-    color: #96C4F5; }
+    color: #000000;
+    background-color: #96C4F5; }
 
 label:disabled {
   color: gray; }
   button label:disabled {
     color: inherit; }
   > selection label:disabled {
-    color: #577ebb; }
+    color: #8ba2ba; }
     > selection label:disabled:backdrop {
-      color: #b7b7b7; }
+      color: #abc2da; }
 
 label.error {
   color: #CC0000; }
@@ -635,7 +636,7 @@ searchbar {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: #e6e6e6;
-  background-color: #FFFFFF; }
+  background-color: #f2f2f2; }
 
 .nautilus-window .searchbar-container {
   margin-top: -1px; }
@@ -1058,21 +1059,20 @@ menubar, .menubar {
   menubar:backdrop, .menubar:backdrop {
     color: #8C8C8C;
     background-color: #FBFBFB; }
-
-menubar > menuitem, .menubar > menuitem {
-  padding: 3px 5px;
-  border: none;
-  color: #000000;
-  background-color: transparent; }
-  menubar > menuitem:hover, .menubar > menuitem:hover {
-    color: #FFFFFF;
-    background-color: #2E7CF7; }
-  menubar > menuitem:disabled, .menubar > menuitem:disabled {
-    color: gray;
+  menubar > menuitem, .menubar > menuitem {
+    padding: 3px 5px;
+    border: none;
+    color: #000000;
     background-color: transparent; }
-  menubar > menuitem:backdrop, .menubar > menuitem:backdrop {
-    color: #8C8C8C;
-    background-color: transparent; }
+    menubar > menuitem:hover, .menubar > menuitem:hover {
+      color: #FFFFFF;
+      background-color: #2E7CF7; }
+    menubar > menuitem:disabled, .menubar > menuitem:disabled {
+      color: gray;
+      background-color: transparent; }
+    menubar > menuitem:backdrop, .menubar > menuitem:backdrop {
+      color: #8C8C8C;
+      background-color: transparent; }
 
 notebook {
   padding: 0; }
@@ -1570,8 +1570,7 @@ window.dialog.print drawing {
 window.dialog.print .dialog-action-box {
   margin: 12px; }
 
-frame,
-.frame {
+frame, .frame {
   border: 1px solid #e6e6e6; }
 
 frame {
