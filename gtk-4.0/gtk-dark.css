@@ -3,7 +3,7 @@
   background-color: rgba(52, 50, 54, 0.999); }
   .background:backdrop {
     color: #8C8C8C;
-    background-color: #25262A; }
+    background-color: rgba(37, 38, 42, 0.999); }
 
 dnd {
   color: #FFFFFF; }
@@ -559,6 +559,37 @@ button.suggested-action {
     color: #8b8b8b;
     background-image: linear-gradient(to bottom, #619eff, #3784fc); }
 
+modelbutton.flat {
+  min-height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: none;
+  border-radius: 0px;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none; }
+  modelbutton.flat:hover {
+    color: #FFFFFF;
+    background-color: #2E7CF7; }
+  modelbutton.flat:selected {
+    color: #FFFFFF;
+    background-color: #2E7CF7; }
+  modelbutton.flat:disabled {
+    color: #9a999b; }
+  modelbutton.flat > image {
+    padding-right: 4px; }
+  modelbutton.flat arrow {
+    background: none;
+    min-width: 16px;
+    min-height: 16px;
+    opacity: 0.3; }
+    modelbutton.flat arrow:hover {
+      background: none; }
+    modelbutton.flat arrow.left {
+      -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
+    modelbutton.flat arrow.right {
+      -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
+
 button.link,
 link {
   color: #0057D8;
@@ -997,74 +1028,28 @@ treeview entry, treeview entry.flat {
   treeview entry:focus, treeview entry.flat:focus {
     border-color: #2E7CF7; }
 
-popover, popover.background {
+popover.background {
   padding: 2px;
-  border-color: #474747;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 8px;
-  color: #FFFFFF;
-  background-clip: border-box;
   background-color: rgba(52, 50, 54, 0.9);
-  box-shadow: none; }
-  .csd popover, popover, .csd popover.background, popover.background {
-    border: 1px solid #474747; }
-  popover > list, popover > .view, popover > iconview, popover > toolbar, popover > .inline-toolbar, popover.background > list, popover.background > .view, popover.background > iconview, popover.background > toolbar, popover.background > .inline-toolbar {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+  .csd popover.background, popover.background {
+    border: 1px solid #474747;
+    border-radius: 8px; }
+    .csd popover.background:backdrop, popover.background:backdrop {
+      border-color: #222226; }
+  popover.background:backdrop {
+    background-color: #25262A;
+    box-shadow: none; }
+  popover.background > list, popover.background > .view, popover.background > iconview, popover.background > toolbar, popover.background > .inline-toolbar {
     border-style: none;
     background-color: transparent; }
-  popover checkbutton:selected, popover radiobutton:selected, popover.background checkbutton:selected, popover.background radiobutton:selected {
-    color: #FFFFFF;
-    background-color: #2E7CF7; }
-
-popover.osd {
-  box-shadow: none; }
-  popover.osd > toolbar button {
-    border-width: 0;
-    border-radius: 0;
-    background-color: transparent; }
-
-popover:backdrop {
-  border-color: #222226;
-  color: #8C8C8C;
-  background-color: #25262A;
-  box-shadow: none; }
-
-popover .view, popover iconview {
-  background-color: transparent; }
+  popover.background separator {
+    margin: 3px; }
+  popover.background list separator {
+    margin: 0px; }
 
 magnifier {
   background-color: #242226; }
-
-modelbutton.flat {
-  min-height: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border: none;
-  border-radius: 0px;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none; }
-  modelbutton.flat:hover {
-    color: #FFFFFF;
-    background-color: #2E7CF7; }
-  modelbutton.flat:selected {
-    color: #FFFFFF;
-    background-color: #2E7CF7; }
-  modelbutton.flat:disabled {
-    color: #9a999b; }
-  modelbutton.flat > image {
-    padding-right: 4px; }
-  modelbutton.flat arrow {
-    background: none;
-    min-width: 16px;
-    min-height: 16px;
-    opacity: 0.3; }
-    modelbutton.flat arrow:hover {
-      background: none; }
-    modelbutton.flat arrow.left {
-      -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
-    modelbutton.flat arrow.right {
-      -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
 
 .background.popup {
   background-color: transparent; }
@@ -1748,6 +1733,20 @@ list {
         background-color: #2f3138; }
   list separator, list separator:backdrop {
     background: none; }
+
+columnview > listview > row {
+  padding: 0; }
+  columnview > listview > row > cell {
+    padding: 8px 6px; }
+    columnview > listview > row > cell:not(:first-child) {
+      border-left: 1px solid transparent; }
+
+columnview.column-separators > listview > row > cell {
+  border-left-color: #474747; }
+
+columnview.data-table > listview > row > cell {
+  padding-top: 2px;
+  padding-bottom: 2px; }
 
 treeexpander {
   border-spacing: 4px; }
