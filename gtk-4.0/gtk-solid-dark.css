@@ -17,49 +17,46 @@ dnd {
 image:disabled {
   -gtk-icon-filter: opacity(0.5); }
 
-.view {
+.view, iconview {
   color: #FFFFFF;
   background-color: #242226; }
-  .view:backdrop {
-    color: #AEAEAE;
-    background-color: #1C1E1F; }
-  .view:disabled {
+  .view:disabled, iconview:disabled {
     color: #9a999b;
     background-color: #3e3c40; }
-  .view:selected, .view:selected:focus, .view text:selected, .view text:selected:focus, .view text selection, .view text selection:focus {
+  .view:selected:focus, .view:selected, iconview:selected {
     color: #FFFFFF;
     background-color: #2E7CF7;
     border-radius: 8px; }
-    .view:selected:disabled, .view:selected:focus:disabled, .view text:selected:disabled, .view text:selected:focus:disabled, .view text selection:disabled, .view text selection:focus:disabled {
-      color: #cccccd;
-      background-color: #2E7CF7; }
-    .view:selected:backdrop, .view:selected:focus:backdrop, .view text:selected:backdrop, .view text:selected:focus:backdrop, .view text selection:backdrop, .view text selection:focus:backdrop {
-      color: #8b8b8b;
-      background-color: #2f3138; }
+  .view:selected:backdrop, iconview:selected:backdrop {
+    color: #8b8b8b;
+    background-color: #2f3138; }
 
-textview {
+textview > text {
   color: #FFFFFF;
-  background-color: #242226; }
-  textview text {
-    background-color: #242226; }
-    textview text:selected, textview text selection, textview text:selected:focus, textview text selection:focus {
-      color: #FFFFFF;
+  background-color: #242226;
+  background-color: transparent; }
+  textview > text:disabled {
+    color: #9a999b;
+    background-color: #3e3c40; }
+  textview > text:selected:focus, textview > text:selected {
+    color: #FFFFFF;
+    background-color: #2E7CF7; }
+  textview > text:selected:backdrop {
+    color: #FFFFFF;
+    background-color: #3D6896; }
+  textview > text > selection {
+    background-color: #2f3138; }
+    textview > text > selection:focus-within {
       background-color: #3D6896; }
-    textview text:backdrop {
-      background-color: #1C1E1F; }
 
-iconview:selected, iconview:selected:focus, iconview text:selected, iconview text:selected:focus, iconview text selection, iconview text selection:focus {
-  border: 1px solid #2E7CF7;
-  color: #FFFFFF;
-  background-color: #2E7CF7; }
+textview:drop(active) {
+  caret-color: #2E7CF7; }
 
-iconview:selected:backdrop, iconview selection:backdrop, iconview text:selected:backdrop, iconview text selection:backdrop {
-  color: #8b8b8b;
-  background-color: #2f3138; }
+iconview:drop(active) {
+  box-shadow: none; }
 
-rubberband {
-  border: 1px solid #1d6deb;
-  background-color: rgba(46, 124, 247, 0.3); }
+iconview > dndtarget:drop(active) {
+  border: 1px solid #2E7CF7; }
 
 rubberband {
   border: 1px solid #1d6deb;
@@ -74,6 +71,23 @@ flowbox > flowboxchild {
   flowbox > flowboxchild:selected {
     color: #FFFFFF;
     background-color: #2E7CF7; }
+
+gridview > rubberband {
+  border: 1px solid #1d6deb;
+  background-color: rgba(46, 124, 247, 0.3); }
+
+gridview > child {
+  padding: 3px;
+  transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  gridview > child:selected {
+    color: #FFFFFF;
+    background-color: #2E7CF7; }
+    gridview > child:selected:backdrop {
+      color: #8b8b8b;
+      background-color: #2f3138; }
+  gridview > child box {
+    border-spacing: 8px;
+    margin: 12px; }
 
 coverflow cover {
   color: #FFFFFF;
@@ -160,7 +174,7 @@ switch {
   switch > slider {
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
-.view.content-view.check:not(list),
+.view.content-view.check:not(list), iconview.content-view.check:not(list),
 .content-view .tile check:not(list) {
   transition: 200ms; }
 
@@ -319,9 +333,9 @@ window.aboutdialog image.large-icons {
     border-color: #787878;
     background-color: #4f4f4f; }
 
-.osd view, view.osd, .osd.view {
+.osd view, view.osd, .osd.view, iconview.osd {
   background-color: #3B3B3B; }
-  .osd view:selected, .osd view:selected:focus, view.osd:selected, view.osd:selected:focus, .osd.view:selected, .osd.view:selected:focus {
+  .osd view:selected, .osd view:selected:focus, view.osd:selected, view.osd:selected:focus, .osd.view:selected, iconview.osd:selected, .osd.view:selected:focus {
     background-color: transparent;
     border-style: solid;
     border-radius: 0;
@@ -1015,7 +1029,7 @@ popover:backdrop {
   background-color: #25262A;
   box-shadow: none; }
 
-popover .view {
+popover .view, popover iconview {
   background-color: transparent; }
 
 magnifier {
@@ -1057,59 +1071,30 @@ modelbutton.flat {
 
 menu, .menu {
   margin: 4px;
-  padding: 0;
+  padding: 4px 0;
   border-radius: 8px;
-  border-style: none;
+  border: none;
   color: #FFFFFF;
   background-color: #2c2a2e; }
-  .csd menu, .csd .menu {
-    padding: 4px 0px;
-    border-radius: 8px;
-    border: none; }
-  menu > arrow, .menu > arrow {
+  menu menuitem, .menu menuitem {
+    min-height: 16px;
+    min-width: 40px;
     padding: 4px;
-    border-color: transparent;
-    background-color: #2c2a2e;
-    min-width: 16px;
-    min-height: 16px; }
-    menu > arrow.top, .menu > arrow.top {
-      margin-top: -6px;
-      border-bottom: 1px solid #282629;
-      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
-    menu > arrow.bottom, .menu > arrow.bottom {
-      margin-bottom: -6px;
-      border-top: 1px solid #282629;
-      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-
-menu menuitem, .menu menuitem {
-  min-height: 16px;
-  min-width: 40px;
-  padding: 4px;
-  border: none;
-  border-radius: 0;
-  color: #FFFFFF;
-  background-color: transparent; }
-  menu menuitem:hover, .menu menuitem:hover {
+    border: none;
+    border-radius: 0;
     color: #FFFFFF;
-    background-color: #2E7CF7; }
-  menu menuitem:disabled, .menu menuitem:disabled {
-    color: #969597; }
-  menu menuitem arrow, .menu menuitem arrow {
-    min-width: 16px;
-    min-height: 16px; }
-    menu menuitem arrow:dir(ltr), .menu menuitem arrow:dir(ltr) {
-      margin-left: 10px;
-      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
-    menu menuitem arrow:dir(rtl), .menu menuitem arrow:dir(rtl) {
-      margin-right: 10px;
-      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
-
-menuitem accelerator {
-  color: alpha(currentColor, 0.55); }
-  menuitem accelerator:hover {
-    color: rgba(255, 255, 255, 0.8); }
-  menuitem accelerator:disabled {
-    color: #9a999b; }
+    background-color: transparent; }
+    menu menuitem:hover, .menu menuitem:hover {
+      color: #FFFFFF;
+      background-color: #2E7CF7; }
+    menu menuitem:disabled, .menu menuitem:disabled {
+      color: #969597; }
+    menu menuitem accelerator, .menu menuitem accelerator {
+      color: alpha(currentColor, 0.55); }
+      menu menuitem accelerator:hover, .menu menuitem accelerator:hover {
+        color: rgba(255, 255, 255, 0.8); }
+      menu menuitem accelerator:disabled, .menu menuitem accelerator:disabled {
+        color: #9a999b; }
 
 menubar, .menubar {
   padding: 0;
