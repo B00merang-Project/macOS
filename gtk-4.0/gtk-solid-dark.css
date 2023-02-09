@@ -1840,38 +1840,34 @@ calendar {
     color: #AEAEAE;
     border-color: #222226; }
 
-messagedialog {
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px; }
-  messagedialog .background.csd {
-    border-radius: 8px;
-    color: #FFFFFF;
-    background-color: #343236; }
-  messagedialog decoration {
-    border-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
-  messagedialog .titlebar.horizontal {
-    border: none;
+window.dialog.message {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+  window.dialog.message .titlebar {
+    min-height: 20px;
     background-image: none;
-    background-color: #343236; }
-  messagedialog.csd .dialog-action-area button {
-    padding: 10px;
-    border-radius: 0;
+    background-color: #343236;
+    border-style: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; }
+  window.dialog.message box.dialog-vbox.vertical {
+    border-spacing: 10px; }
+  window.dialog.message label.title {
+    font-weight: 800;
+    font-size: 15pt; }
+  window.dialog.message.csd.background {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px; }
+  window.dialog.message.csd .dialog-action-area button {
+    padding: 10px 14px;
+    border-radius: 0px;
+    border-left-style: solid;
+    border-right-style: none;
     border-bottom-style: none;
     background-image: none; }
-    messagedialog.csd .dialog-action-area button:last-child {
-      border-right-width: 0;
-      border-radius: 0px;
-      border-bottom-right-radius: 8px; }
-    messagedialog.csd .dialog-action-area button:first-child {
-      border-left-width: 0;
-      border-radius: 0px;
+    window.dialog.message.csd .dialog-action-area button:first-child {
+      border-left-style: none;
       border-bottom-left-radius: 8px; }
-    messagedialog.csd .dialog-action-area button:only-child {
-      border-radius: 0px;
-      border-bottom-left-radius: 8px;
+    window.dialog.message.csd .dialog-action-area button:last-child {
       border-bottom-right-radius: 8px; }
 
 .sidebar {
