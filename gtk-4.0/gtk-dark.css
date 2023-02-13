@@ -988,45 +988,118 @@ pathbar > button.slider-button {
   padding-left: 0;
   padding-right: 0; }
 
-treeview.view:selected, treeview.view:selected:focus {
-  border-radius: 0;
-  color: #FFFFFF;
-  background-color: #2E7CF7; }
-  treeview.view:selected:backdrop, treeview.view:selected:focus:backdrop {
-    color: #8b8b8b;
-    background-color: #2f3138; }
-
-treeview.view:drop(active) {
-  border-style: solid none;
-  border-width: 1px;
-  border-color: #2E7CF7; }
-  treeview.view.after:drop(active) {
-    border-top-style: none; }
-  treeview.view.before:drop(active) {
-    border-bottom-style: none; }
-
-treeview header button {
-  border-radius: 0;
-  border-style: solid;
-  border-width: 0 1px 1px 0;
-  background-image: none;
-  background-color: #343236; }
-  treeview header button:last-child {
-    border-width: 0 0 1px 0; }
-  treeview header button:hover, treeview header button:focus:hover {
-    background-image: none;
-    background-color: #343236; }
-  treeview header button:active, treeview header button:focus:active {
+columnview.view, treeview.view {
+  border-left-color: #404041;
+  border-top-color: #404041; }
+  columnview.view > rubberband, treeview.view > rubberband {
+    border: 1px solid #1d6deb;
+    background-color: rgba(46, 124, 247, 0.3); }
+  columnview.view:selected, columnview.view:selected:focus, treeview.view:selected, treeview.view:selected:focus {
+    color: #FFFFFF;
+    background-color: #2E7CF7;
+    border-radius: 0; }
+    columnview.view:selected:backdrop, columnview.view:selected:focus:backdrop, treeview.view:selected:backdrop, treeview.view:selected:focus:backdrop {
+      color: #8b8b8b;
+      background-color: #2f3138; }
+  columnview.view:disabled, treeview.view:disabled {
+    color: #9a999b; }
+    columnview.view:disabled:backdrop, treeview.view:disabled:backdrop {
+      color: #676568; }
+    columnview.view:disabled:selected, treeview.view:disabled:selected {
+      color: #648ac9; }
+      columnview.view:disabled:selected:backdrop, treeview.view:disabled:selected:backdrop {
+        color: #4b4b50; }
+  columnview.view.separator, treeview.view.separator {
+    min-height: 2px;
+    color: #404041; }
+  columnview.view:backdrop, treeview.view:backdrop {
+    border-left-color: #222226;
+    border-top: #222226; }
+  columnview.view:drop(active), treeview.view:drop(active) {
+    box-shadow: none; }
+  columnview.view > dndtarget:drop(active), treeview.view > dndtarget:drop(active) {
+    border-style: solid none;
+    border-width: 1px;
+    border-color: #2E7CF7; }
+    columnview.view > dndtarget.after:drop(active), treeview.view > dndtarget.after:drop(active) {
+      border-top-style: none; }
+    columnview.view > dndtarget.before:drop(active), treeview.view > dndtarget.before:drop(active) {
+      border-bottom-style: none; }
+  columnview.view.expander, treeview.view.expander {
+    min-width: 16px;
+    min-height: 16px;
+    color: #bdbdbe;
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+    columnview.view.expander:hover, treeview.view.expander:hover {
+      color: #FFFFFF; }
+    columnview.view.expander:selected, treeview.view.expander:selected {
+      color: #c0d8fd; }
+      columnview.view.expander:selected:hover, treeview.view.expander:selected:hover {
+        color: #FFFFFF; }
+    columnview.view.expander:checked, treeview.view.expander:checked {
+      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+    columnview.view.expander:dir(rtl), treeview.view.expander:dir(rtl) {
+      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
+  columnview.view.progressbar, treeview.view.progressbar {
+    color: #FFFFFF;
+    background-color: #2E7CF7;
+    background-image: image(#2E7CF7);
+    box-shadow: none; }
+    columnview.view.progressbar:selected:focus, columnview.view.progressbar:selected, treeview.view.progressbar:selected:focus, treeview.view.progressbar:selected {
+      color: #2E7CF7;
+      background-image: image(#FFFFFF); }
+      columnview.view.progressbar:selected:focus:backdrop, columnview.view.progressbar:selected:backdrop, treeview.view.progressbar:selected:focus:backdrop, treeview.view.progressbar:selected:backdrop {
+        color: #2f3138;
+        background-color: #8b8b8b; }
+  columnview.view.trough, treeview.view.trough {
+    background-color: rgba(255, 255, 255, 0.9); }
+    columnview.view.trough:selected, columnview.view.trough:selected:focus, treeview.view.trough:selected, treeview.view.trough:selected:focus {
+      background-color: rgba(255, 255, 255, 0.3); }
+  columnview.view > header > button, treeview.view > header > button {
+    color: #929193;
+    background-color: #242226;
+    font-weight: bold;
+    text-shadow: none;
+    box-shadow: none; }
+    columnview.view > header > button:hover, treeview.view > header > button:hover {
+      color: #c9c8c9;
+      box-shadow: none;
+      transition: none; }
+    columnview.view > header > button:active, treeview.view > header > button:active {
+      color: #FFFFFF;
+      transition: none; }
+    columnview.view > header > button sort-indicator, treeview.view > header > button sort-indicator {
+      min-height: 16px;
+      min-width: 16px; }
+      columnview.view > header > button sort-indicator.ascending, treeview.view > header > button sort-indicator.ascending {
+        -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+      columnview.view > header > button sort-indicator.descending, treeview.view > header > button sort-indicator.descending {
+        -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+  columnview.view button.dnd:active, columnview.view button.dnd:selected, columnview.view button.dnd:hover, columnview.view button.dnd, columnview.view header.button.dnd:active, columnview.view header.button.dnd:selected, columnview.view header.button.dnd:hover, columnview.view header.button.dnd, treeview.view button.dnd:active, treeview.view button.dnd:selected, treeview.view button.dnd:hover, treeview.view button.dnd, treeview.view header.button.dnd:active, treeview.view header.button.dnd:selected, treeview.view header.button.dnd:hover, treeview.view header.button.dnd {
+    padding: 0 6px;
     color: #FFFFFF;
     background-image: none;
-    background-color: #2f2d30; }
+    background-color: #2E7CF7;
+    border-style: none;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 1px #FFFFFF;
+    text-shadow: none;
+    transition: none; }
+  columnview.view acceleditor > label, treeview.view acceleditor > label {
+    background-color: #2E7CF7; }
 
-treeview entry, treeview entry.flat {
-  border-radius: 0;
+columnview.view > header > button, treeview.view > header > button, columnview.view > header > button:hover, treeview.view > header > button:hover, columnview.view > header > button:active, treeview.view > header > button:active {
+  padding: 0 6px;
   background-image: none;
-  background-color: #242226; }
-  treeview entry:focus, treeview entry.flat:focus {
-    border-color: #2E7CF7; }
+  border-style: none none solid solid;
+  border-color: #404041;
+  border-radius: 0;
+  text-shadow: none; }
+  columnview.view > header > button:disabled, treeview.view > header > button:disabled {
+    border-color: #343236;
+    background-image: none; }
+  columnview.view > header > button:last-child, treeview.view > header > button:last-child {
+    border-right-style: none; }
 
 popover.background {
   background-color: transparent;
@@ -2121,10 +2194,11 @@ filechooserbutton:drop(active) {
 
 combobox:drop(active) button.combo {
   box-shadow: none;
-  color: #3bad4e;
-  border-color: #3bad4e; }
+  color: #2E7CF7;
+  border-color: #2E7CF7; }
 
-:not(decoration):not(window):drop(active), :not(decoration):not(window):drop(active):focus, combobox:drop(active) button.combo {
+:not(decoration):not(window):drop(active),
+:not(decoration):not(window):drop(active):focus {
   border-color: #2E7CF7;
   box-shadow: inset 0 0 0 1px #2E7CF7;
   caret-color: #2E7CF7; }
