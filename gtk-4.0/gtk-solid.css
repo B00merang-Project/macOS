@@ -1518,49 +1518,23 @@ scale {
       margin-right: -12px; }
 
 progressbar {
-  padding: 0;
-  border: none;
-  color: gray;
-  background-color: transparent; }
-  progressbar progress {
+  font-size: smaller;
+  color: gray; }
+  progressbar > trough {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1); }
+    progressbar > trough:backdrop {
+      background-color: #eeeeee; }
+  progressbar > trough > progress {
     border: none;
     border-radius: 10px;
     background-color: #2E7CF7; }
-    progressbar progress:backdrop {
+    progressbar > trough > progress:backdrop {
       background-color: #b0b0b0; }
-  progressbar trough {
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.1); }
-    progressbar trough:backdrop {
-      background-color: #eeeeee; }
-  progressbar.horizontal trough, progressbar.horizontal progress {
+  progressbar.horizontal > trough, progressbar.horizontal > trough > progress {
     min-height: 7px; }
-  progressbar.vertical trough, progressbar.vertical progress {
+  progressbar.vertical > trough, progressbar.vertical > trough > progress {
     min-width: 7px; }
-
-treeview.view.progressbar, treeview.view.progressbar:disabled {
-  color: #FFFFFF;
-  border-radius: 0;
-  background-color: #2E7CF7; }
-
-treeview.view.progressbar:focus, treeview.view.progressbar:selected:focus, treeview.view.progressbar:focus:selected, treeview.view.progressbar:focus:selected:focus, treeview.view.progressbar:disabled:selected {
-  border-radius: 0;
-  color: #2E7CF7;
-  background-color: #FFFFFF; }
-
-treeview.view.trough {
-  color: #000000;
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 0;
-  border: none; }
-  treeview.view.trough:selected, treeview.view.trough:selected:focus {
-    color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 0;
-    border: none; }
-
-infobar treeview.view trough, row:selected treeview.view trough {
-  background-color: rgba(0, 0, 0, 0.1); }
 
 levelbar trough {
   padding: 1px;
