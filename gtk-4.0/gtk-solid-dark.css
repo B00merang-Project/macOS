@@ -1426,95 +1426,96 @@ scale {
   min-height: 10px;
   min-width: 10px;
   padding: 12px; }
-  scale fill, scale trough {
+  scale > trough {
     border: none;
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.2);
-    outline-offset: 2px; }
-    scale fill:disabled, scale trough:disabled {
+    background-color: rgba(0, 0, 0, 0.2); }
+    scale > trough:disabled {
       background-color: rgba(0, 0, 0, 0.15); }
-      scale fill:disabled:backdrop, scale trough:disabled:backdrop {
+      scale > trough:disabled:backdrop {
         background-color: rgba(0, 0, 0, 0.08); }
-    scale fill:backdrop, scale trough:backdrop {
+    scale > trough:backdrop {
       background-color: rgba(0, 0, 0, 0.1); }
-  scale highlight {
+  scale > trough > highlight {
     border: none;
     border-radius: 4px;
     background-color: #2E7CF7; }
-    scale highlight:disabled {
+    scale > trough > highlight:disabled {
       background-color: #3e3c40; }
-      scale highlight:disabled:backdrop {
+      scale > trough > highlight:disabled:backdrop {
         background-color: #38363a; }
-    scale highlight:backdrop {
+    scale > trough > highlight:backdrop {
       background-color: #2f3138; }
-  scale.horizontal indicator {
-    min-height: 6px;
-    min-width: 1px; }
-  scale.horizontal.fine-tune indicator {
-    min-height: 3px; }
-  scale.vertical indicator {
-    min-height: 1px;
-    min-width: 6px; }
-  scale.vertical.fine-tune indicator {
-    min-width: 3px; }
-  scale.fine-tune.horizontal {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    min-height: 14px; }
-  scale.fine-tune.vertical {
-    padding-left: 10px;
-    padding-right: 10px;
-    min-width: 14px; }
-  scale.fine-tune slider {
-    margin: -6px; }
-  scale.fine-tune fill, scale.fine-tune trough, scale.fine-tune highlight {
-    border-radius: 4px; }
-  scale.fine-tune marks.top {
-    margin-bottom: 8px;
-    margin-top: -13px; }
-  scale.fine-tune marks.bottom {
-    margin-top: 8px;
-    margin-bottom: -13px; }
-  scale.fine-tune marks.top {
-    margin-right: 8px;
-    margin-left: -13px; }
-  scale.fine-tune marks.bottom {
-    margin-left: 8px;
-    margin-right: -13px; }
-  scale slider {
-    min-height: 18px;
+  scale > trough > slider {
     min-width: 18px;
+    min-height: 18px;
     margin: -8px;
     border: none;
     border-radius: 100%;
-    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.09);
     color: #FFFFFF;
-    background-color: #49454d; }
-    scale slider:disabled {
-      background-color: #444247;
-      -gtk-icon-shadow: none; }
-      scale slider:disabled:backdrop {
-        background-color: #27282c;
-        -gtk-icon-shadow: none; }
-    scale slider:backdrop {
+    background-color: #49454d;
+    background-image: none;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.09); }
+    scale > trough > slider:disabled {
+      background-color: #444247; }
+      scale > trough > slider:disabled:backdrop {
+        background-color: #27282c; }
+    scale > trough > slider:backdrop {
       color: #8C8C8C;
       background-color: #32343c; }
-  scale value {
+  scale.fine-tune.horizontal {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    min-height: 16px; }
+  scale.fine-tune.vertical {
+    min-width: 16px; }
+  scale.fine-tune > trough,
+  scale.fine-tune > trough > fill,
+  scale.fine-tune > trough > highlight {
+    border-radius: 8px; }
+  scale.fine-tune > trough > slider {
+    margin: -5px; }
+  scale > value {
+    color: alpha(currentColor, 0.55);
+    font-feature-settings: "tnum"; }
+  scale > marks {
     color: alpha(currentColor, 0.55); }
-  scale marks {
-    color: alpha(currentColor, 0.55); }
-    scale marks.top {
-      margin-bottom: 6px;
-      margin-top: -12px; }
-    scale marks.bottom {
-      margin-top: 6px;
-      margin-bottom: -12px; }
-    scale marks.top {
-      margin-right: 6px;
-      margin-left: -12px; }
-    scale marks.bottom {
-      margin-left: 6px;
-      margin-right: -12px; }
+  scale.horizontal > marks.top {
+    margin-bottom: 6px; }
+  scale.horizontal > marks.bottom {
+    margin-top: 6px; }
+  scale.horizontal > marks indicator {
+    min-width: 1px;
+    min-height: 6px;
+    background-color: currentColor; }
+  scale.horizontal > value.left {
+    margin-right: 9px; }
+  scale.horizontal > value.right {
+    margin-left: 9px; }
+  scale.horizontal.fine-tune > marks.top {
+    margin-top: 3px; }
+  scale.horizontal.fine-tune > marks.bottom {
+    margin-bottom: 3px; }
+  scale.horizontal.fine-tune > marks indicator {
+    min-height: 3px; }
+  scale.vertical > marks.top {
+    margin-right: 6px; }
+  scale.vertical > marks.bottom {
+    margin-left: 6px; }
+  scale.vertical > marks indicator {
+    min-height: 1px;
+    min-width: 6px;
+    background-color: currentColor; }
+  scale.vertical > value.top {
+    margin-bottom: 9px; }
+  scale.vertical > value.bottom {
+    margin-top: 9px; }
+  scale.vertical.fine-tune > marks.top {
+    margin-left: 3px; }
+  scale.vertical.fine-tune > marks.bottom {
+    margin-right: 3px; }
+  scale.vertical.fine-tune > marks indicator {
+    min-height: 3px; }
 
 progressbar {
   font-size: smaller;
