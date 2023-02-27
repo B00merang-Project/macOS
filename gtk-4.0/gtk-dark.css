@@ -454,15 +454,14 @@ editablelabel > stack > text > selection {
 
 button {
   padding: 6px 8px;
-  border-style: solid;
-  border-width: 1px;
   border-radius: 8px;
-  color: #FFFFFF;
-  border-color: #474747;
+  border: 1px solid #474747;
   border-left-color: #444444;
   border-right-color: #444444;
   border-bottom-color: #404040;
+  color: #FFFFFF;
   background-color: #343236;
+  background-image: none;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1); }
   button:active, button:checked {
     color: #FFFFFF;
@@ -493,6 +492,7 @@ button {
     border-radius: 8px;
     color: #FFFFFF;
     background-color: transparent;
+    background-image: none;
     box-shadow: none; }
     button.flat:hover {
       color: #FFFFFF;
@@ -519,9 +519,7 @@ button {
       color: #8C8C8C; }
 
 button.destructive-action {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #d63333;
+  border: 1px solid #d63333;
   border-radius: 8px;
   color: #fae6e6;
   background-image: none;
@@ -538,10 +536,8 @@ button.destructive-action {
     background-color: #9a0b0d; }
 
 button.suggested-action {
-  border-width: 1px;
-  border-style: solid;
   border-radius: 8px;
-  border-color: #4576df;
+  border: 1px solid #4576df;
   color: #FFFFFF;
   background-image: linear-gradient(to bottom, #769ff7, #5786ea); }
   button.suggested-action:active, button.suggested-action:checked {
@@ -698,6 +694,7 @@ toolbar {
     border-radius: 8px;
     color: #FFFFFF;
     background-color: transparent;
+    background-image: none;
     box-shadow: none; }
     toolbar button.flat:hover {
       color: #FFFFFF;
@@ -849,6 +846,7 @@ headerbar {
     border-radius: 8px;
     color: #FFFFFF;
     background-color: transparent;
+    background-image: none;
     box-shadow: none; }
     headerbar button:hover {
       color: #FFFFFF;
@@ -2466,6 +2464,7 @@ menubutton arrow {
   border-radius: 8px;
   color: #FFFFFF;
   background-color: transparent;
+  background-image: none;
   box-shadow: none; }
   .toolbar > button:hover,
   .toolbar > :not(.linked) > button:hover,
