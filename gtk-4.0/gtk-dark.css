@@ -1252,76 +1252,65 @@ notebook {
 
 scrollbar {
   border: none;
-  background-color: #3e3c41; }
-  scrollbar trough {
-    border: none;
-    border-radius: 0; }
+  background-color: #3e3c41;
+  /*
+  &.horizontal button {
+    &.down { -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
+    &.up { -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
+  }
+
+  &.vertical button {
+    &.down { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+    &.up { -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+  }
+  */ }
   scrollbar:backdrop {
     background-color: #1C1E1F; }
-  scrollbar slider {
+  scrollbar > range > trough > slider {
+    margin: 2px;
     min-width: 8px;
     min-height: 8px;
-    margin: 2px;
-    border: none;
     border-radius: 6px;
+    border: none;
     background-clip: padding-box;
     background-color: #858486; }
-    scrollbar slider:hover {
+    scrollbar > range > trough > slider:hover {
       background-color: #858486; }
-      scrollbar slider:hover:active {
-        background-color: #8f8e90; }
-    scrollbar slider:backdrop {
+    scrollbar > range > trough > slider:hover:active {
       background-color: #8f8e90; }
-    scrollbar slider:disabled {
+    scrollbar > range > trough > slider:backdrop {
+      background-color: #8f8e90; }
+    scrollbar > range > trough > slider:disabled {
       background-color: transparent; }
-  scrollbar.fine-tune slider {
-    min-width: 6px;
-    min-height: 6px;
+  scrollbar.horizontal > range > trough > slider {
+    min-width: 40px; }
+  scrollbar.vertical > range > trough > slider {
+    min-height: 40px; }
+  scrollbar > range.fine-tune > trough > slider {
+    min-width: 4px;
+    min-height: 4px;
     border-radius: 6px; }
-  scrollbar.fine-tune.horizontal slider {
-    margin-top: 1px;
-    margin-bottom: 1px; }
-  scrollbar.fine-tune.vertical slider {
-    margin-left: 1px;
-    margin-right: 1px; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
-    border: none;
-    opacity: 0.7;
-    margin: 0;
-    background-color: transparent; }
-    scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
-      margin: 0;
-      min-width: 1px;
-      min-height: 1px;
-      background-color: #1f1e20;
-      border: none; }
-    scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) slider {
-      margin: 0;
-      min-width: 40px; }
-    scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) slider {
-      margin: 0;
-      min-height: 40px; }
+  scrollbar > range.fine-tune.horizontal > trough > slider {
+    margin-top: 2px;
+    margin-bottom: 2px; }
+  scrollbar > range.fine-tune.vertical > trough > slider {
+    margin-left: 2px;
+    margin-right: 2px; }
+  scrollbar.overlay-indicator:not(.dragging):not(.hovering) > range > trough > slider {
+    margin: 1px;
+    opacity: 0.7; }
+  scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) > range > trough > slider {
+    min-width: 40px;
+    min-height: 1px; }
+  scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) > range > trough > slider {
+    min-width: 1px;
+    min-height: 40px; }
   scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
     opacity: 1; }
-  scrollbar.horizontal {
-    border-top: 1px solid #474747; }
-    scrollbar.horizontal slider {
-      min-width: 40px; }
-    scrollbar.horizontal button.down {
-      -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
-    scrollbar.horizontal button.up {
-      -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
-  scrollbar.vertical {
-    border-left: 1px solid #474747; }
-    scrollbar.vertical slider {
-      min-height: 40px; }
-    scrollbar.vertical button.down {
-      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-    scrollbar.vertical button.up {
-      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
-  treeview ~ scrollbar.vertical {
-    border-top: 1px solid #474747;
-    margin-top: -1px; }
+
+treeview ~ scrollbar.vertical {
+  border-top: 1px solid #474747;
+  margin-top: -1px; }
 
 switch {
   font-size: 0;
