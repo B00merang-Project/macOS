@@ -586,7 +586,7 @@ button.suggested-action {
     color: #8b8b8b;
     background-image: linear-gradient(to bottom, #6c97f3, #4e7ee5); }
 
-modelbutton.flat {
+modelbutton {
   min-height: 20px;
   padding-left: 5px;
   padding-right: 5px;
@@ -595,26 +595,28 @@ modelbutton.flat {
   background-color: transparent;
   background-image: none;
   box-shadow: none; }
-  modelbutton.flat:hover {
+  modelbutton:hover {
     color: #FFFFFF;
     background-color: #4576df; }
-  modelbutton.flat:selected {
+  modelbutton:selected {
     color: #FFFFFF;
     background-color: #4576df; }
-  modelbutton.flat:disabled {
+  modelbutton:disabled {
     color: #9a999b; }
-  modelbutton.flat > image {
+  modelbutton > image {
     padding-right: 4px; }
-  modelbutton.flat arrow {
+  modelbutton arrow {
     background: none;
     min-width: 16px;
     min-height: 16px;
     opacity: 0.3; }
-    modelbutton.flat arrow:hover {
+    modelbutton arrow:hover {
       background: none; }
-    modelbutton.flat arrow.left {
+    modelbutton arrow:disabled {
+      opacity: 0.15; }
+    modelbutton arrow.left {
       -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
-    modelbutton.flat arrow.right {
+    modelbutton arrow.right {
       -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
 
 button.link,
@@ -1096,45 +1098,44 @@ columnview.view > header > button, treeview.view > header > button, columnview.v
     border-right-style: none; }
 
 popover.background {
-  background-color: transparent;
-  font: initial; }
-  popover.background > arrow,
-  popover.background > contents {
-    background-color: rgba(52, 50, 54, 0.9);
-    background-clip: padding-box;
-    border: 1px solid #474747;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
-  popover.background:backdrop {
+  font: initial;
+  background-color: transparent; }
+
+popover > arrow,
+popover > contents {
+  border: 1px solid #474747;
+  color: #FFFFFF;
+  background-color: rgba(52, 50, 54, 0.9);
+  background-clip: padding-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
+
+popover > contents {
+  padding: 8px;
+  border-radius: 8px; }
+  popover > contents > list,
+  popover > contents > .view,
+  popover > contents > iconview,
+  popover > contents > toolbar {
+    border-style: none;
     background-color: transparent; }
-  popover.background > contents {
-    padding: 8px;
-    border-radius: 8px; }
-    popover.background > contents > list,
-    popover.background > contents > .view,
-    popover.background > contents > iconview,
-    popover.background > contents > .toolbar {
-      border-style: none;
-      background-color: transparent; }
-    popover.background > contents separator {
-      background-color: #474747;
-      margin: 3px; }
-    popover.background > contents list separator {
-      margin: 0; }
+  popover > contents separator {
+    margin: 3px;
+    background-color: #474747; }
 
 magnifier {
   background-color: #242226; }
 
-.background.popup {
+popover.menu .background.popup {
   background-color: transparent; }
 
-menu, .menu {
+popover.menu menu, popover.menu .menu {
   margin: 4px;
   padding: 4px 0;
   border-radius: 8px;
   border: none;
   color: #FFFFFF;
   background-color: rgba(52, 50, 54, 0.9); }
-  menu menuitem, .menu menuitem {
+  popover.menu menu menuitem, popover.menu .menu menuitem {
     min-height: 16px;
     min-width: 40px;
     padding: 4px;
@@ -1142,17 +1143,28 @@ menu, .menu {
     border-radius: 0;
     color: #FFFFFF;
     background-color: transparent; }
-    menu menuitem:hover, .menu menuitem:hover {
+    popover.menu menu menuitem:hover, popover.menu .menu menuitem:hover {
       color: #FFFFFF;
       background-color: #4576df; }
-    menu menuitem:disabled, .menu menuitem:disabled {
+    popover.menu menu menuitem:disabled, popover.menu .menu menuitem:disabled {
       color: rgba(159, 158, 160, 0.95); }
-    menu menuitem accelerator, .menu menuitem accelerator {
+    popover.menu menu menuitem accelerator, popover.menu .menu menuitem accelerator {
       color: alpha(currentColor, 0.55); }
-      menu menuitem accelerator:hover, .menu menuitem accelerator:hover {
+      popover.menu menu menuitem accelerator:hover, popover.menu .menu menuitem accelerator:hover {
         color: rgba(255, 255, 255, 0.8); }
-      menu menuitem accelerator:disabled, .menu menuitem accelerator:disabled {
+      popover.menu menu menuitem accelerator:disabled, popover.menu .menu menuitem accelerator:disabled {
         color: #9a999b; }
+
+popover.menu accelerator {
+  color: alpha(currentColor, 0.55); }
+  popover.menu accelerator:hover {
+    color: rgba(255, 255, 255, 0.8); }
+  popover.menu accelerator:disabled {
+    color: rgba(159, 158, 160, 0.95); }
+  popover.menu accelerator:dir(ltr) {
+    margin-left: 4px; }
+  popover.menu accelerator:dir(rtl) {
+    margin-right: 4px; }
 
 menubar {
   padding: 0px;
@@ -2134,7 +2146,7 @@ combobox:drop(active) button.combo {
 
 window {
   border-width: 0px;
-  padding: 0; }
+  padding: 0px; }
   window.csd {
     box-shadow: 0 10px 15px 1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.1);
     margin: 0px;
@@ -2272,23 +2284,6 @@ popover.entry-completion > contents {
 
 statusbar {
   padding: 4px; }
-
-menubutton > button > box {
-  border-spacing: 6px; }
-
-menubutton arrow {
-  min-height: 16px;
-  min-width: 16px; }
-  menubutton arrow.none {
-    -gtk-icon-source: -gtk-icontheme("open-menu-symbolic"); }
-  menubutton arrow.down {
-    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-  menubutton arrow.up {
-    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
-  menubutton arrow.left {
-    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
-  menubutton arrow.right {
-    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
 .floating-bar {
   border: 1px solid #474747;
