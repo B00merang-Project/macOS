@@ -1361,7 +1361,8 @@ StScrollBar StButton#hhandle:active {
 
 .keyboard-key {
   border-image: url("buttons/button.svg") 7;
-  padding: 16px;
+  min-height: 2em;
+  min-width: 2em;
   color: #000000;
   font-size: 12pt;
   font-weight: normal;
@@ -1369,18 +1370,15 @@ StScrollBar StButton#hhandle:active {
 
 .keyboard-key:hover {
   border-image: url("buttons/button-hover.svg") 7;
-  padding: 16px;
 }
 
 .keyboard-key:checked,
 .keyboard-key:active {
   border-image: url("buttons/button-pressed.svg") 7;
-  padding: 16px;
 }
 
 .keyboard-key:grayed {
   border-image: url("buttons/button-insensitive.svg") 7;
-  padding: 16px;
   color: rgba(0, 0, 0, .3);
 }
 
